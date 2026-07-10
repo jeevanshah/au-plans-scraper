@@ -9,7 +9,7 @@
     "speed_tier": "NBN 25/10",
     "typical_evening_speed_mbps": 23.0,
     "source_url": "https://www.aussiebroadband.com.au/nbn-plans/",
-    "scraped_at": "2026-07-10T03:52:39.901278+00:00"
+    "scraped_at": "2026-07-10T04:06:11.525046+00:00"
   },
   {
     "provider": "Aussie Broadband",
@@ -21,7 +21,7 @@
     "speed_tier": "NBN 50/20",
     "typical_evening_speed_mbps": 47.0,
     "source_url": "https://www.aussiebroadband.com.au/nbn-plans/",
-    "scraped_at": "2026-07-10T03:52:39.901278+00:00"
+    "scraped_at": "2026-07-10T04:06:11.525046+00:00"
   },
   {
     "provider": "Aussie Broadband",
@@ -33,7 +33,7 @@
     "speed_tier": "NBN 100/20",
     "typical_evening_speed_mbps": 94.0,
     "source_url": "https://www.aussiebroadband.com.au/nbn-plans/",
-    "scraped_at": "2026-07-10T03:52:39.901278+00:00"
+    "scraped_at": "2026-07-10T04:06:11.525046+00:00"
   },
   {
     "provider": "Aussie Broadband",
@@ -45,7 +45,7 @@
     "speed_tier": "NBN 500/50",
     "typical_evening_speed_mbps": 500.0,
     "source_url": "https://www.aussiebroadband.com.au/nbn-plans/",
-    "scraped_at": "2026-07-10T03:52:39.901278+00:00"
+    "scraped_at": "2026-07-10T04:06:11.525046+00:00"
   },
   {
     "provider": "Aussie Broadband",
@@ -57,7 +57,7 @@
     "speed_tier": "NBN 1000/100",
     "typical_evening_speed_mbps": 875.0,
     "source_url": "https://www.aussiebroadband.com.au/nbn-plans/",
-    "scraped_at": "2026-07-10T03:52:39.901278+00:00"
+    "scraped_at": "2026-07-10T04:06:11.525046+00:00"
   },
   {
     "provider": "Aussie Broadband",
@@ -69,7 +69,7 @@
     "speed_tier": "NBN 2000/200",
     "typical_evening_speed_mbps": 1810.0,
     "source_url": "https://www.aussiebroadband.com.au/nbn-plans/",
-    "scraped_at": "2026-07-10T03:52:39.901278+00:00"
+    "scraped_at": "2026-07-10T04:06:11.525046+00:00"
   },
   {
     "provider": "Tangerine",
@@ -81,7 +81,7 @@
     "speed_tier": "NBN 25/8.5",
     "typical_evening_speed_mbps": 25.0,
     "source_url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband",
-    "scraped_at": "2026-07-10T03:52:42.307767+00:00"
+    "scraped_at": "2026-07-10T04:06:15.731771+00:00"
   },
   {
     "provider": "Tangerine",
@@ -93,7 +93,7 @@
     "speed_tier": "NBN 50/17",
     "typical_evening_speed_mbps": 50.0,
     "source_url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband",
-    "scraped_at": "2026-07-10T03:52:42.307767+00:00"
+    "scraped_at": "2026-07-10T04:06:15.731771+00:00"
   },
   {
     "provider": "Tangerine",
@@ -105,7 +105,7 @@
     "speed_tier": "NBN 500/42.5",
     "typical_evening_speed_mbps": 500.0,
     "source_url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband",
-    "scraped_at": "2026-07-10T03:52:42.307767+00:00"
+    "scraped_at": "2026-07-10T04:06:15.731771+00:00"
   },
   {
     "provider": "Tangerine",
@@ -117,7 +117,7 @@
     "speed_tier": "NBN 700/85",
     "typical_evening_speed_mbps": 700.0,
     "source_url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband",
-    "scraped_at": "2026-07-10T03:52:42.307767+00:00"
+    "scraped_at": "2026-07-10T04:06:15.731771+00:00"
   },
   {
     "provider": "Telstra",
@@ -129,7 +129,7 @@
     "speed_tier": "NBN 25",
     "typical_evening_speed_mbps": 25.0,
     "source_url": "https://www.telstra.com.au/internet/nbn",
-    "scraped_at": "2026-07-10T03:52:43.031898+00:00"
+    "scraped_at": "2026-07-10T04:06:16.547782+00:00"
   },
   {
     "provider": "Telstra",
@@ -141,7 +141,7 @@
     "speed_tier": "NBN 50",
     "typical_evening_speed_mbps": 50.0,
     "source_url": "https://www.telstra.com.au/internet/nbn",
-    "scraped_at": "2026-07-10T03:52:43.031898+00:00"
+    "scraped_at": "2026-07-10T04:06:16.547782+00:00"
   },
   {
     "provider": "Telstra",
@@ -153,7 +153,7 @@
     "speed_tier": "NBN 100",
     "typical_evening_speed_mbps": 100.0,
     "source_url": "https://www.telstra.com.au/internet/nbn",
-    "scraped_at": "2026-07-10T03:52:43.031898+00:00"
+    "scraped_at": "2026-07-10T04:06:16.547782+00:00"
   },
   {
     "provider": "Telstra",
@@ -165,7 +165,7 @@
     "speed_tier": "NBN 750",
     "typical_evening_speed_mbps": 750.0,
     "source_url": "https://www.telstra.com.au/internet/nbn",
-    "scraped_at": "2026-07-10T03:52:43.031898+00:00"
+    "scraped_at": "2026-07-10T04:06:16.547782+00:00"
   },
   {
     "provider": "Telstra",
@@ -177,6 +177,6 @@
     "speed_tier": "NBN 1000",
     "typical_evening_speed_mbps": 815.0,
     "source_url": "https://www.telstra.com.au/internet/nbn",
-    "scraped_at": "2026-07-10T03:52:43.031898+00:00"
+    "scraped_at": "2026-07-10T04:06:16.547782+00:00"
   }
 ]

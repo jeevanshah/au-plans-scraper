@@ -10,7 +10,7 @@
     "is_unlimited_data": false,
     "network": null,
     "source_url": "https://www.tpg.com.au/mobile-plans",
-    "scraped_at": "2026-07-10T03:52:46.543395+00:00"
+    "scraped_at": "2026-07-10T04:06:23.475420+00:00"
   },
   {
     "provider": "TPG",
@@ -23,7 +23,7 @@
     "is_unlimited_data": false,
     "network": null,
     "source_url": "https://www.tpg.com.au/mobile-plans",
-    "scraped_at": "2026-07-10T03:52:46.543395+00:00"
+    "scraped_at": "2026-07-10T04:06:23.475420+00:00"
   },
   {
     "provider": "TPG",
@@ -36,7 +36,7 @@
     "is_unlimited_data": false,
     "network": null,
     "source_url": "https://www.tpg.com.au/mobile-plans",
-    "scraped_at": "2026-07-10T03:52:46.543395+00:00"
+    "scraped_at": "2026-07-10T04:06:23.475420+00:00"
   },
   {
     "provider": "Telstra",
@@ -49,7 +49,7 @@
     "is_unlimited_data": false,
     "network": "Telstra",
     "source_url": "https://www.telstra.com.au/mobile-phones/sim-only-plans",
-    "scraped_at": "2026-07-10T03:52:47.307460+00:00"
+    "scraped_at": "2026-07-10T04:06:23.948191+00:00"
   },
   {
     "provider": "Telstra",
@@ -62,7 +62,7 @@
     "is_unlimited_data": false,
     "network": "Telstra",
     "source_url": "https://www.telstra.com.au/mobile-phones/sim-only-plans",
-    "scraped_at": "2026-07-10T03:52:47.307460+00:00"
+    "scraped_at": "2026-07-10T04:06:23.948191+00:00"
   },
   {
     "provider": "Telstra",
@@ -75,6 +75,6 @@
     "is_unlimited_data": false,
     "network": "Telstra",
     "source_url": "https://www.telstra.com.au/mobile-phones/sim-only-plans",
-    "scraped_at": "2026-07-10T03:52:47.307460+00:00"
+    "scraped_at": "2026-07-10T04:06:23.948191+00:00"
   }
 ]
