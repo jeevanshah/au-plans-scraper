@@ -182,7 +182,7 @@
     "url": "https://www.telstra.com.au/internet/nbn",
     "serviceType": "nbn",
     "tier": "NBN 25",
-    "techType": null,
+    "techType": "Fibre and FTTN",
     "postedAt": "2026-07-10",
     "_source": "Telstra official site, verified 2026-07-10"
   },

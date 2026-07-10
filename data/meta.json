@@ -1,49 +1,49 @@
 {
   "Aussie Broadband (nbn)": {
     "status": "ok",
-    "last_success": "2026-07-10T04:43:41.102113+00:00",
+    "last_success": "2026-07-10T05:53:51.834035+00:00",
     "consecutive_failures": 0,
     "plan_count": 6
   },
   "Tangerine (nbn)": {
     "status": "ok",
-    "last_success": "2026-07-10T04:43:43.677036+00:00",
+    "last_success": "2026-07-10T05:53:56.745803+00:00",
     "consecutive_failures": 0,
     "plan_count": 4
   },
   "Telstra (nbn)": {
     "status": "ok",
-    "last_success": "2026-07-10T04:43:45.111532+00:00",
+    "last_success": "2026-07-10T05:53:57.573503+00:00",
     "consecutive_failures": 0,
     "plan_count": 5
   },
   "Dodo (nbn)": {
     "status": "ok",
-    "last_success": "2026-07-10T04:43:46.402882+00:00",
+    "last_success": "2026-07-10T05:54:04.091911+00:00",
     "consecutive_failures": 0,
     "plan_count": 6
   },
   "Superloop (nbn)": {
     "status": "ok",
-    "last_success": "2026-07-10T04:44:02.168261+00:00",
+    "last_success": "2026-07-10T05:54:13.880066+00:00",
     "consecutive_failures": 0,
     "plan_count": 5
   },
   "Exetel (nbn)": {
     "status": "ok",
-    "last_success": "2026-07-10T04:44:03.320974+00:00",
+    "last_success": "2026-07-10T05:54:14.958781+00:00",
     "consecutive_failures": 0,
     "plan_count": 1
   },
   "TPG (mobile)": {
     "status": "ok",
-    "last_success": "2026-07-10T04:44:18.255554+00:00",
+    "last_success": "2026-07-10T05:54:20.718772+00:00",
     "consecutive_failures": 0,
     "plan_count": 3
   },
   "Telstra (mobile)": {
     "status": "ok",
-    "last_success": "2026-07-10T04:44:19.508778+00:00",
+    "last_success": "2026-07-10T05:54:21.268714+00:00",
     "consecutive_failures": 0,
     "plan_count": 3
   }
