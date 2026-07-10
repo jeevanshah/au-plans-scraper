@@ -1,0 +1,82 @@
+"""Transform internal NbnPlan/MobilePlan models into the public deal-card JSON shape
+consumed by the blog/app: camelCase fields, a marketing title/description, category,
+and a single merged deals list across NBN and mobile."""
+import re
+
+from scraper.schema import MobilePlan, NbnPlan
+
+CATEGORY = "Utilities"
+
+
+def _slugify(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+
+
+def _make_id(provider: str, tier: str, scraped_at: str) -> str:
+    month_key = scraped_at[:7]  # YYYY-MM
+    return f"{_slugify(provider)}-{_slugify(tier)}-{month_key}"
+
+
+def _source_note(provider: str, scraped_at: str) -> str:
+    return f"{provider} official site, verified {scraped_at[:10]}"
+
+
+def nbn_plan_to_deal(plan: NbnPlan) -> dict:
+    has_promo = plan.promo_price is not None
+    if has_promo:
+        description = (
+            f"{plan.speed_tier} plan discounted for the first {plan.promo_period_months} "
+            f"months for new customers. Unlimited data, {plan.contract_length.lower()}."
+        )
+    else:
+        description = f"{plan.speed_tier} plan. Unlimited data, {plan.contract_length.lower()}."
+
+    return {
+        "id": _make_id(plan.provider, plan.speed_tier, plan.scraped_at),
+        "provider": plan.provider,
+        "title": f"{plan.plan_name} {plan.speed_tier}",
+        "category": CATEGORY,
+        "description": description,
+        "promoPrice": plan.promo_price if has_promo else plan.price_monthly,
+        "regularPrice": plan.price_monthly,
+        "promoMonths": plan.promo_period_months if has_promo else None,
+        "validUntil": plan.promo_end_date,
+        "url": plan.source_url,
+        "serviceType": "nbn",
+        "tier": plan.speed_tier,
+        "techType": plan.tech_type,
+        "postedAt": plan.scraped_at[:10],
+        "_source": _source_note(plan.provider, plan.scraped_at),
+    }
+
+
+def mobile_plan_to_deal(plan: MobilePlan) -> dict:
+    has_promo = plan.promo_price is not None
+    data_desc = "Unlimited data" if plan.is_unlimited_data else f"{plan.data_allowance_gb:g}GB data"
+    tier = "Unlimited" if plan.is_unlimited_data else f"{plan.data_allowance_gb:g}GB"
+
+    if has_promo:
+        description = (
+            f"{data_desc} mobile plan discounted for the first {plan.promo_period_months} "
+            f"months for new customers. {plan.contract_length}."
+        )
+    else:
+        description = f"{data_desc} mobile plan. {plan.contract_length}."
+
+    return {
+        "id": _make_id(plan.provider, tier, plan.scraped_at),
+        "provider": plan.provider,
+        "title": f"{plan.plan_name} {tier}",
+        "category": CATEGORY,
+        "description": description,
+        "promoPrice": plan.promo_price if has_promo else plan.price_monthly,
+        "regularPrice": plan.price_monthly,
+        "promoMonths": plan.promo_period_months if has_promo else None,
+        "validUntil": plan.promo_end_date,
+        "url": plan.source_url,
+        "serviceType": "mobile",
+        "tier": tier,
+        "techType": plan.network_tech,
+        "postedAt": plan.scraped_at[:10],
+        "_source": _source_note(plan.provider, plan.scraped_at),
+    }

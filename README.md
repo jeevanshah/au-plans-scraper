@@ -7,29 +7,56 @@ hosting cost.
 
 ## Data
 
-- [`data/nbn.json`](data/nbn.json) -- NBN broadband plans
-- [`data/mobile.json`](data/mobile.json) -- mobile SIM-only plans
+- [`data/deals.json`](data/deals.json) -- merged NBN + mobile deal cards (see shape below)
 - [`data/meta.json`](data/meta.json) -- per-provider last-success timestamp and consecutive-failure count
 
 Fetch from your app via:
 
 ```
-https://cdn.jsdelivr.net/gh/<github-user>/au-plans-scraper@main/data/nbn.json
-https://cdn.jsdelivr.net/gh/<github-user>/au-plans-scraper@main/data/mobile.json
+https://cdn.jsdelivr.net/gh/<github-user>/au-plans-scraper@main/data/deals.json
 ```
 
 (jsDelivr caches per branch and can lag up to ~12-24h behind the latest commit --
 fine at the daily/weekly update cadence this scraper runs on.)
 
+Each entry looks like:
+
+```json
+{
+  "id": "dodo-nbn-50-20-2026-07",
+  "provider": "Dodo",
+  "title": "Value NBN 50/20",
+  "category": "Utilities",
+  "description": "NBN 50/20 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+  "promoPrice": 57.99,
+  "regularPrice": 87.99,
+  "promoMonths": 6,
+  "validUntil": "2026-09-01",
+  "url": "https://www.dodo.com/nbn",
+  "serviceType": "nbn",
+  "tier": "NBN 50/20",
+  "techType": "Fibre and FTTN",
+  "postedAt": "2026-07-10",
+  "_source": "Dodo official site, verified 2026-07-10"
+}
+```
+
+`validUntil` and `techType` are `null` when a provider's page doesn't state an explicit
+calendar end-date or connection-tech eligibility for that plan -- see `scraper/transform.py`
+for the mapping from internal scrape fields to this shape, and `scraper/base.py`'s
+`classify_tech_type` / `parse_relative_end_date` / `parse_absolute_end_date` for how those
+two fields get extracted per provider.
+
 ## Providers
 
-**NBN:** Aussie Broadband, Tangerine, Telstra
+**NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel
 **Mobile:** TPG, Telstra
 
-Dropped: Circles.Life (exited the Australian market in 2025, acquired by amaysim).
-Held back pending manual verification: Belong, Optus, amaysim, TPG's NBN plans (all four
-either returned inconsistent responses during initial research or need Playwright +
-careful rate-limiting -- see `scraper/providers/` for what's implemented so far).
+Dropped: Circles.Life (exited the Australian market in 2025, acquired by amaysim); Flip
+(not actually an NBN/broadband provider -- a logistics company, unrelated).
+Held back pending manual verification: Belong, Optus, amaysim (all returned inconsistent
+responses or need careful rate-limiting -- see `scraper/providers/` for what's implemented
+so far).
 
 ## Running locally
 
@@ -39,7 +66,7 @@ playwright install chromium
 python run.py
 ```
 
-Writes/updates `data/nbn.json`, `data/mobile.json`, `data/meta.json`.
+Writes/updates `data/deals.json`, `data/meta.json`.
 
 ## Testing
 
@@ -54,7 +81,7 @@ site changes layout, re-fetch its fixture and update the parser + test together.
 ## How a provider failing is handled
 
 `run.py` never lets one provider's failure kill the run: it keeps that provider's
-last-known-good plans (from the existing `data/*.json`) and increments
+last-known-good deals (from the existing `data/deals.json`) and increments
 `consecutive_failures` in `data/meta.json`. After 3 consecutive failures, the
 GitHub Actions workflow opens a `stale: <provider>` issue (and closes it once the
 provider recovers) so staleness doesn't go unnoticed.

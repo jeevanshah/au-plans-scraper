@@ -1,7 +1,7 @@
 """Aussie Broadband NBN plans scraper. Static HTML, no JS rendering needed."""
 import re
 
-from scraper.base import fetch_static, parse_price
+from scraper.base import classify_tech_type, fetch_static, parse_price
 from scraper.schema import NbnPlan, now_iso
 
 PROVIDER = "Aussie Broadband"
@@ -47,6 +47,8 @@ def scrape() -> list[NbnPlan]:
 
         contract_length = "No lock-in contract" if "No lock-in contract" in text else "Contract required"
 
+        tech_type = classify_tech_type(text)
+
         plans.append(
             NbnPlan(
                 provider=PROVIDER,
@@ -57,6 +59,7 @@ def scrape() -> list[NbnPlan]:
                 contract_length=contract_length,
                 speed_tier=speed_tier,
                 typical_evening_speed_mbps=typical_evening_speed_mbps,
+                tech_type=tech_type,
                 source_url=URL,
                 scraped_at=scraped_at,
             )

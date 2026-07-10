@@ -11,7 +11,7 @@ restructures this page.
 """
 import re
 
-from scraper.base import fetch_static, parse_price
+from scraper.base import classify_tech_type, fetch_static, parse_price, parse_relative_end_date
 from scraper.schema import NbnPlan, now_iso
 
 PROVIDER = "Telstra"
@@ -76,9 +76,11 @@ def scrape() -> list[NbnPlan]:
                 price_monthly=price_monthly,
                 promo_price=promo_price,
                 promo_period_months=promo_period_months,
+                promo_end_date=parse_relative_end_date(text, scraped_at) if promo_match else None,
                 contract_length="No lock-in contract (month-to-month)",
                 speed_tier=f"NBN {tier_match.group(1)}" if tier_match else "NBN (tier unknown)",
                 typical_evening_speed_mbps=float(speed_match.group(1)) if speed_match else None,
+                tech_type=classify_tech_type(text),
                 source_url=URL,
                 scraped_at=scraped_at,
             )

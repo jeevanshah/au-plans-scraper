@@ -1,6 +1,8 @@
 """Shared fetch helpers for provider scrapers."""
 import logging
+import re
 import time
+from datetime import datetime
 
 import requests
 from bs4 import BeautifulSoup
@@ -46,10 +48,18 @@ def fetch_js(
     url: str,
     *,
     wait_selector: str | None = None,
+    wait_until: str = "load",
+    settle_ms: int = 0,
     timeout_ms: int = 45000,
     retries: int = DEFAULT_RETRIES,
 ) -> BeautifulSoup:
-    """Fetch a JS-rendered page via Playwright. Only used by providers with requires_js=True."""
+    """Fetch a JS-rendered page via Playwright. Only used by providers with requires_js=True.
+
+    wait_until defaults to "load" rather than "networkidle" -- some sites (e.g. TPG) never
+    go network-idle due to background polling, which hangs "networkidle" until timeout.
+    settle_ms adds a fixed extra wait after load/selector for client-side hydration that
+    finishes just after the load event (e.g. Superloop's Gatsby+React plan cards).
+    """
     from playwright.sync_api import sync_playwright
 
     last_exc: Exception | None = None
@@ -59,9 +69,11 @@ def fetch_js(
                 browser = p.chromium.launch()
                 try:
                     page = browser.new_page(user_agent=USER_AGENT)
-                    page.goto(url, timeout=timeout_ms, wait_until="domcontentloaded")
+                    page.goto(url, timeout=timeout_ms, wait_until=wait_until)
                     if wait_selector:
                         page.wait_for_selector(wait_selector, timeout=timeout_ms)
+                    if settle_ms:
+                        page.wait_for_timeout(settle_ms)
                     html = page.content()
                 finally:
                     browser.close()
@@ -72,6 +84,53 @@ def fetch_js(
             if attempt < retries:
                 time.sleep(DEFAULT_BACKOFF_SECONDS * attempt)
     raise FetchError(f"Failed to fetch (js) {url} after {retries} attempts") from last_exc
+
+
+_MONTH_END_DATE_RE = re.compile(
+    r"Ends (\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)"
+)
+
+
+def parse_relative_end_date(text: str, scraped_at: str) -> str | None:
+    """Extract a promo end-date like 'Ends 10 August' -> ISO date, inferring the year
+    from scraped_at (rolling forward a year if that date has already passed)."""
+    match = _MONTH_END_DATE_RE.search(text)
+    if not match:
+        return None
+
+    day, month_name = match.groups()
+    scraped_dt = datetime.fromisoformat(scraped_at)
+    candidate = datetime.strptime(f"{day} {month_name} {scraped_dt.year}", "%d %B %Y")
+    if candidate.date() < scraped_dt.date():
+        candidate = candidate.replace(year=scraped_dt.year + 1)
+    return candidate.date().isoformat()
+
+
+def classify_tech_type(text: str) -> str | None:
+    """Best-effort NBN connection-tech label from disclosure text on a plan card.
+    Returns None rather than guessing when no eligibility text is present at all."""
+    if "FTTN" in text or "FTTB" in text or "FTTC" in text or "All Fixed-Line" in text:
+        return "Fibre and FTTN"
+    if "FTTP" in text or "HFC" in text:
+        return "Fibre"
+    return None
+
+
+_ABS_END_DATE_RE = re.compile(r"[Oo]ffer ends (\d{1,2}) (\w+) (\d{4})")
+
+
+def parse_absolute_end_date(text: str) -> str | None:
+    """Extract a promo end-date like 'Offer ends 1 Sep 2026' -> ISO date."""
+    match = _ABS_END_DATE_RE.search(text)
+    if not match:
+        return None
+    day, month_name, year = match.groups()
+    for fmt in ("%d %b %Y", "%d %B %Y"):
+        try:
+            return datetime.strptime(f"{day} {month_name} {year}", fmt).date().isoformat()
+        except ValueError:
+            continue
+    return None
 
 
 def parse_price(text: str) -> float:

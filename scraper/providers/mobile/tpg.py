@@ -21,6 +21,7 @@ PROMO_RE = re.compile(r"\$(\d+)\s*/mth\s*\.(\d+)\s*for (\d+) months?")
 # whole clause literally.
 TAIL_RE = re.compile(r"then\s+(.+?)\s+Unlimited", re.S)
 DOLLAR_RE = re.compile(r"\$(\d+)/mth(\s+with a (?:linked )?TPG internet plan)?")
+NETWORK_TECH_RE = re.compile(r"(4G|5G) network")
 
 
 def _extract_standalone_price(tail: str) -> float | None:
@@ -56,6 +57,7 @@ def scrape() -> list[MobilePlan]:
 
         data_gb, tier_name = header_match.groups()
         promo_dollars, promo_cents, promo_months = promo_match.groups()
+        network_tech_match = NETWORK_TECH_RE.search(text)
 
         plans.append(
             MobilePlan(
@@ -68,6 +70,7 @@ def scrape() -> list[MobilePlan]:
                 data_allowance_gb=float(data_gb),
                 is_unlimited_data=False,
                 network=None,
+                network_tech=network_tech_match.group(1) if network_tech_match else None,
                 source_url=URL,
                 scraped_at=scraped_at,
             )
