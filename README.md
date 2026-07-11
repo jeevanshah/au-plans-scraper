@@ -49,14 +49,16 @@ two fields get extracted per provider.
 
 ## Providers
 
-**NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel
-**Mobile:** TPG, Telstra
+**NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel, iiNet
+**Mobile:** TPG, Telstra, amaysim, Vodafone, Kogan Mobile, Felix, Boost Mobile, ALDImobile
 
 Dropped: Circles.Life (exited the Australian market in 2025, acquired by amaysim); Flip
-(not actually an NBN/broadband provider -- a logistics company, unrelated).
-Held back pending manual verification: Belong, Optus, amaysim (all returned inconsistent
-responses or need careful rate-limiting -- see `scraper/providers/` for what's implemented
-so far).
+(not actually an NBN/broadband provider -- a logistics company, unrelated);
+MyRepublic (exited the AU NBN market in Dec 2022/Jan 2023, all URLs return HTTP 530 --
+not a scraping gap, there is no product to scrape).
+Held back (needs real anti-bot/browser-fingerprint handling, not scrapeable with
+`fetch_static`/`fetch_js` as-is): Belong, Optus, Southern Phone, Woolworths
+Mobile/everyday -- see `scraper/providers/` for what's implemented so far.
 
 ## Running locally
 

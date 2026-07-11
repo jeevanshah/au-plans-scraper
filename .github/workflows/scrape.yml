@@ -28,6 +28,9 @@ jobs:
           pip install -r requirements.txt
           playwright install --with-deps chromium
 
+      - name: Run parser tests
+        run: pytest tests/
+
       - name: Run scrapers
         run: python run.py
         continue-on-error: true
