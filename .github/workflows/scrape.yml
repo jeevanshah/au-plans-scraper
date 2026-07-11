@@ -30,7 +30,6 @@ jobs:
 
       - name: Run parser tests
         run: pytest tests/
-        continue-on-error: true
 
       - name: Run scrapers
         run: python run.py
