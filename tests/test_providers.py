@@ -11,9 +11,13 @@ from scraper.providers.mobile import kogan as mobile_kogan
 from scraper.providers.mobile import felix as mobile_felix
 from scraper.providers.mobile import boost as mobile_boost
 from scraper.providers.mobile import aldimobile as mobile_aldi
+from scraper.providers.mobile import dodo_mobile
+from scraper.providers.mobile import aussie_broadband_mobile as mobile_aussie_broadband
 from scraper.providers.nbn import aussie_broadband, dodo, exetel, superloop, tangerine
+from scraper.providers.nbn import spintel_nbn as nbn_spintel
 from scraper.providers.nbn import telstra as nbn_telstra
 from scraper.providers.nbn import iinet as nbn_iinet
+from scraper.providers.nbn import vodafone_nbn as nbn_vodafone
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -338,6 +342,81 @@ def test_aldi_mobile(monkeypatch):
         assert p.data_allowance_gb is not None and p.data_allowance_gb > 0
         assert p.network == "Telstra"
         assert p.contract_length in ("30-day expiry", "365-day expiry")
+
+
+# ========== Wave 1 provider tests ==========
+
+def test_dodo_mobile(monkeypatch):
+    monkeypatch.setattr(dodo_mobile, "fetch_static", lambda url: _soup("dodo_mobile.html"))
+    plans = dodo_mobile.scrape()
+    assert len(plans) == 3
+    by_name = {p.plan_name: p for p in plans}
+    assert by_name["25GB"].price_monthly == 25.0
+    assert by_name["25GB"].promo_price is None
+    assert by_name["40GB"].price_monthly == 30.0
+    assert by_name["40GB"].promo_price == 15.0
+    assert by_name["40GB"].promo_period_months == 6
+    assert by_name["80GB"].price_monthly == 40.0
+    assert by_name["80GB"].promo_price == 20.0
+    assert by_name["80GB"].promo_period_months == 6
+    for p in plans:
+        assert p.provider == "Dodo"
+        assert p.network == "Optus"
+        assert p.contract_length == "Month-to-month"
+
+
+def test_aussie_broadband_mobile(monkeypatch):
+    monkeypatch.setattr(mobile_aussie_broadband, "fetch_static", lambda url: _soup("aussiebb_mobile.html"))
+    plans = mobile_aussie_broadband.scrape()
+    assert len(plans) == 4
+    by_name = {p.plan_name: p for p in plans}
+    assert by_name["20GB"].price_monthly == 30.0
+    assert by_name["20GB"].promo_price == 15.0
+    assert by_name["20GB"].promo_period_months == 3
+    assert by_name["45GB"].price_monthly == 40.0
+    assert by_name["45GB"].promo_price == 20.0
+    assert by_name["100GB"].price_monthly == 50.0
+    assert by_name["180GB"].price_monthly == 60.0
+    for p in plans:
+        assert p.provider == "Aussie Broadband"
+        assert p.network == "Optus"
+        assert p.contract_length == "Month-to-month"
+
+
+def test_vodafone_nbn(monkeypatch):
+    monkeypatch.setattr(nbn_vodafone, "fetch_static", lambda url: _soup("vodafone_nbn.html"))
+    plans = nbn_vodafone.scrape()
+    assert len(plans) == 3
+    tiers = {p.speed_tier for p in plans}
+    assert "NBN 100/20" in tiers
+    assert "NBN 500/50" in tiers
+    assert "NBN 1000/50" in tiers
+    for p in plans:
+        assert p.provider == "Vodafone"
+        assert p.price_monthly > 0
+        assert p.promo_price is not None
+        assert p.promo_price < p.price_monthly
+        assert p.contract_length == "Month-to-month"
+
+
+def test_spintel_nbn(monkeypatch):
+    monkeypatch.setattr(nbn_spintel, "fetch_static", lambda url: _soup("spintel_nbn.html"))
+    plans = nbn_spintel.scrape()
+    assert len(plans) == 4
+    by_tier = {p.speed_tier: p for p in plans}
+    assert by_tier["NBN 25/10"].price_monthly == 69.95
+    assert by_tier["NBN 25/10"].promo_price == 59.0
+    assert by_tier["NBN 100/20"].price_monthly == 89.95
+    assert by_tier["NBN 100/20"].promo_price == 76.0
+    assert by_tier["NBN 500/50"].price_monthly == 89.95
+    assert by_tier["NBN 500/50"].promo_price == 79.0
+    assert by_tier["NBN 750/50"].price_monthly == 94.95
+    assert by_tier["NBN 750/50"].promo_price == 84.0
+    for p in plans:
+        assert p.provider == "SpinTel"
+        assert p.promo_price < p.price_monthly
+        assert p.promo_period_months == 6
+        assert p.contract_length == "No lock-in contract"
 
 
 # ========== Transform tests ==========

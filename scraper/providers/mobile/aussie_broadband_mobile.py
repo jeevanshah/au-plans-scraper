@@ -1,6 +1,7 @@
 """Aussie Broadband SIM-only mobile plans scraper. Static HTML.
 
-Cards use 'embla__slide' class containers. AB mobile runs on Optus network.
+Cards use 'embla__slide' class (Embla carousel). AB mobile runs on Optus
+network. Pricing: "$X /month first N months* ... $Y/month after promo period"
 """
 import re
 
@@ -11,15 +12,21 @@ PROVIDER = "Aussie Broadband"
 URL = "https://www.aussiebroadband.com.au/mobile/sim-only-plans/"
 REQUIRES_JS = False
 
-GB_RE = re.compile(r"(\d+)\s*GB", re.I)
+GB_RE = re.compile(r"(\d+)\s*(?:[Gg][Bb])")
 DOLLAR_RE = re.compile(r"\$\s*(\d+\.?\d*)")
-PROMO_MONTHS_RE = re.compile(r"(?:first|for)\s+(\d+)\s+months?", re.I)
+# "$15 /month first 3 months" -- promo price + duration
+PROMO_FIRST_RE = re.compile(
+    r"\$\s*(\d+\.?\d*)\s*/month\s+first\s+(\d+)\s+months?", re.I
+)
+# "$30/month after promo period" -- regular price
+AFTER_PROMO_RE = re.compile(
+    r"\$\s*(\d+\.?\d*)\s*/month\s+after\s+promo\s+period", re.I
+)
 
 
 def scrape():
     soup = fetch_static(URL)
     scraped_at = now_iso()
-    text = soup.get_text(" ", strip=True)
 
     plans = []
     seen_gb = set()
@@ -36,23 +43,31 @@ def scrape():
         if gb < 1 or gb in seen_gb:
             continue
 
-        prices = DOLLAR_RE.findall(txt)
-        vals = sorted(set(float(p) for p in prices if float(p) > 1))
+        # Anchored promo extraction
+        first_m = PROMO_FIRST_RE.search(txt)
+        after_m = AFTER_PROMO_RE.search(txt)
 
         price_monthly = None
         promo_price = None
+        promo_months = None
 
-        if len(vals) >= 2:
-            promo_price = vals[0]
-            price_monthly = vals[1]
-        elif vals:
-            price_monthly = vals[0]
+        if after_m and first_m:
+            price_monthly = float(after_m.group(1))
+            promo_price = float(first_m.group(1))
+            promo_months = int(first_m.group(2))
+        else:
+            # No promo pattern found — all prices, use largest as regular
+            prices = DOLLAR_RE.findall(txt)
+            vals = sorted(set(float(p) for p in prices if float(p) > 1))
+            if vals:
+                price_monthly = vals[-1]
 
         if price_monthly is None or price_monthly <= 1:
             continue
 
-        pm_m = PROMO_MONTHS_RE.search(txt)
-        promo_months = int(pm_m.group(1)) if pm_m else None
+        if promo_price is not None and promo_price >= price_monthly:
+            promo_price = None
+            promo_months = None
 
         seen_gb.add(gb)
         plans.append(
@@ -60,8 +75,8 @@ def scrape():
                 provider=PROVIDER,
                 plan_name="{}GB".format(int(gb)),
                 price_monthly=price_monthly,
-                promo_price=promo_price if promo_price and promo_price < price_monthly else None,
-                promo_period_months=promo_months if (promo_price and promo_price < price_monthly) else None,
+                promo_price=promo_price,
+                promo_period_months=promo_months,
                 promo_end_date=None,
                 contract_length="Month-to-month",
                 data_allowance_gb=gb,

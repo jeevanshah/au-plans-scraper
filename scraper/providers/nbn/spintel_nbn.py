@@ -1,7 +1,8 @@
 """SpinTel NBN plans scraper. Static HTML.
 
-SpinTel is a budget NBN provider (WhistleOut "Best Fast NBN Provider").
-Cards use w-col-option / plan-block classes with speed text and pricing.
+Pricing: "$X Per Month For N months, then $Y ongoing" pattern.
+Dedup on download speed to avoid duplicate tiers from typical evening vs
+max speed labels in same card.
 """
 import re
 
@@ -12,10 +13,11 @@ PROVIDER = "SpinTel"
 URL = "https://www.spintel.net.au/nbn"
 REQUIRES_JS = False
 
-# "Home Starter 25/10 Mbps Typical evening speed 25/8 Mbps $59 Per Month For 6 months, then $69.95"
 SPEED_RE = re.compile(r"(\d+)/(\d+)\s*Mbps", re.I)
-PRICE_RE = re.compile(r"\$\s*(\d+\.?\d*)")
-PROMO_MONTHS_RE = re.compile(r"[Ff]or\s+(\d+)\s+months?", re.I)
+# "$59 Per Month For 6 months, then $69.95 ongoing"
+FOR_N_THEN_RE = re.compile(
+    r"\$\s*(\d+\.?\d*)\s*[Pp]er\s+[Mm]onth\s+[Ff]or\s+(\d+)\s+months?\s*,?\s*then\s+\$\s*(\d+\.?\d*)", re.I
+)
 OFFER_ENDS_RE = re.compile(
     r"[Oo]ffer\s+[Ee]nds\s+(\d{1,2})\.(\d{2})\.(\d{2})", re.I
 )
@@ -27,74 +29,55 @@ def scrape():
     text = soup.get_text(" ", strip=True)
 
     plans = []
-    seen_tiers = set()
+    seen_down = set()
 
-    # SpinTel plan cards use w-col-option / plan-block classes
-    for card in soup.find_all(class_=lambda c: c and "plan-block" in " ".join(c)):
-        txt = card.get_text(" ", strip=True)
-        if len(txt) < 30:
+    for m in SPEED_RE.finditer(text):
+        down, up = m.groups()
+        down_int = int(down)
+
+        # Dedup on download speed only (typical vs max upload gives duplicates)
+        if down_int in seen_down:
             continue
 
-        speed_m = SPEED_RE.search(txt)
-        if not speed_m:
+        start = m.start()
+        end = min(start + 300, len(text))
+        window = text[start:end]
+
+        fn_m = FOR_N_THEN_RE.search(window)
+        if not fn_m:
             continue
 
-        down, up = speed_m.groups()
-        speed_tier = "NBN {}/{}".format(down, up)
+        promo_price = float(fn_m.group(1))
+        promo_months = int(fn_m.group(2))
+        regular_price = float(fn_m.group(3))
 
-        if speed_tier in seen_tiers:
-            continue
-
-        # Skip wireless/home starter names that aren't NBN plans
-        if "wireless" in txt.lower() or "starter" in txt.lower():
-            continue
-
-        prices = PRICE_RE.findall(txt)
-        if not prices:
-            continue
-
-        vals = sorted(set(float(p) for p in prices if float(p) > 1))
-        promo_months_m = PROMO_MONTHS_RE.search(txt)
-
-        regular_price = None
-        promo_price = None
-        promo_months = None
-
-        if len(vals) >= 2:
-            promo_price = vals[0]
-            regular_price = vals[1]
-        elif vals:
-            regular_price = vals[0]
-
-        if regular_price is None or regular_price <= 1:
-            continue
-
-        if promo_months_m:
-            promo_months = int(promo_months_m.group(1))
-
-        # Parse offer end date
-        offer_m = OFFER_ENDS_RE.search(txt)
+        offer_m = OFFER_ENDS_RE.search(window)
         promo_end_date = None
         if offer_m:
-            d, m, y = offer_m.groups()
-            promo_end_date = "20{}-{}-{}".format(y, m, d)
+            d, mm, y = offer_m.groups()
+            promo_end_date = "20{}-{}-{}".format(y, mm, d)
 
-        seen_tiers.add(speed_tier)
+        if regular_price <= 1:
+            continue
 
+        has_promo = promo_price < regular_price
+        seen_down.add(down_int)
         plans.append(
             NbnPlan(
                 provider=PROVIDER,
-                plan_name=speed_tier,
+                plan_name=f"NBN {down}/{up}",
                 price_monthly=regular_price,
-                promo_price=promo_price if promo_price and promo_price < regular_price else None,
-                promo_period_months=promo_months if (promo_price and promo_price < regular_price) else None,
-                promo_end_date=promo_end_date,
+                promo_price=promo_price if has_promo else None,
+                promo_period_months=promo_months if has_promo else None,
+                promo_end_date=promo_end_date if has_promo else None,
                 contract_length="No lock-in contract",
-                speed_tier=speed_tier,
-                tech_type=classify_tech_type(txt),
+                speed_tier=f"NBN {down}/{up}",
+                tech_type=classify_tech_type(window),
                 source_url=URL,
                 scraped_at=scraped_at,
             )
         )
 
+    if not plans:
+        raise RuntimeError("scrape() returned no plans")
     return plans
