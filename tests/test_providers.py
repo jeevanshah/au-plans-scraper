@@ -387,14 +387,28 @@ def test_vodafone_nbn(monkeypatch):
     monkeypatch.setattr(nbn_vodafone, "fetch_static", lambda url: _soup("vodafone_nbn.html"))
     plans = nbn_vodafone.scrape()
     assert len(plans) == 3
-    tiers = {p.speed_tier for p in plans}
-    assert "NBN 100/20" in tiers
-    assert "NBN 500/50" in tiers
-    assert "NBN 1000/50" in tiers
+    by_name = {p.plan_name: p for p in plans}
+    # Plan names read from page text, not derived from Mbps
+    assert "Home Fast" in by_name
+    assert "Home Superfast" in by_name
+    assert "Home Ultrafast" in by_name
+    # Speed tiers map correctly
+    assert by_name["Home Fast"].speed_tier == "NBN 100/20"
+    assert by_name["Home Superfast"].speed_tier == "NBN 500/50"
+    assert by_name["Home Ultrafast"].speed_tier == "NBN 1000/50"
+    # Prices: promo < regular for all
+    assert by_name["Home Ultrafast"].price_monthly == 104.0
+    assert by_name["Home Ultrafast"].promo_price == 89.0
+    assert by_name["Home Superfast"].price_monthly == 99.0
+    assert by_name["Home Superfast"].promo_price == 84.0
+    assert by_name["Home Fast"].price_monthly == 99.0
+    assert by_name["Home Fast"].promo_price == 84.0
+    # Promo months scoped per-tier, not whole-page
+    assert by_name["Home Fast"].promo_period_months == 12
+    assert by_name["Home Superfast"].promo_period_months == 12
+    assert by_name["Home Ultrafast"].promo_period_months == 12
     for p in plans:
         assert p.provider == "Vodafone"
-        assert p.price_monthly > 0
-        assert p.promo_price is not None
         assert p.promo_price < p.price_monthly
         assert p.contract_length == "Month-to-month"
 
