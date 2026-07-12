@@ -19,12 +19,15 @@ from scraper.providers.mobile import boost as mobile_boost
 from scraper.providers.mobile import dodo_mobile
 from scraper.providers.mobile import felix as mobile_felix
 from scraper.providers.mobile import kogan as mobile_kogan
+from scraper.providers.mobile import moose_mobile
 from scraper.providers.mobile import telstra as mobile_telstra
 from scraper.providers.mobile import tpg as mobile_tpg
 from scraper.providers.mobile import vodafone as mobile_vodafone
 from scraper.providers.nbn import aussie_broadband, dodo, exetel, iinet, superloop, tangerine
 from scraper.providers.nbn import spintel_nbn as nbn_spintel
 from scraper.providers.nbn import telstra as nbn_telstra
+from scraper.providers.nbn import tpg_nbn as nbn_tpg
+from scraper.providers.nbn import flip_nbn as nbn_flip
 from scraper.providers.nbn import vodafone_nbn as nbn_vodafone
 from scraper.schema import now_iso
 from scraper.transform import _make_id, mobile_plan_to_deal, nbn_plan_to_deal
@@ -56,6 +59,9 @@ PROVIDERS = [
     (mobile_aussiebb, "mobile", mobile_plan_to_deal),
     (nbn_vodafone, "nbn", nbn_plan_to_deal),
     (nbn_spintel, "nbn", nbn_plan_to_deal),
+    (nbn_tpg, "nbn", nbn_plan_to_deal),
+    (nbn_flip, "nbn", nbn_plan_to_deal),
+    (moose_mobile, "mobile", mobile_plan_to_deal),
 ]
 
 CONSECUTIVE_FAILURE_ISSUE_THRESHOLD = 3

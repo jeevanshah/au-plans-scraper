@@ -13,11 +13,14 @@ from scraper.providers.mobile import boost as mobile_boost
 from scraper.providers.mobile import aldimobile as mobile_aldi
 from scraper.providers.mobile import dodo_mobile
 from scraper.providers.mobile import aussie_broadband_mobile as mobile_aussie_broadband
+from scraper.providers.mobile import moose_mobile
 from scraper.providers.nbn import aussie_broadband, dodo, exetel, superloop, tangerine
 from scraper.providers.nbn import spintel_nbn as nbn_spintel
 from scraper.providers.nbn import telstra as nbn_telstra
 from scraper.providers.nbn import iinet as nbn_iinet
 from scraper.providers.nbn import vodafone_nbn as nbn_vodafone
+from scraper.providers.nbn import tpg_nbn as nbn_tpg
+from scraper.providers.nbn import flip_nbn as nbn_flip
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -332,6 +335,18 @@ def test_boost_dedup_prevents_duplicate_cards(monkeypatch):
     assert len(plans) == 12
 
 
+def test_boost_id_disambiguates_same_gb_different_expiry(monkeypatch):
+    """Regression: _make_id() must not collide for two distinct plans that
+    share a data allowance but differ in contract length (e.g. Boost's
+    160GB/28-day and 160GB/186-day tiers) -- see transform.py's id_key."""
+    monkeypatch.setattr(mobile_boost, "fetch_static", lambda url: _soup("boost_mobile.html"))
+    plans = mobile_boost.scrape()
+    same_gb = [p for p in plans if p.data_allowance_gb == 160.0]
+    assert len(same_gb) == 2
+    ids = {mobile_plan_to_deal(p)["id"] for p in same_gb}
+    assert len(ids) == 2, "160GB/28-day and 160GB/186-day must not collide on id"
+
+
 def test_aldi_mobile(monkeypatch):
     monkeypatch.setattr(mobile_aldi, "fetch_static", lambda url: _soup("aldi_mobile.html"))
     plans = mobile_aldi.scrape()
@@ -365,6 +380,30 @@ def test_dodo_mobile(monkeypatch):
         assert p.contract_length == "Month-to-month"
 
 
+def test_dodo_mobile_ignores_decoy_price_before_gb_figure(monkeypatch):
+    """Regression: a promo-tile's price extraction must anchor to the
+    GB-figure...'/mth' window, not a blind scan of the whole tile's text --
+    otherwise a decoy dollar amount elsewhere in the tile (e.g. an add-on
+    fee mentioned before the plan's own price) could get picked up as the
+    'regular' price instead of the real one."""
+    html = '''
+    <div class="plan-tile">
+      $5 setup fee waived this month only
+      30% OFF FOR FIRST 3 MONTHS 60GB $50.00 $35 /mth
+      Network 5G Network Max 150Mbps Includes Unlimited Data
+      banking $999 international call credit
+    </div>
+    '''
+    soup = BeautifulSoup(html, "lxml")
+    monkeypatch.setattr(dodo_mobile, "fetch_static", lambda url: soup)
+    plans = dodo_mobile.scrape()
+    assert len(plans) == 1
+    plan = plans[0]
+    assert plan.price_monthly == 50.0
+    assert plan.promo_price == 35.0
+    assert plan.promo_period_months == 3
+
+
 def test_aussie_broadband_mobile(monkeypatch):
     monkeypatch.setattr(mobile_aussie_broadband, "fetch_static", lambda url: _soup("aussiebb_mobile.html"))
     plans = mobile_aussie_broadband.scrape()
@@ -386,31 +425,114 @@ def test_aussie_broadband_mobile(monkeypatch):
 def test_vodafone_nbn(monkeypatch):
     monkeypatch.setattr(nbn_vodafone, "fetch_static", lambda url: _soup("vodafone_nbn.html"))
     plans = nbn_vodafone.scrape()
-    assert len(plans) == 3
+    # 7 raw entries in the page's __NEXT_DATA__, but one is flagged
+    # isDuplicatePlan and one isInterimPlan -- 5 real orderable tiers remain.
+    assert len(plans) == 5
     by_name = {p.plan_name: p for p in plans}
-    # Plan names read from page text, not derived from Mbps
-    assert "Home Fast" in by_name
-    assert "Home Superfast" in by_name
-    assert "Home Ultrafast" in by_name
-    # Speed tiers map correctly
-    assert by_name["Home Fast"].speed_tier == "NBN 100/20"
-    assert by_name["Home Superfast"].speed_tier == "NBN 500/50"
-    assert by_name["Home Ultrafast"].speed_tier == "NBN 1000/50"
-    # Prices: promo < regular for all
-    assert by_name["Home Ultrafast"].price_monthly == 104.0
-    assert by_name["Home Ultrafast"].promo_price == 89.0
-    assert by_name["Home Superfast"].price_monthly == 99.0
-    assert by_name["Home Superfast"].promo_price == 84.0
-    assert by_name["Home Fast"].price_monthly == 99.0
-    assert by_name["Home Fast"].promo_price == 84.0
-    # Promo months scoped per-tier, not whole-page
-    assert by_name["Home Fast"].promo_period_months == 12
-    assert by_name["Home Superfast"].promo_period_months == 12
-    assert by_name["Home Ultrafast"].promo_period_months == 12
+    # Plan names read directly from the page's own plan data (customPlanName),
+    # not derived/guessed from a Mbps value
+    assert set(by_name) == {
+        "nbn Home Ultrafast", "nbn Home Superfast", "nbn Home Fast+",
+        "nbn Essential+", "nbn Essential",
+    }
+    # Speed tiers are the page's own maxConnectionSpeed field, not a
+    # hardcoded Mbps->label map
+    assert by_name["nbn Home Ultrafast"].speed_tier == "NBN 1000/100"
+    assert by_name["nbn Home Superfast"].speed_tier == "NBN 750/50"
+    assert by_name["nbn Home Fast+"].speed_tier == "NBN 500/50"
+    assert by_name["nbn Essential+"].speed_tier == "NBN 50/20"
+    assert by_name["nbn Essential"].speed_tier == "NBN 25/10"
+    # Prices: regular (recurringCharge) vs promo (discountedRecurringCharge)
+    assert by_name["nbn Home Ultrafast"].price_monthly == 114.0
+    assert by_name["nbn Home Ultrafast"].promo_price == 99.0
+    assert by_name["nbn Home Superfast"].price_monthly == 104.0
+    assert by_name["nbn Home Superfast"].promo_price == 89.0
+    assert by_name["nbn Essential"].price_monthly == 84.0
+    assert by_name["nbn Essential"].promo_price == 74.0
+    # Promo months genuinely differ per tier (proves per-tier scoping, not
+    # one whole-page value applied to everything): the top 3 tiers have an
+    # explicit "for 12 months" promo, Essential/Essential+ only have an
+    # unconditional bundle discount with no stated duration.
+    assert by_name["nbn Home Ultrafast"].promo_period_months == 12
+    assert by_name["nbn Home Superfast"].promo_period_months == 12
+    assert by_name["nbn Home Fast+"].promo_period_months == 12
+    assert by_name["nbn Essential+"].promo_period_months is None
+    assert by_name["nbn Essential"].promo_period_months is None
     for p in plans:
         assert p.provider == "Vodafone"
         assert p.promo_price < p.price_monthly
         assert p.contract_length == "Month-to-month"
+
+
+def test_tpg_nbn(monkeypatch):
+    monkeypatch.setattr(nbn_tpg, "fetch_static", lambda url: _soup("tpg_nbn.html"))
+    plans = nbn_tpg.scrape()
+    # 6 genuine NBN "_Bundle_" tiers -- wireless-alternative products (5G
+    # Plus/Premium, "FTTB Max"/FTTB25/FTTB100, Home Wireless Broadband) and
+    # duplicate tech-variant cards (FTTC/Fibre/FTTB/HFC/Wireless) are excluded
+    assert len(plans) == 6
+    by_name = {p.plan_name: p for p in plans}
+    assert set(by_name) == {
+        "NBN100", "NBN500", "NBN25", "NBN50",
+        "NBN Home Superfast", "NBN Home Ultrafast",
+    }
+    # Prices read from the getDollars('promo') : getDollars('regular')
+    # ternary embedded in the (unresolved) template source, not a plain
+    # "$X/mth" text search -- that text pattern doesn't exist on this page
+    assert by_name["NBN25"].price_monthly == 79.99
+    assert by_name["NBN25"].promo_price == 59.99
+    assert by_name["NBN25"].promo_period_months == 6
+    assert by_name["NBN100"].price_monthly == 94.99
+    assert by_name["NBN100"].promo_price == 69.99
+    assert by_name["NBN100"].promo_period_months == 12
+    assert by_name["NBN Home Ultrafast"].price_monthly == 114.99
+    assert by_name["NBN Home Ultrafast"].promo_price == 84.99
+    for p in plans:
+        assert p.provider == "TPG"
+        assert p.promo_price < p.price_monthly
+        assert p.tech_type == "Fibre and FTTN"
+
+
+def test_flip_nbn(monkeypatch):
+    monkeypatch.setattr(nbn_flip, "fetch_js", lambda url, **kw: _soup("flip_nbn.html"))
+    plans = nbn_flip.scrape()
+    # 3 real cards from the plans-scroll-inner carousel (a precise DOM
+    # anchor -- not the old page-wide div/section/article scan)
+    assert len(plans) == 3
+    by_name = {p.plan_name: p for p in plans}
+    assert set(by_name) == {"Premium", "Family", "Fast Speed"}
+    # Regular price comes from "then $X ongoing" text, not guessed from
+    # number size -- promo price is always the SMALLER number here, but the
+    # extraction doesn't rely on that coincidence
+    assert by_name["Premium"].price_monthly == 65.9
+    assert by_name["Premium"].promo_price == 48.0
+    assert by_name["Premium"].promo_period_months == 6
+    assert by_name["Premium"].speed_tier == "NBN 25/8"
+    assert by_name["Family"].speed_tier == "NBN 50/17"
+    assert by_name["Fast Speed"].speed_tier == "NBN 500/42"
+    for p in plans:
+        assert p.provider == "Flip"
+        assert p.promo_price < p.price_monthly
+
+
+def test_moose_mobile(monkeypatch):
+    monkeypatch.setattr(moose_mobile, "fetch_js", lambda url, **kw: _soup("moose_mobile.html"))
+    plans = moose_mobile.scrape()
+    # 4 real cards from the Swiper.js carousel (card-mobile class) -- a
+    # precise DOM anchor, not the old page-wide div/article/section scan
+    assert len(plans) == 4
+    by_gb = {p.data_allowance_gb: p for p in plans}
+    assert set(by_gb) == {30.0, 50.0, 100.0, 250.0}
+    assert by_gb[30.0].price_monthly == 24.8
+    assert by_gb[30.0].network_tech == "4G"
+    assert by_gb[50.0].price_monthly == 32.8
+    assert by_gb[50.0].network_tech == "5G"
+    assert by_gb[250.0].price_monthly == 49.8
+    for p in plans:
+        assert p.provider == "Moose Mobile"
+        assert p.network == "Vodafone"
+        # No promo structure on these plans -- flat pricing only
+        assert p.promo_price is None
 
 
 def test_spintel_nbn(monkeypatch):

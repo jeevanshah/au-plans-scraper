@@ -49,13 +49,24 @@ two fields get extracted per provider.
 
 ## Providers
 
-**NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel, iiNet
-**Mobile:** TPG, Telstra, amaysim, Vodafone, Kogan Mobile, Felix, Boost Mobile, ALDImobile
+**NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel, iiNet,
+Vodafone, SpinTel, TPG, Flip
+**Mobile:** TPG, Telstra, amaysim, Vodafone, Kogan Mobile, Felix, Boost Mobile,
+ALDImobile, Dodo, Aussie Broadband, Moose Mobile
 
-Dropped: Circles.Life (exited the Australian market in 2025, acquired by amaysim); Flip
-(not actually an NBN/broadband provider -- a logistics company, unrelated);
+Note some providers appear in both lists under separate scraper modules for
+their NBN and mobile product lines (e.g. Dodo NBN vs. Dodo Mobile, Vodafone
+NBN vs. Vodafone Mobile) -- these are different pages/pricing, not duplicates.
+
+Dropped: Circles.Life (exited the Australian market in 2025, acquired by amaysim);
 MyRepublic (exited the AU NBN market in Dec 2022/Jan 2023, all URLs return HTTP 530 --
 not a scraping gap, there is no product to scrape).
+
+Correction: Flip was previously listed here as dropped ("not actually an
+NBN/broadband provider -- a logistics company, unrelated"). That was wrong --
+Flip (flipconnect.com.au) is a real, currently-operating budget NBN retailer
+and is now scraped like any other provider.
+
 Held back (needs real anti-bot/browser-fingerprint handling, not scrapeable with
 `fetch_static`/`fetch_js` as-is): Belong, Optus, Southern Phone, Woolworths
 Mobile/everyday -- see `scraper/providers/` for what's implemented so far.
@@ -90,7 +101,9 @@ provider recovers) so staleness doesn't go unnoticed.
 
 ## Scheduling
 
-The workflow (`.github/workflows/scrape.yml`) currently runs on `workflow_dispatch`
-(manual trigger) only. Once the pilot providers have proven stable across a few
-manual runs, uncomment the `schedule:` cron block to run it automatically (daily
-recommended, given the low request volume).
+The workflow (`.github/workflows/scrape.yml`) runs daily at 12:00am AEST
+(`cron: '0 14 * * *'`, UTC+10) in addition to `workflow_dispatch` for manual
+runs. GitHub Actions cron is UTC-only and not DST-aware, so during AEDT
+(UTC+11, roughly early Oct-early Apr) this fires at 1:00am local time
+instead -- a 1-hour drift for about 5 months of the year, acceptable for a
+daily data-freshness job.

@@ -1,78 +1,86 @@
-"""Vodafone NBN plans scraper. Static HTML.
+"""Vodafone NBN plans scraper.
 
-3 known tiers: Home Fast (98 Mbps → NBN 100/20), Home Superfast (500 Mbps →
-NBN 500/50), Home Ultrafast (740 Mbps → NBN 1000/50). Plan-names read from
-heading labels in page text.
+Vodafone's NBN page embeds a Next.js `__NEXT_DATA__` JSON blob
+(pageProps.plansResponseNbn.planListing.plans) with clean, already-labeled
+fields per plan -- customPlanName, recurringCharge (regular price),
+discountedRecurringCharge (promo price), maxConnectionSpeed (the real "NBN
+X/Y" nominal tier label), and a promotions list with the intro-discount
+duration. Parsing this directly is far more reliable than regexing the
+rendered page text (no hardcoded Mbps->tier-name map, no risk of decoy
+prices/text elsewhere on the page bleeding into extraction).
 
-Pricing: "$X Per month $Y" paired structure. Promo months extracted from
-context near each tier match (not whole-page).
+Each plan carries `isDuplicatePlan` / `isInterimPlan` / `isTrialPlan` flags
+in the source data itself -- these are Vodafone's own signal for SKUs that
+aren't real, currently-orderable branded tiers (e.g. a legacy "pre-fibre
+interim" plan, or a duplicate listing of another tier), so they're skipped
+rather than guessed at.
 """
+import json
 import re
 
-from scraper.base import classify_tech_type, fetch_static
+from scraper.base import fetch_static
 from scraper.schema import NbnPlan, now_iso
 
 PROVIDER = "Vodafone"
 URL = "https://www.vodafone.com.au/home-internet/nbn"
 REQUIRES_JS = False
 
-# Known Vodafone Mbps values and their tier names
-TIER_MAP = {
-    98:  ("NBN 100/20", "Home Fast"),
-    500: ("NBN 500/50", "Home Superfast"),
-    740: ("NBN 1000/50", "Home Ultrafast"),
-}
-
-# "$X Per month $Y" within 2 lines of a Mbps value
-PRICE_MBPS_RE = re.compile(
-    r"(\d+)\s*Mbps\s+Typical\s+evening\s+speed.*?"
-    r"\$\s*(\d+)\s*[Pp]er\s+month\s+\$\s*(\d+)", re.I
-)
-PROMO_MONTHS_RE = re.compile(
-    r"(?:save|off)\s+\$?\d+/?mth\s+for\s+(\d+)\s+months?", re.I
-)
+PROMO_MONTHS_RE = re.compile(r"for\s+(\d+)\s+months?", re.I)
 
 
-def scrape():
+def _plan_promo_months(plan: dict) -> int | None:
+    """First promotion whose title states an explicit "for N months" duration.
+    Plans can have zero, one, or several promotions (e.g. a permanent
+    bundle discount alongside a time-limited intro discount) -- only a
+    stated duration counts as promo_period_months."""
+    for promo in plan.get("promotions", []):
+        match = PROMO_MONTHS_RE.search(promo.get("title", ""))
+        if match:
+            return int(match.group(1))
+    return None
+
+
+def scrape() -> list[NbnPlan]:
     soup = fetch_static(URL)
     scraped_at = now_iso()
-    text = soup.get_text(" ", strip=True)
+
+    script_tag = soup.find("script", id="__NEXT_DATA__")
+    if script_tag is None or not script_tag.string:
+        raise RuntimeError("scrape() could not find the __NEXT_DATA__ script tag")
+
+    data = json.loads(script_tag.string)
+    try:
+        raw_plans = data["props"]["pageProps"]["plansResponseNbn"]["planListing"]["plans"]
+    except (KeyError, TypeError) as exc:
+        raise RuntimeError(f"scrape() could not locate plans in __NEXT_DATA__: {exc}")
 
     plans = []
-    seen_mbps = set()
-
-    for m in PRICE_MBPS_RE.finditer(text):
-        mbps = int(m.group(1))
-
-        # Only process known Vodafone tiers
-        if mbps not in TIER_MAP:
-            continue
-        if mbps in seen_mbps:
+    for p in raw_plans:
+        if p.get("isDuplicatePlan") or p.get("isInterimPlan") or p.get("isTrialPlan"):
             continue
 
-        tier, plan_name = TIER_MAP[mbps]
-        promo_val = float(m.group(2))
-        regular_val = float(m.group(3))
+        regular = p.get("recurringCharge")
+        discounted = p.get("discountedRecurringCharge")
+        speed_tier = p.get("maxConnectionSpeed")
+        plan_name = p.get("customPlanName") or p.get("planName")
+        typical_evening = p.get("connectionSpeed")
 
-        # Scope promo months to text window around this tier
-        ctx_start = max(0, m.start() - 1000)
-        ctx_end = min(len(text), m.end() + 1000)
-        ctx = text[ctx_start:ctx_end]
-        pm_m = PROMO_MONTHS_RE.search(ctx)
-        promo_months = int(pm_m.group(1)) if pm_m else None
+        if regular is None or not speed_tier or not plan_name:
+            continue
 
-        seen_mbps.add(mbps)
+        has_promo = discounted is not None and discounted < regular
+
         plans.append(
             NbnPlan(
                 provider=PROVIDER,
-                plan_name=plan_name,
-                price_monthly=regular_val,
-                promo_price=promo_val,
-                promo_period_months=promo_months,
+                plan_name=plan_name.replace("®", "").strip(),
+                price_monthly=float(regular),
+                promo_price=float(discounted) if has_promo else None,
+                promo_period_months=_plan_promo_months(p) if has_promo else None,
                 contract_length="Month-to-month",
-                speed_tier=tier,
-                typical_evening_speed_mbps=float(mbps),
-                tech_type=classify_tech_type(ctx),
+                speed_tier=f"NBN {speed_tier}",
+                typical_evening_speed_mbps=float(typical_evening) if typical_evening else None,
+                tech_type=None,
                 source_url=URL,
                 scraped_at=scraped_at,
             )

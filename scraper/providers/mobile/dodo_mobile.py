@@ -3,6 +3,16 @@
 Dodo mobile runs on the Optus network. Cards use 'plan-tile' class.
 Promo tiles have "X% OFF FOR FIRST N MONTHS" banner; non-promo tiles have
 single price. Offer end date in "Offer ends DD Mon YYYY" format.
+
+Price extraction is scoped to the text between the GB figure and the
+"/mth" unit label (PRICE_BLOCK_RE) -- tiles also mention unrelated dollar
+amounts later on (e.g. "$200 international call credit", "$10/1GB daily
+roaming") which a page-wide/tile-wide dollar search would also match.
+Within that scoped block: the first amount is the "was" comparison price
+(only present on promo tiles), and the amount immediately preceding "/mth"
+is what's actually charged now -- anchored to that structural position,
+not to numeric size, since the true relationship isn't "the smaller of two
+numbers" but "whichever price is right before the /mth unit label."
 """
 import re
 
@@ -14,6 +24,7 @@ URL = "https://www.dodo.com/mobile"
 REQUIRES_JS = False
 
 GB_RE = re.compile(r"(\d+)\s*GB", re.I)
+PRICE_BLOCK_RE = re.compile(r"\d+\s*GB\s+(.*?/mth)", re.I | re.S)
 DOLLAR_RE = re.compile(r"\$\s*(\d+\.?\d*)")
 PROMO_BANNER_RE = re.compile(r"(?:(\d+)%\s*OFF\s+FOR\s+FIRST\s+(\d+)\s+MONTHS)", re.I)
 OFFER_ENDS_RE = re.compile(
@@ -60,8 +71,17 @@ def scrape():
 
         # Detect promo banner: "50% OFF FOR FIRST 6 MONTHS"
         promo_banner = PROMO_BANNER_RE.search(txt)
-        prices = DOLLAR_RE.findall(txt)
+
+        # Scope price extraction to the GB-figure...through..."/mth" window --
+        # everything after "/mth" (call credits, roaming rates) is noise that
+        # a tile-wide dollar search would otherwise also pick up.
+        price_block_m = PRICE_BLOCK_RE.search(txt)
+        if not price_block_m:
+            continue
+        prices = DOLLAR_RE.findall(price_block_m.group(1))
         vals = [float(p) for p in prices if float(p) > 1]
+        if not vals:
+            continue
 
         price_monthly = None
         promo_price = None
@@ -69,18 +89,18 @@ def scrape():
 
         if promo_banner:
             promo_pct, promo_months = int(promo_banner.group(1)), int(promo_banner.group(2))
-            # Promo tile: first dollar after GB is undiscounted/strikethrough,
-            # second is the discounted price
             if len(vals) >= 2:
-                price_monthly = max(vals[0], vals[1])
-                promo_price = min(vals[0], vals[1])
-            elif vals:
+                # First amount in the scoped block is the "was" comparison
+                # price; the one immediately preceding "/mth" (last in this
+                # window) is what's actually charged now.
+                price_monthly = vals[0]
+                promo_price = vals[-1]
+            else:
                 price_monthly = vals[0]
                 promo_price = vals[0] * (1 - promo_pct / 100)
         else:
             # No promo banner — single price
-            if vals:
-                price_monthly = vals[0]
+            price_monthly = vals[0]
 
         if price_monthly is None or price_monthly <= 1:
             continue

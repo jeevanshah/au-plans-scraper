@@ -510,7 +510,7 @@
     "_source": "iiNet official site, verified 2026-07-12"
   },
   {
-    "id": "tpg-25gb-2026-07",
+    "id": "tpg-25gb-month-to-month-2026-07",
     "provider": "TPG",
     "title": "Small Plan 25GB",
     "category": "Utilities",
@@ -527,7 +527,7 @@
     "_source": "TPG official site, verified 2026-07-12"
   },
   {
-    "id": "tpg-50gb-2026-07",
+    "id": "tpg-50gb-month-to-month-2026-07",
     "provider": "TPG",
     "title": "Medium Plan 50GB",
     "category": "Utilities",
@@ -544,7 +544,7 @@
     "_source": "TPG official site, verified 2026-07-12"
   },
   {
-    "id": "tpg-100gb-2026-07",
+    "id": "tpg-100gb-month-to-month-2026-07",
     "provider": "TPG",
     "title": "Large Plan 100GB",
     "category": "Utilities",
@@ -561,7 +561,7 @@
     "_source": "TPG official site, verified 2026-07-12"
   },
   {
-    "id": "telstra-50gb-2026-07",
+    "id": "telstra-50gb-month-to-month-2026-07",
     "provider": "Telstra",
     "title": "Basic 50GB",
     "category": "Utilities",
@@ -578,7 +578,7 @@
     "_source": "Telstra official site, verified 2026-07-12"
   },
   {
-    "id": "telstra-180gb-2026-07",
+    "id": "telstra-180gb-month-to-month-2026-07",
     "provider": "Telstra",
     "title": "Essential 180GB",
     "category": "Utilities",
@@ -595,7 +595,7 @@
     "_source": "Telstra official site, verified 2026-07-12"
   },
   {
-    "id": "telstra-300gb-2026-07",
+    "id": "telstra-300gb-month-to-month-2026-07",
     "provider": "Telstra",
     "title": "Premium 300GB",
     "category": "Utilities",
@@ -612,7 +612,7 @@
     "_source": "Telstra official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-42gb-2026-07",
+    "id": "amaysim-42gb-28-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "42GB 42GB",
     "category": "Utilities",
@@ -629,7 +629,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-80gb-2026-07",
+    "id": "amaysim-80gb-28-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "80GB 80GB",
     "category": "Utilities",
@@ -646,7 +646,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-120gb-2026-07",
+    "id": "amaysim-120gb-28-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "120GB 120GB",
     "category": "Utilities",
@@ -663,7 +663,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-95gb-2026-07",
+    "id": "amaysim-95gb-28-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "95GB 95GB",
     "category": "Utilities",
@@ -680,7 +680,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-15gb-2026-07",
+    "id": "amaysim-15gb-28-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "15GB 15GB",
     "category": "Utilities",
@@ -697,7 +697,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-240gb-2026-07",
+    "id": "amaysim-240gb-365-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "240GB 240GB",
     "category": "Utilities",
@@ -714,7 +714,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-150gb-2026-07",
+    "id": "amaysim-150gb-184-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "150GB 150GB",
     "category": "Utilities",
@@ -731,7 +731,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-200gb-2026-07",
+    "id": "amaysim-200gb-365-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "200GB 200GB",
     "category": "Utilities",
@@ -748,7 +748,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-30gb-2026-07",
+    "id": "amaysim-30gb-28-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "30GB 30GB",
     "category": "Utilities",
@@ -765,7 +765,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-100gb-2026-07",
+    "id": "amaysim-100gb-28-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "100GB 100GB",
     "category": "Utilities",
@@ -782,7 +782,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-365gb-2026-07",
+    "id": "amaysim-365gb-365-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "365GB 365GB",
     "category": "Utilities",
@@ -799,7 +799,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "amaysim-10gb-2026-07",
+    "id": "amaysim-10gb-7-day-expiry-2026-07",
     "provider": "amaysim",
     "title": "10GB 10GB",
     "category": "Utilities",
@@ -816,7 +816,7 @@
     "_source": "amaysim official site, verified 2026-07-12"
   },
   {
-    "id": "vodafone-65gb-2026-07",
+    "id": "vodafone-65gb-month-to-month-2026-07",
     "provider": "Vodafone",
     "title": "Small Plan 65GB",
     "category": "Utilities",
@@ -833,7 +833,7 @@
     "_source": "Vodafone official site, verified 2026-07-12"
   },
   {
-    "id": "vodafone-220gb-2026-07",
+    "id": "vodafone-220gb-month-to-month-2026-07",
     "provider": "Vodafone",
     "title": "Medium Plan 220GB",
     "category": "Utilities",
@@ -850,7 +850,7 @@
     "_source": "Vodafone official site, verified 2026-07-12"
   },
   {
-    "id": "vodafone-420gb-2026-07",
+    "id": "vodafone-420gb-month-to-month-2026-07",
     "provider": "Vodafone",
     "title": "Large Plan 420GB",
     "category": "Utilities",
@@ -867,7 +867,7 @@
     "_source": "Vodafone official site, verified 2026-07-12"
   },
   {
-    "id": "kogan-mobile-60gb-2026-07",
+    "id": "kogan-mobile-60gb-month-to-month-2026-07",
     "provider": "Kogan Mobile",
     "title": "60GB 60GB",
     "category": "Utilities",
@@ -884,7 +884,7 @@
     "_source": "Kogan Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "kogan-mobile-250gb-2026-07",
+    "id": "kogan-mobile-250gb-365-day-expiry-2026-07",
     "provider": "Kogan Mobile",
     "title": "250GB 250GB",
     "category": "Utilities",
@@ -901,7 +901,7 @@
     "_source": "Kogan Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "kogan-mobile-350gb-2026-07",
+    "id": "kogan-mobile-350gb-365-day-expiry-2026-07",
     "provider": "Kogan Mobile",
     "title": "350GB 350GB",
     "category": "Utilities",
@@ -918,7 +918,7 @@
     "_source": "Kogan Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "kogan-mobile-500gb-2026-07",
+    "id": "kogan-mobile-500gb-365-day-expiry-2026-07",
     "provider": "Kogan Mobile",
     "title": "500GB 500GB",
     "category": "Utilities",
@@ -935,7 +935,7 @@
     "_source": "Kogan Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "kogan-mobile-15gb-2026-07",
+    "id": "kogan-mobile-15gb-month-to-month-2026-07",
     "provider": "Kogan Mobile",
     "title": "15GB 15GB",
     "category": "Utilities",
@@ -952,7 +952,7 @@
     "_source": "Kogan Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "kogan-mobile-80gb-2026-07",
+    "id": "kogan-mobile-80gb-month-to-month-2026-07",
     "provider": "Kogan Mobile",
     "title": "80GB 80GB",
     "category": "Utilities",
@@ -969,7 +969,7 @@
     "_source": "Kogan Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "kogan-mobile-140gb-2026-07",
+    "id": "kogan-mobile-140gb-month-to-month-2026-07",
     "provider": "Kogan Mobile",
     "title": "140GB 140GB",
     "category": "Utilities",
@@ -986,7 +986,7 @@
     "_source": "Kogan Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "felix-25gb-2026-07",
+    "id": "felix-25gb-month-to-month-2026-07",
     "provider": "Felix",
     "title": "25GB 25GB",
     "category": "Utilities",
@@ -1003,7 +1003,7 @@
     "_source": "Felix official site, verified 2026-07-12"
   },
   {
-    "id": "felix-50gb-2026-07",
+    "id": "felix-50gb-month-to-month-2026-07",
     "provider": "Felix",
     "title": "50GB 50GB",
     "category": "Utilities",
@@ -1020,7 +1020,7 @@
     "_source": "Felix official site, verified 2026-07-12"
   },
   {
-    "id": "felix-unlimited-2026-07",
+    "id": "felix-unlimited-month-to-month-2026-07",
     "provider": "Felix",
     "title": "Unlimited Unlimited",
     "category": "Utilities",
@@ -1037,7 +1037,7 @@
     "_source": "Felix official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-21gb-2026-07",
+    "id": "boost-mobile-21gb-28-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "21GB 21GB",
     "category": "Utilities",
@@ -1054,7 +1054,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-80gb-2026-07",
+    "id": "boost-mobile-80gb-28-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "80GB 80GB",
     "category": "Utilities",
@@ -1071,7 +1071,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-110gb-2026-07",
+    "id": "boost-mobile-110gb-28-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "110GB 110GB",
     "category": "Utilities",
@@ -1088,7 +1088,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-125gb-2026-07",
+    "id": "boost-mobile-125gb-28-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "125GB 125GB",
     "category": "Utilities",
@@ -1105,7 +1105,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-160gb-2026-07",
+    "id": "boost-mobile-160gb-28-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "160GB 160GB",
     "category": "Utilities",
@@ -1122,7 +1122,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-160gb-2026-07",
+    "id": "boost-mobile-160gb-186-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "160GB 160GB",
     "category": "Utilities",
@@ -1139,7 +1139,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-295gb-2026-07",
+    "id": "boost-mobile-295gb-365-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "295GB 295GB",
     "category": "Utilities",
@@ -1156,7 +1156,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-375gb-2026-07",
+    "id": "boost-mobile-375gb-365-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "375GB 375GB",
     "category": "Utilities",
@@ -1173,7 +1173,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-8gb-2026-07",
+    "id": "boost-mobile-8gb-7-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "8GB 8GB",
     "category": "Utilities",
@@ -1190,7 +1190,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-7gb-2026-07",
+    "id": "boost-mobile-7gb-14-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "7GB 7GB",
     "category": "Utilities",
@@ -1207,7 +1207,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-5gb-2026-07",
+    "id": "boost-mobile-5gb-7-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "5GB 5GB",
     "category": "Utilities",
@@ -1224,7 +1224,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "boost-mobile-2gb-2026-07",
+    "id": "boost-mobile-2gb-3-day-expiry-2026-07",
     "provider": "Boost Mobile",
     "title": "2GB 2GB",
     "category": "Utilities",
@@ -1241,7 +1241,7 @@
     "_source": "Boost Mobile official site, verified 2026-07-12"
   },
   {
-    "id": "aldimobile-12gb-2026-07",
+    "id": "aldimobile-12gb-30-day-expiry-2026-07",
     "provider": "ALDImobile",
     "title": "12GB 12GB",
     "category": "Utilities",
@@ -1258,7 +1258,7 @@
     "_source": "ALDImobile official site, verified 2026-07-12"
   },
   {
-    "id": "aldimobile-29gb-2026-07",
+    "id": "aldimobile-29gb-30-day-expiry-2026-07",
     "provider": "ALDImobile",
     "title": "29GB 29GB",
     "category": "Utilities",
@@ -1275,7 +1275,7 @@
     "_source": "ALDImobile official site, verified 2026-07-12"
   },
   {
-    "id": "aldimobile-75gb-2026-07",
+    "id": "aldimobile-75gb-30-day-expiry-2026-07",
     "provider": "ALDImobile",
     "title": "75GB 75GB",
     "category": "Utilities",
@@ -1292,7 +1292,7 @@
     "_source": "ALDImobile official site, verified 2026-07-12"
   },
   {
-    "id": "aldimobile-120gb-2026-07",
+    "id": "aldimobile-120gb-30-day-expiry-2026-07",
     "provider": "ALDImobile",
     "title": "120GB 120GB",
     "category": "Utilities",
@@ -1309,7 +1309,7 @@
     "_source": "ALDImobile official site, verified 2026-07-12"
   },
   {
-    "id": "aldimobile-175gb-2026-07",
+    "id": "aldimobile-175gb-30-day-expiry-2026-07",
     "provider": "ALDImobile",
     "title": "175GB 175GB",
     "category": "Utilities",
@@ -1326,7 +1326,7 @@
     "_source": "ALDImobile official site, verified 2026-07-12"
   },
   {
-    "id": "aldimobile-30gb-2026-07",
+    "id": "aldimobile-30gb-365-day-expiry-2026-07",
     "provider": "ALDImobile",
     "title": "30GB 30GB",
     "category": "Utilities",
@@ -1343,7 +1343,7 @@
     "_source": "ALDImobile official site, verified 2026-07-12"
   },
   {
-    "id": "aldimobile-185gb-2026-07",
+    "id": "aldimobile-185gb-365-day-expiry-2026-07",
     "provider": "ALDImobile",
     "title": "185GB 185GB",
     "category": "Utilities",
@@ -1360,7 +1360,7 @@
     "_source": "ALDImobile official site, verified 2026-07-12"
   },
   {
-    "id": "aldimobile-365gb-2026-07",
+    "id": "aldimobile-365gb-365-day-expiry-2026-07",
     "provider": "ALDImobile",
     "title": "365GB 365GB",
     "category": "Utilities",
@@ -1377,7 +1377,7 @@
     "_source": "ALDImobile official site, verified 2026-07-12"
   },
   {
-    "id": "aldimobile-300gb-2026-07",
+    "id": "aldimobile-300gb-365-day-expiry-2026-07",
     "provider": "ALDImobile",
     "title": "300GB 300GB",
     "category": "Utilities",
@@ -1394,7 +1394,7 @@
     "_source": "ALDImobile official site, verified 2026-07-12"
   },
   {
-    "id": "dodo-25gb-2026-07",
+    "id": "dodo-25gb-month-to-month-2026-07",
     "provider": "Dodo",
     "title": "25GB 25GB",
     "category": "Utilities",
@@ -1411,7 +1411,7 @@
     "_source": "Dodo official site, verified 2026-07-12"
   },
   {
-    "id": "dodo-40gb-2026-07",
+    "id": "dodo-40gb-month-to-month-2026-07",
     "provider": "Dodo",
     "title": "40GB 40GB",
     "category": "Utilities",
@@ -1428,7 +1428,7 @@
     "_source": "Dodo official site, verified 2026-07-12"
   },
   {
-    "id": "dodo-80gb-2026-07",
+    "id": "dodo-80gb-month-to-month-2026-07",
     "provider": "Dodo",
     "title": "80GB 80GB",
     "category": "Utilities",
@@ -1445,7 +1445,7 @@
     "_source": "Dodo official site, verified 2026-07-12"
   },
   {
-    "id": "aussie-broadband-20gb-2026-07",
+    "id": "aussie-broadband-20gb-month-to-month-2026-07",
     "provider": "Aussie Broadband",
     "title": "20GB 20GB",
     "category": "Utilities",
@@ -1462,7 +1462,7 @@
     "_source": "Aussie Broadband official site, verified 2026-07-12"
   },
   {
-    "id": "aussie-broadband-45gb-2026-07",
+    "id": "aussie-broadband-45gb-month-to-month-2026-07",
     "provider": "Aussie Broadband",
     "title": "45GB 45GB",
     "category": "Utilities",
@@ -1479,7 +1479,7 @@
     "_source": "Aussie Broadband official site, verified 2026-07-12"
   },
   {
-    "id": "aussie-broadband-100gb-2026-07",
+    "id": "aussie-broadband-100gb-month-to-month-2026-07",
     "provider": "Aussie Broadband",
     "title": "100GB 100GB",
     "category": "Utilities",
@@ -1496,7 +1496,7 @@
     "_source": "Aussie Broadband official site, verified 2026-07-12"
   },
   {
-    "id": "aussie-broadband-180gb-2026-07",
+    "id": "aussie-broadband-180gb-month-to-month-2026-07",
     "provider": "Aussie Broadband",
     "title": "180GB 180GB",
     "category": "Utilities",
@@ -1513,18 +1513,35 @@
     "_source": "Aussie Broadband official site, verified 2026-07-12"
   },
   {
-    "id": "vodafone-nbn-1000-50-2026-07",
+    "id": "vodafone-nbn-1000-100-2026-07",
     "provider": "Vodafone",
-    "title": "Home Ultrafast NBN 1000/50",
+    "title": "nbn Home Ultrafast NBN 1000/100",
     "category": "Utilities",
-    "description": "NBN 1000/50 plan discounted for the first 12 months for new customers. Unlimited data, month-to-month.",
+    "description": "NBN 1000/100 plan discounted for the first 12 months for new customers. Unlimited data, month-to-month.",
+    "promoPrice": 99.0,
+    "regularPrice": 114.0,
+    "promoMonths": 12,
+    "validUntil": null,
+    "url": "https://www.vodafone.com.au/home-internet/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "techType": null,
+    "postedAt": "2026-07-12",
+    "_source": "Vodafone official site, verified 2026-07-12"
+  },
+  {
+    "id": "vodafone-nbn-750-50-2026-07",
+    "provider": "Vodafone",
+    "title": "nbn Home Superfast NBN 750/50",
+    "category": "Utilities",
+    "description": "NBN 750/50 plan discounted for the first 12 months for new customers. Unlimited data, month-to-month.",
     "promoPrice": 89.0,
     "regularPrice": 104.0,
     "promoMonths": 12,
     "validUntil": null,
     "url": "https://www.vodafone.com.au/home-internet/nbn",
     "serviceType": "nbn",
-    "tier": "NBN 1000/50",
+    "tier": "NBN 750/50",
     "techType": null,
     "postedAt": "2026-07-12",
     "_source": "Vodafone official site, verified 2026-07-12"
@@ -1532,7 +1549,7 @@
   {
     "id": "vodafone-nbn-500-50-2026-07",
     "provider": "Vodafone",
-    "title": "Home Superfast NBN 500/50",
+    "title": "nbn Home Fast+ NBN 500/50",
     "category": "Utilities",
     "description": "NBN 500/50 plan discounted for the first 12 months for new customers. Unlimited data, month-to-month.",
     "promoPrice": 84.0,
@@ -1547,18 +1564,35 @@
     "_source": "Vodafone official site, verified 2026-07-12"
   },
   {
-    "id": "vodafone-nbn-100-20-2026-07",
+    "id": "vodafone-nbn-50-20-2026-07",
     "provider": "Vodafone",
-    "title": "Home Fast NBN 100/20",
+    "title": "nbn Essential+ NBN 50/20",
     "category": "Utilities",
-    "description": "NBN 100/20 plan discounted for the first 12 months for new customers. Unlimited data, month-to-month.",
+    "description": "NBN 50/20 plan discounted for the first None months for new customers. Unlimited data, month-to-month.",
     "promoPrice": 84.0,
-    "regularPrice": 99.0,
-    "promoMonths": 12,
+    "regularPrice": 94.0,
+    "promoMonths": null,
     "validUntil": null,
     "url": "https://www.vodafone.com.au/home-internet/nbn",
     "serviceType": "nbn",
-    "tier": "NBN 100/20",
+    "tier": "NBN 50/20",
+    "techType": null,
+    "postedAt": "2026-07-12",
+    "_source": "Vodafone official site, verified 2026-07-12"
+  },
+  {
+    "id": "vodafone-nbn-25-10-2026-07",
+    "provider": "Vodafone",
+    "title": "nbn Essential NBN 25/10",
+    "category": "Utilities",
+    "description": "NBN 25/10 plan discounted for the first None months for new customers. Unlimited data, month-to-month.",
+    "promoPrice": 74.0,
+    "regularPrice": 84.0,
+    "promoMonths": null,
+    "validUntil": null,
+    "url": "https://www.vodafone.com.au/home-internet/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 25/10",
     "techType": null,
     "postedAt": "2026-07-12",
     "_source": "Vodafone official site, verified 2026-07-12"
@@ -1630,5 +1664,226 @@
     "techType": null,
     "postedAt": "2026-07-12",
     "_source": "SpinTel official site, verified 2026-07-12"
+  },
+  {
+    "id": "tpg-nbn-98-17-2026-07",
+    "provider": "TPG",
+    "title": "NBN100 NBN 98/17",
+    "category": "Utilities",
+    "description": "NBN 98/17 plan discounted for the first 12 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 69.99,
+    "regularPrice": 94.99,
+    "promoMonths": 12,
+    "validUntil": null,
+    "url": "https://www.tpg.com.au/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 98/17",
+    "techType": "Fibre and FTTN",
+    "postedAt": "2026-07-12",
+    "_source": "TPG official site, verified 2026-07-12"
+  },
+  {
+    "id": "tpg-nbn-500-42-2026-07",
+    "provider": "TPG",
+    "title": "NBN500 NBN 500/42",
+    "category": "Utilities",
+    "description": "NBN 500/42 plan discounted for the first 12 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 69.99,
+    "regularPrice": 94.99,
+    "promoMonths": 12,
+    "validUntil": null,
+    "url": "https://www.tpg.com.au/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 500/42",
+    "techType": "Fibre and FTTN",
+    "postedAt": "2026-07-12",
+    "_source": "TPG official site, verified 2026-07-12"
+  },
+  {
+    "id": "tpg-nbn-25-8-2026-07",
+    "provider": "TPG",
+    "title": "NBN25 NBN 25/8",
+    "category": "Utilities",
+    "description": "NBN 25/8 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 59.99,
+    "regularPrice": 79.99,
+    "promoMonths": 6,
+    "validUntil": null,
+    "url": "https://www.tpg.com.au/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 25/8",
+    "techType": "Fibre and FTTN",
+    "postedAt": "2026-07-12",
+    "_source": "TPG official site, verified 2026-07-12"
+  },
+  {
+    "id": "tpg-nbn-50-17-2026-07",
+    "provider": "TPG",
+    "title": "NBN50 NBN 50/17",
+    "category": "Utilities",
+    "description": "NBN 50/17 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 69.99,
+    "regularPrice": 89.99,
+    "promoMonths": 6,
+    "validUntil": null,
+    "url": "https://www.tpg.com.au/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 50/17",
+    "techType": "Fibre and FTTN",
+    "postedAt": "2026-07-12",
+    "_source": "TPG official site, verified 2026-07-12"
+  },
+  {
+    "id": "tpg-nbn-740-42-2026-07",
+    "provider": "TPG",
+    "title": "NBN Home Superfast NBN 740/42",
+    "category": "Utilities",
+    "description": "NBN 740/42 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 74.99,
+    "regularPrice": 104.99,
+    "promoMonths": 6,
+    "validUntil": null,
+    "url": "https://www.tpg.com.au/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 740/42",
+    "techType": "Fibre and FTTN",
+    "postedAt": "2026-07-12",
+    "_source": "TPG official site, verified 2026-07-12"
+  },
+  {
+    "id": "tpg-nbn-850-85-2026-07",
+    "provider": "TPG",
+    "title": "NBN Home Ultrafast NBN 850/85",
+    "category": "Utilities",
+    "description": "NBN 850/85 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 84.99,
+    "regularPrice": 114.99,
+    "promoMonths": 6,
+    "validUntil": null,
+    "url": "https://www.tpg.com.au/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 850/85",
+    "techType": "Fibre and FTTN",
+    "postedAt": "2026-07-12",
+    "_source": "TPG official site, verified 2026-07-12"
+  },
+  {
+    "id": "flip-nbn-25-8-2026-07",
+    "provider": "Flip",
+    "title": "Premium NBN 25/8",
+    "category": "Utilities",
+    "description": "NBN 25/8 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 48.0,
+    "regularPrice": 65.9,
+    "promoMonths": 6,
+    "validUntil": null,
+    "url": "https://flipconnect.com.au/cheap-nbn-plans",
+    "serviceType": "nbn",
+    "tier": "NBN 25/8",
+    "techType": null,
+    "postedAt": "2026-07-12",
+    "_source": "Flip official site, verified 2026-07-12"
+  },
+  {
+    "id": "flip-nbn-50-17-2026-07",
+    "provider": "Flip",
+    "title": "Family NBN 50/17",
+    "category": "Utilities",
+    "description": "NBN 50/17 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 64.0,
+    "regularPrice": 84.9,
+    "promoMonths": 6,
+    "validUntil": null,
+    "url": "https://flipconnect.com.au/cheap-nbn-plans",
+    "serviceType": "nbn",
+    "tier": "NBN 50/17",
+    "techType": null,
+    "postedAt": "2026-07-12",
+    "_source": "Flip official site, verified 2026-07-12"
+  },
+  {
+    "id": "flip-nbn-500-42-2026-07",
+    "provider": "Flip",
+    "title": "Fast Speed NBN 500/42",
+    "category": "Utilities",
+    "description": "NBN 500/42 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 74.0,
+    "regularPrice": 88.9,
+    "promoMonths": 6,
+    "validUntil": null,
+    "url": "https://flipconnect.com.au/cheap-nbn-plans",
+    "serviceType": "nbn",
+    "tier": "NBN 500/42",
+    "techType": null,
+    "postedAt": "2026-07-12",
+    "_source": "Flip official site, verified 2026-07-12"
+  },
+  {
+    "id": "moose-mobile-30gb-month-to-month-2026-07",
+    "provider": "Moose Mobile",
+    "title": "30GB 30GB",
+    "category": "Utilities",
+    "description": "30GB data mobile plan. Month-to-month.",
+    "promoPrice": 24.8,
+    "regularPrice": 24.8,
+    "promoMonths": null,
+    "validUntil": null,
+    "url": "https://moosemobile.com.au/",
+    "serviceType": "mobile",
+    "tier": "30GB",
+    "techType": "4G",
+    "postedAt": "2026-07-12",
+    "_source": "Moose Mobile official site, verified 2026-07-12"
+  },
+  {
+    "id": "moose-mobile-50gb-month-to-month-2026-07",
+    "provider": "Moose Mobile",
+    "title": "50GB 50GB",
+    "category": "Utilities",
+    "description": "50GB data mobile plan. Month-to-month.",
+    "promoPrice": 32.8,
+    "regularPrice": 32.8,
+    "promoMonths": null,
+    "validUntil": null,
+    "url": "https://moosemobile.com.au/",
+    "serviceType": "mobile",
+    "tier": "50GB",
+    "techType": "5G",
+    "postedAt": "2026-07-12",
+    "_source": "Moose Mobile official site, verified 2026-07-12"
+  },
+  {
+    "id": "moose-mobile-100gb-month-to-month-2026-07",
+    "provider": "Moose Mobile",
+    "title": "100GB 100GB",
+    "category": "Utilities",
+    "description": "100GB data mobile plan. Month-to-month.",
+    "promoPrice": 39.8,
+    "regularPrice": 39.8,
+    "promoMonths": null,
+    "validUntil": null,
+    "url": "https://moosemobile.com.au/",
+    "serviceType": "mobile",
+    "tier": "100GB",
+    "techType": "5G",
+    "postedAt": "2026-07-12",
+    "_source": "Moose Mobile official site, verified 2026-07-12"
+  },
+  {
+    "id": "moose-mobile-250gb-month-to-month-2026-07",
+    "provider": "Moose Mobile",
+    "title": "250GB 250GB",
+    "category": "Utilities",
+    "description": "250GB data mobile plan. Month-to-month.",
+    "promoPrice": 49.8,
+    "regularPrice": 49.8,
+    "promoMonths": null,
+    "validUntil": null,
+    "url": "https://moosemobile.com.au/",
+    "serviceType": "mobile",
+    "tier": "250GB",
+    "techType": "5G",
+    "postedAt": "2026-07-12",
+    "_source": "Moose Mobile official site, verified 2026-07-12"
   }
 ]

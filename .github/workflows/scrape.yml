@@ -2,12 +2,15 @@ name: Scrape AU NBN & mobile plans
 
 on:
   workflow_dispatch: {}
-  # Manual trigger only for now. Once the pilot providers have been proven
-  # stable over a few manual runs, uncomment the schedule below (daily,
-  # 2:17am UTC ~ low-traffic time, off the hour to avoid GitHub Actions'
-  # top-of-hour cron congestion).
-  # schedule:
-  #   - cron: '17 2 * * *'
+  # Daily at 12:00am AEST (UTC+10, Australian Eastern Standard Time -- no
+  # daylight saving in July). GitHub Actions cron is UTC-only and not
+  # DST-aware, so during AEDT (UTC+11, roughly early Oct-early Apr) this
+  # will run at 1:00am local time instead of 12:00am -- a 1-hour drift for
+  # about 5 months of the year. Acceptable for a daily data-freshness job;
+  # revisit with a season-aware second cron entry if exact midnight ever
+  # matters more precisely.
+  schedule:
+    - cron: '0 14 * * *'
 
 permissions:
   contents: write

@@ -198,6 +198,68 @@ batch. Skip Southern Phone and Woolworths Mobile/everyday for now -- same
 Don't re-investigate MyRepublic -- confirmed dead product in AU, not a
 scraping gap.
 
+## Wave 1 completion (2026-07-12): TPG NBN, Flip NBN, Moose Mobile
+
+Round 7 shipped 4 of wave 1's 7 providers but left TPG NBN, Flip NBN, and
+Moose Mobile unregistered -- their fixtures didn't capture real plan data.
+All three are now genuinely fixed and shipped. Root causes and fixes, so
+this isn't re-investigated from scratch:
+
+- **TPG NBN** -- the real problem wasn't the fixture, it was that TPG's NBN
+  page (`https://www.tpg.com.au/nbn`) is a legacy AngularJS app whose raw
+  HTML is *un-rendered template source* (`{* ... *}` expressions) -- final
+  pricing needs both JS evaluation and a real address entered for
+  eligibility/tech-type detection. However, the literal price values for
+  both branches of each promo ternary are embedded directly in the
+  template source as string arguments, e.g. `promotion.hasSixMonthPromotion(...)
+  ? getDollars('69.99') : getDollars('94.99')` -- so real prices can be
+  read straight out of the raw HTML via `getDollars\('([\d.]*)'\)\s*:\s*getDollars\('([\d.]*)'\)`,
+  no browser/address needed. Card container class is `planCards` (not
+  `plan-container`, which never existed on this page). Each named tier
+  (e.g. "NBN100") repeats once per possible connection tech (FTTN, FTTC,
+  Fibre, FTTB, HFC, Wireless) via `ng-show`-gated duplicates -- dedupe by
+  tier name, keep first-seen (FTTN, the most common TPG connection type).
+  Genuine NBN bundle plans vs. wireless-alternative products (5G Plus/
+  Premium, "FTTB Max"/FTTB25/FTTB100, Home Wireless Broadband) are
+  distinguished by the card's `ng-show` promo SKU containing `_Bundle_` --
+  a real signal, not a name-guess.
+
+- **Flip NBN** -- the captured fixture was the *homepage*
+  (`flipconnect.com.au/`), which only has a "$48/month" teaser, not real
+  per-tier pricing. The actual plans page is
+  `https://flipconnect.com.au/cheap-nbn-plans`. It's a Vue/Vuetify SPA;
+  plan cards are the direct `.flex-shrink-0` children of the
+  `.plans-scroll-inner` carousel container -- a precise DOM anchor, not a
+  page-wide scan of every div/section/article by text length. Within each
+  card: `.text-flipRed` holds the marketing tier name, `.text-price` holds
+  the promo price, and the regular price + promo duration come from the
+  card's own "For 6 months, then $65.90 ongoing*" text.
+
+- **Moose Mobile** -- same homepage-fixture problem, plus the plan cards
+  render a few seconds after the page's "load" event fires -- the original
+  `settle_ms=5000` fetch captured the page before they existed at all;
+  `settle_ms=8000` against `https://moosemobile.com.au/` (the plans ARE on
+  the homepage, just slow to render) reveals them. Cards are Swiper.js
+  carousel slides with the `card-mobile` class; GB is in
+  `.card-mobile__header .h2`, price in `.card-mobile__section.price .h3`.
+  All 4 tiers are flat monthly prices, no promo/regular split.
+
+Also fixed while completing this: `transform.py`'s `_make_id()` collided
+for two distinct plans sharing a data allowance but differing in contract
+length (Boost's 160GB/28-day and 160GB/186-day tiers both produced
+`boost-mobile-160gb-2026-07`) -- the id now incorporates `contract_length`
+for mobile plans. Dodo Mobile's and Vodafone NBN's price/tier-naming
+"fixes" from rounds 7-8 turned out to still be a blind heuristic and a
+hardcoded map respectively (see the round-8/9 prompts for the full story);
+both are now genuinely anchored -- Dodo scopes price extraction to the
+GB-figure-to-"/mth" text window (ignoring decoy prices elsewhere in the
+tile), and Vodafone parses the page's own embedded `__NEXT_DATA__` Next.js
+JSON (`plansResponseNbn.planListing.plans`) directly for plan names,
+prices, and nominal tier labels, filtering out `isDuplicatePlan`/
+`isInterimPlan` SKUs using the page's own flags rather than guessing.
+Scheduling is also now live: `.github/workflows/scrape.yml` runs daily at
+12:00am AEST via cron, not just on manual `workflow_dispatch`.
+
 ## Workflow note: scraper implementation goes through DeepSeek
 
 New provider scraper code (parsers, fixtures, tests) gets written via

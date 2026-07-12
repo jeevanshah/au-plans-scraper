@@ -63,8 +63,13 @@ def mobile_plan_to_deal(plan: MobilePlan) -> dict:
     else:
         description = f"{data_desc} mobile plan. {plan.contract_length}."
 
+    # Include contract_length in the id (but not the displayed `tier` field below) --
+    # some providers (e.g. Boost) sell the same data allowance under different expiry
+    # periods (28-day vs 186-day vs 365-day), which would otherwise collide on tier alone.
+    id_key = f"{tier}-{plan.contract_length}"
+
     return {
-        "id": _make_id(plan.provider, tier, plan.scraped_at),
+        "id": _make_id(plan.provider, id_key, plan.scraped_at),
         "provider": plan.provider,
         "title": f"{plan.plan_name} {tier}",
         "category": CATEGORY,
