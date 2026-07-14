@@ -32,7 +32,7 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Run parser tests
-        run: pytest tests/
+        run: python -m pytest tests/
 
       - name: Run scrapers
         run: python run.py
