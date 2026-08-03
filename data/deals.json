@@ -13,8 +13,8 @@
     "serviceType": "nbn",
     "tier": "NBN 25/10",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "Aussie Broadband official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Aussie Broadband official site, verified 2026-08-03"
   },
   {
     "id": "aussie-broadband-nbn-50-20-2026-08",
@@ -30,8 +30,8 @@
     "serviceType": "nbn",
     "tier": "NBN 50/20",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "Aussie Broadband official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Aussie Broadband official site, verified 2026-08-03"
   },
   {
     "id": "aussie-broadband-nbn-100-20-2026-08",
@@ -47,8 +47,8 @@
     "serviceType": "nbn",
     "tier": "NBN 100/20",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "Aussie Broadband official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Aussie Broadband official site, verified 2026-08-03"
   },
   {
     "id": "aussie-broadband-nbn-500-50-2026-08",
@@ -64,8 +64,8 @@
     "serviceType": "nbn",
     "tier": "NBN 500/50",
     "techType": "Fibre",
-    "postedAt": "2026-08-02",
-    "_source": "Aussie Broadband official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Aussie Broadband official site, verified 2026-08-03"
   },
   {
     "id": "aussie-broadband-nbn-1000-100-2026-08",
@@ -81,8 +81,8 @@
     "serviceType": "nbn",
     "tier": "NBN 1000/100",
     "techType": "Fibre",
-    "postedAt": "2026-08-02",
-    "_source": "Aussie Broadband official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Aussie Broadband official site, verified 2026-08-03"
   },
   {
     "id": "aussie-broadband-nbn-2000-200-2026-08",
@@ -98,8 +98,8 @@
     "serviceType": "nbn",
     "tier": "NBN 2000/200",
     "techType": "Fibre",
-    "postedAt": "2026-08-02",
-    "_source": "Aussie Broadband official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Aussie Broadband official site, verified 2026-08-03"
   },
   {
     "id": "tangerine-nbn-25-8-5-2026-08",
@@ -115,8 +115,8 @@
     "serviceType": "nbn",
     "tier": "NBN 25/8.5",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Tangerine official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Tangerine official site, verified 2026-08-03"
   },
   {
     "id": "tangerine-nbn-50-17-2026-08",
@@ -132,8 +132,8 @@
     "serviceType": "nbn",
     "tier": "NBN 50/17",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Tangerine official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Tangerine official site, verified 2026-08-03"
   },
   {
     "id": "tangerine-nbn-500-42-5-2026-08",
@@ -149,8 +149,8 @@
     "serviceType": "nbn",
     "tier": "NBN 500/42.5",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Tangerine official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Tangerine official site, verified 2026-08-03"
   },
   {
     "id": "tangerine-nbn-700-85-2026-08",
@@ -166,8 +166,8 @@
     "serviceType": "nbn",
     "tier": "NBN 700/85",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Tangerine official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Tangerine official site, verified 2026-08-03"
   },
   {
     "id": "telstra-nbn-25-2026-08",
@@ -183,8 +183,8 @@
     "serviceType": "nbn",
     "tier": "NBN 25",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "Telstra official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Telstra official site, verified 2026-08-03"
   },
   {
     "id": "telstra-nbn-50-2026-08",
@@ -200,8 +200,8 @@
     "serviceType": "nbn",
     "tier": "NBN 50",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "Telstra official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Telstra official site, verified 2026-08-03"
   },
   {
     "id": "telstra-nbn-100-2026-08",
@@ -217,8 +217,8 @@
     "serviceType": "nbn",
     "tier": "NBN 100",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "Telstra official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Telstra official site, verified 2026-08-03"
   },
   {
     "id": "telstra-nbn-750-2026-08",
@@ -234,8 +234,8 @@
     "serviceType": "nbn",
     "tier": "NBN 750",
     "techType": "Fibre",
-    "postedAt": "2026-08-02",
-    "_source": "Telstra official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Telstra official site, verified 2026-08-03"
   },
   {
     "id": "telstra-nbn-1000-2026-08",
@@ -251,8 +251,8 @@
     "serviceType": "nbn",
     "tier": "NBN 1000",
     "techType": "Fibre",
-    "postedAt": "2026-08-02",
-    "_source": "Telstra official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Telstra official site, verified 2026-08-03"
   },
   {
     "id": "dodo-nbn-25-10-2026-07",
@@ -370,8 +370,8 @@
     "serviceType": "nbn",
     "tier": "NBN 25/10",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Superloop official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Superloop official site, verified 2026-08-03"
   },
   {
     "id": "superloop-nbn-50-20-2026-08",
@@ -387,8 +387,8 @@
     "serviceType": "nbn",
     "tier": "NBN 50/20",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Superloop official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Superloop official site, verified 2026-08-03"
   },
   {
     "id": "superloop-nbn-500-50-2026-08",
@@ -404,8 +404,8 @@
     "serviceType": "nbn",
     "tier": "NBN 500/50",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Superloop official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Superloop official site, verified 2026-08-03"
   },
   {
     "id": "superloop-nbn-750-50-2026-08",
@@ -421,8 +421,8 @@
     "serviceType": "nbn",
     "tier": "NBN 750/50",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Superloop official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Superloop official site, verified 2026-08-03"
   },
   {
     "id": "superloop-nbn-1000-100-2026-08",
@@ -438,8 +438,8 @@
     "serviceType": "nbn",
     "tier": "NBN 1000/100",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Superloop official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Superloop official site, verified 2026-08-03"
   },
   {
     "id": "exetel-nbn-500-50-2026-08",
@@ -455,8 +455,8 @@
     "serviceType": "nbn",
     "tier": "NBN 500/50",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Exetel official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Exetel official site, verified 2026-08-03"
   },
   {
     "id": "iinet-nbn-500-500-2026-08",
@@ -472,8 +472,8 @@
     "serviceType": "nbn",
     "tier": "NBN 500/500",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "iiNet official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "iiNet official site, verified 2026-08-03"
   },
   {
     "id": "iinet-nbn-25-25-2026-08",
@@ -489,8 +489,8 @@
     "serviceType": "nbn",
     "tier": "NBN 25/25",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "iiNet official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "iiNet official site, verified 2026-08-03"
   },
   {
     "id": "iinet-nbn-50-50-2026-08",
@@ -506,8 +506,8 @@
     "serviceType": "nbn",
     "tier": "NBN 50/50",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "iiNet official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "iiNet official site, verified 2026-08-03"
   },
   {
     "id": "tpg-25gb-month-to-month-2026-08",
@@ -523,8 +523,8 @@
     "serviceType": "mobile",
     "tier": "25GB",
     "techType": "4G",
-    "postedAt": "2026-08-02",
-    "_source": "TPG official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "TPG official site, verified 2026-08-03"
   },
   {
     "id": "tpg-50gb-month-to-month-2026-08",
@@ -540,8 +540,8 @@
     "serviceType": "mobile",
     "tier": "50GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "TPG official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "TPG official site, verified 2026-08-03"
   },
   {
     "id": "tpg-100gb-month-to-month-2026-08",
@@ -557,8 +557,8 @@
     "serviceType": "mobile",
     "tier": "100GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "TPG official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "TPG official site, verified 2026-08-03"
   },
   {
     "id": "telstra-50gb-month-to-month-2026-08",
@@ -574,8 +574,8 @@
     "serviceType": "mobile",
     "tier": "50GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Telstra official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Telstra official site, verified 2026-08-03"
   },
   {
     "id": "telstra-180gb-month-to-month-2026-08",
@@ -591,8 +591,8 @@
     "serviceType": "mobile",
     "tier": "180GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Telstra official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Telstra official site, verified 2026-08-03"
   },
   {
     "id": "telstra-300gb-month-to-month-2026-08",
@@ -608,8 +608,8 @@
     "serviceType": "mobile",
     "tier": "300GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Telstra official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Telstra official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-95gb-28-day-expiry-2026-08",
@@ -625,8 +625,8 @@
     "serviceType": "mobile",
     "tier": "95GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-15gb-28-day-expiry-2026-08",
@@ -642,8 +642,8 @@
     "serviceType": "mobile",
     "tier": "15GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-42gb-28-day-expiry-2026-08",
@@ -659,8 +659,8 @@
     "serviceType": "mobile",
     "tier": "42GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-80gb-28-day-expiry-2026-08",
@@ -676,8 +676,8 @@
     "serviceType": "mobile",
     "tier": "80GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-120gb-28-day-expiry-2026-08",
@@ -693,8 +693,8 @@
     "serviceType": "mobile",
     "tier": "120GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-150gb-184-day-expiry-2026-08",
@@ -710,8 +710,8 @@
     "serviceType": "mobile",
     "tier": "150GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-200gb-365-day-expiry-2026-08",
@@ -727,8 +727,8 @@
     "serviceType": "mobile",
     "tier": "200GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-240gb-365-day-expiry-2026-08",
@@ -744,8 +744,8 @@
     "serviceType": "mobile",
     "tier": "240GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-30gb-28-day-expiry-2026-08",
@@ -761,8 +761,8 @@
     "serviceType": "mobile",
     "tier": "30GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-100gb-28-day-expiry-2026-08",
@@ -778,8 +778,8 @@
     "serviceType": "mobile",
     "tier": "100GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-365gb-365-day-expiry-2026-08",
@@ -795,8 +795,8 @@
     "serviceType": "mobile",
     "tier": "365GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "amaysim-10gb-7-day-expiry-2026-08",
@@ -812,8 +812,8 @@
     "serviceType": "mobile",
     "tier": "10GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "amaysim official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "amaysim official site, verified 2026-08-03"
   },
   {
     "id": "vodafone-65gb-month-to-month-2026-07",
@@ -875,13 +875,13 @@
     "promoPrice": 149.0,
     "regularPrice": 179.9,
     "promoMonths": 1,
-    "validUntil": "2026-08-02",
+    "validUntil": "2026-08-09",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
     "tier": "140GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Kogan Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Kogan Mobile official site, verified 2026-08-03"
   },
   {
     "id": "kogan-mobile-250gb-365-day-expiry-2026-08",
@@ -892,13 +892,13 @@
     "promoPrice": 159.0,
     "regularPrice": 190.0,
     "promoMonths": 1,
-    "validUntil": "2026-08-02",
+    "validUntil": "2026-08-09",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
     "tier": "250GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Kogan Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Kogan Mobile official site, verified 2026-08-03"
   },
   {
     "id": "kogan-mobile-350gb-365-day-expiry-2026-08",
@@ -909,30 +909,30 @@
     "promoPrice": 179.0,
     "regularPrice": 240.0,
     "promoMonths": 1,
-    "validUntil": "2026-08-02",
+    "validUntil": "2026-08-09",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
     "tier": "350GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Kogan Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Kogan Mobile official site, verified 2026-08-03"
   },
   {
-    "id": "kogan-mobile-900gb-365-day-expiry-2026-08",
+    "id": "kogan-mobile-500gb-365-day-expiry-2026-08",
     "provider": "Kogan Mobile",
-    "title": "900GB 900GB",
+    "title": "500GB 500GB",
     "category": "Utilities",
-    "description": "900GB data mobile plan discounted for the first 1 months for new customers. 365-day expiry.",
-    "promoPrice": 199.0,
+    "description": "500GB data mobile plan discounted for the first 1 months for new customers. 365-day expiry.",
+    "promoPrice": 205.0,
     "regularPrice": 300.0,
     "promoMonths": 1,
-    "validUntil": "2026-08-02",
+    "validUntil": "2026-08-09",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
-    "tier": "900GB",
+    "tier": "500GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Kogan Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Kogan Mobile official site, verified 2026-08-03"
   },
   {
     "id": "kogan-mobile-20gb-month-to-month-2026-08",
@@ -943,30 +943,30 @@
     "promoPrice": 10.0,
     "regularPrice": 20.0,
     "promoMonths": 1,
-    "validUntil": "2026-08-02",
+    "validUntil": "2026-08-09",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
     "tier": "20GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Kogan Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Kogan Mobile official site, verified 2026-08-03"
   },
   {
-    "id": "kogan-mobile-40gb-month-to-month-2026-08",
+    "id": "kogan-mobile-60gb-month-to-month-2026-08",
     "provider": "Kogan Mobile",
-    "title": "40GB 40GB",
+    "title": "60GB 60GB",
     "category": "Utilities",
-    "description": "40GB data mobile plan. Month-to-month.",
-    "promoPrice": 25.0,
+    "description": "60GB data mobile plan discounted for the first 1 months for new customers. Month-to-month.",
+    "promoPrice": 12.0,
     "regularPrice": 25.0,
-    "promoMonths": null,
-    "validUntil": "2026-08-02",
+    "promoMonths": 1,
+    "validUntil": "2026-08-09",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
-    "tier": "40GB",
+    "tier": "60GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Kogan Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Kogan Mobile official site, verified 2026-08-03"
   },
   {
     "id": "kogan-mobile-80gb-month-to-month-2026-08",
@@ -977,13 +977,13 @@
     "promoPrice": 40.0,
     "regularPrice": 40.0,
     "promoMonths": null,
-    "validUntil": "2026-08-02",
+    "validUntil": "2026-08-09",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
     "tier": "80GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Kogan Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Kogan Mobile official site, verified 2026-08-03"
   },
   {
     "id": "felix-25gb-month-to-month-2026-08",
@@ -999,8 +999,8 @@
     "serviceType": "mobile",
     "tier": "25GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Felix official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Felix official site, verified 2026-08-03"
   },
   {
     "id": "felix-50gb-month-to-month-2026-08",
@@ -1016,8 +1016,8 @@
     "serviceType": "mobile",
     "tier": "50GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Felix official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Felix official site, verified 2026-08-03"
   },
   {
     "id": "felix-unlimited-month-to-month-2026-08",
@@ -1033,8 +1033,8 @@
     "serviceType": "mobile",
     "tier": "Unlimited",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Felix official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Felix official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-21gb-28-day-expiry-2026-08",
@@ -1050,8 +1050,8 @@
     "serviceType": "mobile",
     "tier": "21GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-80gb-28-day-expiry-2026-08",
@@ -1067,8 +1067,8 @@
     "serviceType": "mobile",
     "tier": "80GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-110gb-28-day-expiry-2026-08",
@@ -1084,8 +1084,8 @@
     "serviceType": "mobile",
     "tier": "110GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-125gb-28-day-expiry-2026-08",
@@ -1101,8 +1101,8 @@
     "serviceType": "mobile",
     "tier": "125GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-160gb-28-day-expiry-2026-08",
@@ -1118,8 +1118,8 @@
     "serviceType": "mobile",
     "tier": "160GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-160gb-186-day-expiry-2026-08",
@@ -1135,8 +1135,8 @@
     "serviceType": "mobile",
     "tier": "160GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-295gb-365-day-expiry-2026-08",
@@ -1152,8 +1152,8 @@
     "serviceType": "mobile",
     "tier": "295GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-375gb-365-day-expiry-2026-08",
@@ -1169,8 +1169,8 @@
     "serviceType": "mobile",
     "tier": "375GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-8gb-7-day-expiry-2026-08",
@@ -1186,8 +1186,8 @@
     "serviceType": "mobile",
     "tier": "8GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-7gb-14-day-expiry-2026-08",
@@ -1203,8 +1203,8 @@
     "serviceType": "mobile",
     "tier": "7GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-5gb-7-day-expiry-2026-08",
@@ -1220,8 +1220,8 @@
     "serviceType": "mobile",
     "tier": "5GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "boost-mobile-2gb-3-day-expiry-2026-08",
@@ -1237,8 +1237,8 @@
     "serviceType": "mobile",
     "tier": "2GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Boost Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Boost Mobile official site, verified 2026-08-03"
   },
   {
     "id": "aldimobile-12gb-30-day-expiry-2026-08",
@@ -1254,8 +1254,8 @@
     "serviceType": "mobile",
     "tier": "12GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "ALDImobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "ALDImobile official site, verified 2026-08-03"
   },
   {
     "id": "aldimobile-29gb-30-day-expiry-2026-08",
@@ -1271,8 +1271,8 @@
     "serviceType": "mobile",
     "tier": "29GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "ALDImobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "ALDImobile official site, verified 2026-08-03"
   },
   {
     "id": "aldimobile-75gb-30-day-expiry-2026-08",
@@ -1288,8 +1288,8 @@
     "serviceType": "mobile",
     "tier": "75GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "ALDImobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "ALDImobile official site, verified 2026-08-03"
   },
   {
     "id": "aldimobile-120gb-30-day-expiry-2026-08",
@@ -1305,8 +1305,8 @@
     "serviceType": "mobile",
     "tier": "120GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "ALDImobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "ALDImobile official site, verified 2026-08-03"
   },
   {
     "id": "aldimobile-175gb-30-day-expiry-2026-08",
@@ -1322,8 +1322,8 @@
     "serviceType": "mobile",
     "tier": "175GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "ALDImobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "ALDImobile official site, verified 2026-08-03"
   },
   {
     "id": "aldimobile-30gb-365-day-expiry-2026-08",
@@ -1339,8 +1339,8 @@
     "serviceType": "mobile",
     "tier": "30GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "ALDImobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "ALDImobile official site, verified 2026-08-03"
   },
   {
     "id": "aldimobile-185gb-365-day-expiry-2026-08",
@@ -1356,8 +1356,8 @@
     "serviceType": "mobile",
     "tier": "185GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "ALDImobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "ALDImobile official site, verified 2026-08-03"
   },
   {
     "id": "aldimobile-365gb-365-day-expiry-2026-08",
@@ -1373,8 +1373,8 @@
     "serviceType": "mobile",
     "tier": "365GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "ALDImobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "ALDImobile official site, verified 2026-08-03"
   },
   {
     "id": "aldimobile-300gb-365-day-expiry-2026-08",
@@ -1390,8 +1390,8 @@
     "serviceType": "mobile",
     "tier": "300GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "ALDImobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "ALDImobile official site, verified 2026-08-03"
   },
   {
     "id": "dodo-25gb-month-to-month-2026-07",
@@ -1458,8 +1458,8 @@
     "serviceType": "mobile",
     "tier": "20GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Aussie Broadband official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Aussie Broadband official site, verified 2026-08-03"
   },
   {
     "id": "aussie-broadband-45gb-month-to-month-2026-08",
@@ -1475,8 +1475,8 @@
     "serviceType": "mobile",
     "tier": "45GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Aussie Broadband official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Aussie Broadband official site, verified 2026-08-03"
   },
   {
     "id": "aussie-broadband-100gb-month-to-month-2026-08",
@@ -1492,8 +1492,8 @@
     "serviceType": "mobile",
     "tier": "100GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Aussie Broadband official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Aussie Broadband official site, verified 2026-08-03"
   },
   {
     "id": "aussie-broadband-180gb-month-to-month-2026-08",
@@ -1509,8 +1509,8 @@
     "serviceType": "mobile",
     "tier": "180GB",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Aussie Broadband official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Aussie Broadband official site, verified 2026-08-03"
   },
   {
     "id": "vodafone-nbn-1000-100-2026-07",
@@ -1611,25 +1611,25 @@
     "serviceType": "nbn",
     "tier": "NBN 25/10",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "SpinTel official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "SpinTel official site, verified 2026-08-03"
   },
   {
     "id": "spintel-nbn-100-20-2026-08",
     "provider": "SpinTel",
     "title": "NBN 100/20 NBN 100/20",
     "category": "Utilities",
-    "description": "NBN 100/20 plan. Unlimited data, no lock-in contract.",
-    "promoPrice": 89.95,
+    "description": "NBN 100/20 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 76.0,
     "regularPrice": 89.95,
-    "promoMonths": null,
+    "promoMonths": 6,
     "validUntil": null,
     "url": "https://www.spintel.net.au/nbn",
     "serviceType": "nbn",
     "tier": "NBN 100/20",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "SpinTel official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "SpinTel official site, verified 2026-08-03"
   },
   {
     "id": "spintel-nbn-500-50-2026-08",
@@ -1637,7 +1637,7 @@
     "title": "NBN 500/50 NBN 500/50",
     "category": "Utilities",
     "description": "NBN 500/50 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
-    "promoPrice": 89.0,
+    "promoPrice": 79.0,
     "regularPrice": 89.95,
     "promoMonths": 6,
     "validUntil": null,
@@ -1645,25 +1645,59 @@
     "serviceType": "nbn",
     "tier": "NBN 500/50",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "SpinTel official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "SpinTel official site, verified 2026-08-03"
   },
   {
     "id": "spintel-nbn-750-50-2026-08",
     "provider": "SpinTel",
     "title": "NBN 750/50 NBN 750/50",
     "category": "Utilities",
-    "description": "NBN 750/50 plan. Unlimited data, no lock-in contract.",
-    "promoPrice": 94.95,
+    "description": "NBN 750/50 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 84.0,
     "regularPrice": 94.95,
-    "promoMonths": null,
+    "promoMonths": 6,
     "validUntil": null,
     "url": "https://www.spintel.net.au/nbn",
     "serviceType": "nbn",
     "tier": "NBN 750/50",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "SpinTel official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "SpinTel official site, verified 2026-08-03"
+  },
+  {
+    "id": "spintel-nbn-1000-100-2026-08",
+    "provider": "SpinTel",
+    "title": "NBN 1000/100 NBN 1000/100",
+    "category": "Utilities",
+    "description": "NBN 1000/100 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 94.0,
+    "regularPrice": 104.95,
+    "promoMonths": 6,
+    "validUntil": null,
+    "url": "https://www.spintel.net.au/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "techType": null,
+    "postedAt": "2026-08-03",
+    "_source": "SpinTel official site, verified 2026-08-03"
+  },
+  {
+    "id": "spintel-nbn-850-82-2026-08",
+    "provider": "SpinTel",
+    "title": "NBN 850/82 NBN 850/82",
+    "category": "Utilities",
+    "description": "NBN 850/82 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 94.0,
+    "regularPrice": 104.95,
+    "promoMonths": 6,
+    "validUntil": null,
+    "url": "https://www.spintel.net.au/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 850/82",
+    "techType": null,
+    "postedAt": "2026-08-03",
+    "_source": "SpinTel official site, verified 2026-08-03"
   },
   {
     "id": "tpg-nbn-98-17-2026-08",
@@ -1679,8 +1713,8 @@
     "serviceType": "nbn",
     "tier": "NBN 98/17",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "TPG official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "TPG official site, verified 2026-08-03"
   },
   {
     "id": "tpg-nbn-500-42-2026-08",
@@ -1696,8 +1730,8 @@
     "serviceType": "nbn",
     "tier": "NBN 500/42",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "TPG official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "TPG official site, verified 2026-08-03"
   },
   {
     "id": "tpg-nbn-25-8-2026-08",
@@ -1713,8 +1747,8 @@
     "serviceType": "nbn",
     "tier": "NBN 25/8",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "TPG official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "TPG official site, verified 2026-08-03"
   },
   {
     "id": "tpg-nbn-50-17-2026-08",
@@ -1730,8 +1764,8 @@
     "serviceType": "nbn",
     "tier": "NBN 50/17",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "TPG official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "TPG official site, verified 2026-08-03"
   },
   {
     "id": "tpg-nbn-740-42-2026-08",
@@ -1747,8 +1781,8 @@
     "serviceType": "nbn",
     "tier": "NBN 740/42",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "TPG official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "TPG official site, verified 2026-08-03"
   },
   {
     "id": "tpg-nbn-850-85-2026-08",
@@ -1764,8 +1798,8 @@
     "serviceType": "nbn",
     "tier": "NBN 850/85",
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-02",
-    "_source": "TPG official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "TPG official site, verified 2026-08-03"
   },
   {
     "id": "flip-nbn-25-8-2026-08",
@@ -1781,8 +1815,8 @@
     "serviceType": "nbn",
     "tier": "NBN 25/8",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Flip official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Flip official site, verified 2026-08-03"
   },
   {
     "id": "flip-nbn-50-17-2026-08",
@@ -1798,8 +1832,8 @@
     "serviceType": "nbn",
     "tier": "NBN 50/17",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Flip official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Flip official site, verified 2026-08-03"
   },
   {
     "id": "flip-nbn-500-42-2026-08",
@@ -1815,8 +1849,8 @@
     "serviceType": "nbn",
     "tier": "NBN 500/42",
     "techType": null,
-    "postedAt": "2026-08-02",
-    "_source": "Flip official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Flip official site, verified 2026-08-03"
   },
   {
     "id": "moose-mobile-30gb-month-to-month-2026-08",
@@ -1832,8 +1866,8 @@
     "serviceType": "mobile",
     "tier": "30GB",
     "techType": "4G",
-    "postedAt": "2026-08-02",
-    "_source": "Moose Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Moose Mobile official site, verified 2026-08-03"
   },
   {
     "id": "moose-mobile-50gb-month-to-month-2026-08",
@@ -1849,8 +1883,8 @@
     "serviceType": "mobile",
     "tier": "50GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "Moose Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Moose Mobile official site, verified 2026-08-03"
   },
   {
     "id": "moose-mobile-100gb-month-to-month-2026-08",
@@ -1866,8 +1900,8 @@
     "serviceType": "mobile",
     "tier": "100GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "Moose Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Moose Mobile official site, verified 2026-08-03"
   },
   {
     "id": "moose-mobile-250gb-month-to-month-2026-08",
@@ -1883,7 +1917,7 @@
     "serviceType": "mobile",
     "tier": "250GB",
     "techType": "5G",
-    "postedAt": "2026-08-02",
-    "_source": "Moose Mobile official site, verified 2026-08-02"
+    "postedAt": "2026-08-03",
+    "_source": "Moose Mobile official site, verified 2026-08-03"
   }
 ]
