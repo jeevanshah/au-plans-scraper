@@ -22,6 +22,7 @@ from scraper.providers.nbn import vodafone_nbn as nbn_vodafone
 from scraper.providers.nbn import tpg_nbn as nbn_tpg
 from scraper.providers.nbn import flip_nbn as nbn_flip
 from scraper.providers.nbn import swoop_nbn as nbn_swoop
+from scraper.providers.nbn import neptune_nbn as nbn_neptune
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -563,6 +564,30 @@ def test_swoop_nbn(monkeypatch):
     for p in plans:
         assert p.provider == "Swoop"
         assert p.promo_price < p.price_monthly
+
+
+def test_neptune_nbn(monkeypatch):
+    monkeypatch.setattr(nbn_neptune, "fetch_js", lambda url, **kw: _soup("neptune_cis.html"))
+    plans = nbn_neptune.scrape()
+    # 7 Standard + 5 FTTP-only = 12; the 4 Fixed Wireless and 5 Business
+    # (eSLA, ABN-required) rows in the same table are excluded
+    assert len(plans) == 12
+    by_tier = {p.speed_tier: p for p in plans}
+    assert set(by_tier) == {
+        "NBN 25/10", "NBN 50/20", "NBN 100/20", "NBN 500/50", "NBN 750/50",
+        "NBN 1000/100", "NBN 2000/100", "NBN 250/100", "NBN 500/200",
+        "NBN 1000/400", "NBN 2000/200", "NBN 2000/500",
+    }
+    assert by_tier["NBN 25/10"].price_monthly == 60.0
+    assert by_tier["NBN 25/10"].typical_evening_speed_mbps == 24.0
+    # NBN 250/100 has no "(FTTP)" suffix on the live page (unlike its
+    # neighbouring FTTP-only rows) but is still correctly included via the
+    # section state-machine, not a fixed row count
+    assert by_tier["NBN 250/100"].price_monthly == 105.0
+    assert by_tier["NBN 500/200"].tech_type == "Fibre"
+    for p in plans:
+        assert p.provider == "Neptune Internet"
+        assert p.promo_price is None
 
 
 def test_spintel_nbn(monkeypatch):

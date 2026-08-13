@@ -50,7 +50,7 @@ two fields get extracted per provider.
 ## Providers
 
 **NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel, iiNet,
-Vodafone, SpinTel, TPG, Flip, Swoop
+Vodafone, SpinTel, TPG, Flip, Swoop, Neptune Internet
 **Mobile:** TPG, Telstra, amaysim, Vodafone, Kogan Mobile, Felix, Boost Mobile,
 ALDImobile, Dodo, Aussie Broadband, Moose Mobile
 
@@ -69,9 +69,16 @@ and is now scraped like any other provider.
 
 Held back (needs real anti-bot/browser-fingerprint handling, not scrapeable with
 `fetch_static`/`fetch_js` as-is): Belong, Optus, Southern Phone, Woolworths
-Mobile/everyday, Neptune Internet (Cloudflare bot-management challenge,
-403 with `Cf-Mitigated`/`CF-RAY` headers on every URL tried) -- see
-`scraper/providers/` for what's implemented so far.
+Mobile/everyday -- see `scraper/providers/` for what's implemented so far.
+
+Note: Neptune Internet's main plans page IS behind Cloudflare bot-management
+(403 with `Cf-Mitigated`/`CF-RAY` headers via a plain HTTP client), but a
+real Playwright browser context passes with no stealth patches needed --
+it's scraped via its Critical Information Summary page instead (see
+`scraper/providers/nbn/neptune_nbn.py`), which is address-independent and
+lists every plan in one combined table. Not every Cloudflare-fronted site
+needs proxy/fingerprint workarounds -- worth checking with a real browser
+fetch before writing a provider off as blocked.
 
 ## Running locally
 

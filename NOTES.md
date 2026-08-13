@@ -260,7 +260,7 @@ prices, and nominal tier labels, filtering out `isDuplicatePlan`/
 Scheduling is also now live: `.github/workflows/scrape.yml` runs daily at
 12:00am AEST via cron, not just on manual `workflow_dispatch`.
 
-## Swoop (shipped) and Neptune Internet (blocked) -- 2026-07-22
+## Swoop and Neptune Internet (both shipped) -- 2026-07-22 / 2026-08-14
 
 Two more candidates: Swoop and Neptune Internet, both real NBN retailers.
 
@@ -274,14 +274,32 @@ Two more candidates: Swoop and Neptune Internet, both real NBN retailers.
   these can differ from the nominal tier (the "1000/100" tier's real
   evening download is 890Mbps, not 1000). Shipped and registered.
 
-- **Neptune Internet** -- `https://www.neptune.net.au/internet` and every
-  URL variant tried returns 403 with `Cf-Mitigated`/`CF-RAY` response
-  headers -- a Cloudflare bot-management challenge blocking the request
-  before any HTML (static or JS-rendered) is served. Same category as
-  Belong/Optus/Southern Phone/Woolworths -- would need a real headless
-  browser with a residential-like fingerprint (Playwright + stealth
-  patches, or a Cloudflare-challenge solver) to even see the page. Not
-  attempted further; treat as a stretch goal like the others.
+- **Neptune Internet** -- initially found blocked: `https://www.neptune.net.au/internet`
+  and every URL variant tried via a plain HTTP client (or WebFetch) returns
+  403 with `Cf-Mitigated`/`CF-RAY` response headers, a Cloudflare bot-
+  management challenge. **Follow-up (2026-08-14) reversed this finding**:
+  a real Playwright browser context (this project's existing `fetch_js()`,
+  no stealth patches at all) passes fine -- Neptune's Cloudflare rule
+  checks for genuine browser/JS capability, not a harder fingerprint/proxy
+  check, so it's a materially different (and much easier) obstacle than
+  Belong/Optus/Southern Phone/Woolworths, which stay genuinely blocked even
+  through `fetch_js`. Lesson: don't assume every `Cf-Mitigated` 403 needs
+  proxy/anti-bot infrastructure -- retry with a real headless browser
+  before writing a provider off.
+
+  The `/internet` page itself is address-gated (shows no pricing until a
+  real connection address is entered), so it's scraped via
+  `/critical-information-summary` instead -- Australian telcos are
+  required to publish this as a regulatory disclosure, so it's guaranteed
+  complete and address-independent. One combined `<table>` covers Standard
+  (7 tiers), Fixed Wireless (4, excluded -- not fixed-line NBN, same
+  convention as other providers), FTTP Only (5, included), and Business
+  (5, excluded -- requires an ABN) plans, distinguished mostly by a
+  "(Fixed Wireless)"/"(FTTP)"/"eSLA" suffix on the plan name -- except one
+  FTTP-tier row that has no suffix at all, handled by tracking section
+  membership as a state machine over row order (once a Fixed-Wireless row
+  is seen, the next unmarked row starts the FTTP-only section) rather than
+  a fixed row count/position, so it survives future tier additions.
 
 ## CI/scheduling: pytest sys.path bug (fixed) and cloud-IP blocking (open)
 

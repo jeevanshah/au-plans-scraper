@@ -29,9 +29,10 @@ from scraper.providers.nbn import telstra as nbn_telstra
 from scraper.providers.nbn import tpg_nbn as nbn_tpg
 from scraper.providers.nbn import flip_nbn as nbn_flip
 from scraper.providers.nbn import swoop_nbn as nbn_swoop
+from scraper.providers.nbn import neptune_nbn as nbn_neptune
 from scraper.providers.nbn import vodafone_nbn as nbn_vodafone
 from scraper.schema import now_iso
-from scraper.transform import _make_id, mobile_plan_to_deal, nbn_plan_to_deal
+from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 logger = logging.getLogger("run")
@@ -64,6 +65,7 @@ PROVIDERS = [
     (nbn_flip, "nbn", nbn_plan_to_deal),
     (moose_mobile, "mobile", mobile_plan_to_deal),
     (nbn_swoop, "nbn", nbn_plan_to_deal),
+    (nbn_neptune, "nbn", nbn_plan_to_deal),
 ]
 
 CONSECUTIVE_FAILURE_ISSUE_THRESHOLD = 3
