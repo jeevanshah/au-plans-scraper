@@ -497,8 +497,12 @@ def test_tpg_nbn(monkeypatch):
 def test_flip_nbn(monkeypatch):
     monkeypatch.setattr(nbn_flip, "fetch_js", lambda url, **kw: _soup("flip_nbn.html"))
     plans = nbn_flip.scrape()
-    # 3 real cards from the plans-scroll-inner carousel (a precise DOM
-    # anchor -- not the old page-wide div/section/article scan)
+    # 3 real cards from the plans-*-inner container (a precise DOM anchor --
+    # not the old page-wide div/section/article scan). The container class
+    # itself has already renamed once (plans-scroll-inner -> plans-wrap-
+    # inner) since this fixture was first captured -- matched via a
+    # plans-\w+-inner pattern so this test doesn't need updating again for
+    # a similar future rename.
     assert len(plans) == 3
     by_name = {p.plan_name: p for p in plans}
     assert set(by_name) == {"Premium", "Family", "Fast Speed"}
@@ -510,7 +514,11 @@ def test_flip_nbn(monkeypatch):
     assert by_name["Premium"].promo_period_months == 6
     assert by_name["Premium"].speed_tier == "NBN 25/8"
     assert by_name["Family"].speed_tier == "NBN 50/17"
+    assert by_name["Family"].price_monthly == 84.9
+    assert by_name["Family"].promo_price == 68.0
     assert by_name["Fast Speed"].speed_tier == "NBN 500/42"
+    assert by_name["Fast Speed"].price_monthly == 88.9
+    assert by_name["Fast Speed"].promo_price == 69.0
     for p in plans:
         assert p.provider == "Flip"
         assert p.promo_price < p.price_monthly

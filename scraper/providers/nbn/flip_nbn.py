@@ -4,9 +4,13 @@ The real plans page is https://flipconnect.com.au/cheap-nbn-plans (NOT the
 bare homepage, which only has a "from $48/month" teaser with no per-tier
 data -- that mismatch is what caused earlier attempts to come back empty).
 
-Plan cards are the direct children of the `.plans-scroll-inner` carousel
-container (each wrapped in a `.flex-shrink-0` div) -- a precise, real DOM
-anchor, not a page-wide scan of every div/section/article by text length.
+Plan cards are the direct children of a `plans-*-inner` container (each
+wrapped in a `.flex-shrink-0` div) -- a precise, real DOM anchor, not a
+page-wide scan of every div/section/article by text length. The container's
+exact class has already changed once (`plans-scroll-inner` -> `plans-wrap-
+inner`, when Flip redesigned this section from a horizontal-scroll carousel
+to a wrapping grid) -- matched via a `plans-\w+-inner` pattern instead of an
+exact string so a similar future rename doesn't silently break this again.
 Within each card: `.text-flipRed` holds the marketing tier name (e.g.
 "Premium"), `.text-price` holds the promo price, and the regular/ongoing
 price plus promo duration are read from the card's own "For 6 months, then
@@ -24,17 +28,18 @@ REQUIRES_JS = True
 ONGOING_RE = re.compile(r"then\s*\$([\d.]+)\s*ongoing", re.I)
 DURATION_RE = re.compile(r"[Ff]or\s+(\d+)\s*months", re.I)
 SPEED_RE = re.compile(r"(\d+)\s*Mbps\s*Download.*?(\d+)\s*Mbps\s*Upload", re.I | re.S)
+PLANS_INNER_RE = re.compile(r"plans-\w+-inner")
 
 
 def scrape() -> list[NbnPlan]:
     soup = fetch_js(URL, settle_ms=6000)
     scraped_at = now_iso()
 
-    scroll = soup.find(class_=lambda c: c and "plans-scroll-inner" in c)
+    scroll = soup.find(class_=lambda c: c and PLANS_INNER_RE.search(c))
     if scroll is None:
-        raise RuntimeError("scrape() could not find the plans-scroll-inner container")
+        raise RuntimeError("scrape() could not find the plans-*-inner container")
 
-    cards = scroll.find_all("div", class_="flex-shrink-0", recursive=False)
+    cards = scroll.find_all("div", class_=lambda c: c and "flex-shrink-0" in c, recursive=False)
 
     plans = []
     for card in cards:

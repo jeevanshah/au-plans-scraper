@@ -11,13 +11,31 @@ from pathlib import Path
 
 THRESHOLD = 3
 META_PATH = Path(__file__).parent.parent.parent / "data" / "meta.json"
+LABEL = "scraper-stale"
+
+_had_failure = False
 
 
 def gh(*args: str) -> str:
     result = subprocess.run(["gh", *args], capture_output=True, text=True)
     if result.returncode != 0:
+        global _had_failure
+        _had_failure = True
         print(f"gh {' '.join(args)} failed: {result.stderr}", file=sys.stderr)
     return result.stdout.strip()
+
+
+def ensure_label_exists() -> None:
+    # gh issue create --label X fails outright if the label doesn't already
+    # exist on the repo -- this silently broke every issue-creation attempt
+    # for weeks (the repo never had a "scraper-stale" label) because gh()
+    # only logs failures, it doesn't raise. --force makes this idempotent:
+    # creates the label if missing, updates it in place if already there.
+    gh(
+        "label", "create", LABEL, "--force",
+        "--color", "d73a4a",
+        "--description", "Opened automatically when a provider scraper hits 3+ consecutive failures",
+    )
 
 
 def find_open_issue(title: str) -> str | None:
@@ -28,10 +46,12 @@ def find_open_issue(title: str) -> str | None:
     return output.splitlines()[0] if output else None
 
 
-def main() -> None:
+def main() -> int:
     if not META_PATH.exists():
         print("No meta.json found, nothing to do")
-        return
+        return 0
+
+    ensure_label_exists()
 
     meta = json.loads(META_PATH.read_text(encoding="utf-8"))
 
@@ -47,7 +67,7 @@ def main() -> None:
                 "The last-known-good plan data is still being served, but it is "
                 "now stale. Check the provider's page for a layout/markup change."
             )
-            gh("issue", "create", "--title", title, "--body", body, "--label", "scraper-stale")
+            gh("issue", "create", "--title", title, "--body", body, "--label", LABEL)
             print(f"Opened issue for {provider} ({failures} consecutive failures)")
         elif failures < THRESHOLD and existing_issue:
             gh(
@@ -56,6 +76,12 @@ def main() -> None:
             )
             print(f"Closed stale issue for {provider} (recovered)")
 
+    # Propagate real gh failures as a non-zero exit -- this step has no
+    # continue-on-error in the workflow, so this is what actually surfaces
+    # a broken automation in the Actions UI instead of silently no-op'ing,
+    # which is exactly how the missing-label bug went unnoticed for weeks.
+    return 1 if _had_failure else 0
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
