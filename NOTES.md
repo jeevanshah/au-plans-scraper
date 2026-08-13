@@ -260,11 +260,72 @@ prices, and nominal tier labels, filtering out `isDuplicatePlan`/
 Scheduling is also now live: `.github/workflows/scrape.yml` runs daily at
 12:00am AEST via cron, not just on manual `workflow_dispatch`.
 
-## Workflow note: scraper implementation goes through DeepSeek
+## Swoop (shipped) and Neptune Internet (blocked) -- 2026-07-22
 
-New provider scraper code (parsers, fixtures, tests) gets written via
-DeepSeek rather than Claude, to save tokens on repetitive, well-scoped work.
-Claude's role on this repo defaults to research/scoping/planning (site
-structure, feasibility, data shape, integration points -- see above) rather
-than writing full new scraper implementations end-to-end, unless explicitly
-asked to write the code.
+Two more candidates: Swoop and Neptune Internet, both real NBN retailers.
+
+- **Swoop** -- `https://www.swoop.com.au/nbn/`, fully static, no anti-bot.
+  4 tiers (NBN 25/10, 50/20, 500/50, 1000/100). Genuinely clean, semantic
+  markup: plan cards are `div.card--plan`, the regular price is marked
+  `span.discount.strikethrough` and the promo price `span.discount-price`
+  (a real distinguishing class, not a positional guess), tier label is in
+  `.card__header .subheading`, and typical evening download/upload speeds
+  are the two `.h2` figures in `.card__typical-speeds .speeds` -- note
+  these can differ from the nominal tier (the "1000/100" tier's real
+  evening download is 890Mbps, not 1000). Shipped and registered.
+
+- **Neptune Internet** -- `https://www.neptune.net.au/internet` and every
+  URL variant tried returns 403 with `Cf-Mitigated`/`CF-RAY` response
+  headers -- a Cloudflare bot-management challenge blocking the request
+  before any HTML (static or JS-rendered) is served. Same category as
+  Belong/Optus/Southern Phone/Woolworths -- would need a real headless
+  browser with a residential-like fingerprint (Playwright + stealth
+  patches, or a Cloudflare-challenge solver) to even see the page. Not
+  attempted further; treat as a stretch goal like the others.
+
+## CI/scheduling: pytest sys.path bug (fixed) and cloud-IP blocking (open)
+
+The daily cron went live 2026-07-14 (`0 14 * * *` UTC = 12:00am AEST). Two
+issues surfaced once it started actually running unattended -- neither
+showed up during local dev/testing:
+
+1. **Fixed (`e8ef915`):** the "Run parser tests" step used bare
+   `pytest tests/`, which does NOT add the current directory to
+   `sys.path` -- so CI hit `ModuleNotFoundError: No module named 'scraper'`
+   on every run, even though `python -m pytest tests/` (which DOES add cwd
+   to sys.path) always worked fine locally. `scraper/` has `__init__.py`
+   (real package) but `tests/` doesn't, which is exactly the condition that
+   triggers this. Fixed by changing the workflow step to
+   `python -m pytest tests/`. Side note: a `continue-on-error: true` flag
+   that got added and then reverted earlier turned out to have been
+   covering for this exact bug, not "masking passing tests for no reason"
+   as first assessed -- reverting it was still right (a safeguard shouldn't
+   silently swallow real failures), but removing a workaround can surface a
+   real pre-existing bug that then needs its own fix.
+
+2. **Open as of 2026-07-22, not yet root-caused:** Dodo (both NBN and
+   mobile) and Vodafone (both NBN and mobile) have failed on every single
+   scheduled run since the cron went live -- 6+ consecutive failures each.
+   Confirmed by direct testing that all 4 URLs work completely fine from a
+   normal/dev connection -- this is GitHub Actions' cloud/datacenter IP
+   range getting blocked (403 for Dodo, 503 for Vodafone) in a way that
+   never manifests from a residential/dev machine. Same category as the
+   already-documented anti-bot-blocked providers, except worse: it only
+   shows up in the actual production environment (CI), not during dev.
+   Also found: `manage_stale_issues.py` never actually opened a
+   `stale: <provider>` GitHub issue despite being well past the
+   3-consecutive-failure threshold for days -- that automation isn't
+   working and needs investigating (was mid-investigation when this note
+   was written -- check for a resolution before re-investigating).
+
+## Workflow note: Claude implements scraper code directly
+
+This project originally had DeepSeek write all new scraper code (parsers,
+fixtures, tests) to save Claude tokens, with Claude doing research/planning/
+verification only. That changed 2026-07-12: DeepSeek's self-reported fixes
+repeatedly turned out to be superficial or fabricated (e.g. claiming a file
+was fixed when it was never touched), so the workflow shifted to Claude
+implementing directly -- research the live site, write the parser, add a
+fixture-based test, register it in `run.py`, verify with `pytest` AND a
+live `python run.py` run (not just one or the other), then commit. Default
+to this unless told otherwise.

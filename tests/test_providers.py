@@ -21,6 +21,7 @@ from scraper.providers.nbn import iinet as nbn_iinet
 from scraper.providers.nbn import vodafone_nbn as nbn_vodafone
 from scraper.providers.nbn import tpg_nbn as nbn_tpg
 from scraper.providers.nbn import flip_nbn as nbn_flip
+from scraper.providers.nbn import swoop_nbn as nbn_swoop
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -533,6 +534,27 @@ def test_moose_mobile(monkeypatch):
         assert p.network == "Vodafone"
         # No promo structure on these plans -- flat pricing only
         assert p.promo_price is None
+
+
+def test_swoop_nbn(monkeypatch):
+    monkeypatch.setattr(nbn_swoop, "fetch_static", lambda url: _soup("swoop_nbn.html"))
+    plans = nbn_swoop.scrape()
+    assert len(plans) == 4
+    by_tier = {p.speed_tier: p for p in plans}
+    assert set(by_tier) == {"NBN 25/10", "NBN 50/20", "NBN 500/50", "NBN 1000/100"}
+    # Regular price comes from the genuinely-marked .strikethrough element,
+    # promo from .discount-price -- not a positional/numeric guess
+    assert by_tier["NBN 25/10"].price_monthly == 69.0
+    assert by_tier["NBN 25/10"].promo_price == 54.0
+    assert by_tier["NBN 25/10"].promo_period_months == 6
+    assert by_tier["NBN 500/50"].price_monthly == 94.0
+    assert by_tier["NBN 500/50"].promo_price == 72.0
+    # Typical evening speed can differ from the nominal tier label (the
+    # 1000/100 tier's real evening download is 890Mbps, not 1000)
+    assert by_tier["NBN 1000/100"].typical_evening_speed_mbps == 890.0
+    for p in plans:
+        assert p.provider == "Swoop"
+        assert p.promo_price < p.price_monthly
 
 
 def test_spintel_nbn(monkeypatch):

@@ -50,7 +50,7 @@ two fields get extracted per provider.
 ## Providers
 
 **NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel, iiNet,
-Vodafone, SpinTel, TPG, Flip
+Vodafone, SpinTel, TPG, Flip, Swoop
 **Mobile:** TPG, Telstra, amaysim, Vodafone, Kogan Mobile, Felix, Boost Mobile,
 ALDImobile, Dodo, Aussie Broadband, Moose Mobile
 
@@ -69,7 +69,9 @@ and is now scraped like any other provider.
 
 Held back (needs real anti-bot/browser-fingerprint handling, not scrapeable with
 `fetch_static`/`fetch_js` as-is): Belong, Optus, Southern Phone, Woolworths
-Mobile/everyday -- see `scraper/providers/` for what's implemented so far.
+Mobile/everyday, Neptune Internet (Cloudflare bot-management challenge,
+403 with `Cf-Mitigated`/`CF-RAY` headers on every URL tried) -- see
+`scraper/providers/` for what's implemented so far.
 
 ## Running locally
 
