@@ -9,6 +9,9 @@ hosting cost.
 
 - [`data/deals.json`](data/deals.json) -- merged NBN + mobile deal cards (see shape below)
 - [`data/meta.json`](data/meta.json) -- per-provider last-success timestamp and consecutive-failure count
+- [`data/changelog.json`](data/changelog.json) -- human-readable log of genuine changes each run
+  (new providers, new tiers, real price changes) vs. the previous run, most recent first, capped
+  at the last `CHANGELOG_MAX_ENTRIES` entries in `run.py`
 
 Fetch from your app via:
 
@@ -97,11 +100,15 @@ User-Agent for a plain browser UA -- real Chrome with the normal
 
 ```
 pip install -r requirements.txt
-playwright install chromium
+playwright install chromium chrome
 python run.py
 ```
 
-Writes/updates `data/deals.json`, `data/meta.json`.
+(Optus needs the `chrome` channel specifically -- Playwright's bundled Chromium gets
+connection-reset by its bot mitigation regardless of user-agent, see
+`scraper/providers/nbn/optus.py`. Every other provider only needs `chromium`.)
+
+Writes/updates `data/deals.json`, `data/meta.json`, `data/changelog.json`.
 
 ## Testing
 
