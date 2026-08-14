@@ -89,6 +89,10 @@ INTER_PROVIDER_DELAY_MAX = 2.5
 # either direction), log a warning as potential parser drift.
 PRICE_VARIANCE_WARN_FACTOR = 0.5
 
+# changelog.json only ever needs to show the last few entries on-site, but
+# keep some history in the file itself in case that ever changes.
+CHANGELOG_MAX_ENTRIES = 40
+
 
 def _load_json(path: Path):
     if not path.exists():
@@ -167,6 +171,62 @@ def _sanity_check_deals(all_deals: list[dict], previous_deals: list[dict]):
         seen_ids.add(deal_id)
 
 
+def build_changelog_entries(all_deals: list[dict], previous_deals: list[dict], today: str) -> list[dict]:
+    """Describe what genuinely changed vs. the last run, for a public changelog.
+
+    Keyed by (provider, serviceType, tier) -- same key as _sanity_check_deals,
+    since `id` rotates monthly and isn't stable enough to diff against, and
+    `postedAt`/`_source` change on every run regardless of real changes.
+    """
+
+    def key(d):
+        return (d.get("provider", ""), d.get("serviceType", ""), d.get("tier", ""))
+
+    prev_index = {key(d): d for d in previous_deals}
+    prev_provider_categories = {(d.get("provider", ""), d.get("serviceType", "")) for d in previous_deals}
+
+    seen_new_provider_categories: set[tuple[str, str]] = set()
+    messages: list[str] = []
+
+    for deal in all_deals:
+        provider = deal.get("provider", "")
+        service_type = deal.get("serviceType", "")
+        tier = deal.get("tier", "")
+        provider_category = (provider, service_type)
+        prev = prev_index.get(key(deal))
+
+        if prev is None:
+            if provider_category not in prev_provider_categories:
+                # Brand new provider -- one line for the whole batch of tiers,
+                # not one per tier (a provider can launch with 7+ at once).
+                if provider_category not in seen_new_provider_categories:
+                    seen_new_provider_categories.add(provider_category)
+                    label = "NBN" if service_type == "nbn" else "mobile"
+                    messages.append(f"Added {provider} {label} plans")
+            else:
+                messages.append(f"Added {provider} {tier} plan")
+            continue
+
+        changed = any(
+            deal.get(f) != prev.get(f) for f in ("promoPrice", "regularPrice", "promoMonths")
+        )
+        if changed:
+            messages.append(f"Updated {provider} {tier} pricing")
+
+    seen: set[str] = set()
+    deduped = [m for m in messages if not (m in seen or seen.add(m))]
+
+    return [{"date": today, "message": m} for m in deduped]
+
+
+def _write_changelog(new_entries: list[dict]) -> None:
+    existing = _load_json(DATA_DIR / "changelog.json") or []
+    combined = new_entries + existing
+    (DATA_DIR / "changelog.json").write_text(
+        json.dumps(combined[:CHANGELOG_MAX_ENTRIES], indent=2), encoding="utf-8"
+    )
+
+
 def main() -> int:
     DATA_DIR.mkdir(exist_ok=True)
     meta = _load_json(DATA_DIR / "meta.json") or {}
@@ -226,6 +286,9 @@ def main() -> int:
 
     # Run sanity checks before writing
     _sanity_check_deals(all_deals, previous_deals)
+
+    changelog_entries = build_changelog_entries(all_deals, previous_deals, now_iso()[:10])
+    _write_changelog(changelog_entries)
 
     (DATA_DIR / "deals.json").write_text(json.dumps(all_deals, indent=2), encoding="utf-8")
     (DATA_DIR / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
