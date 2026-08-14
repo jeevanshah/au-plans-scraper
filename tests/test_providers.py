@@ -296,6 +296,30 @@ def test_amaysim_mobile(monkeypatch):
     assert p10.promo_price is None
 
 
+def test_amaysim_no_promo_end_date_without_promo_price(monkeypatch):
+    """Regression: a card can be flagged plan-hasflag-true and have "Ongoing
+    is $X... Ends <date>" terms text (a signup-window deadline) without an
+    actual "Save $X" discount badge -- promo_end_date must stay None in that
+    case, not carry a real date on an otherwise flat-priced plan."""
+    html = '''
+    <article class="product-card product-card-plan plan-hasflag-true product-id-99999"
+             data-base-data="50" data-base-price="35" data-plan-id="99999">
+      <span data-mp-flag="">Bonus 10GB, ends soon</span>
+      <span data-mp-data="">50</span>GB
+      Ongoing is $35 for 50GB/28 days. Ends 30th July. New online services only.
+      <div class="product-card-renewal">28 day renewal</div>
+    </article>
+    '''
+    soup = BeautifulSoup(html, "lxml")
+    monkeypatch.setattr(mobile_amaysim, "fetch_static", lambda url: soup)
+    plans = mobile_amaysim.scrape()
+    assert len(plans) == 1
+    plan = plans[0]
+    assert plan.promo_price is None
+    assert plan.promo_end_date is None
+    assert plan.price_monthly == 35.0
+
+
 def test_vodafone_mobile(monkeypatch):
     monkeypatch.setattr(mobile_vodafone, "fetch_static", lambda url: _soup("vodafone_mobile.html"))
     plans = mobile_vodafone.scrape()

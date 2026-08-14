@@ -100,7 +100,14 @@ def scrape() -> list[MobilePlan]:
             promo_match = PROMO_PRICE_RE.search(text)
             if promo_match:
                 promo_price = float(promo_match.group(1))
-            promo_end_date = _parse_terms_end_date(text, scraped_at)
+                # Only set an end-date when there's an actual discount to
+                # attach it to -- the "Ends <date>" terms text can appear
+                # (a signup-window deadline) even on cards where the "Save
+                # $X" sub-badge isn't present, i.e. no real promo_price.
+                # Leaving promo_end_date set in that case would let a flat,
+                # non-discounted plan carry a real validUntil date
+                # downstream (transform.py passes it through unconditionally).
+                promo_end_date = _parse_terms_end_date(text, scraped_at)
         else:
             price_monthly = base_price
             promo_price = None
