@@ -618,6 +618,48 @@ from the old note:
   Playwright+real-Chrome page capture from 2026-08-14) AND a live
   `optus.scrape()` call against the real site -- output matched.
 
+## Leaptel (shipped) -- 2026-08-14/15
+
+Added by request (highest-requested provider not yet covered). Verified
+live via WebSearch first -- Leaptel is a real, currently-operating
+Melbourne-based NBN retailer (`leaptel.com.au`), no naming ambiguity.
+
+- Plain HTTP (`fetch_static`) gets a 403 outright. Per the "retry with a
+  real browser before writing a site off" lesson from Neptune/Optus,
+  tried `fetch_js()` next -- passes fine with the bundled Chromium, no
+  channel/UA override needed at all (unlike Optus, which needed both).
+- The plans page (`leaptel.com.au/plans/`) renders every plan card
+  **twice** in the DOM: once as a genuine, complete "SSR preview" block
+  (`wp-block-leaptel-plan-list__ssr`, explicitly commented in the page's
+  own markup as a server-rendered fallback "hidden by Alpine once the
+  interactive list has real data") and again via the live Alpine-
+  interactive carousel that replaces it. Both exist simultaneously in the
+  DOM regardless of the SSR block's `display: none` -- BeautifulSoup
+  doesn't care about CSS visibility, so `get_text()` on the whole page
+  picks up both copies, which is what looked like duplicated/garbled plan
+  data on first read. Scoping extraction to the SSR block specifically
+  avoids double-counting.
+- Getting *that* right needed one more fix: `find_all(class_=lambda c: c
+  and "wp-block-leaptel-card" in c)` matched 218 elements, not 13 --
+  BeautifulSoup calls a `class_` callable once per individual class
+  token *and* once with the full joined string (confirmed via the same
+  investigation technique used for Flip NBN's class-rename bug), so a
+  substring check also matches nested sub-elements like
+  `wp-block-leaptel-card__heading`. Fixed with exact token equality
+  (`c == "wp-block-leaptel-card"`) instead of a substring check -- the
+  same fix shape as Flip's container-matching bug, worth checking for
+  on any future WordPress/Elementor-style site with BEM-ish nested class
+  names sharing a common prefix.
+- 13 real tiers (Pronto 25/10 through Hyperfast+ 2000/500), each with a
+  clean "$X / month $Y discount for N months, then $Z ongoing" promo
+  string and a per-card "Available for `<tech>` technolog(y|ies) only"
+  disclosure (absent entirely on the 2 tiers -- Pronto, Accelerated --
+  available on every fixed-line tech, matching this project's "return
+  None rather than guessing" convention for `tech_type`). Typical evening
+  speed can differ from the nominal tier label (Superfast's real evening
+  download is 700Mbps, not its 750 tier name) -- same pattern seen
+  repeatedly elsewhere in this project (Swoop, More Telecom, Arctel).
+
 ## Workflow note: Claude implements scraper code directly
 
 This project originally had DeepSeek write all new scraper code (parsers,

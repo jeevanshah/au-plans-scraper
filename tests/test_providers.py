@@ -27,6 +27,7 @@ from scraper.providers.nbn import more_nbn
 from scraper.providers.nbn import purple_connect
 from scraper.providers.nbn import arctel
 from scraper.providers.nbn import optus
+from scraper.providers.nbn import leaptel
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -246,6 +247,39 @@ def test_optus_nbn(monkeypatch):
         assert p.provider == "Optus"
         assert p.promo_price < p.price_monthly
         assert p.contract_length == "No lock-in contract"
+
+
+def test_leaptel_nbn(monkeypatch):
+    monkeypatch.setattr(leaptel, "fetch_js", lambda url, **kw: _soup("leaptel_nbn.html"))
+    plans = leaptel.scrape()
+    # 13 real cards from the wp-block-leaptel-plan-list__ssr block -- the
+    # page renders every card twice (a hidden SSR fallback + the live
+    # Alpine-interactive carousel), scoping to the SSR block and matching
+    # its exact "wp-block-leaptel-card" class token (not a substring, which
+    # would also match nested sub-elements) avoids double-counting
+    assert len(plans) == 13
+    by_tier = {p.speed_tier: p for p in plans}
+    assert set(by_tier) == {
+        "NBN 25/10", "NBN 50/20", "NBN 100/20", "NBN 100/40", "NBN 250/100",
+        "NBN 500/50", "NBN 500/200", "NBN 750/50", "NBN 1000/100",
+        "NBN 1000/400", "NBN 2000/100", "NBN 2000/200", "NBN 2000/500",
+    }
+    assert by_tier["NBN 25/10"].plan_name == "Pronto"
+    assert by_tier["NBN 25/10"].price_monthly == 75.0
+    assert by_tier["NBN 25/10"].promo_price == 50.0
+    assert by_tier["NBN 25/10"].promo_period_months == 6
+    # No tech-eligibility text on Pronto/Accelerated (available on every
+    # fixed-line tech) -- tech_type correctly stays None, not guessed
+    assert by_tier["NBN 25/10"].tech_type is None
+    assert by_tier["NBN 100/20"].tech_type == "Fibre and FTTN"
+    assert by_tier["NBN 500/50"].tech_type == "Fibre"
+    # Typical evening speed can differ from the nominal tier (Superfast's
+    # real evening download is 700Mbps, not its 750 tier label)
+    assert by_tier["NBN 750/50"].typical_evening_speed_mbps == 700.0
+    for p in plans:
+        assert p.provider == "Leaptel"
+        assert p.promo_price < p.price_monthly
+        assert p.promo_period_months in (6, 12)
 
 
 # ========== Mobile tests ==========

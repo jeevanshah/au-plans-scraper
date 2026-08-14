@@ -54,7 +54,7 @@ two fields get extracted per provider.
 
 **NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel, iiNet,
 Vodafone, SpinTel, TPG, Flip, Swoop, Neptune Internet, More Telecom, Purple Connect,
-Arctel, Optus
+Arctel, Optus, Leaptel
 **Mobile:** TPG, Telstra, amaysim, Vodafone, Kogan Mobile, Felix, Boost Mobile,
 ALDImobile, Dodo, Aussie Broadband, Moose Mobile
 
