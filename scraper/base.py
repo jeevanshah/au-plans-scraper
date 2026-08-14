@@ -52,6 +52,8 @@ def fetch_js(
     settle_ms: int = 0,
     timeout_ms: int = 45000,
     retries: int = DEFAULT_RETRIES,
+    channel: str | None = None,
+    user_agent: str | None = None,
 ) -> BeautifulSoup:
     """Fetch a JS-rendered page via Playwright. Only used by providers with requires_js=True.
 
@@ -59,6 +61,18 @@ def fetch_js(
     go network-idle due to background polling, which hangs "networkidle" until timeout.
     settle_ms adds a fixed extra wait after load/selector for client-side hydration that
     finishes just after the load event (e.g. Superloop's Gatsby+React plan cards).
+
+    channel lets a provider request a real installed browser (e.g. "chrome") instead of
+    Playwright's bundled Chromium-for-Testing build, and user_agent overrides the module's
+    self-identifying default UA. Optus needs both: its bot mitigation fingerprints at the
+    TLS/HTTP2 layer and resets the connection (net::ERR_HTTP2_PROTOCOL_ERROR) for the
+    bundled Chromium build regardless of UA, AND (separately) for a real Chrome binary
+    if it's sent this module's default USER_AGENT, which -- unlike a normal browser UA --
+    carries an honest "au-plans-scraper/1.0 (+https://github.com/...)" self-identification
+    prefix; only real Chrome + a plain, unmodified browser UA string passes. See
+    scraper/providers/nbn/optus.py and NOTES.md for the full 2x2 test that isolated this.
+    The CI workflow installs both `chromium` and `chrome` via `playwright install` so the
+    "chrome" channel is available there too.
     """
     from playwright.sync_api import sync_playwright
 
@@ -66,9 +80,9 @@ def fetch_js(
     for attempt in range(1, retries + 1):
         try:
             with sync_playwright() as p:
-                browser = p.chromium.launch()
+                browser = p.chromium.launch(channel=channel)
                 try:
-                    page = browser.new_page(user_agent=USER_AGENT)
+                    page = browser.new_page(user_agent=user_agent or USER_AGENT)
                     page.goto(url, timeout=timeout_ms, wait_until=wait_until)
                     if wait_selector:
                         page.wait_for_selector(wait_selector, timeout=timeout_ms)

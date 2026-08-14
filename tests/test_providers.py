@@ -23,6 +23,10 @@ from scraper.providers.nbn import tpg_nbn as nbn_tpg
 from scraper.providers.nbn import flip_nbn as nbn_flip
 from scraper.providers.nbn import swoop_nbn as nbn_swoop
 from scraper.providers.nbn import neptune_nbn as nbn_neptune
+from scraper.providers.nbn import more_nbn
+from scraper.providers.nbn import purple_connect
+from scraper.providers.nbn import arctel
+from scraper.providers.nbn import optus
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -105,6 +109,143 @@ def test_iinet_nbn(monkeypatch):
         assert p.provider == "iiNet"
         assert p.price_monthly > 0
         assert p.speed_tier.startswith("NBN")
+
+
+def test_more_nbn(monkeypatch):
+    monkeypatch.setattr(more_nbn, "fetch_static", lambda url: _soup("more_nbn.html"))
+    plans = more_nbn.scrape()
+    # 4 real buy-cards (data-offer="false") -- the compare table's "Fast" and
+    # "Fast Plus" tiers have no matching price/card in this address-free view
+    assert len(plans) == 4
+    by_name = {p.plan_name: p for p in plans}
+    assert set(by_name) == {"Value", "Value Plus", "Fast Max", "Ultrafast"}
+    assert by_name["Value"].price_monthly == 80.0
+    assert by_name["Value"].speed_tier == "NBN 25/10"
+    assert by_name["Value Plus"].price_monthly == 100.0
+    assert by_name["Value Plus"].speed_tier == "NBN 50/20"
+    assert by_name["Fast Max"].price_monthly == 105.0
+    assert by_name["Fast Max"].speed_tier == "NBN 500/50"
+    assert by_name["Ultrafast"].price_monthly == 125.0
+    assert by_name["Ultrafast"].speed_tier == "NBN 1000/100"
+    # Typical evening speed is the page's own busy-hour figure, which for
+    # Ultrafast genuinely differs from its nominal 1000/100 tier label
+    assert by_name["Ultrafast"].typical_evening_speed_mbps == 700.0
+    for p in plans:
+        assert p.provider == "More Telecom"
+        assert p.promo_price is None
+        assert p.contract_length == "No lock-in contract"
+
+
+def test_purple_connect_nbn(monkeypatch):
+    fixture_bytes = (FIXTURES / "purple_connect_cis.pdf").read_bytes()
+    monkeypatch.setattr(purple_connect, "_fetch_pdf_bytes", lambda url: fixture_bytes)
+    plans = purple_connect.scrape()
+    # 7 fixed-line tiers -- the CIS's 4 Fixed Wireless tiers are excluded,
+    # same convention as Dodo/Neptune
+    assert len(plans) == 7
+
+
+def test_purple_connect_nbn_details(monkeypatch):
+    fixture_bytes = (FIXTURES / "purple_connect_cis.pdf").read_bytes()
+    monkeypatch.setattr(purple_connect, "_fetch_pdf_bytes", lambda url: fixture_bytes)
+    plans = purple_connect.scrape()
+    by_name = {p.plan_name: p for p in plans}
+    assert set(by_name) == {
+        "Essentials", "Everyday", "Family", "Family Plus",
+        "Superfast", "Superfast II", "Ultrafast",
+    }
+    assert by_name["Essentials"].speed_tier == "NBN 25/10"
+    assert by_name["Essentials"].price_monthly == 72.0
+    assert by_name["Essentials"].typical_evening_speed_mbps == 24.0
+    assert by_name["Family Plus"].speed_tier == "NBN 100/40"
+    assert by_name["Family Plus"].price_monthly == 99.0
+    assert by_name["Ultrafast"].speed_tier == "NBN 1000/100"
+    assert by_name["Ultrafast"].price_monthly == 109.0
+    # "Maximum Speed Potential" tiers (the 3 newest fibre-only plans) have no
+    # measured typical evening speed yet, per the CIS's own footnote
+    assert by_name["Superfast"].typical_evening_speed_mbps is None
+    assert by_name["Superfast II"].typical_evening_speed_mbps is None
+    assert by_name["Ultrafast"].typical_evening_speed_mbps is None
+    for p in plans:
+        assert p.provider == "Purple Connect"
+        assert p.promo_price is None
+        assert p.contract_length == "No lock-in contract"
+        assert p.tech_type in ("Fibre", "Fibre and FTTN")
+
+
+def test_arctel_nbn(monkeypatch):
+    monkeypatch.setattr(arctel, "fetch_static", lambda url: _soup("arctel_nbn.html"))
+    plans = arctel.scrape()
+    # 5 real broadband cards (product_cat-broadband) -- the "Select Your
+    # Hardware" eero 7 modem upsell carousel further down the page uses the
+    # same product-card markup but is tagged product_cat-modem instead
+    assert len(plans) == 5
+    by_name = {p.plan_name: p for p in plans}
+    assert set(by_name) == {"Cruisy Lite", "Cruisy", "Super Fast", "Ultra Fast", "Hyper Sonic"}
+
+    # Flat-priced plans -- no "then $X" promo text, headline price is regular
+    assert by_name["Cruisy Lite"].price_monthly == 48.99
+    assert by_name["Cruisy Lite"].promo_price is None
+    assert by_name["Cruisy Lite"].speed_tier == "NBN 25/10"
+    assert by_name["Cruisy"].price_monthly == 69.99
+    assert by_name["Ultra Fast"].price_monthly == 98.99
+    assert by_name["Ultra Fast"].speed_tier == "NBN 750/50"
+
+    # Promo plans -- headline price is the promo price, "then $X" is regular
+    assert by_name["Super Fast"].price_monthly == 84.99
+    assert by_name["Super Fast"].promo_price == 59.99
+    assert by_name["Super Fast"].promo_period_months == 6
+    assert by_name["Super Fast"].speed_tier == "NBN 500/50"
+    assert by_name["Hyper Sonic"].price_monthly == 112.99
+    assert by_name["Hyper Sonic"].promo_price == 78.99
+    assert by_name["Hyper Sonic"].promo_period_months == 6
+    assert by_name["Hyper Sonic"].speed_tier == "NBN 1000/100"
+    # Typical evening speed can differ from the advertised tier
+    assert by_name["Hyper Sonic"].typical_evening_speed_mbps == 860.0
+
+    for p in plans:
+        assert p.provider == "Arctel"
+        assert p.contract_length == "No lock-in contract"
+        assert p.tech_type is None
+
+
+def test_optus_nbn(monkeypatch):
+    monkeypatch.setattr(optus, "fetch_js", lambda url, **kw: _soup("optus_nbn.html"))
+    plans = optus.scrape()
+    # 5 plan cards on the page, but 2 (Fast/Promo Plus) share the same 500Mbps
+    # tier -- deduped to whichever is cheaper right now (Promo Plus's 6-month
+    # $69 promo beats Fast's flat $89), leaving 4 distinct tiers
+    assert len(plans) == 4
+    by_tier = {p.speed_tier: p for p in plans}
+    assert set(by_tier) == {"NBN 25/8", "NBN 50/17", "NBN 500/43", "NBN 820/85"}
+
+    assert by_tier["NBN 25/8"].plan_name == "Basic"
+    assert by_tier["NBN 25/8"].price_monthly == 83.0
+    assert by_tier["NBN 25/8"].promo_price == 73.0
+    assert by_tier["NBN 25/8"].promo_period_months == 12
+    assert by_tier["NBN 25/8"].tech_type == "Fibre and FTTN"
+
+    assert by_tier["NBN 50/17"].plan_name == "Everyday"
+    assert by_tier["NBN 50/17"].price_monthly == 97.0
+    assert by_tier["NBN 50/17"].promo_price == 87.0
+
+    # The winning 500Mbps card is "Promo Plus", not the flat-priced "Fast"
+    # plan it beat out on price
+    assert by_tier["NBN 500/43"].plan_name == "Promo Plus"
+    assert by_tier["NBN 500/43"].price_monthly == 109.0
+    assert by_tier["NBN 500/43"].promo_price == 69.0
+    assert by_tier["NBN 500/43"].promo_period_months == 6
+    assert by_tier["NBN 500/43"].tech_type == "Fibre"
+
+    assert by_tier["NBN 820/85"].plan_name == "Ultrafast"
+    assert by_tier["NBN 820/85"].price_monthly == 129.0
+    assert by_tier["NBN 820/85"].promo_price == 119.0
+    assert by_tier["NBN 820/85"].tech_type == "Fibre"
+
+    for p in plans:
+        assert p.provider == "Optus"
+        assert p.promo_price < p.price_monthly
+        assert p.contract_length == "No lock-in contract"
 
 
 # ========== Mobile tests ==========

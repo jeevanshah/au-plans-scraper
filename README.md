@@ -50,7 +50,8 @@ two fields get extracted per provider.
 ## Providers
 
 **NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel, iiNet,
-Vodafone, SpinTel, TPG, Flip, Swoop, Neptune Internet
+Vodafone, SpinTel, TPG, Flip, Swoop, Neptune Internet, More Telecom, Purple Connect,
+Arctel, Optus
 **Mobile:** TPG, Telstra, amaysim, Vodafone, Kogan Mobile, Felix, Boost Mobile,
 ALDImobile, Dodo, Aussie Broadband, Moose Mobile
 
@@ -68,7 +69,7 @@ Flip (flipconnect.com.au) is a real, currently-operating budget NBN retailer
 and is now scraped like any other provider.
 
 Held back (needs real anti-bot/browser-fingerprint handling, not scrapeable with
-`fetch_static`/`fetch_js` as-is): Belong, Optus, Southern Phone, Woolworths
+`fetch_static`/`fetch_js` as-is): Belong, Southern Phone, Woolworths
 Mobile/everyday -- see `scraper/providers/` for what's implemented so far.
 
 Note: Neptune Internet's main plans page IS behind Cloudflare bot-management
@@ -79,6 +80,18 @@ it's scraped via its Critical Information Summary page instead (see
 lists every plan in one combined table. Not every Cloudflare-fronted site
 needs proxy/fingerprint workarounds -- worth checking with a real browser
 fetch before writing a provider off as blocked.
+
+Note: Optus was previously listed as blocked (every plain fetch timed out or hit
+ECONNRESET, worse than a 403). Retried and now shipped: plain HTTP actually works
+fine for the raw page, but its plan cards are entirely client-rendered, and
+Playwright's *bundled* Chromium gets connection-reset (`net::ERR_HTTP2_PROTOCOL_ERROR`)
+by Optus's TLS/HTTP2-level bot mitigation on every URL, even the homepage. Getting a
+clean response needed two changes together: a real Google Chrome binary via
+Playwright's `channel="chrome"`, AND dropping this project's usual self-identifying
+User-Agent for a plain browser UA -- real Chrome with the normal
+`au-plans-scraper/1.0 (...)`-prefixed UA still gets reset. See
+`scraper/providers/nbn/optus.py` and `scraper/base.py`'s `fetch_js()` for the
+`channel`/`user_agent` kwargs this needed, and NOTES.md for the full 2x2 test.
 
 ## Running locally
 

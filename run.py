@@ -30,6 +30,10 @@ from scraper.providers.nbn import tpg_nbn as nbn_tpg
 from scraper.providers.nbn import flip_nbn as nbn_flip
 from scraper.providers.nbn import swoop_nbn as nbn_swoop
 from scraper.providers.nbn import neptune_nbn as nbn_neptune
+from scraper.providers.nbn import more_nbn
+from scraper.providers.nbn import purple_connect
+from scraper.providers.nbn import arctel
+from scraper.providers.nbn import optus as nbn_optus
 from scraper.providers.nbn import vodafone_nbn as nbn_vodafone
 from scraper.schema import now_iso
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
@@ -66,12 +70,16 @@ PROVIDERS = [
     (moose_mobile, "mobile", mobile_plan_to_deal),
     (nbn_swoop, "nbn", nbn_plan_to_deal),
     (nbn_neptune, "nbn", nbn_plan_to_deal),
+    (more_nbn, "nbn", nbn_plan_to_deal),
+    (purple_connect, "nbn", nbn_plan_to_deal),
+    (arctel, "nbn", nbn_plan_to_deal),
+    (nbn_optus, "nbn", nbn_plan_to_deal),
 ]
 
 CONSECUTIVE_FAILURE_ISSUE_THRESHOLD = 3
 
 # Politeness delay range in seconds between provider requests.
-# Several providers (Belong, Optus -- see NOTES.md) show bot-mitigation
+# Several providers (Belong, Southern Phone -- see NOTES.md) show bot-mitigation
 # behaviour; back-to-back requests from the same IP likely make it worse.
 INTER_PROVIDER_DELAY_MIN = 1.0
 INTER_PROVIDER_DELAY_MAX = 2.5

@@ -88,6 +88,17 @@ whether/how each could be scraped:
 
 ### Optus (NBN + mobile) -- worse than Belong, likely not worth pursuing
 
+**Follow-up (2026-08-14) reversed this finding for NBN**: retried from
+scratch and shipped -- see the dedicated "Optus (shipped) -- 2026-08-14"
+section further down. Short version: the ECONNRESET/timeout behaviour
+below wasn't reproducible this time (plain `requests` now 200s fine), and
+the real blocker turned out to be Playwright's bundled Chromium getting
+TLS/HTTP2-fingerprinted and connection-reset -- fixed with
+`channel="chrome"` (a real installed Chrome binary) instead of any
+proxy/residential-IP infrastructure. Mobile SIM-only plans weren't
+investigated in the follow-up; treat that part of this entry as still
+unverified.
+
 - Every fetch attempt to optus.com.au (7 URLs tried, homepage/NBN/mobile/even
   a static PDF) simply timed out (60s) or hit ECONNRESET -- no page content,
   no 403, no CAPTCHA HTML ever came back. A control fetch to
@@ -301,6 +312,54 @@ Two more candidates: Swoop and Neptune Internet, both real NBN retailers.
   is seen, the next unmarked row starts the FTTP-only section) rather than
   a fixed row count/position, so it survives future tier additions.
 
+## More Telecom (shipped) -- 2026-08-14
+
+Added as a new provider. Verified via WebSearch first (per the lesson from
+the "Circle" naming-confusion incident) that "More" is a real, currently-
+operating Australian NBN retailer: legally "More Telecom Pty Ltd", trading
+as "More" (Melbourne-based, founded 2013, part-owned by CommBank since
+2021), live at `more.com.au` -- not a rebrand or defunct entity. Used
+"More Telecom" as the `PROVIDER` value (matches the site's own `<meta
+name="author">`, image alt text, and footer copyright "More Telecom Pty
+Ltd", even though the on-page UI mark is styled "More (TM)") to avoid the
+generic single word "More" colliding with unrelated things downstream.
+
+- Working URL: `https://www.more.com.au/personal/nbn-plans`. Fully static
+  HTML, no JS rendering needed -- `fetch_static` alone gets the real prices
+  and speeds baked directly into the page's markup, no address entry
+  required (the page's "Check Address" button only gates order/
+  serviceability, not the pricing display itself, unlike Neptune's or
+  TPG's main pages).
+- 4 real, purchasable speed tiers: Value ($80, NBN 25/10), Value Plus
+  ($100, NBN 50/20), Fast Max ($105, NBN 500/50), Ultrafast ($125, NBN
+  1000/100). Each is a `<div data-offer="false">` card -- a precise,
+  attribute-based anchor that was necessary because the page reuses the
+  exact same `card overflow-hidden rounded-5` class combo for 11 other,
+  unrelated cards (Wi-Fi router add-ons and mobile SIM add-ons), which are
+  instead marked `data-offer="true"` or have no `data-offer` attribute at
+  all.
+- The page's separate "Compare nbn(R) plans" table additionally lists two
+  more named tiers, "Fast" (100/20) and "Fast Plus" (100/40), but neither
+  has a matching buy-card, price, or product ID anywhere in this
+  address-free view -- they're informational only here (likely surfaced
+  only after an address is entered, based on detected connection tech).
+  Not scraped, since there's no real price to attach to them without
+  guessing.
+- No promo pricing on any tier -- flat pricing only, same category as
+  Exetel. (A separate $25/mth-off-for-36-months CommBank cross-promotion
+  and a $25-off Wi-Fi-router-pack discount both exist on the page, but
+  they're conditional on a CommBank payment method / router purchase, not
+  a plan-price discount for all customers, so they're deliberately not
+  modelled as `promo_price`.)
+- One field genuinely needed a raw-HTML regex instead of `get_text()`: each
+  card's authoritative nbn(R) speed tier string (e.g. "nbn(R) speed tier
+  500/50") only exists inside a tooltip icon's `data-bs-title` attribute,
+  not in any visible text node -- `get_text()` silently drops it. Regexing
+  `str(card)` instead picks it up. This matters because the card's own
+  *visible* "Typical Evening Speed" download/upload figures are NOT always
+  the same as the nominal tier (Ultrafast's real typical download is
+  700Mbps, not the tier's 1000) -- same pattern already seen with Swoop.
+
 ## CI/scheduling: pytest sys.path bug (fixed) and cloud-IP blocking (open)
 
 The daily cron went live 2026-07-14 (`0 14 * * *` UTC = 12:00am AEST). Two
@@ -335,6 +394,229 @@ showed up during local dev/testing:
    3-consecutive-failure threshold for days -- that automation isn't
    working and needs investigating (was mid-investigation when this note
    was written -- check for a resolution before re-investigating).
+
+## "Purple Wireless" -- not a real entity, skipped (2026-08-14)
+
+Asked to add a scraper for an Australian NBN provider called "Purple
+Wireless". Per the lesson from the earlier "Circle" naming-confusion
+incident, did WebSearch/WebFetch verification *before* writing any code --
+no scraper module, fixture, or `run.py` wiring was added.
+
+Findings: no real, live, currently-operating Australian NBN retailer trades
+under the name "Purple Wireless". Closest name matches, all ruled out:
+
+- **Purple Connect** (`elgas.com.au/purple-connect`) -- a real, live NBN
+  reseller aimed at regional/rural customers, operated by ELGAS (the gas
+  company). Real product, real pricing (11 tiers, 24-600Mbps, unlimited
+  data, no lock-in), but the actual trading name is "Purple Connect", not
+  "Purple Wireless" -- a different provider than what was asked for.
+- **Purple Communications Australia Pty Ltd** (ABN 37 108 802 366) -- a
+  registered company since 2004, but its own domain
+  (`purplecommunications.com.au`) doesn't even resolve (`ENOTFOUND`).
+  Appears to be a defunct or B2B voice/telecom entity, not a consumer NBN
+  ISP with a plans page to scrape.
+- **Purple WiFi** (`purple.ai`) -- a UK-founded guest-WiFi analytics
+  platform for businesses (social WiFi login/marketing), not an ISP at all
+  and not NBN-related.
+
+No ABN/ASIC record, ISP comparator listing (WhistleOut/Finder/Canstar), or
+nbnco.com.au provider-directory hit for "Purple Wireless" specifically.
+Conclusion: treat as a naming confusion like "Circle", not a real omission.
+If revisited, ask the requester whether they actually meant Purple Connect
+(a genuinely scrapeable, currently-unlisted NBN reseller) before starting
+over.
+
+## Purple Connect (shipped) -- 2026-08-14
+
+Following on from the "Purple Wireless" naming-confusion entry above: added
+Purple Connect as a real new provider. Re-verified live before writing any
+code -- it's operated by Carrier Access Networks Pty Ltd (ABN 85 688 012 544)
+trading as "Purple Connect(TM) Broadband", marketed under ELGAS's own domain
+(`elgas.com.au/purple-connect`) even though ELGAS's core business is LPG gas,
+not telecom. Used "Purple Connect" as the `PROVIDER` value, not "ELGAS" --
+that's the customer-facing brand on every plan card, the CIS's own letterhead,
+and its "How to contact us" section.
+
+- Both the marketing page (`elgas.com.au/purple-connect`) and the actual order
+  portal (`purpleconnect.elgas.com.au`, a Vite/React SPA) are address-gated --
+  neither renders a single plan name or price until a real service address is
+  entered ("Enter your address for available plans"). Same shape of problem as
+  Neptune Internet.
+- Unlike Neptune, there's no HTML Critical Information Summary *page* --
+  instead the portal's footer ("Legals" -> "Critical Information Summary")
+  links straight to a PDF, `Purple_Connect_CIS_NBN_v4.pdf`, hosted on Purple
+  Connect's own S3 asset bucket (`btb-storefront-purpleconnect-otherassets.
+  s3.ap-southeast-2.amazonaws.com`) with no bot-mitigation in front of it --
+  fetchable with a plain `requests.get()`, no Playwright required despite the
+  portal itself being a JS SPA. Found this link by rendering the portal home
+  page with Playwright once (`page.eval_on_selector_all('a', ...)`) rather
+  than guessing route names -- WebFetch alone couldn't see it because the
+  footer links only exist after the SPA hydrates.
+- The PDF's pricing table isn't a real HTML `<table>` -- it's parsed by adding
+  a new `pypdf` dependency, extracting each page's text, collapsing
+  whitespace, and regexing rows of the shape `<name> <tech tokens>
+  [Maximum Speed Potential] Download <n> Mbps Upload <n> Mbps Unlimited
+  $<price> $<price>`. The table's tech-type tokens ("FTTN/B/C, FTTP, HFC" vs.
+  plain "FTTN/B/C") had to be matched longest-alternative-first in the regex,
+  same kind of prefix-collision gotcha as everywhere else in this project.
+  The very first row's name capture also needed an explicit anchor past the
+  header text ("...Minimum Monthly Charge 3 Maximum Monthly Charge 3") --
+  without it, the header's own trailing words got swallowed into the
+  first plan's non-greedy name group.
+- 11 plan tiers total in the CIS: 7 fixed-line (FTTN/B/C, FTTP, HFC) plus 4
+  Fixed Wireless. Only the 7 fixed-line tiers are kept, same convention as
+  Dodo/Neptune (Fixed Wireless isn't a fixed-line NBN product). Kept:
+  Essentials (25/10, $72), Everyday (50/20, $85), Family (100/20, $95),
+  Family Plus (100/40, $99), Superfast (500/50, $95), Superfast II (750/50,
+  $99), Ultrafast (1000/100, $109) -- all flat month-to-month pricing, no
+  promo tiers.
+- The 3 newest/fastest tiers (Superfast, Superfast II, Ultrafast) are flagged
+  in the CIS itself as "Maximum Speed Potential" rather than a measured
+  typical-evening figure -- Purple Connect's own footnote says they don't yet
+  have enough customer data to calculate a real busy-period speed for these.
+  `typical_evening_speed_mbps` is left `None` for those three rather than
+  reporting the theoretical max as if it were a measured figure (would have
+  been a subtly wrong/misleading number to publish).
+- Note the top-tier speeds have moved on since the prior investigation's
+  headline figure ("24-600Mbps") -- this CIS (`_v4`) now goes up to
+  1000/100 (Ultrafast) via a newer Superfast II 750/50 tier in between. Not a
+  discrepancy to chase, just normal price-sheet churn between investigations;
+  scrape from the live CIS each run rather than trusting any cached summary.
+
+## Arctel (shipped) -- 2026-08-14
+
+Asked to add a scraper for an NBN provider called "Arctel". Per the
+"Circle"/"Purple Wireless" lesson, verified it as a real, live entity via
+WebSearch/WebFetch before writing any code -- this one checked out cleanly on
+the first name tried, no mishearing/typo involved. Arctel is a real,
+currently-operating budget nbn(R) retail brand launched in 2025, `arctel.com.au`
+("Your Trusted nbn Provider"), reported (GadgetGuy) as a budget subsidiary of
+Superloop. Used "Arctel" as the `PROVIDER` value -- that's the sole
+customer-facing brand on the site, no separate parent-company letterhead
+anywhere in the plan cards.
+
+- Unlike Neptune/Purple Connect, this one was NOT address-gated for pricing.
+  The homepage's address-eligibility checker (which resolves FTTP/HFC/FTTC/
+  FTTN per address) only gates order/serviceability flow -- all five
+  residential speed-tier plan cards, their live/promo prices, and typical
+  evening speeds render straight into the static HTML (WordPress +
+  WooCommerce + Elementor, no JS rendering needed, `fetch_static` works fine).
+- The plan cards share a WooCommerce product wrapper
+  (`data-elementor-type="product"`) with an unrelated "Select Your Hardware"
+  upsell carousel further down the same page (an eero 7 modem add-on) using
+  near-identical Elementor markup -- same "distinguishing data attribute, not
+  position/count" trick as More Telecom's `data-offer` cards. Here the
+  disambiguator is the WooCommerce category class: real plans carry
+  `product_cat-broadband`, the modem upsell carries `product_cat-modem`.
+- Each card's advertised nbn(R) speed tier (e.g. "25 Mbps" / DOWNLOAD, "10
+  Mbps" / UPLOAD) is split across two separate `<h3>`/`<sup>` widget pairs,
+  never as a single "25/10" string in visible text -- pulled with a regex
+  over the card's raw HTML rather than `get_text()`, same style as More
+  Telecom's tooltip-attribute regex. A separate "Typical evening speed:
+  <down>/<up> Mbps from 7pm-11pm" string can disagree with the advertised
+  tier -- Hyper Sonic advertises 1000/100 but states a typical evening speed
+  of only 860/86.
+- Promo pricing is disclosed only as free text next to the already-discounted
+  headline price, e.g. "$25 off for the first 6 months, then $84.99" -- the
+  headline WooCommerce price is the promo price, and the "then $X" figure is
+  the real regular/ongoing price, not the other way around. 2 of 5 plans
+  (Super Fast, Hyper Sonic) have this; the other 3 (Cruisy Lite, Cruisy,
+  Ultra Fast) are flat-priced with no promo text at all.
+- 5 plans total, all kept (no Fixed Wireless/business tiers mixed in on this
+  page to exclude): Cruisy Lite (25/10, $48.99), Cruisy (50/20, $69.99),
+  Super Fast (500/50, $59.99 for 6 months then $84.99), Ultra Fast (750/50,
+  $98.99), Hyper Sonic (1000/100, $78.99 for 6 months then $112.99).
+- `tech_type` is left `None` for every plan -- FTTP/HFC/FTTC/FTTN is resolved
+  per-address by the JS eligibility checker at order time, not disclosed
+  against any specific plan tier in the static markup.
+- Verified with `pytest` (fixture `tests/fixtures/arctel_nbn.html`, saved
+  2026-08-14) AND a live `arctel.scrape()` call against the real site --
+  output matched the fixture-derived test expectations exactly.
+
+## Optus (shipped) -- 2026-08-14
+
+Previously listed as "worse than Belong, likely not worth pursuing" (see the
+2026-07-11 entry above): every fetch attempt (7 URLs, plain HTTP/WebFetch)
+timed out or hit ECONNRESET with zero page content, worse than a parseable
+403/CAPTCHA. Retried from scratch per the "don't trust an old block finding,
+retry with different tooling" lesson from Neptune -- this time it worked, but
+the failure mode and fix were both different from Neptune's, and different
+from the old note:
+
+- **Plain `requests` (`fetch_static`) now returns 200 fine.**
+  `https://www.optus.com.au/internet/nbn` comes back in a few seconds with
+  ~1MB of HTML -- no timeout, no reset, no 403. So the old "connection-level
+  throttling" finding no longer holds as stated (whether it changed on
+  Optus's side or was a transient/tooling issue back then is unclear, but
+  it's not reproducible now). However this doesn't get real data: it's an
+  AEM page whose plan-listing widgets (`PlanListingWithRecoil`,
+  `PlanSliderBlockAem` in the component markup) render prices/speeds
+  entirely client-side -- the raw HTML only carries widget config (CTA
+  button text, brand/pack ID maps), no plan data at all.
+- **Playwright's bundled Chromium (`fetch_js()` as it existed before this
+  change) fails hard**, unlike Neptune where a stock `fetch_js()` call was
+  enough: `page.goto()` raises `net::ERR_HTTP2_PROTOCOL_ERROR` on every URL
+  tried, including the bare homepage (`https://www.optus.com.au/`), with a
+  normal desktop Chrome User-Agent header already set. Passing
+  `--disable-http2` doesn't fix it -- it just changes the failure to
+  `net::ERR_CONNECTION_RESET` (or a timeout with `--disable-quic` added
+  too). This isn't a real HTTP/2 protocol issue, it's bot mitigation
+  fingerprinting at the TLS/HTTP2 layer specifically against Playwright's
+  "Chromium for Testing" build (its TLS ClientHello / HTTP2 SETTINGS frame
+  ordering differs subtly from a real Chrome release) and resetting the
+  connection before any response comes back.
+- **Getting a clean 200 needed BOTH a real Chrome binary AND dropping this
+  project's self-identifying User-Agent** -- a 2x2 test isolated the two
+  variables:
+  | browser | User-Agent | result |
+  |---|---|---|
+  | bundled Chromium | plain browser UA | `ERR_HTTP2_PROTOCOL_ERROR` |
+  | bundled Chromium | project's `USER_AGENT` (self-identifying) | `ERR_HTTP2_PROTOCOL_ERROR` |
+  | real Chrome (`channel="chrome"`) | project's `USER_AGENT` (self-identifying) | `ERR_HTTP2_PROTOCOL_ERROR` |
+  | real Chrome (`channel="chrome"`) | plain browser UA | **200, full plan cards** |
+
+  This project's normal `USER_AGENT` constant (in `scraper/base.py`) carries
+  an honest self-identification prefix ahead of the browser string --
+  `"au-plans-scraper/1.0 (+https://github.com/; contact: see repo README) Mozilla/5.0 ..."`
+  -- which is exactly what's different from a genuine Chrome install's UA.
+  Optus's bot mitigation flags that prefix and resets the connection even
+  from a real Chrome binary; only real Chrome + an unmodified plain UA
+  string passes. `scraper/base.py`'s `fetch_js()` now takes optional
+  `channel` and `user_agent` kwargs for this (both default to the old
+  behaviour, unaffected for every other provider). The GitHub Actions
+  workflow now runs `playwright install --with-deps chromium chrome` (was
+  just `chromium`) so the `chrome` channel exists in CI too, not just
+  locally where Chrome happened to already be installed.
+- Lesson refined from Neptune's "retry with a real browser before writing a
+  site off as blocked": sometimes that's still not enough on two separate
+  axes -- Optus needed a real *Chrome binary specifically* (not just any
+  Chromium-based automated browser) AND a UA that doesn't self-identify as
+  a scraper. Worth trying both independently on any future site that still
+  fails under a stock `fetch_js()` call. Flagging the trade-off explicitly:
+  scraping Optus this way means not sending this project's usual polite
+  "here's who's fetching this" UA, unlike every other provider here --a
+  deliberate one-off compromise given the alternative was "unscrapeable",
+  documented in `scraper/providers/nbn/optus.py`'s docstring too.
+- No address gating and no CIS-page detour needed (unlike Neptune): the
+  `/internet/nbn` page shows real prices for all 5 residential plan cards
+  with no address entered at all -- "Check your eligibility" gates order
+  flow only, not the price/plan display. Each card does link a per-plan
+  "Critical Information Summary (PDF)", but it's a client-side download
+  triggered by JS (`href="#"`, no static URL in the DOM), so it wasn't
+  pursued as a data source since the main page already has everything.
+- 5 plan cards, 4 distinct speed tiers: Basic (25/8, $73 for 12mo then $83),
+  Everyday (50/17, $87 for 12mo then $97), Fast (500/43, FTTP/HFC-only, $89
+  for 12mo then $99) and a simultaneous limited-time "Promo Plus" card on
+  the *same* 500/43 tier ($69 for 6mo then $109, "Available until
+  6/9/2026"), and Ultrafast (820/85, FTTP/HFC-only, $119 for 12mo then
+  $129). Fast and Promo Plus sharing one tier would collide in
+  `transform.py`'s `_make_id()` (keyed on provider+speed_tier+month) if
+  both were kept, so the scraper dedupes by speed_tier and keeps whichever
+  card is cheaper right now (Promo Plus's $69 beats Fast's $89) -- 4 plans
+  ship, not 5.
+- Verified with `pytest` (fixture `tests/fixtures/optus_nbn.html`, a full
+  Playwright+real-Chrome page capture from 2026-08-14) AND a live
+  `optus.scrape()` call against the real site -- output matched.
 
 ## Workflow note: Claude implements scraper code directly
 
