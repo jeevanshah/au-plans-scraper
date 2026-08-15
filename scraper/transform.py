@@ -82,6 +82,7 @@ def mobile_plan_to_deal(plan: MobilePlan) -> dict:
         "serviceType": "mobile",
         "tier": tier,
         "techType": plan.network_tech,
+        "billingCycleDays": plan.billing_cycle_days,
         "postedAt": plan.scraped_at[:10],
         "_source": _source_note(plan.provider, plan.scraped_at),
     }

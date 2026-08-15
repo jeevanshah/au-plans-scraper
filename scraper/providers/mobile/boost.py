@@ -144,6 +144,7 @@ def scrape() -> list[MobilePlan]:
                 promo_period_months=1 if (promo_price and promo_price < price_monthly) else None,
                 promo_end_date=promo_end_date,
                 contract_length=contract,
+                billing_cycle_days=expiry_days,
                 data_allowance_gb=gb,
                 is_unlimited_data=False,
                 network="Telstra",

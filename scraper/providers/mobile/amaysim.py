@@ -146,6 +146,7 @@ def scrape() -> list[MobilePlan]:
                 promo_period_months=1 if promo_price is not None else None,
                 promo_end_date=promo_end_date,
                 contract_length=contract_length,
+                billing_cycle_days=renewal_days,
                 data_allowance_gb=base_data,
                 is_unlimited_data=False,
                 network="Optus",

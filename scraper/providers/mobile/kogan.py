@@ -91,6 +91,7 @@ def scrape() -> list[MobilePlan]:
         ctx = txt
         is_yearly = bool(YEARLY_RE.search(ctx))
         contract = "365-day expiry" if is_yearly else "Month-to-month"
+        billing_cycle_days = 365 if is_yearly else 30
 
         prices = DOLLAR_RE.findall(ctx)
         if not prices:
@@ -155,6 +156,7 @@ def scrape() -> list[MobilePlan]:
                 promo_period_months=1 if promo_price is not None else None,
                 promo_end_date=promo_end_date,
                 contract_length=contract,
+                billing_cycle_days=billing_cycle_days,
                 data_allowance_gb=gb,
                 is_unlimited_data=False,
                 network="Vodafone",

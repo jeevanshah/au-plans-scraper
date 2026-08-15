@@ -100,8 +100,10 @@ def scrape() -> list[MobilePlan]:
         # Determine contract length
         if EXPIRY_365_RE.search(txt):
             contract = "365-day expiry"
+            billing_cycle_days = 365
         elif EXPIRY_30_RE.search(txt):
             contract = "30-day expiry"
+            billing_cycle_days = 30
         else:
             continue  # Unknown expiry period, skip
 
@@ -119,6 +121,7 @@ def scrape() -> list[MobilePlan]:
                 promo_period_months=None,
                 promo_end_date=promo_end_date,
                 contract_length=contract,
+                billing_cycle_days=billing_cycle_days,
                 data_allowance_gb=gb,
                 is_unlimited_data=False,
                 network="Telstra",  # ALDImobile runs on Telstra wholesale

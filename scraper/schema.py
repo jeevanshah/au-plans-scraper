@@ -40,6 +40,20 @@ class MobilePlan(BaseModel):
     promo_period_months: int | None = Field(default=None, gt=0)
     promo_end_date: str | None = None  # ISO date, only set when the page shows a fixed calendar end-date
     contract_length: str
+    # Real billing/renewal cadence in days. Defaults to 30 (standard monthly
+    # billing) -- explicitly overridden by providers selling prepaid SIMs on
+    # a different cadence (amaysim's 7/28/184/365-day plans, Boost's
+    # 3/7/14/28/186/365-day plans, ALDImobile's 365-day "Long Life" plan,
+    # Kogan's 365-day plans). Without this, `price_monthly` for those plans
+    # is a total-for-the-whole-cycle figure, not an actual monthly price --
+    # treating it as monthly (as this project did before this field existed)
+    # produces a wildly wrong annual/monthly cost for ~1 in 4 mobile plans
+    # (e.g. a $270/365-day plan showing as $270/MONTH, a 12x overstatement).
+    # Consumers (site JS, app's offer.dart) must normalize price_monthly and
+    # promo_price to a true monthly-equivalent using this field before doing
+    # any monthly/annual cost math -- see NOTES.md for the incident that
+    # prompted this.
+    billing_cycle_days: int = Field(default=30, gt=0)
     data_allowance_gb: float | None = None  # None means unlimited
     is_unlimited_data: bool = False
     network: str | None = None  # e.g. "Telstra", "Optus"
