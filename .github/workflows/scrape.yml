@@ -47,7 +47,17 @@ jobs:
             echo "No data changes to commit"
           else
             git commit -m "chore: update scraped plan data [skip ci]"
-            git push
+            # main can move between checkout and this push (e.g. a manual
+            # commit lands mid-run) -- rebase onto the latest main and retry
+            # once rather than failing the whole run on a non-fast-forward push.
+            for attempt in 1 2; do
+              if git push; then
+                break
+              fi
+              echo "push rejected, rebasing onto latest main and retrying (attempt $attempt)"
+              git fetch origin main
+              git rebase origin/main
+            done
           fi
 
       - name: Manage staleness issues
