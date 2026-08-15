@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"C:\\\\Users\\\\Deep\\\\Desktop\\\\mobile-app\\\\app_library_ledger\" 2>&1 | head -50)",
+      "Read(//c/Users/Deep/Desktop/mobile-app/app_library_ledger/**)",
+      "WebSearch",
+      "Bash(python -c ' *)",
+      "Bash(cat)",
+      "Bash(python \"C:\\\\Users\\\\Deep\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Deep-Desktop-au-plans-scraper\\\\1113823c-3073-4acb-958c-eb67b98af46f\\\\scratchpad\\\\dbg.py\")",
+      "Bash(python \"C:\\\\Users\\\\Deep\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Deep-Desktop-au-plans-scraper\\\\1113823c-3073-4acb-958c-eb67b98af46f\\\\scratchpad\\\\dbg2.py\")",
+      "Bash(python -c \"print\\(repr\\(open\\('run.py','rb'\\).read\\(\\)[-5:]\\)\\)\")",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(grep -oE '\\\\$ [0-9]' tests/fixtures/kogan_mobile.html)",
+      "Bash(sort -k6,7)",
+      "Bash(grep -n \"190\\\\|240\\\\|159\\\\|179\\\\|Was \\\\$\\\\|Non-Member Price\\\\|That's only\\\\|140GB\\\\|250GB\\\\|350GB\\\\|500GB\" tests/fixtures/kogan_mobile.html)",
+      "Bash(powershell -NoProfile -Command 'Get-ChildItem -Recurse -File | Where-Object { $_.FullName -notmatch '\\\\''\\\\.git\\\\'\\\\'' } | Sort-Object LastWriteTime -Descending | Select-Object -First 25 LastWriteTime, FullName | Format-Table -AutoSize')",
+      "Bash(python -m pytest tests/test_providers.py::test_kogan_mobile -v)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git -c 'user.name=Jeevan Shah' -c user.email=jeevan.shah@churchill.edu.au commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(curl -s \"https://api.github.com/repos/jeevanshah/au-plans-scraper/issues?state=all&per_page=20\")",
+      "Bash(curl -s \"https://api.github.com/repos/jeevanshah/au-plans-scraper/actions/runs?per_page=8\")",
+      "WebFetch(domain:www.swoop.com.au)",
+      "WebFetch(domain:www.neptune.net.au)",
+      "Bash(\"/c/Python310/python.exe\" --version)",
+      "Bash(\"C:\\\\Python310\\\\python.exe\" --version)",
+      "PowerShell(python --version)",
+      "Bash(/c/Python310/python.exe -c ' *)",
+      "Bash(\"/c/Python310/python.exe\" -m pytest tests/test_providers.py -k swoop -v)",
+      "Bash(\"/c/Python310/python.exe\" -m pytest tests/ -v)",
+      "Bash(\"/c/Python310/python.exe\" -c \"print\\(len\\(open\\('NOTES.md', encoding='utf-8'\\).readlines\\(\\)\\)\\)\")",
+      "Bash(rm flip_recheck.txt)",
+      "Bash(\"/c/Python310/python.exe\" run.py)",
+      "Bash(\"/c/Python310/python.exe\" -m pytest tests/test_providers.py -k neptune -v)",
+      "Read(//c/Users/Deep/.claude/projects/c--Users-Deep-Desktop-au-plans-scraper/memory/**)",
+      "Bash(\"/c/Python310/python.exe\" -c \"print\\('check'\\)\")",
+      "Bash(dir)",
+      "Bash(\"/c/Python310/python.exe\" -m playwright install --dry-run chrome)"
+    ]
+  }
+}

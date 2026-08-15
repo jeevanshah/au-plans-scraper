@@ -1,0 +1,231 @@
+{
+  "generatedAt": "2026-08-15T06:38:37.076676+00:00",
+  "note": "States reflect each provider public internet-exchange (IX) peering footprint per bgp.he.net, not a direct read of NBN Co POI data. See scraper/poi.py for methodology and caveats.",
+  "providers": {
+    "Aussie Broadband": {
+      "asn": 4764,
+      "viaWholesaler": null,
+      "states": [
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "VIC",
+        "WA"
+      ],
+      "exchangeCount": 20,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS4764"
+    },
+    "Leaptel": {
+      "asn": 134090,
+      "viaWholesaler": null,
+      "states": [
+        "NSW",
+        "QLD",
+        "SA",
+        "VIC",
+        "WA"
+      ],
+      "exchangeCount": 17,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS134090"
+    },
+    "Superloop": {
+      "asn": 38195,
+      "viaWholesaler": null,
+      "states": [
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "TAS",
+        "VIC",
+        "WA"
+      ],
+      "exchangeCount": 32,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS38195"
+    },
+    "Exetel": {
+      "asn": 10143,
+      "viaWholesaler": null,
+      "states": [
+        "NSW"
+      ],
+      "exchangeCount": 1,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS10143"
+    },
+    "Tangerine": {
+      "asn": 4764,
+      "viaWholesaler": "Aussie Broadband",
+      "states": [
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "VIC",
+        "WA"
+      ],
+      "exchangeCount": 20,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS4764"
+    },
+    "More Telecom": {
+      "asn": 4764,
+      "viaWholesaler": "Aussie Broadband",
+      "states": [
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "VIC",
+        "WA"
+      ],
+      "exchangeCount": 20,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS4764"
+    },
+    "Swoop": {
+      "asn": 58511,
+      "viaWholesaler": null,
+      "states": [
+        "NSW",
+        "QLD",
+        "SA",
+        "VIC",
+        "WA"
+      ],
+      "exchangeCount": 31,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS58511"
+    },
+    "Neptune Internet": {
+      "asn": 151660,
+      "viaWholesaler": null,
+      "states": [
+        "NSW",
+        "QLD",
+        "SA",
+        "VIC",
+        "WA"
+      ],
+      "exchangeCount": 16,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS151660"
+    },
+    "Purple Connect": {
+      "asn": 4764,
+      "viaWholesaler": "Aussie Broadband",
+      "states": [
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "VIC",
+        "WA"
+      ],
+      "exchangeCount": 20,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS4764"
+    },
+    "Telstra": {
+      "asn": 1221,
+      "viaWholesaler": null,
+      "states": [],
+      "exchangeCount": 0,
+      "noPublicIxData": true,
+      "sourceUrl": "https://bgp.he.net/AS1221"
+    },
+    "Optus": {
+      "asn": 7474,
+      "viaWholesaler": null,
+      "states": [],
+      "exchangeCount": 0,
+      "noPublicIxData": true,
+      "sourceUrl": "https://bgp.he.net/AS7474"
+    },
+    "Arctel": {
+      "asn": 55736,
+      "viaWholesaler": "Triforce/Dataknox",
+      "states": [],
+      "exchangeCount": 0,
+      "noPublicIxData": true,
+      "sourceUrl": "https://bgp.he.net/AS55736"
+    },
+    "Flip": {
+      "asn": 133898,
+      "viaWholesaler": null,
+      "states": [
+        "NSW",
+        "VIC"
+      ],
+      "exchangeCount": 4,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS133898"
+    },
+    "Dodo": {
+      "asn": 9443,
+      "viaWholesaler": "Vocus",
+      "states": [
+        "NSW",
+        "QLD"
+      ],
+      "exchangeCount": 3,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS9443"
+    },
+    "TPG": {
+      "asn": 7545,
+      "viaWholesaler": null,
+      "states": [
+        "NSW",
+        "QLD",
+        "SA",
+        "VIC"
+      ],
+      "exchangeCount": 6,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS7545"
+    },
+    "iiNet": {
+      "asn": 4802,
+      "viaWholesaler": null,
+      "states": [],
+      "exchangeCount": 0,
+      "noPublicIxData": true,
+      "sourceUrl": "https://bgp.he.net/AS4802"
+    },
+    "SpinTel": {
+      "asn": 18390,
+      "viaWholesaler": null,
+      "states": [
+        "NSW",
+        "QLD",
+        "SA",
+        "VIC",
+        "WA"
+      ],
+      "exchangeCount": 17,
+      "noPublicIxData": false,
+      "sourceUrl": "https://bgp.he.net/AS18390"
+    },
+    "Vodafone": {
+      "asn": 133612,
+      "viaWholesaler": null,
+      "states": [],
+      "exchangeCount": 0,
+      "noPublicIxData": true,
+      "sourceUrl": "https://bgp.he.net/AS133612"
+    },
+    "amaysim": {
+      "asn": 7474,
+      "viaWholesaler": "Optus",
+      "states": [],
+      "exchangeCount": 0,
+      "noPublicIxData": true,
+      "sourceUrl": "https://bgp.he.net/AS7474"
+    }
+  }
+}
