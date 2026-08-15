@@ -54,13 +54,13 @@ two fields get extracted per provider.
 
 **NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel, iiNet,
 Vodafone, SpinTel, TPG, Flip, Swoop, Neptune Internet, More Telecom, Purple Connect,
-Arctel, Optus, Leaptel
+Arctel, Optus, Leaptel, amaysim
 **Mobile:** TPG, Telstra, amaysim, Vodafone, Kogan Mobile, Felix, Boost Mobile,
 ALDImobile, Dodo, Aussie Broadband, Moose Mobile
 
 Note some providers appear in both lists under separate scraper modules for
-their NBN and mobile product lines (e.g. Dodo NBN vs. Dodo Mobile, Vodafone
-NBN vs. Vodafone Mobile) -- these are different pages/pricing, not duplicates.
+their NBN and mobile product lines (e.g. amaysim NBN vs. amaysim Mobile, Dodo NBN vs.
+Dodo Mobile, Vodafone NBN vs. Vodafone Mobile) -- these are different pages/pricing, not duplicates.
 
 Dropped: Circles.Life (exited the Australian market in 2025, acquired by amaysim);
 MyRepublic (exited the AU NBN market in Dec 2022/Jan 2023, all URLs return HTTP 530 --

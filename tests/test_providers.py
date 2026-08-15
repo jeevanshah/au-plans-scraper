@@ -28,6 +28,7 @@ from scraper.providers.nbn import purple_connect
 from scraper.providers.nbn import arctel
 from scraper.providers.nbn import optus
 from scraper.providers.nbn import leaptel
+from scraper.providers.nbn import amaysim_nbn
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -280,6 +281,36 @@ def test_leaptel_nbn(monkeypatch):
         assert p.provider == "Leaptel"
         assert p.promo_price < p.price_monthly
         assert p.promo_period_months in (6, 12)
+
+
+def test_amaysim_nbn(monkeypatch):
+    monkeypatch.setattr(amaysim_nbn, "fetch_static", lambda url: _soup("amaysim_nbn.html"))
+    plans = amaysim_nbn.scrape()
+    assert len(plans) == 6
+    by_tier = {p.speed_tier: p for p in plans}
+    assert set(by_tier) == {
+        "NBN 25/8", "NBN 50/17", "NBN 100/18", "NBN 500/43", "NBN 680/43", "NBN 820/85"
+    }
+
+    assert by_tier["NBN 25/8"].plan_name == "NBN 25"
+    assert by_tier["NBN 25/8"].price_monthly == 70.0
+    assert by_tier["NBN 25/8"].promo_price == 60.0
+    assert by_tier["NBN 25/8"].promo_period_months == 6
+    assert by_tier["NBN 25/8"].tech_type == "Fibre and FTTN"
+
+    assert by_tier["NBN 100/18"].plan_name == "NBN 100"
+    assert by_tier["NBN 100/18"].price_monthly == 90.0
+    assert by_tier["NBN 100/18"].promo_price == 50.0
+    assert by_tier["NBN 100/18"].promo_period_months == 6
+    assert by_tier["NBN 100/18"].promo_end_date == "2026-08-31"
+
+    assert by_tier["NBN 500/43"].tech_type == "Fibre"
+    assert by_tier["NBN 820/85"].tech_type == "Fibre"
+
+    for p in plans:
+        assert p.provider == "amaysim"
+        assert p.price_monthly > 0
+        assert p.contract_length == "No lock-in contract"
 
 
 # ========== Mobile tests ==========
