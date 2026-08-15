@@ -574,6 +574,7 @@
     "serviceType": "mobile",
     "tier": "50GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Telstra official site, verified 2026-08-15"
   },
@@ -591,6 +592,7 @@
     "serviceType": "mobile",
     "tier": "180GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Telstra official site, verified 2026-08-15"
   },
@@ -608,6 +610,7 @@
     "serviceType": "mobile",
     "tier": "300GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Telstra official site, verified 2026-08-15"
   },
@@ -625,6 +628,7 @@
     "serviceType": "mobile",
     "tier": "95GB",
     "techType": "5G",
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -642,6 +646,7 @@
     "serviceType": "mobile",
     "tier": "15GB",
     "techType": "5G",
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -659,6 +664,7 @@
     "serviceType": "mobile",
     "tier": "42GB",
     "techType": "5G",
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -676,6 +682,7 @@
     "serviceType": "mobile",
     "tier": "80GB",
     "techType": "5G",
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -693,6 +700,7 @@
     "serviceType": "mobile",
     "tier": "120GB",
     "techType": "5G",
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -710,6 +718,7 @@
     "serviceType": "mobile",
     "tier": "150GB",
     "techType": "5G",
+    "billingCycleDays": 184,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -727,6 +736,7 @@
     "serviceType": "mobile",
     "tier": "200GB",
     "techType": "5G",
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -744,6 +754,7 @@
     "serviceType": "mobile",
     "tier": "240GB",
     "techType": "5G",
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -761,6 +772,7 @@
     "serviceType": "mobile",
     "tier": "30GB",
     "techType": "5G",
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -778,6 +790,7 @@
     "serviceType": "mobile",
     "tier": "100GB",
     "techType": "5G",
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -795,6 +808,7 @@
     "serviceType": "mobile",
     "tier": "365GB",
     "techType": "5G",
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -812,6 +826,7 @@
     "serviceType": "mobile",
     "tier": "10GB",
     "techType": "5G",
+    "billingCycleDays": 7,
     "postedAt": "2026-08-15",
     "_source": "amaysim official site, verified 2026-08-15"
   },
@@ -880,6 +895,7 @@
     "serviceType": "mobile",
     "tier": "20GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Kogan Mobile official site, verified 2026-08-15"
   },
@@ -897,6 +913,7 @@
     "serviceType": "mobile",
     "tier": "60GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Kogan Mobile official site, verified 2026-08-15"
   },
@@ -914,6 +931,7 @@
     "serviceType": "mobile",
     "tier": "250GB",
     "techType": null,
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "Kogan Mobile official site, verified 2026-08-15"
   },
@@ -931,6 +949,7 @@
     "serviceType": "mobile",
     "tier": "500GB",
     "techType": null,
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "Kogan Mobile official site, verified 2026-08-15"
   },
@@ -948,6 +967,7 @@
     "serviceType": "mobile",
     "tier": "80GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Kogan Mobile official site, verified 2026-08-15"
   },
@@ -965,6 +985,7 @@
     "serviceType": "mobile",
     "tier": "140GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Kogan Mobile official site, verified 2026-08-15"
   },
@@ -982,6 +1003,7 @@
     "serviceType": "mobile",
     "tier": "300GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Kogan Mobile official site, verified 2026-08-15"
   },
@@ -999,6 +1021,7 @@
     "serviceType": "mobile",
     "tier": "25GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Felix official site, verified 2026-08-15"
   },
@@ -1016,6 +1039,7 @@
     "serviceType": "mobile",
     "tier": "50GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Felix official site, verified 2026-08-15"
   },
@@ -1033,6 +1057,7 @@
     "serviceType": "mobile",
     "tier": "Unlimited",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Felix official site, verified 2026-08-15"
   },
@@ -1050,6 +1075,7 @@
     "serviceType": "mobile",
     "tier": "8GB",
     "techType": null,
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1067,6 +1093,7 @@
     "serviceType": "mobile",
     "tier": "60GB",
     "techType": null,
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1084,6 +1111,7 @@
     "serviceType": "mobile",
     "tier": "75GB",
     "techType": null,
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1101,6 +1129,7 @@
     "serviceType": "mobile",
     "tier": "105GB",
     "techType": null,
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1118,6 +1147,7 @@
     "serviceType": "mobile",
     "tier": "150GB",
     "techType": null,
+    "billingCycleDays": 28,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1135,6 +1165,7 @@
     "serviceType": "mobile",
     "tier": "160GB",
     "techType": null,
+    "billingCycleDays": 186,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1152,6 +1183,7 @@
     "serviceType": "mobile",
     "tier": "290GB",
     "techType": null,
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1169,6 +1201,7 @@
     "serviceType": "mobile",
     "tier": "365GB",
     "techType": null,
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1186,6 +1219,7 @@
     "serviceType": "mobile",
     "tier": "6GB",
     "techType": null,
+    "billingCycleDays": 7,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1203,6 +1237,7 @@
     "serviceType": "mobile",
     "tier": "7GB",
     "techType": null,
+    "billingCycleDays": 14,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1220,6 +1255,7 @@
     "serviceType": "mobile",
     "tier": "5GB",
     "techType": null,
+    "billingCycleDays": 7,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1237,6 +1273,7 @@
     "serviceType": "mobile",
     "tier": "2GB",
     "techType": null,
+    "billingCycleDays": 3,
     "postedAt": "2026-08-15",
     "_source": "Boost Mobile official site, verified 2026-08-15"
   },
@@ -1254,6 +1291,7 @@
     "serviceType": "mobile",
     "tier": "12GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "ALDImobile official site, verified 2026-08-15"
   },
@@ -1271,6 +1309,7 @@
     "serviceType": "mobile",
     "tier": "29GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "ALDImobile official site, verified 2026-08-15"
   },
@@ -1288,6 +1327,7 @@
     "serviceType": "mobile",
     "tier": "75GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "ALDImobile official site, verified 2026-08-15"
   },
@@ -1305,6 +1345,7 @@
     "serviceType": "mobile",
     "tier": "120GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "ALDImobile official site, verified 2026-08-15"
   },
@@ -1322,6 +1363,7 @@
     "serviceType": "mobile",
     "tier": "175GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "ALDImobile official site, verified 2026-08-15"
   },
@@ -1339,6 +1381,7 @@
     "serviceType": "mobile",
     "tier": "30GB",
     "techType": null,
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "ALDImobile official site, verified 2026-08-15"
   },
@@ -1356,6 +1399,7 @@
     "serviceType": "mobile",
     "tier": "185GB",
     "techType": null,
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "ALDImobile official site, verified 2026-08-15"
   },
@@ -1373,6 +1417,7 @@
     "serviceType": "mobile",
     "tier": "365GB",
     "techType": null,
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "ALDImobile official site, verified 2026-08-15"
   },
@@ -1390,6 +1435,7 @@
     "serviceType": "mobile",
     "tier": "300GB",
     "techType": null,
+    "billingCycleDays": 365,
     "postedAt": "2026-08-15",
     "_source": "ALDImobile official site, verified 2026-08-15"
   },
@@ -1458,6 +1504,7 @@
     "serviceType": "mobile",
     "tier": "20GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Aussie Broadband official site, verified 2026-08-15"
   },
@@ -1475,6 +1522,7 @@
     "serviceType": "mobile",
     "tier": "45GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Aussie Broadband official site, verified 2026-08-15"
   },
@@ -1492,6 +1540,7 @@
     "serviceType": "mobile",
     "tier": "100GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Aussie Broadband official site, verified 2026-08-15"
   },
@@ -1509,6 +1558,7 @@
     "serviceType": "mobile",
     "tier": "180GB",
     "techType": null,
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Aussie Broadband official site, verified 2026-08-15"
   },
@@ -1866,6 +1916,7 @@
     "serviceType": "mobile",
     "tier": "30GB",
     "techType": "4G",
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Moose Mobile official site, verified 2026-08-15"
   },
@@ -1883,6 +1934,7 @@
     "serviceType": "mobile",
     "tier": "50GB",
     "techType": "5G",
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Moose Mobile official site, verified 2026-08-15"
   },
@@ -1900,6 +1952,7 @@
     "serviceType": "mobile",
     "tier": "100GB",
     "techType": "5G",
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Moose Mobile official site, verified 2026-08-15"
   },
@@ -1917,6 +1970,7 @@
     "serviceType": "mobile",
     "tier": "250GB",
     "techType": "5G",
+    "billingCycleDays": 30,
     "postedAt": "2026-08-15",
     "_source": "Moose Mobile official site, verified 2026-08-15"
   },
