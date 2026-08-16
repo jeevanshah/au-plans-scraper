@@ -1,6 +1,10 @@
 [
   {
     "date": "2026-08-16",
+    "message": "Added Pentanet NBN plans"
+  },
+  {
+    "date": "2026-08-16",
     "message": "Added Tangerine NBN 25/10 plan"
   },
   {
@@ -154,9 +158,5 @@
   {
     "date": "2026-08-15",
     "message": "Added amaysim NBN plans"
-  },
-  {
-    "date": "2026-08-14",
-    "message": "Added Leaptel NBN plans"
   }
 ]

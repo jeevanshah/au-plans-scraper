@@ -37,6 +37,7 @@ from scraper.providers.nbn import optus as nbn_optus
 from scraper.providers.nbn import leaptel
 from scraper.providers.nbn import vodafone_nbn as nbn_vodafone
 from scraper.providers.nbn import amaysim_nbn as nbn_amaysim
+from scraper.providers.nbn import pentanet as nbn_pentanet
 from scraper.schema import now_iso
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
@@ -78,6 +79,7 @@ PROVIDERS = [
     (nbn_optus, "nbn", nbn_plan_to_deal),
     (leaptel, "nbn", nbn_plan_to_deal),
     (nbn_amaysim, "nbn", nbn_plan_to_deal),
+    (nbn_pentanet, "nbn", nbn_plan_to_deal),
 ]
 
 CONSECUTIVE_FAILURE_ISSUE_THRESHOLD = 3

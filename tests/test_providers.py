@@ -29,6 +29,7 @@ from scraper.providers.nbn import arctel
 from scraper.providers.nbn import optus
 from scraper.providers.nbn import leaptel
 from scraper.providers.nbn import amaysim_nbn
+from scraper.providers.nbn import pentanet as nbn_pentanet
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -837,6 +838,41 @@ def test_spintel_nbn(monkeypatch):
         assert p.provider == "SpinTel"
         assert p.promo_price < p.price_monthly
         assert p.promo_period_months == 6
+        assert p.contract_length == "No lock-in contract"
+
+
+def test_pentanet_nbn(monkeypatch):
+    monkeypatch.setattr(nbn_pentanet, "fetch_static", lambda url: _soup("pentanet_nbn.html"))
+    plans = nbn_pentanet.scrape()
+    assert len(plans) == 7
+    by_tier = {p.speed_tier: p for p in plans if p.plan_name.startswith("Family") or not p.plan_name.startswith("Pro+")}
+    assert len(by_tier) == 6
+    assert by_tier["NBN 25/10"].price_monthly == 83.0
+    assert by_tier["NBN 25/10"].promo_price is None
+    assert by_tier["NBN 25/10"].typical_evening_speed_mbps == 24.0
+
+    assert by_tier["NBN 50/20"].price_monthly == 94.0
+    assert by_tier["NBN 50/20"].promo_price is None
+    assert by_tier["NBN 50/20"].typical_evening_speed_mbps == 44.0
+
+    assert by_tier["NBN 100/20"].price_monthly == 99.0
+    assert by_tier["NBN 100/20"].promo_price == 89.0
+    assert by_tier["NBN 100/20"].promo_period_months == 12
+
+    assert by_tier["NBN 500/50"].price_monthly == 99.0
+    assert by_tier["NBN 500/50"].promo_price == 89.0
+    assert by_tier["NBN 500/50"].promo_period_months == 12
+    assert by_tier["NBN 500/50"].typical_evening_speed_mbps == 420.0
+
+    assert by_tier["NBN 750/50"].price_monthly == 119.0
+    assert by_tier["NBN 750/50"].promo_price == 99.0
+
+    assert by_tier["NBN 1000/100"].price_monthly == 129.0
+    assert by_tier["NBN 1000/100"].promo_price == 104.0
+    assert by_tier["NBN 1000/100"].typical_evening_speed_mbps == 800.0
+
+    for p in plans:
+        assert p.provider == "Pentanet"
         assert p.contract_length == "No lock-in contract"
 
 

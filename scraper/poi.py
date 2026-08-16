@@ -93,6 +93,7 @@ PROVIDER_ASN = {
     "SpinTel": (18390, None),
     "Vodafone": (133612, None),
     "amaysim": (7474, "Optus"),
+    "Pentanet": (10214, None),
 }
 
 # Exchange-city -> AU state/territory. bgp.he.net's IX "City" column uses the

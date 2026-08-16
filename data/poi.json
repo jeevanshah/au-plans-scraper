@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T04:04:08.982529+00:00",
+  "generatedAt": "2026-08-16T04:25:10.894193+00:00",
   "providers": {
     "Aussie Broadband": {
       "exchangeCount": 20,
@@ -327,6 +327,21 @@
       "viaWholesaler": "Optus",
       "sourceUrl": "https://bgp.he.net/AS7474",
       "noPublicIxData": true
+    },
+    "Pentanet": {
+      "exchangeCount": 6,
+      "cities": [
+        "Perth",
+        "Sydney"
+      ],
+      "states": [
+        "NSW",
+        "WA"
+      ],
+      "asn": 10214,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS10214",
+      "noPublicIxData": false
     }
   }
 }
