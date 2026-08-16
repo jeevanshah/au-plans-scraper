@@ -89,23 +89,42 @@ def scrape() -> list[MobilePlan]:
         if (gb, expiry_days) in seen:
             continue
 
+        # Exclude International Roaming packs
+        if re.search(r"roaming", txt, re.I):
+            continue
+
         # Extract prices from card text
-        prices = DOLLAR_RE.findall(txt)
+        # Remove annualized marketing copy like "THAT'S 24GB FOR $25 P/M" or "THAT'S 30GB FOR $30.41 PER MONTH"
+        clean_txt = re.sub(r"THAT'?S\s+[^$]*\$\s*\d+\.?\d*\s*(?:P/M|PER\s+MONTH)", "", txt, flags=re.I)
+        prices = DOLLAR_RE.findall(clean_txt)
         if not prices:
             continue
 
-        was_m = WAS_RE.search(txt)
-        ongoing_m = ONGOING_RE.search(txt)
-        for_price_m = FOR_PRICE_RE.search(txt)
+        was_m = WAS_RE.search(clean_txt)
+        ongoing_m = ONGOING_RE.search(clean_txt)
+        for_price_m = FOR_PRICE_RE.search(clean_txt)
 
         price_monthly: float | None = None
         promo_price: float | None = None
 
         if for_price_m:
-            price_monthly = float(for_price_m.group(2))
-            vals = sorted(set(float(p) for p in prices if float(p) > 1 and float(p) < price_monthly))
-            if vals:
-                promo_price = vals[0]
+            base_price = float(for_price_m.group(2))
+            if was_m:
+                was_price = float(was_m.group(1))
+                if was_price > base_price:
+                    price_monthly = was_price
+                    promo_price = base_price
+                else:
+                    price_monthly = base_price
+            elif ongoing_m:
+                ongoing_price = float(ongoing_m.group(1))
+                if ongoing_price > base_price:
+                    price_monthly = ongoing_price
+                    promo_price = base_price
+                else:
+                    price_monthly = base_price
+            else:
+                price_monthly = base_price
         elif was_m:
             price_monthly = float(was_m.group(1))
             vals = sorted(set(float(p) for p in prices if float(p) > 1 and float(p) < price_monthly))
@@ -119,7 +138,7 @@ def scrape() -> list[MobilePlan]:
         else:
             vals = sorted(set(float(p) for p in prices if float(p) > 1))
             if vals:
-                price_monthly = vals[0]
+                price_monthly = vals[-1]
 
         if price_monthly is None or price_monthly <= 0:
             continue

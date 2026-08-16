@@ -526,9 +526,9 @@ def test_felix_mobile(monkeypatch):
 def test_boost_mobile(monkeypatch):
     monkeypatch.setattr(mobile_boost, "fetch_static", lambda url: _soup("boost_mobile.html"))
     plans = mobile_boost.scrape()
-    # Fixture: 12 distinct plans across short (7/14/28-day) and
-    # long-expiry (186/365-day) tiers, deduplicated by (GB, expiry_days)
-    assert len(plans) == 12
+    # Fixture: 9 distinct domestic plans across short (7/28-day) and
+    # long-expiry (186/365-day) tiers (excluding international roaming), deduplicated by (GB, expiry_days)
+    assert len(plans) == 9
     for p in plans:
         assert p.provider == "Boost Mobile"
         assert p.price_monthly > 0
@@ -540,7 +540,7 @@ def test_boost_mobile(monkeypatch):
     assert (295.0, "365-day expiry") in by_key
     assert (375.0, "365-day expiry") in by_key
     assert by_key[(295.0, "365-day expiry")].price_monthly == 300.0
-    assert by_key[(375.0, "365-day expiry")].price_monthly == 330.0
+    assert by_key[(375.0, "365-day expiry")].price_monthly == 365.0
     # 186-day long-expiry
     assert (160.0, "186-day expiry") in by_key
     assert by_key[(160.0, "186-day expiry")].price_monthly == 180.0
@@ -563,8 +563,8 @@ def test_boost_dedup_prevents_duplicate_cards(monkeypatch):
 
     monkeypatch.setattr(mobile_boost, "fetch_static", lambda url: soup)
     plans = mobile_boost.scrape()
-    # The original 12 plans — the duplicated card must NOT add a 13th
-    assert len(plans) == 12
+    # The original 9 plans — the duplicated card must NOT add a 10th
+    assert len(plans) == 9
 
 
 def test_boost_id_disambiguates_same_gb_different_expiry(monkeypatch):

@@ -89,13 +89,13 @@ def scrape() -> list[MobilePlan]:
         # in Kogan's markup — scope to the card element only, no parent
         # text that could leak from sibling cards.
         ctx = txt
-        is_yearly = bool(YEARLY_RE.search(ctx))
-        contract = "365-day expiry" if is_yearly else "Month-to-month"
-        billing_cycle_days = 365 if is_yearly else 30
-
         prices = DOLLAR_RE.findall(ctx)
         if not prices:
             continue
+
+        is_yearly = bool(YEARLY_RE.search(ctx)) or bool(THATSONLY_RE.search(ctx)) or (gb >= 140 and any(float(p) > 100 for p in prices))
+        contract = "365-day expiry" if is_yearly else "Month-to-month"
+        billing_cycle_days = 365 if is_yearly else 30
 
         non_member_m = NON_MEMBER_RE.search(ctx)
         was_m = WAS_RE.search(ctx)

@@ -51,16 +51,19 @@ def scrape():
         promo_price = None
         promo_months = None
 
+        # Extract prices explicitly associated with /month
+        month_prices = re.findall(r"\$\s*(\d+\.?\d*)\s*/\s*month", txt, re.I)
         if after_m and first_m:
             price_monthly = float(after_m.group(1))
             promo_price = float(first_m.group(1))
             promo_months = int(first_m.group(2))
+        elif month_prices:
+            price_monthly = float(month_prices[0])
         else:
-            # No promo pattern found — all prices, use largest as regular
             prices = DOLLAR_RE.findall(txt)
-            vals = sorted(set(float(p) for p in prices if float(p) > 1))
+            vals = sorted(set(float(p) for p in prices if 10 <= float(p) <= 150))
             if vals:
-                price_monthly = vals[-1]
+                price_monthly = vals[0]
 
         if price_monthly is None or price_monthly <= 1:
             continue

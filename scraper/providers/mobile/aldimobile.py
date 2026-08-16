@@ -29,10 +29,10 @@ DOLLAR_RE = re.compile(r"[$]\s*(\d+\.?\d*)")
 GB_RE = re.compile(r"(\d+)\s*GB", re.I)
 # "30 Day" / "365 Day" / "Long Life"
 EXPIRY_30_RE = re.compile(r"30\s*[Dd]ay", re.I)
-EXPIRY_365_RE = re.compile(r"365\s*[Dd]ay|Long\s*Life", re.I)
+EXPIRY_365_RE = re.compile(r"365\s*[Dd]ay|Long\s*Life|Super\s*Pack", re.I)
 # Family / data-only exclusion
 FAMILY_RE = re.compile(r"[Ff]amily", re.I)
-DATA_ONLY_RE = re.compile(r"[Dd]ata\s*[Oo]nly", re.I)
+DATA_ONLY_RE = re.compile(r"[Dd]ata\s*[Oo]nly|[Dd]ata\s*[Pp]lan|no\s+calls|internet\s+devices", re.I)
 
 MONTH_MAP = {
     "january": 1, "february": 2, "march": 3, "april": 4,
