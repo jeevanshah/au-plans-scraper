@@ -176,6 +176,16 @@ def _rows_to_footprint(rows: list[dict]) -> dict:
     }
 
 
+# Tier-1 / major national carriers with nationwide Private Network Interconnects (PNIs)
+PRIVATE_PNI_PROVIDERS = {
+    "Telstra": "Direct nationwide private interconnects (PNI / Tier-1). Exchanges traffic directly in major capital cities rather than via public route servers.",
+    "Optus": "Direct nationwide private interconnects (PNI / Tier-1). Exchanges traffic directly in major capital cities rather than via public route servers.",
+    "Vodafone": "Direct nationwide private interconnects (PNI / Tier-1). Exchanges traffic directly in major capital cities rather than via public route servers.",
+    "iiNet": "Routes via TPG Telecom / Vodafone nationwide private backbone.",
+    "amaysim": "Routes via Optus nationwide private backbone.",
+}
+
+
 def scrape_provider(provider: str) -> dict:
     """Returns the public-exchange footprint dict for one provider. Raises on
     fetch failure -- caller (update_poi.py) decides whether to keep
@@ -186,14 +196,7 @@ def scrape_provider(provider: str) -> dict:
     and Arctel/Triforce (AS55736) all genuinely have zero rows in bgp.he.net's
     IX section -- Tier-1/large carriers mostly peer privately/directly rather
     than through public exchanges, so bgp.he.net's IX report has nothing to
-    show for them despite their real-world footprint being nationwide. Showing
-    "0 states" for these would be actively misleading (the opposite of their
-    real coverage), so this is surfaced as noPublicIxData=True instead of a
-    state list, and the site must render that as "not published via public
-    exchanges" rather than "no coverage". This is why the feature is framed as
-    "public internet exchange footprint" (a measurable, honestly-labelled
-    proxy) rather than "NBN Point of Interconnect" (which this data is NOT a
-    direct measurement of -- see module docstring).
+    show for them despite their real-world footprint being nationwide.
     """
     asn, via = PROVIDER_ASN[provider]
     soup = _fetch_as_page(asn)
@@ -203,6 +206,17 @@ def scrape_provider(provider: str) -> dict:
     footprint["viaWholesaler"] = via
     footprint["sourceUrl"] = BGP_HE_URL.format(asn=asn)
     footprint["noPublicIxData"] = len(rows) == 0
+
+    if provider in PRIVATE_PNI_PROVIDERS:
+        footprint["peeringType"] = "private_pni"
+        footprint["peeringNote"] = PRIVATE_PNI_PROVIDERS[provider]
+    elif len(rows) > 0:
+        footprint["peeringType"] = "public_ix"
+        footprint["peeringNote"] = f"Direct public Internet Exchange (IX) presence across {len(footprint['states'])} states."
+    else:
+        footprint["peeringType"] = "transit_only"
+        footprint["peeringNote"] = "Routes via upstream wholesale transit."
+
     return footprint
 
 
@@ -215,3 +229,4 @@ def scrape_all() -> dict[str, dict]:
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
+

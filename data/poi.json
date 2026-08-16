@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T04:25:10.894193+00:00",
+  "generatedAt": "2026-08-16T04:41:53.826073+00:00",
   "providers": {
     "Aussie Broadband": {
       "exchangeCount": 20,
@@ -22,7 +22,9 @@
       "asn": 4764,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS4764",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 6 states."
     },
     "Leaptel": {
       "exchangeCount": 17,
@@ -43,7 +45,9 @@
       "asn": 134090,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS134090",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 5 states."
     },
     "Superloop": {
       "exchangeCount": 32,
@@ -68,7 +72,9 @@
       "asn": 38195,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS38195",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 7 states."
     },
     "Exetel": {
       "exchangeCount": 1,
@@ -81,7 +87,9 @@
       "asn": 10143,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS10143",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 1 states."
     },
     "Tangerine": {
       "exchangeCount": 20,
@@ -104,7 +112,9 @@
       "asn": 4764,
       "viaWholesaler": "Aussie Broadband",
       "sourceUrl": "https://bgp.he.net/AS4764",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 6 states."
     },
     "More Telecom": {
       "exchangeCount": 20,
@@ -127,7 +137,9 @@
       "asn": 4764,
       "viaWholesaler": "Aussie Broadband",
       "sourceUrl": "https://bgp.he.net/AS4764",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 6 states."
     },
     "Swoop": {
       "exchangeCount": 31,
@@ -148,7 +160,9 @@
       "asn": 58511,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS58511",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 5 states."
     },
     "Neptune Internet": {
       "exchangeCount": 16,
@@ -169,7 +183,9 @@
       "asn": 151660,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS151660",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 5 states."
     },
     "Purple Connect": {
       "exchangeCount": 20,
@@ -192,7 +208,9 @@
       "asn": 4764,
       "viaWholesaler": "Aussie Broadband",
       "sourceUrl": "https://bgp.he.net/AS4764",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 6 states."
     },
     "Telstra": {
       "exchangeCount": 0,
@@ -201,7 +219,9 @@
       "asn": 1221,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS1221",
-      "noPublicIxData": true
+      "noPublicIxData": true,
+      "peeringType": "private_pni",
+      "peeringNote": "Direct nationwide private interconnects (PNI / Tier-1). Exchanges traffic directly in major capital cities rather than via public route servers."
     },
     "Optus": {
       "exchangeCount": 0,
@@ -210,7 +230,9 @@
       "asn": 7474,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS7474",
-      "noPublicIxData": true
+      "noPublicIxData": true,
+      "peeringType": "private_pni",
+      "peeringNote": "Direct nationwide private interconnects (PNI / Tier-1). Exchanges traffic directly in major capital cities rather than via public route servers."
     },
     "Arctel": {
       "exchangeCount": 0,
@@ -219,7 +241,9 @@
       "asn": 55736,
       "viaWholesaler": "Triforce/Dataknox",
       "sourceUrl": "https://bgp.he.net/AS55736",
-      "noPublicIxData": true
+      "noPublicIxData": true,
+      "peeringType": "transit_only",
+      "peeringNote": "Routes via upstream wholesale transit."
     },
     "Flip": {
       "exchangeCount": 4,
@@ -234,7 +258,9 @@
       "asn": 133898,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS133898",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 2 states."
     },
     "Dodo": {
       "exchangeCount": 46,
@@ -259,7 +285,9 @@
       "asn": 4826,
       "viaWholesaler": "Vocus",
       "sourceUrl": "https://bgp.he.net/AS4826",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 7 states."
     },
     "TPG": {
       "exchangeCount": 6,
@@ -278,7 +306,9 @@
       "asn": 7545,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS7545",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 4 states."
     },
     "iiNet": {
       "exchangeCount": 0,
@@ -287,7 +317,9 @@
       "asn": 4802,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS4802",
-      "noPublicIxData": true
+      "noPublicIxData": true,
+      "peeringType": "private_pni",
+      "peeringNote": "Routes via TPG Telecom / Vodafone nationwide private backbone."
     },
     "SpinTel": {
       "exchangeCount": 17,
@@ -308,7 +340,9 @@
       "asn": 18390,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS18390",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 5 states."
     },
     "Vodafone": {
       "exchangeCount": 0,
@@ -317,7 +351,9 @@
       "asn": 133612,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS133612",
-      "noPublicIxData": true
+      "noPublicIxData": true,
+      "peeringType": "private_pni",
+      "peeringNote": "Direct nationwide private interconnects (PNI / Tier-1). Exchanges traffic directly in major capital cities rather than via public route servers."
     },
     "amaysim": {
       "exchangeCount": 0,
@@ -326,7 +362,9 @@
       "asn": 7474,
       "viaWholesaler": "Optus",
       "sourceUrl": "https://bgp.he.net/AS7474",
-      "noPublicIxData": true
+      "noPublicIxData": true,
+      "peeringType": "private_pni",
+      "peeringNote": "Routes via Optus nationwide private backbone."
     },
     "Pentanet": {
       "exchangeCount": 6,
@@ -341,7 +379,9 @@
       "asn": 10214,
       "viaWholesaler": null,
       "sourceUrl": "https://bgp.he.net/AS10214",
-      "noPublicIxData": false
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 2 states."
     }
   }
 }
