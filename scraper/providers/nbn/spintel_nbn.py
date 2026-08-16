@@ -23,6 +23,9 @@ OFFER_ENDS_RE = re.compile(
 )
 
 
+TYPICAL_RE = re.compile(r"Typical evening speed\s*(\d+)(?:/(\d+))?\s*Mbps", re.I)
+
+
 def scrape():
     soup = fetch_static(URL)
     scraped_at = now_iso()
@@ -33,7 +36,7 @@ def scrape():
 
     for m in SPEED_RE.finditer(text):
         down, up = m.groups()
-        tier, evening_d, evening_u = normalize_nbn_speed_tier(down, up)
+        tier, _, _ = normalize_nbn_speed_tier(down, up)
 
         # Dedup on normalized speed tier (e.g. NBN 1000/100)
         if tier in seen_tiers:
@@ -60,6 +63,9 @@ def scrape():
         if regular_price <= 1:
             continue
 
+        typ_m = TYPICAL_RE.search(window)
+        evening_speed = float(typ_m.group(1)) if typ_m else float(down)
+
         has_promo = promo_price < regular_price
         seen_tiers.add(tier)
         plans.append(
@@ -72,7 +78,7 @@ def scrape():
                 promo_end_date=promo_end_date if has_promo else None,
                 contract_length="No lock-in contract",
                 speed_tier=tier,
-                typical_evening_speed_mbps=evening_d if evening_d and evening_d != float(tier.split()[1].split("/")[0]) else None,
+                typical_evening_speed_mbps=evening_speed,
                 tech_type=classify_tech_type(window),
                 source_url=URL,
                 scraped_at=scraped_at,

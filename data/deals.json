@@ -1596,7 +1596,7 @@
     "url": "https://www.spintel.net.au/nbn",
     "serviceType": "nbn",
     "tier": "NBN 25/10",
-    "typicalEveningSpeed": null,
+    "typicalEveningSpeed": 25.0,
     "techType": null,
     "postedAt": "2026-08-16",
     "_source": "SpinTel official site, verified 2026-08-16"
@@ -1614,7 +1614,7 @@
     "url": "https://www.spintel.net.au/nbn",
     "serviceType": "nbn",
     "tier": "NBN 100/20",
-    "typicalEveningSpeed": null,
+    "typicalEveningSpeed": 100.0,
     "techType": null,
     "postedAt": "2026-08-16",
     "_source": "SpinTel official site, verified 2026-08-16"
@@ -1632,7 +1632,7 @@
     "url": "https://www.spintel.net.au/nbn",
     "serviceType": "nbn",
     "tier": "NBN 500/50",
-    "typicalEveningSpeed": null,
+    "typicalEveningSpeed": 500.0,
     "techType": null,
     "postedAt": "2026-08-16",
     "_source": "SpinTel official site, verified 2026-08-16"
@@ -1650,7 +1650,7 @@
     "url": "https://www.spintel.net.au/nbn",
     "serviceType": "nbn",
     "tier": "NBN 750/50",
-    "typicalEveningSpeed": null,
+    "typicalEveningSpeed": 750.0,
     "techType": null,
     "postedAt": "2026-08-16",
     "_source": "SpinTel official site, verified 2026-08-16"
@@ -1668,7 +1668,7 @@
     "url": "https://www.spintel.net.au/nbn",
     "serviceType": "nbn",
     "tier": "NBN 1000/100",
-    "typicalEveningSpeed": null,
+    "typicalEveningSpeed": 850.0,
     "techType": null,
     "postedAt": "2026-08-16",
     "_source": "SpinTel official site, verified 2026-08-16"
