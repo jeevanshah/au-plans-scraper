@@ -31,6 +31,7 @@ from scraper.providers.nbn import leaptel
 from scraper.providers.nbn import amaysim_nbn
 from scraper.providers.nbn import pentanet as nbn_pentanet
 from scraper.providers.nbn import future_broadband as nbn_future
+from scraper.providers.nbn import mint_telecom as nbn_mint
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -907,6 +908,32 @@ def test_future_broadband_nbn(monkeypatch):
     for p in plans:
         assert p.provider == "Future Broadband"
         assert p.contract_length == "No lock-in contract"
+
+
+def test_mint_telecom_nbn(monkeypatch):
+    monkeypatch.setattr(nbn_mint, "fetch_static", lambda url: _soup("mint_telecom_nbn.html"))
+    plans = nbn_mint.scrape()
+    assert len(plans) == 5
+    by_tier = {p.speed_tier: p for p in plans}
+    assert by_tier["NBN 25/5"].price_monthly == 84.95
+    assert by_tier["NBN 25/5"].typical_evening_speed_mbps == 15.0
+
+    assert by_tier["NBN 50/20"].price_monthly == 94.95
+    assert by_tier["NBN 50/20"].typical_evening_speed_mbps == 30.0
+
+    assert by_tier["NBN 500/50"].price_monthly == 99.95
+    assert by_tier["NBN 500/50"].typical_evening_speed_mbps == 300.0
+
+    assert by_tier["NBN 750/50"].price_monthly == 109.95
+    assert by_tier["NBN 750/50"].typical_evening_speed_mbps == 450.0
+
+    assert by_tier["NBN 1000/100"].price_monthly == 119.95
+    assert by_tier["NBN 1000/100"].typical_evening_speed_mbps == 600.0
+
+    for p in plans:
+        assert p.provider == "Mint Telecom"
+        assert p.contract_length == "6-month contract"
+        assert p.promo_price is None
 
 
 # ========== Transform tests ==========

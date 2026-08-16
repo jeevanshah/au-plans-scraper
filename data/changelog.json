@@ -1,6 +1,10 @@
 [
   {
     "date": "2026-08-16",
+    "message": "Added Mint Telecom NBN plans"
+  },
+  {
+    "date": "2026-08-16",
     "message": "Added Future Broadband NBN plans"
   },
   {
@@ -154,9 +158,5 @@
   {
     "date": "2026-08-16",
     "message": "Updated Aussie Broadband 100GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Aussie Broadband 180GB pricing"
   }
 ]

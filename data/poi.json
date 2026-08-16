@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T05:16:02.760488+00:00",
+  "generatedAt": "2026-08-16T05:43:40.411660+00:00",
   "providers": {
     "Aussie Broadband": {
       "exchangeCount": 20,
@@ -403,6 +403,33 @@
       "noPublicIxData": false,
       "peeringType": "public_ix",
       "peeringNote": "Direct public Internet Exchange (IX) presence across 4 states."
+    },
+    "Mint Telecom": {
+      "exchangeCount": 46,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Darwin",
+        "Hobart",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
+      "states": [
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "TAS",
+        "VIC",
+        "WA"
+      ],
+      "asn": 4826,
+      "viaWholesaler": "Vocus",
+      "sourceUrl": "https://bgp.he.net/AS4826",
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 7 states."
     }
   }
 }
