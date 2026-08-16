@@ -31,10 +31,15 @@ def nbn_plan_to_deal(plan: NbnPlan) -> dict:
     else:
         description = f"{plan.speed_tier} plan. Unlimited data, {plan.contract_length.lower()}."
 
+    if plan.plan_name.strip().lower() == plan.speed_tier.strip().lower() or plan.speed_tier.lower() in plan.plan_name.lower():
+        title = plan.plan_name.strip()
+    else:
+        title = f"{plan.plan_name.strip()} {plan.speed_tier.strip()}"
+
     return {
         "id": _make_id(plan.provider, plan.speed_tier, plan.scraped_at),
         "provider": plan.provider,
-        "title": f"{plan.plan_name} {plan.speed_tier}",
+        "title": title,
         "category": CATEGORY,
         "description": description,
         "promoPrice": plan.promo_price if has_promo else plan.price_monthly,
@@ -44,6 +49,7 @@ def nbn_plan_to_deal(plan: NbnPlan) -> dict:
         "url": plan.source_url,
         "serviceType": "nbn",
         "tier": plan.speed_tier,
+        "typicalEveningSpeed": plan.typical_evening_speed_mbps,
         "techType": plan.tech_type,
         "postedAt": plan.scraped_at[:10],
         "_source": _source_note(plan.provider, plan.scraped_at),

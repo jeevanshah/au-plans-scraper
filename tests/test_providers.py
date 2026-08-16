@@ -219,30 +219,30 @@ def test_optus_nbn(monkeypatch):
     # $69 promo beats Fast's flat $89), leaving 4 distinct tiers
     assert len(plans) == 4
     by_tier = {p.speed_tier: p for p in plans}
-    assert set(by_tier) == {"NBN 25/8", "NBN 50/17", "NBN 500/43", "NBN 820/85"}
+    assert set(by_tier) == {"NBN 25/10", "NBN 50/20", "NBN 500/50", "NBN 1000/100"}
 
-    assert by_tier["NBN 25/8"].plan_name == "Basic"
-    assert by_tier["NBN 25/8"].price_monthly == 83.0
-    assert by_tier["NBN 25/8"].promo_price == 73.0
-    assert by_tier["NBN 25/8"].promo_period_months == 12
-    assert by_tier["NBN 25/8"].tech_type == "Fibre and FTTN"
+    assert by_tier["NBN 25/10"].plan_name == "Basic"
+    assert by_tier["NBN 25/10"].price_monthly == 83.0
+    assert by_tier["NBN 25/10"].promo_price == 73.0
+    assert by_tier["NBN 25/10"].promo_period_months == 12
+    assert by_tier["NBN 25/10"].tech_type == "Fibre and FTTN"
 
-    assert by_tier["NBN 50/17"].plan_name == "Everyday"
-    assert by_tier["NBN 50/17"].price_monthly == 97.0
-    assert by_tier["NBN 50/17"].promo_price == 87.0
+    assert by_tier["NBN 50/20"].plan_name == "Everyday"
+    assert by_tier["NBN 50/20"].price_monthly == 97.0
+    assert by_tier["NBN 50/20"].promo_price == 87.0
 
     # The winning 500Mbps card is "Promo Plus", not the flat-priced "Fast"
     # plan it beat out on price
-    assert by_tier["NBN 500/43"].plan_name == "Promo Plus"
-    assert by_tier["NBN 500/43"].price_monthly == 109.0
-    assert by_tier["NBN 500/43"].promo_price == 69.0
-    assert by_tier["NBN 500/43"].promo_period_months == 6
-    assert by_tier["NBN 500/43"].tech_type == "Fibre"
+    assert by_tier["NBN 500/50"].plan_name == "Promo Plus"
+    assert by_tier["NBN 500/50"].price_monthly == 109.0
+    assert by_tier["NBN 500/50"].promo_price == 69.0
+    assert by_tier["NBN 500/50"].promo_period_months == 6
+    assert by_tier["NBN 500/50"].tech_type == "Fibre"
 
-    assert by_tier["NBN 820/85"].plan_name == "Ultrafast"
-    assert by_tier["NBN 820/85"].price_monthly == 129.0
-    assert by_tier["NBN 820/85"].promo_price == 119.0
-    assert by_tier["NBN 820/85"].tech_type == "Fibre"
+    assert by_tier["NBN 1000/100"].plan_name == "Ultrafast"
+    assert by_tier["NBN 1000/100"].price_monthly == 129.0
+    assert by_tier["NBN 1000/100"].promo_price == 119.0
+    assert by_tier["NBN 1000/100"].tech_type == "Fibre"
 
     for p in plans:
         assert p.provider == "Optus"
@@ -289,23 +289,23 @@ def test_amaysim_nbn(monkeypatch):
     assert len(plans) == 6
     by_tier = {p.speed_tier: p for p in plans}
     assert set(by_tier) == {
-        "NBN 25/8", "NBN 50/17", "NBN 100/18", "NBN 500/43", "NBN 680/43", "NBN 820/85"
+        "NBN 25/10", "NBN 50/20", "NBN 100/20", "NBN 500/50", "NBN 750/50", "NBN 1000/100"
     }
 
-    assert by_tier["NBN 25/8"].plan_name == "NBN 25"
-    assert by_tier["NBN 25/8"].price_monthly == 70.0
-    assert by_tier["NBN 25/8"].promo_price == 60.0
-    assert by_tier["NBN 25/8"].promo_period_months == 6
-    assert by_tier["NBN 25/8"].tech_type == "Fibre and FTTN"
+    assert by_tier["NBN 25/10"].plan_name == "NBN 25"
+    assert by_tier["NBN 25/10"].price_monthly == 70.0
+    assert by_tier["NBN 25/10"].promo_price == 60.0
+    assert by_tier["NBN 25/10"].promo_period_months == 6
+    assert by_tier["NBN 25/10"].tech_type == "Fibre and FTTN"
 
-    assert by_tier["NBN 100/18"].plan_name == "NBN 100"
-    assert by_tier["NBN 100/18"].price_monthly == 90.0
-    assert by_tier["NBN 100/18"].promo_price == 50.0
-    assert by_tier["NBN 100/18"].promo_period_months == 6
-    assert by_tier["NBN 100/18"].promo_end_date == "2026-08-31"
+    assert by_tier["NBN 100/20"].plan_name == "NBN 100"
+    assert by_tier["NBN 100/20"].price_monthly == 90.0
+    assert by_tier["NBN 100/20"].promo_price == 50.0
+    assert by_tier["NBN 100/20"].promo_period_months == 6
+    assert by_tier["NBN 100/20"].promo_end_date == "2026-08-31"
 
-    assert by_tier["NBN 500/43"].tech_type == "Fibre"
-    assert by_tier["NBN 820/85"].tech_type == "Fibre"
+    assert by_tier["NBN 500/50"].tech_type == "Fibre"
+    assert by_tier["NBN 1000/100"].tech_type == "Fibre"
 
     for p in plans:
         assert p.provider == "amaysim"
@@ -743,11 +743,11 @@ def test_flip_nbn(monkeypatch):
     assert by_name["Premium"].price_monthly == 65.9
     assert by_name["Premium"].promo_price == 48.0
     assert by_name["Premium"].promo_period_months == 6
-    assert by_name["Premium"].speed_tier == "NBN 25/8"
-    assert by_name["Family"].speed_tier == "NBN 50/17"
+    assert by_name["Premium"].speed_tier == "NBN 25/10"
+    assert by_name["Family"].speed_tier == "NBN 50/20"
     assert by_name["Family"].price_monthly == 84.9
     assert by_name["Family"].promo_price == 68.0
-    assert by_name["Fast Speed"].speed_tier == "NBN 500/42"
+    assert by_name["Fast Speed"].speed_tier == "NBN 500/50"
     assert by_name["Fast Speed"].price_monthly == 88.9
     assert by_name["Fast Speed"].promo_price == 69.0
     for p in plans:
@@ -849,7 +849,7 @@ def test_transform_nbn_deal_shape(monkeypatch):
     expected_keys = {
         "id", "provider", "title", "category", "description", "promoPrice",
         "regularPrice", "promoMonths", "validUntil", "url", "serviceType",
-        "tier", "techType", "postedAt", "_source",
+        "tier", "typicalEveningSpeed", "techType", "postedAt", "_source",
     }
     assert set(deal.keys()) == expected_keys
     assert deal["serviceType"] == "nbn"

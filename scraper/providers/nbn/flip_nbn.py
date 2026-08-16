@@ -18,7 +18,7 @@ $65.90 ongoing*" text -- not guessed from number size.
 """
 import re
 
-from scraper.base import classify_tech_type, fetch_js
+from scraper.base import classify_tech_type, fetch_js, normalize_nbn_speed_tier
 from scraper.schema import NbnPlan, now_iso
 
 PROVIDER = "Flip"
@@ -60,6 +60,7 @@ def scrape() -> list[NbnPlan]:
         promo_months = int(duration_m.group(1)) if duration_m else None
 
         down_mbps, up_mbps = speed_m.groups()
+        speed_tier, _, _ = normalize_nbn_speed_tier(down_mbps, up_mbps)
 
         plans.append(
             NbnPlan(
@@ -69,7 +70,7 @@ def scrape() -> list[NbnPlan]:
                 promo_price=promo_price if promo_price < regular_price else None,
                 promo_period_months=promo_months if promo_price < regular_price else None,
                 contract_length="No lock-in contract",
-                speed_tier=f"NBN {down_mbps}/{up_mbps}",
+                speed_tier=speed_tier,
                 typical_evening_speed_mbps=float(down_mbps),
                 tech_type=classify_tech_type(txt),
                 source_url=URL,

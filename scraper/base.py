@@ -153,3 +153,51 @@ def parse_price(text: str) -> float:
     if not cleaned:
         raise ValueError(f"No numeric price found in: {text!r}")
     return float(cleaned)
+
+
+def normalize_nbn_speed_tier(down: float | int, up: float | int | None = None) -> tuple[str, float | None, float | None]:
+    """Given an advertised download and optional upload speed (whether nominal or evening average),
+    returns (nominal_speed_tier, typical_evening_down, typical_evening_up)."""
+    down_f = float(down)
+    up_f = float(up) if up is not None else None
+
+    if down_f <= 15:
+        nom_down = 12
+        nom_up = 1
+    elif down_f <= 35:
+        nom_down = 25
+        nom_up = 10 if (up_f is None or up_f > 6) else 5
+    elif down_f <= 65:
+        nom_down = 50
+        nom_up = 20
+    elif down_f <= 160:
+        nom_down = 100
+        nom_up = 40 if (up_f is not None and up_f >= 30) else 20
+    elif down_f <= 350:
+        nom_down = 250
+        nom_up = 100 if (up_f is not None and up_f >= 80) else 25
+    elif down_f <= 600:
+        nom_down = 500
+        nom_up = 200 if (up_f is not None and up_f >= 150) else 50
+    elif down_f <= 790 and (up_f is None or up_f <= 60):
+        nom_down = 750
+        nom_up = 50
+    elif down_f <= 1400:
+        nom_down = 1000
+        if up_f is not None and up_f >= 300:
+            nom_up = 400
+        elif up_f is not None and up_f <= 60:
+            nom_up = 50
+        else:
+            nom_up = 100
+    else:
+        nom_down = 2000
+        if up_f is not None and up_f >= 400:
+            nom_up = 500
+        elif up_f is not None and up_f >= 180:
+            nom_up = 200
+        else:
+            nom_up = 100
+
+    tier = f"NBN {nom_down}/{nom_up}"
+    return tier, down_f, up_f

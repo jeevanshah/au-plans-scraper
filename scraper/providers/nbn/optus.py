@@ -71,7 +71,7 @@ what a price-comparison site actually wants to surface for that tier anyway.
 """
 import re
 
-from scraper.base import classify_tech_type, fetch_js
+from scraper.base import classify_tech_type, fetch_js, normalize_nbn_speed_tier
 from scraper.schema import NbnPlan, now_iso
 
 PROVIDER = "Optus"
@@ -134,7 +134,7 @@ def scrape() -> list[NbnPlan]:
             continue
 
         down_mbps, up_mbps = typical_m.groups()
-        speed_tier = f"NBN {down_mbps}/{up_mbps}"
+        speed_tier, _, _ = normalize_nbn_speed_tier(down_mbps, up_mbps)
 
         promo_price, promo_months, regular_price = price_m.groups()
         promo_price = float(promo_price)

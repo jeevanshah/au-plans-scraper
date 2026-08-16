@@ -1,7 +1,7 @@
 """Tangerine Telecom NBN plans scraper. Static HTML, no JS rendering needed."""
 import re
 
-from scraper.base import fetch_static, parse_price
+from scraper.base import fetch_static, parse_price, normalize_nbn_speed_tier
 from scraper.schema import NbnPlan, now_iso
 
 PROVIDER = "Tangerine"
@@ -33,6 +33,7 @@ def scrape() -> list[NbnPlan]:
 
         down, up = speed_match.groups()
         promo_period_match = re.search(r"For (\d+) months", footer_el.get_text(" ", strip=True))
+        speed_tier, _, _ = normalize_nbn_speed_tier(down, up)
 
         plans.append(
             NbnPlan(
@@ -42,7 +43,7 @@ def scrape() -> list[NbnPlan]:
                 promo_price=parse_price(price_el.get_text(strip=True)),
                 promo_period_months=int(promo_period_match.group(1)) if promo_period_match else None,
                 contract_length="No lock-in contract",
-                speed_tier=f"NBN {int(float(down))}/{up}",
+                speed_tier=speed_tier,
                 typical_evening_speed_mbps=float(down),
                 source_url=URL,
                 scraped_at=scraped_at,

@@ -6,7 +6,7 @@ max speed labels in same card.
 """
 import re
 
-from scraper.base import classify_tech_type, fetch_static
+from scraper.base import classify_tech_type, fetch_static, normalize_nbn_speed_tier
 from scraper.schema import NbnPlan, now_iso
 
 PROVIDER = "SpinTel"
@@ -29,14 +29,14 @@ def scrape():
     text = soup.get_text(" ", strip=True)
 
     plans = []
-    seen_down = set()
+    seen_tiers = set()
 
     for m in SPEED_RE.finditer(text):
         down, up = m.groups()
-        down_int = int(down)
+        tier, evening_d, evening_u = normalize_nbn_speed_tier(down, up)
 
-        # Dedup on download speed only (typical vs max upload gives duplicates)
-        if down_int in seen_down:
+        # Dedup on normalized speed tier (e.g. NBN 1000/100)
+        if tier in seen_tiers:
             continue
 
         start = m.start()
@@ -61,17 +61,18 @@ def scrape():
             continue
 
         has_promo = promo_price < regular_price
-        seen_down.add(down_int)
+        seen_tiers.add(tier)
         plans.append(
             NbnPlan(
                 provider=PROVIDER,
-                plan_name=f"NBN {down}/{up}",
+                plan_name=tier,
                 price_monthly=regular_price,
                 promo_price=promo_price if has_promo else None,
                 promo_period_months=promo_months if has_promo else None,
                 promo_end_date=promo_end_date if has_promo else None,
                 contract_length="No lock-in contract",
-                speed_tier=f"NBN {down}/{up}",
+                speed_tier=tier,
+                typical_evening_speed_mbps=evening_d if evening_d and evening_d != float(tier.split()[1].split("/")[0]) else None,
                 tech_type=classify_tech_type(window),
                 source_url=URL,
                 scraped_at=scraped_at,

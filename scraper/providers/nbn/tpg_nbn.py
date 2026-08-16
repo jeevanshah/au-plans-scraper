@@ -37,7 +37,7 @@ guessing from the display name alone.
 """
 import re
 
-from scraper.base import classify_tech_type, fetch_static
+from scraper.base import classify_tech_type, fetch_static, normalize_nbn_speed_tier
 from scraper.schema import NbnPlan, now_iso
 
 PROVIDER = "TPG"
@@ -96,6 +96,7 @@ def scrape() -> list[NbnPlan]:
         tech_m = TECH_RE.search(ng_show)
         tech_type = classify_tech_type(tech_m.group(1)) if tech_m else None
 
+        tier, _, _ = normalize_nbn_speed_tier(down_mbps, up_mbps)
         seen_tiers.add(tier_name)
         plans.append(
             NbnPlan(
@@ -105,7 +106,7 @@ def scrape() -> list[NbnPlan]:
                 promo_price=promo_price,
                 promo_period_months=promo_months,
                 contract_length="No lock-in contract",
-                speed_tier=f"NBN {down_mbps}/{up_mbps}",
+                speed_tier=tier,
                 typical_evening_speed_mbps=float(down_mbps),
                 tech_type=tech_type,
                 source_url=URL,

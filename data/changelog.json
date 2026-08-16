@@ -1,6 +1,110 @@
 [
   {
     "date": "2026-08-16",
+    "message": "Added Tangerine NBN 25/10 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added Tangerine NBN 50/20 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added Tangerine NBN 500/50 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added Tangerine NBN 1000/100 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added iiNet NBN 500/50 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added iiNet NBN 25/10 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added iiNet NBN 50/20 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added TPG NBN 100/20 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added TPG NBN 500/50 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added TPG NBN 25/10 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added TPG NBN 50/20 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added TPG NBN 750/50 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added TPG NBN 1000/100 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added Flip NBN 25/10 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added Flip NBN 50/20 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added Flip NBN 500/50 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added Optus NBN 25/10 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added Optus NBN 50/20 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added Optus NBN 500/50 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added Optus NBN 1000/100 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added amaysim NBN 25/10 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added amaysim NBN 50/20 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added amaysim NBN 100/20 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added amaysim NBN 500/50 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added amaysim NBN 750/50 plan"
+  },
+  {
+    "date": "2026-08-16",
+    "message": "Added amaysim NBN 1000/100 plan"
+  },
+  {
+    "date": "2026-08-16",
     "message": "Updated Boost Mobile 8GB pricing"
   },
   {
@@ -54,37 +158,5 @@
   {
     "date": "2026-08-14",
     "message": "Added Leaptel NBN plans"
-  },
-  {
-    "date": "2026-08-14",
-    "message": "Updated Aussie Broadband NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-08-14",
-    "message": "Updated Aussie Broadband NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-08-14",
-    "message": "Updated Aussie Broadband NBN 100/20 pricing"
-  },
-  {
-    "date": "2026-08-14",
-    "message": "Updated Aussie Broadband NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-14",
-    "message": "Added More Telecom NBN plans"
-  },
-  {
-    "date": "2026-08-14",
-    "message": "Added Purple Connect NBN plans"
-  },
-  {
-    "date": "2026-08-14",
-    "message": "Added Arctel NBN plans"
-  },
-  {
-    "date": "2026-08-14",
-    "message": "Added Optus NBN plans"
   }
 ]

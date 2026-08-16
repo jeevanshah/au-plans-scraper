@@ -8,7 +8,7 @@ specifying original price, speeds, and technology (FTTP/HFC fibre vs all fixed-l
 import re
 from datetime import datetime
 
-from scraper.base import fetch_static, parse_price
+from scraper.base import fetch_static, parse_price, normalize_nbn_speed_tier
 from scraper.schema import NbnPlan, now_iso
 
 PROVIDER = "amaysim"
@@ -90,7 +90,11 @@ def scrape() -> list[NbnPlan]:
             promo_price_val = None
 
         tech_type = "Fibre" if is_fibre else "Fibre and FTTN"
-        speed_tier = f"NBN {dl_speed}/{ul_speed}" if dl_speed and ul_speed else plan_name
+        if dl_speed:
+            speed_tier, evening_d, _ = normalize_nbn_speed_tier(dl_speed, ul_speed)
+        else:
+            speed_tier = plan_name
+            evening_d = None
 
         plans.append(
             NbnPlan(

@@ -8,7 +8,7 @@ Promos: "$20/mth off for 6 months" (NBN25/50), "$25/mth off for 6 months"
 """
 import re
 
-from scraper.base import classify_tech_type, fetch_js, parse_price
+from scraper.base import classify_tech_type, fetch_js, parse_price, normalize_nbn_speed_tier
 from scraper.schema import NbnPlan, now_iso
 
 PROVIDER = "iiNet"
@@ -40,8 +40,8 @@ def scrape() -> list[NbnPlan]:
             continue
 
         down = speed_m.group(1)
-        up = speed_m.group(2) if speed_m.group(2) else down
-        speed_tier = f"NBN {down}/{up}"
+        up = speed_m.group(2)
+        speed_tier, _, _ = normalize_nbn_speed_tier(down, up)
 
         if speed_tier in seen_tiers:
             continue
