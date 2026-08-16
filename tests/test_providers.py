@@ -30,6 +30,7 @@ from scraper.providers.nbn import optus
 from scraper.providers.nbn import leaptel
 from scraper.providers.nbn import amaysim_nbn
 from scraper.providers.nbn import pentanet as nbn_pentanet
+from scraper.providers.nbn import future_broadband as nbn_future
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -873,6 +874,38 @@ def test_pentanet_nbn(monkeypatch):
 
     for p in plans:
         assert p.provider == "Pentanet"
+        assert p.contract_length == "No lock-in contract"
+
+
+def test_future_broadband_nbn(monkeypatch):
+    monkeypatch.setattr(nbn_future, "fetch_static", lambda url: _soup("future_broadband_nbn.html"))
+    plans = nbn_future.scrape()
+    assert len(plans) == 8
+    by_tier = {p.speed_tier: p for p in plans if not p.plan_name.startswith("Lite")}
+    assert len(by_tier) == 7
+    assert by_tier["NBN 25/10"].price_monthly == 59.0
+    assert by_tier["NBN 25/10"].typical_evening_speed_mbps == 25.0
+
+    assert by_tier["NBN 50/20"].price_monthly == 85.0
+    assert by_tier["NBN 50/20"].typical_evening_speed_mbps == 50.0
+
+    assert by_tier["NBN 100/20"].price_monthly == 89.0
+    assert by_tier["NBN 100/20"].typical_evening_speed_mbps == 94.0
+
+    assert by_tier["NBN 500/50"].price_monthly == 89.0
+    assert by_tier["NBN 500/50"].typical_evening_speed_mbps == 500.0
+
+    assert by_tier["NBN 750/50"].price_monthly == 99.0
+    assert by_tier["NBN 750/50"].typical_evening_speed_mbps == 700.0
+
+    assert by_tier["NBN 1000/100"].price_monthly == 109.0
+    assert by_tier["NBN 1000/100"].typical_evening_speed_mbps == 880.0
+
+    assert by_tier["NBN 2000/100"].price_monthly == 165.0
+    assert by_tier["NBN 2000/100"].typical_evening_speed_mbps == 1700.0
+
+    for p in plans:
+        assert p.provider == "Future Broadband"
         assert p.contract_length == "No lock-in contract"
 
 
