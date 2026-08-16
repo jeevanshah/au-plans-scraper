@@ -1,10 +1,16 @@
 {
-  "generatedAt": "2026-08-15T06:38:37.076676+00:00",
-  "note": "States reflect each provider public internet-exchange (IX) peering footprint per bgp.he.net, not a direct read of NBN Co POI data. See scraper/poi.py for methodology and caveats.",
+  "generatedAt": "2026-08-16T04:04:08.982529+00:00",
   "providers": {
     "Aussie Broadband": {
-      "asn": 4764,
-      "viaWholesaler": null,
+      "exchangeCount": 20,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Darwin",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
       "states": [
         "NSW",
         "NT",
@@ -13,13 +19,20 @@
         "VIC",
         "WA"
       ],
-      "exchangeCount": 20,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS4764"
+      "asn": 4764,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS4764",
+      "noPublicIxData": false
     },
     "Leaptel": {
-      "asn": 134090,
-      "viaWholesaler": null,
+      "exchangeCount": 17,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
       "states": [
         "NSW",
         "QLD",
@@ -27,13 +40,22 @@
         "VIC",
         "WA"
       ],
-      "exchangeCount": 17,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS134090"
+      "asn": 134090,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS134090",
+      "noPublicIxData": false
     },
     "Superloop": {
-      "asn": 38195,
-      "viaWholesaler": null,
+      "exchangeCount": 32,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Darwin",
+        "Hobart",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
       "states": [
         "NSW",
         "NT",
@@ -43,23 +65,34 @@
         "VIC",
         "WA"
       ],
-      "exchangeCount": 32,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS38195"
+      "asn": 38195,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS38195",
+      "noPublicIxData": false
     },
     "Exetel": {
-      "asn": 10143,
-      "viaWholesaler": null,
+      "exchangeCount": 1,
+      "cities": [
+        "Sydney"
+      ],
       "states": [
         "NSW"
       ],
-      "exchangeCount": 1,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS10143"
+      "asn": 10143,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS10143",
+      "noPublicIxData": false
     },
     "Tangerine": {
-      "asn": 4764,
-      "viaWholesaler": "Aussie Broadband",
+      "exchangeCount": 20,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Darwin",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
       "states": [
         "NSW",
         "NT",
@@ -68,13 +101,21 @@
         "VIC",
         "WA"
       ],
-      "exchangeCount": 20,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS4764"
+      "asn": 4764,
+      "viaWholesaler": "Aussie Broadband",
+      "sourceUrl": "https://bgp.he.net/AS4764",
+      "noPublicIxData": false
     },
     "More Telecom": {
-      "asn": 4764,
-      "viaWholesaler": "Aussie Broadband",
+      "exchangeCount": 20,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Darwin",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
       "states": [
         "NSW",
         "NT",
@@ -83,27 +124,41 @@
         "VIC",
         "WA"
       ],
-      "exchangeCount": 20,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS4764"
+      "asn": 4764,
+      "viaWholesaler": "Aussie Broadband",
+      "sourceUrl": "https://bgp.he.net/AS4764",
+      "noPublicIxData": false
     },
     "Swoop": {
+      "exchangeCount": 31,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
+      "states": [
+        "NSW",
+        "QLD",
+        "SA",
+        "VIC",
+        "WA"
+      ],
       "asn": 58511,
       "viaWholesaler": null,
-      "states": [
-        "NSW",
-        "QLD",
-        "SA",
-        "VIC",
-        "WA"
-      ],
-      "exchangeCount": 31,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS58511"
+      "sourceUrl": "https://bgp.he.net/AS58511",
+      "noPublicIxData": false
     },
     "Neptune Internet": {
-      "asn": 151660,
-      "viaWholesaler": null,
+      "exchangeCount": 16,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
       "states": [
         "NSW",
         "QLD",
@@ -111,13 +166,21 @@
         "VIC",
         "WA"
       ],
-      "exchangeCount": 16,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS151660"
+      "asn": 151660,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS151660",
+      "noPublicIxData": false
     },
     "Purple Connect": {
-      "asn": 4764,
-      "viaWholesaler": "Aussie Broadband",
+      "exchangeCount": 20,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Darwin",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
       "states": [
         "NSW",
         "NT",
@@ -126,80 +189,115 @@
         "VIC",
         "WA"
       ],
-      "exchangeCount": 20,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS4764"
+      "asn": 4764,
+      "viaWholesaler": "Aussie Broadband",
+      "sourceUrl": "https://bgp.he.net/AS4764",
+      "noPublicIxData": false
     },
     "Telstra": {
+      "exchangeCount": 0,
+      "cities": [],
+      "states": [],
       "asn": 1221,
       "viaWholesaler": null,
-      "states": [],
-      "exchangeCount": 0,
-      "noPublicIxData": true,
-      "sourceUrl": "https://bgp.he.net/AS1221"
+      "sourceUrl": "https://bgp.he.net/AS1221",
+      "noPublicIxData": true
     },
     "Optus": {
+      "exchangeCount": 0,
+      "cities": [],
+      "states": [],
       "asn": 7474,
       "viaWholesaler": null,
-      "states": [],
-      "exchangeCount": 0,
-      "noPublicIxData": true,
-      "sourceUrl": "https://bgp.he.net/AS7474"
+      "sourceUrl": "https://bgp.he.net/AS7474",
+      "noPublicIxData": true
     },
     "Arctel": {
+      "exchangeCount": 0,
+      "cities": [],
+      "states": [],
       "asn": 55736,
       "viaWholesaler": "Triforce/Dataknox",
-      "states": [],
-      "exchangeCount": 0,
-      "noPublicIxData": true,
-      "sourceUrl": "https://bgp.he.net/AS55736"
+      "sourceUrl": "https://bgp.he.net/AS55736",
+      "noPublicIxData": true
     },
     "Flip": {
-      "asn": 133898,
-      "viaWholesaler": null,
+      "exchangeCount": 4,
+      "cities": [
+        "Melbourne",
+        "Sydney"
+      ],
       "states": [
         "NSW",
         "VIC"
       ],
-      "exchangeCount": 4,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS133898"
+      "asn": 133898,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS133898",
+      "noPublicIxData": false
     },
     "Dodo": {
-      "asn": 9443,
-      "viaWholesaler": "Vocus",
+      "exchangeCount": 46,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Darwin",
+        "Hobart",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
       "states": [
         "NSW",
-        "QLD"
+        "NT",
+        "QLD",
+        "SA",
+        "TAS",
+        "VIC",
+        "WA"
       ],
-      "exchangeCount": 3,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS9443"
+      "asn": 4826,
+      "viaWholesaler": "Vocus",
+      "sourceUrl": "https://bgp.he.net/AS4826",
+      "noPublicIxData": false
     },
     "TPG": {
-      "asn": 7545,
-      "viaWholesaler": null,
+      "exchangeCount": 6,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Melbourne",
+        "Sydney"
+      ],
       "states": [
         "NSW",
         "QLD",
         "SA",
         "VIC"
       ],
-      "exchangeCount": 6,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS7545"
+      "asn": 7545,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS7545",
+      "noPublicIxData": false
     },
     "iiNet": {
+      "exchangeCount": 0,
+      "cities": [],
+      "states": [],
       "asn": 4802,
       "viaWholesaler": null,
-      "states": [],
-      "exchangeCount": 0,
-      "noPublicIxData": true,
-      "sourceUrl": "https://bgp.he.net/AS4802"
+      "sourceUrl": "https://bgp.he.net/AS4802",
+      "noPublicIxData": true
     },
     "SpinTel": {
-      "asn": 18390,
-      "viaWholesaler": null,
+      "exchangeCount": 17,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
       "states": [
         "NSW",
         "QLD",
@@ -207,25 +305,28 @@
         "VIC",
         "WA"
       ],
-      "exchangeCount": 17,
-      "noPublicIxData": false,
-      "sourceUrl": "https://bgp.he.net/AS18390"
+      "asn": 18390,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS18390",
+      "noPublicIxData": false
     },
     "Vodafone": {
+      "exchangeCount": 0,
+      "cities": [],
+      "states": [],
       "asn": 133612,
       "viaWholesaler": null,
-      "states": [],
-      "exchangeCount": 0,
-      "noPublicIxData": true,
-      "sourceUrl": "https://bgp.he.net/AS133612"
+      "sourceUrl": "https://bgp.he.net/AS133612",
+      "noPublicIxData": true
     },
     "amaysim": {
+      "exchangeCount": 0,
+      "cities": [],
+      "states": [],
       "asn": 7474,
       "viaWholesaler": "Optus",
-      "states": [],
-      "exchangeCount": 0,
-      "noPublicIxData": true,
-      "sourceUrl": "https://bgp.he.net/AS7474"
+      "sourceUrl": "https://bgp.he.net/AS7474",
+      "noPublicIxData": true
     }
   }
 }

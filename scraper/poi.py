@@ -48,8 +48,10 @@ point at the parent/wholesaler they're confirmed to resell on:
   - amaysim -> Optus (AS7474), Optus-owned MVNO/reseller since 2021
   - Arctel -> Triforce/Dataknox (AS55736), route-origin lookup on its own
     announced prefixes (no Arctel-named ASN exists)
-  - Dodo -> Vocus Retail (AS9443) -- corrects an earlier project assumption
-    that Dodo rode Aussie Broadband's network; Dodo is Vocus-owned.
+  - Dodo -> Vocus (AS4826) -- Dodo is part of Vocus Retail Australia.
+    PeeringDB confirms AS9443 has no active IX fabrics of its own and routes
+    all traffic via AS4826 IX links (46 public exchanges including WA-IX in Perth,
+    NSW, VIC, QLD, SA, NT, TAS).
 If any of these commercial arrangements change, this mapping needs updating --
 it is NOT re-derived automatically.
 """
@@ -85,7 +87,7 @@ PROVIDER_ASN = {
     "Optus": (7474, None),
     "Arctel": (55736, "Triforce/Dataknox"),
     "Flip": (133898, None),
-    "Dodo": (9443, "Vocus"),
+    "Dodo": (4826, "Vocus"),
     "TPG": (7545, None),
     "iiNet": (4802, None),
     "SpinTel": (18390, None),
