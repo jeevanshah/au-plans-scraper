@@ -77,7 +77,7 @@ PROVIDER_ASN = {
     "Aussie Broadband": (4764, None),
     "Leaptel": (134090, None),
     "Superloop": (38195, None),
-    "Exetel": (10143, None),
+    "Exetel": (38195, "Superloop"),
     "Tangerine": (4764, "Aussie Broadband"),
     "More Telecom": (4764, "Aussie Broadband"),
     "Swoop": (58511, None),

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T05:43:40.411660+00:00",
+  "generatedAt": "2026-08-16T06:59:54.523619+00:00",
   "providers": {
     "Aussie Broadband": {
       "exchangeCount": 20,
@@ -77,19 +77,31 @@
       "peeringNote": "Direct public Internet Exchange (IX) presence across 7 states."
     },
     "Exetel": {
-      "exchangeCount": 1,
+      "exchangeCount": 32,
       "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Darwin",
+        "Hobart",
+        "Melbourne",
+        "Perth",
         "Sydney"
       ],
       "states": [
-        "NSW"
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "TAS",
+        "VIC",
+        "WA"
       ],
-      "asn": 10143,
-      "viaWholesaler": null,
-      "sourceUrl": "https://bgp.he.net/AS10143",
+      "asn": 38195,
+      "viaWholesaler": "Superloop",
+      "sourceUrl": "https://bgp.he.net/AS38195",
       "noPublicIxData": false,
       "peeringType": "public_ix",
-      "peeringNote": "Direct public Internet Exchange (IX) presence across 1 states."
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 7 states."
     },
     "Tangerine": {
       "exchangeCount": 20,
