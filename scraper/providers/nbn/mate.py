@@ -46,6 +46,10 @@ def scrape() -> list[NbnPlan]:
         raw_down = int(m_down)
         raw_up = int(m_up)
 
+        # Drop Mate DOM typo card "2000/100" (NBN wholesale 2000 Mbps tier is 2000/200)
+        if raw_down == 2000 and raw_up == 100:
+            continue
+
         speed_tier, _, _ = normalize_nbn_speed_tier(raw_down, raw_up)
 
         # Evening speed

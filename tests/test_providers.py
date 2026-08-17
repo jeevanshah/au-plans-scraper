@@ -940,7 +940,7 @@ def test_mint_telecom_nbn(monkeypatch):
 def test_mate_nbn(monkeypatch):
     monkeypatch.setattr(nbn_mate, "fetch_static", lambda url: _soup("mate_nbn.html"))
     plans = nbn_mate.scrape()
-    assert len(plans) == 9
+    assert len(plans) == 8
     by_tier = {p.speed_tier: p for p in plans}
     assert by_tier["NBN 25/10"].price_monthly == 80.0
     assert by_tier["NBN 25/10"].promo_price == 55.0
@@ -976,11 +976,6 @@ def test_mate_nbn(monkeypatch):
     assert by_tier["NBN 1000/100"].promo_price == 101.0
     assert by_tier["NBN 1000/100"].promo_period_months == 6
     assert by_tier["NBN 1000/100"].typical_evening_speed_mbps == 913.0
-
-    assert by_tier["NBN 2000/100"].price_monthly == 166.0
-    assert by_tier["NBN 2000/100"].promo_price == 141.0
-    assert by_tier["NBN 2000/100"].promo_period_months == 6
-    assert by_tier["NBN 2000/100"].typical_evening_speed_mbps == 1831.0
 
     assert by_tier["NBN 2000/200"].price_monthly == 166.0
     assert by_tier["NBN 2000/200"].promo_price == 141.0

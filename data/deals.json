@@ -3384,24 +3384,6 @@
     "_source": "Mate official site, verified 2026-08-17"
   },
   {
-    "id": "mate-nbn-2000-100-2026-08",
-    "provider": "Mate",
-    "title": "Scorchin' Fast NBN 2000/100 (code MATE25)",
-    "category": "Utilities",
-    "description": "NBN 2000/100 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
-    "promoPrice": 141.0,
-    "regularPrice": 166.0,
-    "promoMonths": 6,
-    "validUntil": "2026-12-31",
-    "url": "https://www.letsbemates.com.au/nbn/",
-    "serviceType": "nbn",
-    "tier": "NBN 2000/100",
-    "typicalEveningSpeed": 1831.0,
-    "techType": "Fibre",
-    "postedAt": "2026-08-17",
-    "_source": "Mate official site, verified 2026-08-17"
-  },
-  {
     "id": "mate-nbn-2000-200-2026-08",
     "provider": "Mate",
     "title": "Scorchin' Fast NBN 2000/200 (code MATE25)",
