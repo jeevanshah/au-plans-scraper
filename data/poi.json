@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T10:53:19.161155+00:00",
+  "generatedAt": "2026-08-17T14:32:54.028993+00:00",
   "providers": {
     "Aussie Broadband": {
       "exchangeCount": 20,
@@ -465,6 +465,31 @@
       "noPublicIxData": false,
       "peeringType": "public_ix",
       "peeringNote": "Direct public Internet Exchange (IX) presence across 5 states."
+    },
+    "Launtel": {
+      "exchangeCount": 12,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Hobart",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
+      "states": [
+        "NSW",
+        "QLD",
+        "SA",
+        "TAS",
+        "VIC",
+        "WA"
+      ],
+      "asn": 134697,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS134697",
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 6 states."
     }
   }
 }

@@ -1,4 +1,5 @@
 """Parser regression tests against saved HTML fixtures -- no live network calls."""
+import json
 from pathlib import Path
 
 from bs4 import BeautifulSoup
@@ -33,6 +34,7 @@ from scraper.providers.nbn import pentanet as nbn_pentanet
 from scraper.providers.nbn import future_broadband as nbn_future
 from scraper.providers.nbn import mint_telecom as nbn_mint
 from scraper.providers.nbn import mate as nbn_mate
+from scraper.providers.nbn import launtel as nbn_launtel
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -984,6 +986,66 @@ def test_mate_nbn(monkeypatch):
 
     for p in plans:
         assert p.provider == "Mate"
+        assert p.contract_length == "No lock-in contract"
+
+
+def test_launtel_nbn():
+    fixture_path = FIXTURES / "launtel_nbn.json"
+    with open(fixture_path, "r", encoding="utf-8") as f:
+        raw_json = json.load(f)
+
+    plans = nbn_launtel.scrape(raw_json=raw_json)
+    assert len(plans) == 11
+    by_tier = {p.speed_tier: p for p in plans}
+
+    assert by_tier["NBN 50/20"].price_monthly == 106.46
+    assert by_tier["NBN 50/20"].promo_price == 86.69
+    assert by_tier["NBN 50/20"].promo_period_months == 6
+    assert by_tier["NBN 50/20"].typical_evening_speed_mbps == 48.0
+
+    assert by_tier["NBN 100/20"].price_monthly == 109.50
+    assert by_tier["NBN 100/20"].promo_price == 86.69
+    assert by_tier["NBN 100/20"].promo_period_months == 6
+    assert by_tier["NBN 100/20"].typical_evening_speed_mbps == 95.0
+
+    assert by_tier["NBN 100/40"].price_monthly == 121.67
+    assert by_tier["NBN 100/40"].promo_price is None
+    assert by_tier["NBN 100/40"].typical_evening_speed_mbps == 95.0
+
+    assert by_tier["NBN 250/100"].price_monthly == 121.67
+    assert by_tier["NBN 250/100"].promo_price == 100.38
+    assert by_tier["NBN 250/100"].typical_evening_speed_mbps == 238.0
+
+    assert by_tier["NBN 500/50"].price_monthly == 109.50
+    assert by_tier["NBN 500/50"].promo_price == 86.69
+    assert by_tier["NBN 500/50"].typical_evening_speed_mbps == 475.0
+
+    assert by_tier["NBN 500/200"].price_monthly == 144.48
+    assert by_tier["NBN 500/200"].promo_price == 118.63
+    assert by_tier["NBN 500/200"].typical_evening_speed_mbps == 475.0
+
+    assert by_tier["NBN 750/50"].price_monthly == 127.75
+    assert by_tier["NBN 750/50"].promo_price == 104.94
+    assert by_tier["NBN 750/50"].typical_evening_speed_mbps == 713.0
+
+    assert by_tier["NBN 1000/100"].price_monthly == 133.83
+    assert by_tier["NBN 1000/100"].promo_price == 107.98
+    assert by_tier["NBN 1000/100"].typical_evening_speed_mbps == 825.0
+
+    assert by_tier["NBN 1000/400"].price_monthly == 176.42
+    assert by_tier["NBN 1000/400"].promo_price == 136.88
+    assert by_tier["NBN 1000/400"].typical_evening_speed_mbps == 825.0
+
+    assert by_tier["NBN 2000/200"].price_monthly == 191.63
+    assert by_tier["NBN 2000/200"].promo_price == 170.33
+    assert by_tier["NBN 2000/200"].typical_evening_speed_mbps == 1650.0
+
+    assert by_tier["NBN 2000/500"].price_monthly == 255.50
+    assert by_tier["NBN 2000/500"].promo_price == 234.21
+    assert by_tier["NBN 2000/500"].typical_evening_speed_mbps == 1650.0
+
+    for p in plans:
+        assert p.provider == "Launtel"
         assert p.contract_length == "No lock-in contract"
 
 

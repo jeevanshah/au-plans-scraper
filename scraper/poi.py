@@ -97,6 +97,7 @@ PROVIDER_ASN = {
     "Future Broadband": (139084, None),
     "Mint Telecom": (4826, "Vocus"),
     "Mate": (58507, None),
+    "Launtel": (134697, None),
 }
 
 # Exchange-city -> AU state/territory. bgp.he.net's IX "City" column uses the

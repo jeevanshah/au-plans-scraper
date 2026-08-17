@@ -41,6 +41,7 @@ from scraper.providers.nbn import pentanet as nbn_pentanet
 from scraper.providers.nbn import future_broadband as nbn_future
 from scraper.providers.nbn import mint_telecom as nbn_mint
 from scraper.providers.nbn import mate as nbn_mate
+from scraper.providers.nbn import launtel as nbn_launtel
 from scraper.schema import now_iso
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
@@ -86,6 +87,7 @@ PROVIDERS = [
     (nbn_future, "nbn", nbn_plan_to_deal),
     (nbn_mint, "nbn", nbn_plan_to_deal),
     (nbn_mate, "nbn", nbn_plan_to_deal),
+    (nbn_launtel, "nbn", nbn_plan_to_deal),
 ]
 
 CONSECUTIVE_FAILURE_ISSUE_THRESHOLD = 3

@@ -9,6 +9,10 @@
   },
   {
     "date": "2026-08-17",
+    "message": "Added Launtel NBN plans"
+  },
+  {
+    "date": "2026-08-17",
     "message": "Updated Aussie Broadband NBN 25/10 pricing"
   },
   {
@@ -154,9 +158,5 @@
   {
     "date": "2026-08-16",
     "message": "Added amaysim NBN 500/50 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added amaysim NBN 750/50 plan"
   }
 ]
