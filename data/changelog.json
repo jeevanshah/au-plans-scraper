@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-08-17",
+    "message": "Updated Aussie Broadband NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-08-17",
+    "message": "Updated Aussie Broadband NBN 50/20 pricing"
+  },
+  {
+    "date": "2026-08-17",
+    "message": "Updated Aussie Broadband NBN 100/20 pricing"
+  },
+  {
+    "date": "2026-08-17",
+    "message": "Updated Aussie Broadband NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-08-17",
+    "message": "Updated Aussie Broadband NBN 1000/100 pricing"
+  },
+  {
+    "date": "2026-08-17",
+    "message": "Updated Aussie Broadband NBN 2000/200 pricing"
+  },
+  {
+    "date": "2026-08-17",
+    "message": "Added Kogan Mobile 120GB plan"
+  },
+  {
+    "date": "2026-08-17",
+    "message": "Added Kogan Mobile 200GB plan"
+  },
+  {
+    "date": "2026-08-17",
+    "message": "Added Kogan Mobile 900GB plan"
+  },
+  {
+    "date": "2026-08-17",
+    "message": "Added Mate NBN plans"
+  },
+  {
     "date": "2026-08-16",
     "message": "Added Mint Telecom NBN plans"
   },
@@ -118,45 +158,5 @@
   {
     "date": "2026-08-16",
     "message": "Updated Boost Mobile 8GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Boost Mobile 60GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Boost Mobile 75GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Boost Mobile 105GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Boost Mobile 150GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Boost Mobile 160GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Boost Mobile 290GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Boost Mobile 365GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Aussie Broadband 20GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Aussie Broadband 45GB pricing"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Aussie Broadband 100GB pricing"
   }
 ]

@@ -32,6 +32,7 @@ from scraper.providers.nbn import amaysim_nbn
 from scraper.providers.nbn import pentanet as nbn_pentanet
 from scraper.providers.nbn import future_broadband as nbn_future
 from scraper.providers.nbn import mint_telecom as nbn_mint
+from scraper.providers.nbn import mate as nbn_mate
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -934,6 +935,61 @@ def test_mint_telecom_nbn(monkeypatch):
         assert p.provider == "Mint Telecom"
         assert p.contract_length == "6-month contract"
         assert p.promo_price is None
+
+
+def test_mate_nbn(monkeypatch):
+    monkeypatch.setattr(nbn_mate, "fetch_static", lambda url: _soup("mate_nbn.html"))
+    plans = nbn_mate.scrape()
+    assert len(plans) == 9
+    by_tier = {p.speed_tier: p for p in plans}
+    assert by_tier["NBN 25/10"].price_monthly == 80.0
+    assert by_tier["NBN 25/10"].promo_price == 55.0
+    assert by_tier["NBN 25/10"].promo_period_months == 6
+    assert by_tier["NBN 25/10"].typical_evening_speed_mbps == 25.0
+
+    assert by_tier["NBN 50/20"].price_monthly == 90.0
+    assert by_tier["NBN 50/20"].promo_price == 70.0
+    assert by_tier["NBN 50/20"].promo_period_months == 6
+    assert by_tier["NBN 50/20"].typical_evening_speed_mbps == 49.0
+
+    assert by_tier["NBN 100/20"].price_monthly == 100.0
+    assert by_tier["NBN 100/20"].promo_price == 75.0
+    assert by_tier["NBN 100/20"].promo_period_months == 6
+    assert by_tier["NBN 100/20"].typical_evening_speed_mbps == 97.0
+
+    assert by_tier["NBN 100/40"].price_monthly == 110.0
+    assert by_tier["NBN 100/40"].promo_price == 85.0
+    assert by_tier["NBN 100/40"].promo_period_months == 6
+    assert by_tier["NBN 100/40"].typical_evening_speed_mbps == 97.0
+
+    assert by_tier["NBN 500/50"].price_monthly == 100.0
+    assert by_tier["NBN 500/50"].promo_price == 75.0
+    assert by_tier["NBN 500/50"].promo_period_months == 6
+    assert by_tier["NBN 500/50"].typical_evening_speed_mbps == 485.0
+
+    assert by_tier["NBN 750/50"].price_monthly == 125.0
+    assert by_tier["NBN 750/50"].promo_price == 100.0
+    assert by_tier["NBN 750/50"].promo_period_months == 6
+    assert by_tier["NBN 750/50"].typical_evening_speed_mbps == 713.0
+
+    assert by_tier["NBN 1000/100"].price_monthly == 126.0
+    assert by_tier["NBN 1000/100"].promo_price == 101.0
+    assert by_tier["NBN 1000/100"].promo_period_months == 6
+    assert by_tier["NBN 1000/100"].typical_evening_speed_mbps == 913.0
+
+    assert by_tier["NBN 2000/100"].price_monthly == 166.0
+    assert by_tier["NBN 2000/100"].promo_price == 141.0
+    assert by_tier["NBN 2000/100"].promo_period_months == 6
+    assert by_tier["NBN 2000/100"].typical_evening_speed_mbps == 1831.0
+
+    assert by_tier["NBN 2000/200"].price_monthly == 166.0
+    assert by_tier["NBN 2000/200"].promo_price == 141.0
+    assert by_tier["NBN 2000/200"].promo_period_months == 6
+    assert by_tier["NBN 2000/200"].typical_evening_speed_mbps == 1831.0
+
+    for p in plans:
+        assert p.provider == "Mate"
+        assert p.contract_length == "No lock-in contract"
 
 
 # ========== Transform tests ==========

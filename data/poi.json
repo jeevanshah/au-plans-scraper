@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T06:59:54.523619+00:00",
+  "generatedAt": "2026-08-17T10:53:19.161155+00:00",
   "providers": {
     "Aussie Broadband": {
       "exchangeCount": 20,
@@ -442,6 +442,29 @@
       "noPublicIxData": false,
       "peeringType": "public_ix",
       "peeringNote": "Direct public Internet Exchange (IX) presence across 7 states."
+    },
+    "Mate": {
+      "exchangeCount": 13,
+      "cities": [
+        "Adelaide",
+        "Brisbane",
+        "Melbourne",
+        "Perth",
+        "Sydney"
+      ],
+      "states": [
+        "NSW",
+        "QLD",
+        "SA",
+        "VIC",
+        "WA"
+      ],
+      "asn": 58507,
+      "viaWholesaler": null,
+      "sourceUrl": "https://bgp.he.net/AS58507",
+      "noPublicIxData": false,
+      "peeringType": "public_ix",
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 5 states."
     }
   }
 }

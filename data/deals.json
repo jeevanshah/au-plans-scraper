@@ -4,108 +4,108 @@
     "provider": "Aussie Broadband",
     "title": "Basic Plus NBN 25/10",
     "category": "Utilities",
-    "description": "NBN 25/10 plan. Unlimited data, no lock-in contract.",
-    "promoPrice": 83.0,
+    "description": "NBN 25/10 plan discounted for the first 12 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 63.0,
     "regularPrice": 83.0,
-    "promoMonths": null,
+    "promoMonths": 12,
     "validUntil": null,
     "url": "https://www.aussiebroadband.com.au/nbn-plans/",
     "serviceType": "nbn",
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 23.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Aussie Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Aussie Broadband official site, verified 2026-08-17"
   },
   {
     "id": "aussie-broadband-nbn-50-20-2026-08",
     "provider": "Aussie Broadband",
     "title": "Value NBN 50/20",
     "category": "Utilities",
-    "description": "NBN 50/20 plan. Unlimited data, no lock-in contract.",
-    "promoPrice": 95.0,
+    "description": "NBN 50/20 plan discounted for the first 12 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 80.0,
     "regularPrice": 95.0,
-    "promoMonths": null,
+    "promoMonths": 12,
     "validUntil": null,
     "url": "https://www.aussiebroadband.com.au/nbn-plans/",
     "serviceType": "nbn",
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 47.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Aussie Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Aussie Broadband official site, verified 2026-08-17"
   },
   {
     "id": "aussie-broadband-nbn-100-20-2026-08",
     "provider": "Aussie Broadband",
     "title": "Fast NBN 100/20",
     "category": "Utilities",
-    "description": "NBN 100/20 plan. Unlimited data, no lock-in contract.",
-    "promoPrice": 99.0,
+    "description": "NBN 100/20 plan discounted for the first 12 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 84.0,
     "regularPrice": 99.0,
-    "promoMonths": null,
+    "promoMonths": 12,
     "validUntil": null,
     "url": "https://www.aussiebroadband.com.au/nbn-plans/",
     "serviceType": "nbn",
     "tier": "NBN 100/20",
     "typicalEveningSpeed": 94.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Aussie Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Aussie Broadband official site, verified 2026-08-17"
   },
   {
     "id": "aussie-broadband-nbn-500-50-2026-08",
     "provider": "Aussie Broadband",
     "title": "Fast Fibre NBN 500/50",
     "category": "Utilities",
-    "description": "NBN 500/50 plan. Unlimited data, no lock-in contract.",
-    "promoPrice": 99.0,
+    "description": "NBN 500/50 plan discounted for the first 12 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 84.0,
     "regularPrice": 99.0,
-    "promoMonths": null,
+    "promoMonths": 12,
     "validUntil": null,
     "url": "https://www.aussiebroadband.com.au/nbn-plans/",
     "serviceType": "nbn",
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Aussie Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Aussie Broadband official site, verified 2026-08-17"
   },
   {
     "id": "aussie-broadband-nbn-1000-100-2026-08",
     "provider": "Aussie Broadband",
     "title": "Ultrafast Fibre NBN 1000/100",
     "category": "Utilities",
-    "description": "NBN 1000/100 plan. Unlimited data, no lock-in contract.",
-    "promoPrice": 129.0,
+    "description": "NBN 1000/100 plan discounted for the first 12 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 114.0,
     "regularPrice": 129.0,
-    "promoMonths": null,
+    "promoMonths": 12,
     "validUntil": null,
     "url": "https://www.aussiebroadband.com.au/nbn-plans/",
     "serviceType": "nbn",
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 875.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Aussie Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Aussie Broadband official site, verified 2026-08-17"
   },
   {
     "id": "aussie-broadband-nbn-2000-200-2026-08",
     "provider": "Aussie Broadband",
     "title": "Hyperfast NBN 2000/200",
     "category": "Utilities",
-    "description": "NBN 2000/200 plan. Unlimited data, no lock-in contract.",
-    "promoPrice": 189.0,
+    "description": "NBN 2000/200 plan discounted for the first 12 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 174.0,
     "regularPrice": 189.0,
-    "promoMonths": null,
+    "promoMonths": 12,
     "validUntil": null,
     "url": "https://www.aussiebroadband.com.au/nbn-plans/",
     "serviceType": "nbn",
     "tier": "NBN 2000/200",
     "typicalEveningSpeed": 1810.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Aussie Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Aussie Broadband official site, verified 2026-08-17"
   },
   {
     "id": "tangerine-nbn-25-10-2026-08",
@@ -122,8 +122,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Tangerine official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Tangerine official site, verified 2026-08-17"
   },
   {
     "id": "tangerine-nbn-50-20-2026-08",
@@ -140,8 +140,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Tangerine official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Tangerine official site, verified 2026-08-17"
   },
   {
     "id": "tangerine-nbn-500-50-2026-08",
@@ -158,8 +158,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Tangerine official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Tangerine official site, verified 2026-08-17"
   },
   {
     "id": "tangerine-nbn-1000-100-2026-08",
@@ -176,8 +176,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 700.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Tangerine official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Tangerine official site, verified 2026-08-17"
   },
   {
     "id": "telstra-nbn-25-2026-08",
@@ -194,8 +194,8 @@
     "tier": "NBN 25",
     "typicalEveningSpeed": 25.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Telstra official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Telstra official site, verified 2026-08-17"
   },
   {
     "id": "telstra-nbn-50-2026-08",
@@ -212,8 +212,8 @@
     "tier": "NBN 50",
     "typicalEveningSpeed": 50.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Telstra official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Telstra official site, verified 2026-08-17"
   },
   {
     "id": "telstra-nbn-100-2026-08",
@@ -230,8 +230,8 @@
     "tier": "NBN 100",
     "typicalEveningSpeed": 100.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Telstra official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Telstra official site, verified 2026-08-17"
   },
   {
     "id": "telstra-nbn-750-2026-08",
@@ -248,8 +248,8 @@
     "tier": "NBN 750",
     "typicalEveningSpeed": 750.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Telstra official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Telstra official site, verified 2026-08-17"
   },
   {
     "id": "telstra-nbn-1000-2026-08",
@@ -266,8 +266,8 @@
     "tier": "NBN 1000",
     "typicalEveningSpeed": 875.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Telstra official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Telstra official site, verified 2026-08-17"
   },
   {
     "id": "dodo-nbn-25-10-2026-08",
@@ -284,8 +284,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Dodo official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Dodo official site, verified 2026-08-17"
   },
   {
     "id": "dodo-nbn-50-20-2026-08",
@@ -302,8 +302,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Dodo official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Dodo official site, verified 2026-08-17"
   },
   {
     "id": "dodo-nbn-100-20-2026-08",
@@ -320,8 +320,8 @@
     "tier": "NBN 100/20",
     "typicalEveningSpeed": 100.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Dodo official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Dodo official site, verified 2026-08-17"
   },
   {
     "id": "dodo-nbn-500-50-2026-08",
@@ -338,8 +338,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Dodo official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Dodo official site, verified 2026-08-17"
   },
   {
     "id": "dodo-nbn-750-50-2026-08",
@@ -356,8 +356,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 740.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Dodo official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Dodo official site, verified 2026-08-17"
   },
   {
     "id": "dodo-nbn-1000-100-2026-08",
@@ -374,8 +374,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 800.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Dodo official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Dodo official site, verified 2026-08-17"
   },
   {
     "id": "superloop-nbn-25-10-2026-08",
@@ -392,8 +392,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Superloop official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Superloop official site, verified 2026-08-17"
   },
   {
     "id": "superloop-nbn-50-20-2026-08",
@@ -410,8 +410,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Superloop official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Superloop official site, verified 2026-08-17"
   },
   {
     "id": "superloop-nbn-500-50-2026-08",
@@ -428,8 +428,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Superloop official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Superloop official site, verified 2026-08-17"
   },
   {
     "id": "superloop-nbn-750-50-2026-08",
@@ -446,8 +446,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 750.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Superloop official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Superloop official site, verified 2026-08-17"
   },
   {
     "id": "superloop-nbn-1000-100-2026-08",
@@ -464,8 +464,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 860.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Superloop official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Superloop official site, verified 2026-08-17"
   },
   {
     "id": "exetel-nbn-500-50-2026-08",
@@ -482,8 +482,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Exetel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Exetel official site, verified 2026-08-17"
   },
   {
     "id": "iinet-nbn-500-50-2026-08",
@@ -500,8 +500,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": null,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "iiNet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "iiNet official site, verified 2026-08-17"
   },
   {
     "id": "iinet-nbn-25-10-2026-08",
@@ -518,8 +518,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": null,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "iiNet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "iiNet official site, verified 2026-08-17"
   },
   {
     "id": "iinet-nbn-50-20-2026-08",
@@ -536,8 +536,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": null,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "iiNet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "iiNet official site, verified 2026-08-17"
   },
   {
     "id": "tpg-25gb-month-to-month-2026-08",
@@ -554,8 +554,8 @@
     "tier": "25GB",
     "techType": "4G",
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "TPG official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "TPG official site, verified 2026-08-17"
   },
   {
     "id": "tpg-50gb-month-to-month-2026-08",
@@ -572,8 +572,8 @@
     "tier": "50GB",
     "techType": "5G",
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "TPG official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "TPG official site, verified 2026-08-17"
   },
   {
     "id": "tpg-100gb-month-to-month-2026-08",
@@ -590,8 +590,8 @@
     "tier": "100GB",
     "techType": "5G",
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "TPG official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "TPG official site, verified 2026-08-17"
   },
   {
     "id": "telstra-50gb-month-to-month-2026-08",
@@ -608,8 +608,8 @@
     "tier": "50GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Telstra official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Telstra official site, verified 2026-08-17"
   },
   {
     "id": "telstra-180gb-month-to-month-2026-08",
@@ -626,8 +626,8 @@
     "tier": "180GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Telstra official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Telstra official site, verified 2026-08-17"
   },
   {
     "id": "telstra-300gb-month-to-month-2026-08",
@@ -644,8 +644,8 @@
     "tier": "300GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Telstra official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Telstra official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-95gb-28-day-expiry-2026-08",
@@ -662,8 +662,8 @@
     "tier": "95GB",
     "techType": "5G",
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-15gb-28-day-expiry-2026-08",
@@ -680,8 +680,8 @@
     "tier": "15GB",
     "techType": "5G",
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-42gb-28-day-expiry-2026-08",
@@ -698,8 +698,8 @@
     "tier": "42GB",
     "techType": "5G",
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-80gb-28-day-expiry-2026-08",
@@ -716,8 +716,8 @@
     "tier": "80GB",
     "techType": "5G",
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-120gb-28-day-expiry-2026-08",
@@ -734,8 +734,8 @@
     "tier": "120GB",
     "techType": "5G",
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-150gb-184-day-expiry-2026-08",
@@ -752,8 +752,8 @@
     "tier": "150GB",
     "techType": "5G",
     "billingCycleDays": 184,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-200gb-365-day-expiry-2026-08",
@@ -770,8 +770,8 @@
     "tier": "200GB",
     "techType": "5G",
     "billingCycleDays": 365,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-240gb-365-day-expiry-2026-08",
@@ -788,8 +788,8 @@
     "tier": "240GB",
     "techType": "5G",
     "billingCycleDays": 365,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-30gb-28-day-expiry-2026-08",
@@ -806,8 +806,8 @@
     "tier": "30GB",
     "techType": "5G",
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-100gb-28-day-expiry-2026-08",
@@ -824,8 +824,8 @@
     "tier": "100GB",
     "techType": "5G",
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-365gb-365-day-expiry-2026-08",
@@ -842,8 +842,8 @@
     "tier": "365GB",
     "techType": "5G",
     "billingCycleDays": 365,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-10gb-7-day-expiry-2026-08",
@@ -860,8 +860,8 @@
     "tier": "10GB",
     "techType": "5G",
     "billingCycleDays": 7,
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "vodafone-65gb-month-to-month-2026-08",
@@ -878,8 +878,8 @@
     "tier": "65GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Vodafone official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Vodafone official site, verified 2026-08-17"
   },
   {
     "id": "vodafone-220gb-month-to-month-2026-08",
@@ -896,8 +896,8 @@
     "tier": "220GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Vodafone official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Vodafone official site, verified 2026-08-17"
   },
   {
     "id": "vodafone-420gb-month-to-month-2026-08",
@@ -914,26 +914,8 @@
     "tier": "420GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Vodafone official site, verified 2026-08-16"
-  },
-  {
-    "id": "kogan-mobile-20gb-month-to-month-2026-08",
-    "provider": "Kogan Mobile",
-    "title": "20GB 20GB",
-    "category": "Utilities",
-    "description": "20GB data mobile plan discounted for the first 1 months for new customers. Month-to-month.",
-    "promoPrice": 10.0,
-    "regularPrice": 20.0,
-    "promoMonths": 1,
-    "validUntil": "2026-09-01",
-    "url": "https://www.koganmobile.com.au/plans",
-    "serviceType": "mobile",
-    "tier": "20GB",
-    "techType": null,
-    "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Kogan Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Vodafone official site, verified 2026-08-17"
   },
   {
     "id": "kogan-mobile-60gb-month-to-month-2026-08",
@@ -944,68 +926,86 @@
     "promoPrice": 12.0,
     "regularPrice": 25.0,
     "promoMonths": 1,
-    "validUntil": "2026-09-01",
+    "validUntil": "2026-08-31",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
     "tier": "60GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Kogan Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Kogan Mobile official site, verified 2026-08-17"
   },
   {
-    "id": "kogan-mobile-250gb-365-day-expiry-2026-08",
+    "id": "kogan-mobile-120gb-month-to-month-2026-08",
     "provider": "Kogan Mobile",
-    "title": "250GB 250GB",
+    "title": "120GB 120GB",
     "category": "Utilities",
-    "description": "250GB data mobile plan discounted for the first 1 months for new customers. 365-day expiry.",
+    "description": "120GB data mobile plan discounted for the first 1 months for new customers. Month-to-month.",
+    "promoPrice": 20.0,
+    "regularPrice": 40.0,
+    "promoMonths": 1,
+    "validUntil": "2026-08-31",
+    "url": "https://www.koganmobile.com.au/plans",
+    "serviceType": "mobile",
+    "tier": "120GB",
+    "techType": null,
+    "billingCycleDays": 30,
+    "postedAt": "2026-08-17",
+    "_source": "Kogan Mobile official site, verified 2026-08-17"
+  },
+  {
+    "id": "kogan-mobile-200gb-365-day-expiry-2026-08",
+    "provider": "Kogan Mobile",
+    "title": "200GB 200GB",
+    "category": "Utilities",
+    "description": "200GB data mobile plan discounted for the first 1 months for new customers. 365-day expiry.",
     "promoPrice": 159.0,
     "regularPrice": 190.0,
     "promoMonths": 1,
-    "validUntil": "2026-09-01",
+    "validUntil": "2026-08-31",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
-    "tier": "250GB",
+    "tier": "200GB",
     "techType": null,
     "billingCycleDays": 365,
-    "postedAt": "2026-08-16",
-    "_source": "Kogan Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Kogan Mobile official site, verified 2026-08-17"
   },
   {
-    "id": "kogan-mobile-500gb-365-day-expiry-2026-08",
+    "id": "kogan-mobile-900gb-365-day-expiry-2026-08",
     "provider": "Kogan Mobile",
-    "title": "500GB 500GB",
+    "title": "900GB 900GB",
     "category": "Utilities",
-    "description": "500GB data mobile plan discounted for the first 1 months for new customers. 365-day expiry.",
-    "promoPrice": 205.0,
+    "description": "900GB data mobile plan discounted for the first 1 months for new customers. 365-day expiry.",
+    "promoPrice": 199.0,
     "regularPrice": 300.0,
     "promoMonths": 1,
-    "validUntil": "2026-09-01",
+    "validUntil": "2026-08-31",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
-    "tier": "500GB",
+    "tier": "900GB",
     "techType": null,
     "billingCycleDays": 365,
-    "postedAt": "2026-08-16",
-    "_source": "Kogan Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Kogan Mobile official site, verified 2026-08-17"
   },
   {
-    "id": "kogan-mobile-80gb-month-to-month-2026-08",
+    "id": "kogan-mobile-20gb-month-to-month-2026-08",
     "provider": "Kogan Mobile",
-    "title": "80GB 80GB",
+    "title": "20GB 20GB",
     "category": "Utilities",
-    "description": "80GB data mobile plan. Month-to-month.",
-    "promoPrice": 40.0,
-    "regularPrice": 40.0,
-    "promoMonths": null,
-    "validUntil": "2026-09-01",
+    "description": "20GB data mobile plan discounted for the first 1 months for new customers. Month-to-month.",
+    "promoPrice": 10.0,
+    "regularPrice": 20.0,
+    "promoMonths": 1,
+    "validUntil": "2026-08-31",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
-    "tier": "80GB",
+    "tier": "20GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Kogan Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Kogan Mobile official site, verified 2026-08-17"
   },
   {
     "id": "kogan-mobile-140gb-365-day-expiry-2026-08",
@@ -1016,14 +1016,14 @@
     "promoPrice": 179.9,
     "regularPrice": 179.9,
     "promoMonths": null,
-    "validUntil": "2026-09-01",
+    "validUntil": "2026-08-31",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
     "tier": "140GB",
     "techType": null,
     "billingCycleDays": 365,
-    "postedAt": "2026-08-16",
-    "_source": "Kogan Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Kogan Mobile official site, verified 2026-08-17"
   },
   {
     "id": "kogan-mobile-300gb-365-day-expiry-2026-08",
@@ -1034,14 +1034,14 @@
     "promoPrice": 240.0,
     "regularPrice": 240.0,
     "promoMonths": null,
-    "validUntil": "2026-09-01",
+    "validUntil": "2026-08-31",
     "url": "https://www.koganmobile.com.au/plans",
     "serviceType": "mobile",
     "tier": "300GB",
     "techType": null,
     "billingCycleDays": 365,
-    "postedAt": "2026-08-16",
-    "_source": "Kogan Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Kogan Mobile official site, verified 2026-08-17"
   },
   {
     "id": "felix-25gb-month-to-month-2026-08",
@@ -1058,8 +1058,8 @@
     "tier": "25GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Felix official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Felix official site, verified 2026-08-17"
   },
   {
     "id": "felix-50gb-month-to-month-2026-08",
@@ -1076,8 +1076,8 @@
     "tier": "50GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Felix official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Felix official site, verified 2026-08-17"
   },
   {
     "id": "felix-unlimited-month-to-month-2026-08",
@@ -1094,8 +1094,8 @@
     "tier": "Unlimited",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Felix official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Felix official site, verified 2026-08-17"
   },
   {
     "id": "boost-mobile-8gb-28-day-expiry-2026-08",
@@ -1112,8 +1112,8 @@
     "tier": "8GB",
     "techType": null,
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "Boost Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Boost Mobile official site, verified 2026-08-17"
   },
   {
     "id": "boost-mobile-60gb-28-day-expiry-2026-08",
@@ -1130,8 +1130,8 @@
     "tier": "60GB",
     "techType": null,
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "Boost Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Boost Mobile official site, verified 2026-08-17"
   },
   {
     "id": "boost-mobile-75gb-28-day-expiry-2026-08",
@@ -1148,8 +1148,8 @@
     "tier": "75GB",
     "techType": null,
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "Boost Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Boost Mobile official site, verified 2026-08-17"
   },
   {
     "id": "boost-mobile-105gb-28-day-expiry-2026-08",
@@ -1166,8 +1166,8 @@
     "tier": "105GB",
     "techType": null,
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "Boost Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Boost Mobile official site, verified 2026-08-17"
   },
   {
     "id": "boost-mobile-150gb-28-day-expiry-2026-08",
@@ -1184,8 +1184,8 @@
     "tier": "150GB",
     "techType": null,
     "billingCycleDays": 28,
-    "postedAt": "2026-08-16",
-    "_source": "Boost Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Boost Mobile official site, verified 2026-08-17"
   },
   {
     "id": "boost-mobile-160gb-186-day-expiry-2026-08",
@@ -1202,8 +1202,8 @@
     "tier": "160GB",
     "techType": null,
     "billingCycleDays": 186,
-    "postedAt": "2026-08-16",
-    "_source": "Boost Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Boost Mobile official site, verified 2026-08-17"
   },
   {
     "id": "boost-mobile-290gb-365-day-expiry-2026-08",
@@ -1220,8 +1220,8 @@
     "tier": "290GB",
     "techType": null,
     "billingCycleDays": 365,
-    "postedAt": "2026-08-16",
-    "_source": "Boost Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Boost Mobile official site, verified 2026-08-17"
   },
   {
     "id": "boost-mobile-365gb-365-day-expiry-2026-08",
@@ -1238,8 +1238,8 @@
     "tier": "365GB",
     "techType": null,
     "billingCycleDays": 365,
-    "postedAt": "2026-08-16",
-    "_source": "Boost Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Boost Mobile official site, verified 2026-08-17"
   },
   {
     "id": "boost-mobile-6gb-7-day-expiry-2026-08",
@@ -1256,8 +1256,8 @@
     "tier": "6GB",
     "techType": null,
     "billingCycleDays": 7,
-    "postedAt": "2026-08-16",
-    "_source": "Boost Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Boost Mobile official site, verified 2026-08-17"
   },
   {
     "id": "aldimobile-12gb-30-day-expiry-2026-08",
@@ -1274,8 +1274,8 @@
     "tier": "12GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "ALDImobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "ALDImobile official site, verified 2026-08-17"
   },
   {
     "id": "aldimobile-29gb-30-day-expiry-2026-08",
@@ -1292,8 +1292,8 @@
     "tier": "29GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "ALDImobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "ALDImobile official site, verified 2026-08-17"
   },
   {
     "id": "aldimobile-75gb-30-day-expiry-2026-08",
@@ -1310,8 +1310,8 @@
     "tier": "75GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "ALDImobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "ALDImobile official site, verified 2026-08-17"
   },
   {
     "id": "aldimobile-120gb-30-day-expiry-2026-08",
@@ -1328,8 +1328,8 @@
     "tier": "120GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "ALDImobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "ALDImobile official site, verified 2026-08-17"
   },
   {
     "id": "aldimobile-175gb-30-day-expiry-2026-08",
@@ -1346,8 +1346,8 @@
     "tier": "175GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "ALDImobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "ALDImobile official site, verified 2026-08-17"
   },
   {
     "id": "aldimobile-300gb-365-day-expiry-2026-08",
@@ -1364,8 +1364,8 @@
     "tier": "300GB",
     "techType": null,
     "billingCycleDays": 365,
-    "postedAt": "2026-08-16",
-    "_source": "ALDImobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "ALDImobile official site, verified 2026-08-17"
   },
   {
     "id": "dodo-25gb-month-to-month-2026-08",
@@ -1382,8 +1382,8 @@
     "tier": "25GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Dodo official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Dodo official site, verified 2026-08-17"
   },
   {
     "id": "dodo-40gb-month-to-month-2026-08",
@@ -1400,8 +1400,8 @@
     "tier": "40GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Dodo official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Dodo official site, verified 2026-08-17"
   },
   {
     "id": "dodo-80gb-month-to-month-2026-08",
@@ -1418,8 +1418,8 @@
     "tier": "80GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Dodo official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Dodo official site, verified 2026-08-17"
   },
   {
     "id": "aussie-broadband-20gb-month-to-month-2026-08",
@@ -1436,8 +1436,8 @@
     "tier": "20GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Aussie Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Aussie Broadband official site, verified 2026-08-17"
   },
   {
     "id": "aussie-broadband-45gb-month-to-month-2026-08",
@@ -1454,8 +1454,8 @@
     "tier": "45GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Aussie Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Aussie Broadband official site, verified 2026-08-17"
   },
   {
     "id": "aussie-broadband-100gb-month-to-month-2026-08",
@@ -1472,8 +1472,8 @@
     "tier": "100GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Aussie Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Aussie Broadband official site, verified 2026-08-17"
   },
   {
     "id": "aussie-broadband-180gb-month-to-month-2026-08",
@@ -1490,8 +1490,8 @@
     "tier": "180GB",
     "techType": null,
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Aussie Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Aussie Broadband official site, verified 2026-08-17"
   },
   {
     "id": "vodafone-nbn-1000-100-2026-08",
@@ -1508,8 +1508,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 850.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Vodafone official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Vodafone official site, verified 2026-08-17"
   },
   {
     "id": "vodafone-nbn-750-50-2026-08",
@@ -1526,8 +1526,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 740.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Vodafone official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Vodafone official site, verified 2026-08-17"
   },
   {
     "id": "vodafone-nbn-500-50-2026-08",
@@ -1544,8 +1544,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Vodafone official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Vodafone official site, verified 2026-08-17"
   },
   {
     "id": "vodafone-nbn-50-20-2026-08",
@@ -1562,8 +1562,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Vodafone official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Vodafone official site, verified 2026-08-17"
   },
   {
     "id": "vodafone-nbn-25-10-2026-08",
@@ -1580,8 +1580,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Vodafone official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Vodafone official site, verified 2026-08-17"
   },
   {
     "id": "spintel-nbn-25-10-2026-08",
@@ -1598,8 +1598,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "SpinTel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "SpinTel official site, verified 2026-08-17"
   },
   {
     "id": "spintel-nbn-100-20-2026-08",
@@ -1616,8 +1616,8 @@
     "tier": "NBN 100/20",
     "typicalEveningSpeed": 100.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "SpinTel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "SpinTel official site, verified 2026-08-17"
   },
   {
     "id": "spintel-nbn-500-50-2026-08",
@@ -1634,8 +1634,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "SpinTel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "SpinTel official site, verified 2026-08-17"
   },
   {
     "id": "spintel-nbn-750-50-2026-08",
@@ -1652,8 +1652,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 750.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "SpinTel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "SpinTel official site, verified 2026-08-17"
   },
   {
     "id": "spintel-nbn-1000-100-2026-08",
@@ -1670,8 +1670,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 850.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "SpinTel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "SpinTel official site, verified 2026-08-17"
   },
   {
     "id": "tpg-nbn-100-20-2026-08",
@@ -1688,8 +1688,8 @@
     "tier": "NBN 100/20",
     "typicalEveningSpeed": 98.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "TPG official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "TPG official site, verified 2026-08-17"
   },
   {
     "id": "tpg-nbn-500-50-2026-08",
@@ -1706,8 +1706,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "TPG official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "TPG official site, verified 2026-08-17"
   },
   {
     "id": "tpg-nbn-25-10-2026-08",
@@ -1724,8 +1724,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "TPG official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "TPG official site, verified 2026-08-17"
   },
   {
     "id": "tpg-nbn-50-20-2026-08",
@@ -1742,8 +1742,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "TPG official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "TPG official site, verified 2026-08-17"
   },
   {
     "id": "tpg-nbn-750-50-2026-08",
@@ -1760,8 +1760,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 740.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "TPG official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "TPG official site, verified 2026-08-17"
   },
   {
     "id": "tpg-nbn-1000-100-2026-08",
@@ -1778,8 +1778,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 850.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "TPG official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "TPG official site, verified 2026-08-17"
   },
   {
     "id": "flip-nbn-25-10-2026-08",
@@ -1796,8 +1796,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Flip official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Flip official site, verified 2026-08-17"
   },
   {
     "id": "flip-nbn-50-20-2026-08",
@@ -1814,8 +1814,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Flip official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Flip official site, verified 2026-08-17"
   },
   {
     "id": "flip-nbn-500-50-2026-08",
@@ -1832,8 +1832,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Flip official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Flip official site, verified 2026-08-17"
   },
   {
     "id": "moose-mobile-30gb-month-to-month-2026-08",
@@ -1850,8 +1850,8 @@
     "tier": "30GB",
     "techType": "4G",
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Moose Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Moose Mobile official site, verified 2026-08-17"
   },
   {
     "id": "moose-mobile-50gb-month-to-month-2026-08",
@@ -1868,8 +1868,8 @@
     "tier": "50GB",
     "techType": "5G",
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Moose Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Moose Mobile official site, verified 2026-08-17"
   },
   {
     "id": "moose-mobile-100gb-month-to-month-2026-08",
@@ -1886,8 +1886,8 @@
     "tier": "100GB",
     "techType": "5G",
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Moose Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Moose Mobile official site, verified 2026-08-17"
   },
   {
     "id": "moose-mobile-250gb-month-to-month-2026-08",
@@ -1904,8 +1904,8 @@
     "tier": "250GB",
     "techType": "5G",
     "billingCycleDays": 30,
-    "postedAt": "2026-08-16",
-    "_source": "Moose Mobile official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Moose Mobile official site, verified 2026-08-17"
   },
   {
     "id": "swoop-nbn-25-10-2026-08",
@@ -1922,8 +1922,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Swoop official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Swoop official site, verified 2026-08-17"
   },
   {
     "id": "swoop-nbn-50-20-2026-08",
@@ -1940,8 +1940,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Swoop official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Swoop official site, verified 2026-08-17"
   },
   {
     "id": "swoop-nbn-500-50-2026-08",
@@ -1958,8 +1958,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Swoop official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Swoop official site, verified 2026-08-17"
   },
   {
     "id": "swoop-nbn-1000-100-2026-08",
@@ -1976,8 +1976,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 890.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Swoop official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Swoop official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-25-10-2026-08",
@@ -1994,8 +1994,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 24.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-50-20-2026-08",
@@ -2012,8 +2012,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 48.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-100-20-2026-08",
@@ -2030,8 +2030,8 @@
     "tier": "NBN 100/20",
     "typicalEveningSpeed": 95.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-500-50-2026-08",
@@ -2048,8 +2048,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 475.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-750-50-2026-08",
@@ -2066,8 +2066,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 713.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-1000-100-2026-08",
@@ -2084,8 +2084,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 880.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-2000-100-2026-08",
@@ -2102,8 +2102,8 @@
     "tier": "NBN 2000/100",
     "typicalEveningSpeed": 1760.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-250-100-2026-08",
@@ -2120,8 +2120,8 @@
     "tier": "NBN 250/100",
     "typicalEveningSpeed": 238.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-500-200-2026-08",
@@ -2138,8 +2138,8 @@
     "tier": "NBN 500/200",
     "typicalEveningSpeed": 475.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-1000-400-2026-08",
@@ -2156,8 +2156,8 @@
     "tier": "NBN 1000/400",
     "typicalEveningSpeed": 880.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-2000-200-2026-08",
@@ -2174,8 +2174,8 @@
     "tier": "NBN 2000/200",
     "typicalEveningSpeed": 1760.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "neptune-internet-nbn-2000-500-2026-08",
@@ -2192,8 +2192,8 @@
     "tier": "NBN 2000/500",
     "typicalEveningSpeed": 1760.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Neptune Internet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Neptune Internet official site, verified 2026-08-17"
   },
   {
     "id": "more-telecom-nbn-25-10-2026-08",
@@ -2210,8 +2210,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "More Telecom official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "More Telecom official site, verified 2026-08-17"
   },
   {
     "id": "more-telecom-nbn-50-20-2026-08",
@@ -2228,8 +2228,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "More Telecom official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "More Telecom official site, verified 2026-08-17"
   },
   {
     "id": "more-telecom-nbn-500-50-2026-08",
@@ -2246,8 +2246,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "More Telecom official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "More Telecom official site, verified 2026-08-17"
   },
   {
     "id": "more-telecom-nbn-1000-100-2026-08",
@@ -2264,8 +2264,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 700.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "More Telecom official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "More Telecom official site, verified 2026-08-17"
   },
   {
     "id": "purple-connect-nbn-25-10-2026-08",
@@ -2282,8 +2282,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 24.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Purple Connect official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Purple Connect official site, verified 2026-08-17"
   },
   {
     "id": "purple-connect-nbn-50-20-2026-08",
@@ -2300,8 +2300,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 48.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Purple Connect official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Purple Connect official site, verified 2026-08-17"
   },
   {
     "id": "purple-connect-nbn-100-20-2026-08",
@@ -2318,8 +2318,8 @@
     "tier": "NBN 100/20",
     "typicalEveningSpeed": 97.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Purple Connect official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Purple Connect official site, verified 2026-08-17"
   },
   {
     "id": "purple-connect-nbn-100-40-2026-08",
@@ -2336,8 +2336,8 @@
     "tier": "NBN 100/40",
     "typicalEveningSpeed": 97.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Purple Connect official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Purple Connect official site, verified 2026-08-17"
   },
   {
     "id": "purple-connect-nbn-500-50-2026-08",
@@ -2354,8 +2354,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": null,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Purple Connect official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Purple Connect official site, verified 2026-08-17"
   },
   {
     "id": "purple-connect-nbn-750-50-2026-08",
@@ -2372,8 +2372,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": null,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Purple Connect official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Purple Connect official site, verified 2026-08-17"
   },
   {
     "id": "purple-connect-nbn-1000-100-2026-08",
@@ -2390,8 +2390,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": null,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Purple Connect official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Purple Connect official site, verified 2026-08-17"
   },
   {
     "id": "arctel-nbn-25-10-2026-08",
@@ -2408,8 +2408,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Arctel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Arctel official site, verified 2026-08-17"
   },
   {
     "id": "arctel-nbn-50-20-2026-08",
@@ -2426,8 +2426,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Arctel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Arctel official site, verified 2026-08-17"
   },
   {
     "id": "arctel-nbn-500-50-2026-08",
@@ -2444,8 +2444,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Arctel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Arctel official site, verified 2026-08-17"
   },
   {
     "id": "arctel-nbn-750-50-2026-08",
@@ -2462,8 +2462,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 750.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Arctel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Arctel official site, verified 2026-08-17"
   },
   {
     "id": "arctel-nbn-1000-100-2026-08",
@@ -2480,8 +2480,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 860.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Arctel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Arctel official site, verified 2026-08-17"
   },
   {
     "id": "optus-nbn-25-10-2026-08",
@@ -2498,8 +2498,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Optus official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Optus official site, verified 2026-08-17"
   },
   {
     "id": "optus-nbn-50-20-2026-08",
@@ -2516,8 +2516,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Optus official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Optus official site, verified 2026-08-17"
   },
   {
     "id": "optus-nbn-500-50-2026-08",
@@ -2534,8 +2534,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Optus official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Optus official site, verified 2026-08-17"
   },
   {
     "id": "optus-nbn-1000-100-2026-08",
@@ -2552,8 +2552,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 820.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Optus official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Optus official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-25-10-2026-08",
@@ -2570,8 +2570,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-50-20-2026-08",
@@ -2588,8 +2588,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": null,
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-100-20-2026-08",
@@ -2606,8 +2606,8 @@
     "tier": "NBN 100/20",
     "typicalEveningSpeed": 100.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-100-40-2026-08",
@@ -2624,8 +2624,8 @@
     "tier": "NBN 100/40",
     "typicalEveningSpeed": 100.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-250-100-2026-08",
@@ -2642,8 +2642,8 @@
     "tier": "NBN 250/100",
     "typicalEveningSpeed": 250.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-500-50-2026-08",
@@ -2660,8 +2660,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-500-200-2026-08",
@@ -2678,8 +2678,8 @@
     "tier": "NBN 500/200",
     "typicalEveningSpeed": 500.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-750-50-2026-08",
@@ -2696,8 +2696,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 700.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-1000-100-2026-08",
@@ -2714,8 +2714,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 880.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-1000-400-2026-08",
@@ -2732,8 +2732,8 @@
     "tier": "NBN 1000/400",
     "typicalEveningSpeed": 880.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-2000-100-2026-08",
@@ -2750,8 +2750,8 @@
     "tier": "NBN 2000/100",
     "typicalEveningSpeed": 1700.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-2000-200-2026-08",
@@ -2768,8 +2768,8 @@
     "tier": "NBN 2000/200",
     "typicalEveningSpeed": 1700.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "leaptel-nbn-2000-500-2026-08",
@@ -2786,8 +2786,8 @@
     "tier": "NBN 2000/500",
     "typicalEveningSpeed": 1700.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Leaptel official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Leaptel official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-nbn-25-10-2026-08",
@@ -2804,8 +2804,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-nbn-50-20-2026-08",
@@ -2822,8 +2822,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-nbn-100-20-2026-08",
@@ -2840,8 +2840,8 @@
     "tier": "NBN 100/20",
     "typicalEveningSpeed": 100.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-nbn-500-50-2026-08",
@@ -2858,8 +2858,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-nbn-750-50-2026-08",
@@ -2876,8 +2876,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 680.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "amaysim-nbn-1000-100-2026-08",
@@ -2894,8 +2894,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 820.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "amaysim official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "amaysim official site, verified 2026-08-17"
   },
   {
     "id": "pentanet-nbn-25-10-2026-08",
@@ -2912,8 +2912,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 24.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Pentanet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Pentanet official site, verified 2026-08-17"
   },
   {
     "id": "pentanet-nbn-50-20-2026-08",
@@ -2930,8 +2930,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 44.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Pentanet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Pentanet official site, verified 2026-08-17"
   },
   {
     "id": "pentanet-nbn-100-20-2026-08",
@@ -2948,8 +2948,8 @@
     "tier": "NBN 100/20",
     "typicalEveningSpeed": 80.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Pentanet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Pentanet official site, verified 2026-08-17"
   },
   {
     "id": "pentanet-nbn-100-40-2026-08",
@@ -2966,8 +2966,8 @@
     "tier": "NBN 100/40",
     "typicalEveningSpeed": 80.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Pentanet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Pentanet official site, verified 2026-08-17"
   },
   {
     "id": "pentanet-nbn-500-50-2026-08",
@@ -2984,8 +2984,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 420.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Pentanet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Pentanet official site, verified 2026-08-17"
   },
   {
     "id": "pentanet-nbn-750-50-2026-08",
@@ -3002,8 +3002,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 600.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Pentanet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Pentanet official site, verified 2026-08-17"
   },
   {
     "id": "pentanet-nbn-1000-100-2026-08",
@@ -3020,8 +3020,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 800.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Pentanet official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Pentanet official site, verified 2026-08-17"
   },
   {
     "id": "future-broadband-nbn-25-5-2026-08",
@@ -3038,8 +3038,8 @@
     "tier": "NBN 25/5",
     "typicalEveningSpeed": 25.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Future Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Future Broadband official site, verified 2026-08-17"
   },
   {
     "id": "future-broadband-nbn-25-10-2026-08",
@@ -3056,8 +3056,8 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Future Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Future Broadband official site, verified 2026-08-17"
   },
   {
     "id": "future-broadband-nbn-50-20-2026-08",
@@ -3074,8 +3074,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Future Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Future Broadband official site, verified 2026-08-17"
   },
   {
     "id": "future-broadband-nbn-100-20-2026-08",
@@ -3092,8 +3092,8 @@
     "tier": "NBN 100/20",
     "typicalEveningSpeed": 94.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Future Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Future Broadband official site, verified 2026-08-17"
   },
   {
     "id": "future-broadband-nbn-500-50-2026-08",
@@ -3110,8 +3110,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Future Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Future Broadband official site, verified 2026-08-17"
   },
   {
     "id": "future-broadband-nbn-750-50-2026-08",
@@ -3128,8 +3128,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 700.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Future Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Future Broadband official site, verified 2026-08-17"
   },
   {
     "id": "future-broadband-nbn-1000-100-2026-08",
@@ -3146,8 +3146,8 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 880.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Future Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Future Broadband official site, verified 2026-08-17"
   },
   {
     "id": "future-broadband-nbn-2000-100-2026-08",
@@ -3164,8 +3164,8 @@
     "tier": "NBN 2000/100",
     "typicalEveningSpeed": 1700.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Future Broadband official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Future Broadband official site, verified 2026-08-17"
   },
   {
     "id": "mint-telecom-nbn-25-5-2026-08",
@@ -3182,8 +3182,8 @@
     "tier": "NBN 25/5",
     "typicalEveningSpeed": 15.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Mint Telecom official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Mint Telecom official site, verified 2026-08-17"
   },
   {
     "id": "mint-telecom-nbn-50-20-2026-08",
@@ -3200,8 +3200,8 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 30.0,
     "techType": "Fibre and FTTN",
-    "postedAt": "2026-08-16",
-    "_source": "Mint Telecom official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Mint Telecom official site, verified 2026-08-17"
   },
   {
     "id": "mint-telecom-nbn-500-50-2026-08",
@@ -3218,8 +3218,8 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 300.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Mint Telecom official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Mint Telecom official site, verified 2026-08-17"
   },
   {
     "id": "mint-telecom-nbn-750-50-2026-08",
@@ -3236,8 +3236,8 @@
     "tier": "NBN 750/50",
     "typicalEveningSpeed": 450.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Mint Telecom official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Mint Telecom official site, verified 2026-08-17"
   },
   {
     "id": "mint-telecom-nbn-1000-100-2026-08",
@@ -3254,7 +3254,169 @@
     "tier": "NBN 1000/100",
     "typicalEveningSpeed": 600.0,
     "techType": "Fibre",
-    "postedAt": "2026-08-16",
-    "_source": "Mint Telecom official site, verified 2026-08-16"
+    "postedAt": "2026-08-17",
+    "_source": "Mint Telecom official site, verified 2026-08-17"
+  },
+  {
+    "id": "mate-nbn-25-10-2026-08",
+    "provider": "Mate",
+    "title": "Crikey NBN 25/10 (code MATE25)",
+    "category": "Utilities",
+    "description": "NBN 25/10 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 55.0,
+    "regularPrice": 80.0,
+    "promoMonths": 6,
+    "validUntil": "2026-12-31",
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "serviceType": "nbn",
+    "tier": "NBN 25/10",
+    "typicalEveningSpeed": 25.0,
+    "techType": "Fibre and FTTN",
+    "postedAt": "2026-08-17",
+    "_source": "Mate official site, verified 2026-08-17"
+  },
+  {
+    "id": "mate-nbn-50-20-2026-08",
+    "provider": "Mate",
+    "title": "Ripper NBN 50/20 (code RIPPER20)",
+    "category": "Utilities",
+    "description": "NBN 50/20 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 70.0,
+    "regularPrice": 90.0,
+    "promoMonths": 6,
+    "validUntil": "2026-12-31",
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "serviceType": "nbn",
+    "tier": "NBN 50/20",
+    "typicalEveningSpeed": 49.0,
+    "techType": "Fibre and FTTN",
+    "postedAt": "2026-08-17",
+    "_source": "Mate official site, verified 2026-08-17"
+  },
+  {
+    "id": "mate-nbn-100-20-2026-08",
+    "provider": "Mate",
+    "title": "No Worries NBN 100/20 (code MATE25)",
+    "category": "Utilities",
+    "description": "NBN 100/20 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 75.0,
+    "regularPrice": 100.0,
+    "promoMonths": 6,
+    "validUntil": "2026-12-31",
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "serviceType": "nbn",
+    "tier": "NBN 100/20",
+    "typicalEveningSpeed": 97.0,
+    "techType": "Fibre and FTTN",
+    "postedAt": "2026-08-17",
+    "_source": "Mate official site, verified 2026-08-17"
+  },
+  {
+    "id": "mate-nbn-100-40-2026-08",
+    "provider": "Mate",
+    "title": "You Beaut NBN 100/40 (code MATE25)",
+    "category": "Utilities",
+    "description": "NBN 100/40 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 85.0,
+    "regularPrice": 110.0,
+    "promoMonths": 6,
+    "validUntil": "2026-12-31",
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "serviceType": "nbn",
+    "tier": "NBN 100/40",
+    "typicalEveningSpeed": 97.0,
+    "techType": "Fibre and FTTN",
+    "postedAt": "2026-08-17",
+    "_source": "Mate official site, verified 2026-08-17"
+  },
+  {
+    "id": "mate-nbn-500-50-2026-08",
+    "provider": "Mate",
+    "title": "No Worries NBN 500/50 (code MATE25)",
+    "category": "Utilities",
+    "description": "NBN 500/50 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 75.0,
+    "regularPrice": 100.0,
+    "promoMonths": 6,
+    "validUntil": "2026-12-31",
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "typicalEveningSpeed": 485.0,
+    "techType": "Fibre",
+    "postedAt": "2026-08-17",
+    "_source": "Mate official site, verified 2026-08-17"
+  },
+  {
+    "id": "mate-nbn-750-50-2026-08",
+    "provider": "Mate",
+    "title": "Fair Dinkum NBN 750/50 (code MATE25)",
+    "category": "Utilities",
+    "description": "NBN 750/50 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 100.0,
+    "regularPrice": 125.0,
+    "promoMonths": 6,
+    "validUntil": "2026-12-31",
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "typicalEveningSpeed": 713.0,
+    "techType": "Fibre",
+    "postedAt": "2026-08-17",
+    "_source": "Mate official site, verified 2026-08-17"
+  },
+  {
+    "id": "mate-nbn-1000-100-2026-08",
+    "provider": "Mate",
+    "title": "Flamin' Fast NBN 1000/100 (code MATE25)",
+    "category": "Utilities",
+    "description": "NBN 1000/100 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 101.0,
+    "regularPrice": 126.0,
+    "promoMonths": 6,
+    "validUntil": "2026-12-31",
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "typicalEveningSpeed": 913.0,
+    "techType": "Fibre",
+    "postedAt": "2026-08-17",
+    "_source": "Mate official site, verified 2026-08-17"
+  },
+  {
+    "id": "mate-nbn-2000-100-2026-08",
+    "provider": "Mate",
+    "title": "Scorchin' Fast NBN 2000/100 (code MATE25)",
+    "category": "Utilities",
+    "description": "NBN 2000/100 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 141.0,
+    "regularPrice": 166.0,
+    "promoMonths": 6,
+    "validUntil": "2026-12-31",
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "serviceType": "nbn",
+    "tier": "NBN 2000/100",
+    "typicalEveningSpeed": 1831.0,
+    "techType": "Fibre",
+    "postedAt": "2026-08-17",
+    "_source": "Mate official site, verified 2026-08-17"
+  },
+  {
+    "id": "mate-nbn-2000-200-2026-08",
+    "provider": "Mate",
+    "title": "Scorchin' Fast NBN 2000/200 (code MATE25)",
+    "category": "Utilities",
+    "description": "NBN 2000/200 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 141.0,
+    "regularPrice": 166.0,
+    "promoMonths": 6,
+    "validUntil": "2026-12-31",
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "serviceType": "nbn",
+    "tier": "NBN 2000/200",
+    "typicalEveningSpeed": 1831.0,
+    "techType": "Fibre",
+    "postedAt": "2026-08-17",
+    "_source": "Mate official site, verified 2026-08-17"
   }
 ]
