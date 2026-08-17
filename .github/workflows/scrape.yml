@@ -39,12 +39,14 @@ jobs:
         continue-on-error: true
 
       - name: Commit data if changed
+        id: commit
         run: |
           git config user.name "au-plans-scraper-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/deals.json data/meta.json data/changelog.json
           if git diff --cached --quiet; then
             echo "No data changes to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: update scraped plan data [skip ci]"
             # main can move between checkout and this push (e.g. a manual
@@ -58,7 +60,17 @@ jobs:
               git fetch origin main
               git rebase origin/main
             done
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Trigger deals page pre-render
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.DEALS_SITE_DISPATCH_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/jeevanshah/jrsdigital-site/dispatches \
+            -d '{"event_type":"deals-data-updated"}'
 
       - name: Manage staleness issues
         env:
