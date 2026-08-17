@@ -1,6 +1,14 @@
 [
   {
     "date": "2026-08-17",
+    "message": "Updated Boost Mobile 105GB pricing"
+  },
+  {
+    "date": "2026-08-17",
+    "message": "Updated Boost Mobile 365GB pricing"
+  },
+  {
+    "date": "2026-08-17",
     "message": "Updated Aussie Broadband NBN 25/10 pricing"
   },
   {
@@ -150,13 +158,5 @@
   {
     "date": "2026-08-16",
     "message": "Added amaysim NBN 750/50 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added amaysim NBN 1000/100 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Updated Boost Mobile 8GB pricing"
   }
 ]
