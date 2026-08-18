@@ -75,5 +75,29 @@ class MobilePlan(BaseModel):
         return v
 
 
+class SatellitePlan(BaseModel):
+    provider: str
+    plan_name: str
+    price_monthly: float = Field(gt=0)
+    promo_price: float | None = Field(default=None, gt=0)
+    promo_period_months: int | None = Field(default=None, gt=0)
+    # One-time capital cost (e.g. a Starlink dish/kit or a Sky Muster install fee),
+    # distinct from the recurring price_monthly/promo_price above. None when the
+    # provider doesn't charge (or doesn't disclose) an upfront hardware cost.
+    upfront_hardware_cost: float | None = None
+    data_allowance_gb: float | None = None  # None means unlimited
+    is_unlimited_data: bool = False
+    network: str  # e.g. "Starlink", "Sky Muster"
+    contract_length: str
+    source_url: str
+    scraped_at: str
+
+    @field_validator("scraped_at")
+    @classmethod
+    def _validate_iso(cls, v: str) -> str:
+        datetime.fromisoformat(v)
+        return v
+
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()

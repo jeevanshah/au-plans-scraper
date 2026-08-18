@@ -3,7 +3,7 @@ consumed by the blog/app: camelCase fields, a marketing title/description, categ
 and a single merged deals list across NBN and mobile."""
 import re
 
-from scraper.schema import MobilePlan, NbnPlan
+from scraper.schema import MobilePlan, NbnPlan, SatellitePlan
 
 CATEGORY = "Utilities"
 
@@ -89,6 +89,39 @@ def mobile_plan_to_deal(plan: MobilePlan) -> dict:
         "tier": tier,
         "techType": plan.network_tech,
         "billingCycleDays": plan.billing_cycle_days,
+        "postedAt": plan.scraped_at[:10],
+        "_source": _source_note(plan.provider, plan.scraped_at),
+    }
+
+
+def satellite_plan_to_deal(plan: SatellitePlan) -> dict:
+    has_promo = plan.promo_price is not None
+    data_desc = "Unlimited data" if plan.is_unlimited_data else f"{plan.data_allowance_gb:g}GB data"
+    tier = f"{plan.network} {plan.plan_name}".strip()
+
+    if has_promo:
+        description = (
+            f"{plan.network} satellite plan ({data_desc}) discounted for the first "
+            f"{plan.promo_period_months} months for new customers. {plan.contract_length}."
+        )
+    else:
+        description = f"{plan.network} satellite plan ({data_desc}). {plan.contract_length}."
+
+    return {
+        "id": _make_id(plan.provider, tier, plan.scraped_at),
+        "provider": plan.provider,
+        "title": f"{plan.plan_name} ({plan.network})",
+        "category": CATEGORY,
+        "description": description,
+        "promoPrice": plan.promo_price if has_promo else plan.price_monthly,
+        "regularPrice": plan.price_monthly,
+        "promoMonths": plan.promo_period_months if has_promo else None,
+        "validUntil": None,
+        "url": plan.source_url,
+        "serviceType": "satellite",
+        "tier": tier,
+        "techType": plan.network,
+        "upfrontHardwareCost": plan.upfront_hardware_cost,
         "postedAt": plan.scraped_at[:10],
         "_source": _source_note(plan.provider, plan.scraped_at),
     }

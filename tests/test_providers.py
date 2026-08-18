@@ -36,7 +36,10 @@ from scraper.providers.nbn import future_broadband as nbn_future
 from scraper.providers.nbn import mint_telecom as nbn_mint
 from scraper.providers.nbn import mate as nbn_mate
 from scraper.providers.nbn import launtel as nbn_launtel
-from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal
+from scraper.providers.nbn import kogan_nbn
+from scraper.providers.satellite import starlink as satellite_starlink
+from scraper.providers.satellite import activ8me as satellite_activ8me
+from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal, satellite_plan_to_deal
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -1079,6 +1082,45 @@ def test_launtel_nbn():
         assert p.contract_length == "No lock-in contract"
 
 
+def test_kogan_nbn(monkeypatch):
+    monkeypatch.setattr(kogan_nbn, "fetch_static", lambda url: _soup("kogan_nbn.html"))
+    plans = kogan_nbn.scrape()
+    # 6 real nbn speed tiers -- the page's unrelated "4G Internet" fixed-wireless
+    # 90-day plan card uses the same bootstrapPlans JSON mechanism but has no
+    # nbn(R) speed-tier <h3> in its speedDisclaimer, so it's excluded
+    assert len(plans) == 6
+    by_name = {p.plan_name: p for p in plans}
+    assert set(by_name) == {
+        "Bronze NBN 25", "Silver NBN 50", "Gold NBN 100",
+        "Gold Plus NBN 500", "Platinum NBN 750", "Diamond NBN 1000",
+    }
+
+    bronze = by_name["Bronze NBN 25"]
+    assert bronze.promo_price == 58.9
+    assert bronze.price_monthly == 70.9
+    assert bronze.promo_period_months == 12
+    assert bronze.speed_tier == "NBN 25"
+    assert bronze.typical_evening_speed_mbps == 25.0
+    assert bronze.tech_type is None
+
+    gold = by_name["Gold NBN 100"]
+    assert gold.promo_price == 69.9
+    assert gold.price_monthly == 85.9
+    assert gold.typical_evening_speed_mbps == 98.0
+    assert gold.tech_type == "Fibre and FTTN"
+
+    diamond = by_name["Diamond NBN 1000"]
+    assert diamond.promo_price == 94.9
+    assert diamond.price_monthly == 108.9
+    assert diamond.typical_evening_speed_mbps == 850.0
+    assert diamond.tech_type == "Fibre"
+
+    for p in plans:
+        assert p.provider == "Kogan Internet"
+        assert p.contract_length == "No lock-in contract"
+        assert p.promo_price < p.price_monthly
+
+
 # ========== Transform tests ==========
 
 def test_transform_nbn_deal_shape(monkeypatch):
@@ -1100,4 +1142,46 @@ def test_transform_mobile_deal_shape(monkeypatch):
     plan = mobile_telstra.scrape()[0]
     deal = mobile_plan_to_deal(plan)
     assert deal["serviceType"] == "mobile"
+    assert deal["promoPrice"] == deal["regularPrice"]
+
+
+# ========== Satellite tests ==========
+
+def test_starlink_satellite(monkeypatch):
+    monkeypatch.setattr(satellite_starlink, "fetch_js", lambda url, **kw: _soup("starlink_satellite.html"))
+    plans = satellite_starlink.scrape()
+    assert len(plans) == 3
+    names = {p.plan_name for p in plans}
+    assert names == {"Residential - 100 Mbps", "Residential - 200 Mbps", "Residential - Max"}
+    for p in plans:
+        assert p.provider == "Starlink"
+        assert p.network == "Starlink"
+        assert p.price_monthly > 0
+        assert p.is_unlimited_data is True
+
+
+def test_activ8me_satellite(monkeypatch):
+    monkeypatch.setattr(satellite_activ8me, "fetch_js", lambda url, **kw: _soup("activ8me_satellite.html"))
+    plans = satellite_activ8me.scrape()
+    assert len(plans) == 3
+    names = {p.plan_name for p in plans}
+    assert names == {"Premium 25 (25/5)", "Premium 50 (50/5)", "Premium 100 (100/5)"}
+    for p in plans:
+        assert p.provider == "Activ8me"
+        assert p.network == "Sky Muster"
+        assert p.price_monthly > 0
+        assert p.is_unlimited_data is True
+
+
+def test_transform_satellite_deal_shape(monkeypatch):
+    monkeypatch.setattr(satellite_starlink, "fetch_js", lambda url, **kw: _soup("starlink_satellite.html"))
+    plan = satellite_starlink.scrape()[0]
+    deal = satellite_plan_to_deal(plan)
+    expected_keys = {
+        "id", "provider", "title", "category", "description", "promoPrice",
+        "regularPrice", "promoMonths", "validUntil", "url", "serviceType",
+        "tier", "techType", "upfrontHardwareCost", "postedAt", "_source",
+    }
+    assert set(deal.keys()) == expected_keys
+    assert deal["serviceType"] == "satellite"
     assert deal["promoPrice"] == deal["regularPrice"]

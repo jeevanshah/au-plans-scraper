@@ -721,6 +721,96 @@ actual retail brand site). Mobile plans page:
   Mates $30/15GB, Better Mates $38/45GB, Best Mates $42/60GB, Soul Mates
   $58/160GB).
 
+## Kogan Internet NBN (shipped) -- 2026-08-18
+
+- Live plans page is `https://www.koganinternet.com.au/plans/` -- `/nbn/`
+  404s. `fetch_static` worked fine, no JS needed.
+- Unusual layout for this repo: nothing renders into visible text/CSS
+  classes at all. The whole plans section is a page-builder shell, and every
+  card's title, pricing, and eligibility text is embedded as JSON assigned
+  via `window.bootstrapPlans['<uuid>'] = JSON.parse('...')` in an inline
+  `<script>` next to each card's placeholder div. The `JSON.parse()` argument
+  is a JS single-quoted string with every double-quote, hyphen, and
+  non-ASCII character (nbsp, (R), arrows) `\uXXXX`-escaped -- decoded by
+  regex-replacing all `\uXXXX` sequences with their character before
+  `json.loads()`.
+- The page also renders one unrelated "4G Internet" fixed-wireless 90-day
+  plan card through the exact same `bootstrapPlans` mechanism. It's excluded
+  because it has no nbn(R) speed-tier `<h3>` in its `speedDisclaimer` field
+  at all (a different distinguishing signal than the usual CSS-class/
+  data-attribute gotcha, but the same category of "same markup, different
+  product" trap as More Telecom/Arctel).
+- Gotcha: `downstreamBandwidth`/`upstreamBandwidth` in each plan's JSON are
+  NOT the advertised max speed tier -- they're the *typical evening speed*
+  figures (confirmed against the "Typical evening speeds: ~X Mbps & Y Mbps"
+  text next to them, which matches exactly, e.g. Gold advertises tier "100"
+  but downstreamBandwidth is 98). The real nbn(R) tier number only exists as
+  an `<h3>` inside the `speedDisclaimer` HTML fragment.
+- 6 real NBN tiers, all running the same "$X/month for first 12 months, then
+  $Y/month thereafter" promo shape: Bronze (NBN 25, $58.90->$70.90), Silver
+  (NBN 50, $69.90->$80.90), Gold (NBN 100, $69.90->$85.90), Gold Plus
+  (NBN 500, $69.90->$85.90), Platinum (NBN 750, $84.90->$94.90), Diamond
+  (NBN 1000, $94.90->$108.90).
+- Tech-type eligibility text (`eligibilityDisclaimer`) is only disclosed for
+  Gold through Diamond (FTTB/N/C-only or FTTP/HFC-only); Bronze and Silver
+  have no disclosed restriction, so `tech_type=None` for those per the
+  never-guess convention.
+- Verified with `pytest` (fixture `tests/fixtures/kogan_nbn.html`, a live
+  capture from 2026-08-18) AND a live `kogan_nbn.scrape()` call against the
+  real site -- both returned the same 6 tiers with matching prices.
+
+## New "satellite" category: Starlink + Activ8me Sky Muster (shipped) -- 2026-08-18
+
+Added a third top-level service type (`satellite`) alongside `nbn`/`mobile`,
+end-to-end: `SatellitePlan` model in `scraper/schema.py` (independent
+BaseModel, same style as `NbnPlan`/`MobilePlan`, plus a new
+`upfront_hardware_cost` field for one-time dish/kit costs -- no existing
+model had a concept of a non-recurring cost before this), a sibling
+`satellite_plan_to_deal()` in `scraper/transform.py` (adds
+`upfrontHardwareCost` to the common deal shape), and
+`scraper/providers/satellite/{starlink,activ8me}.py`. Also fixed a latent bug
+in `run.py`'s `build_changelog_entries()`: the "brand new provider" changelog
+label was a binary `"NBN" if service_type == "nbn" else "mobile"`, which
+would have mislabelled satellite (and any future category) as "mobile" --
+now a dict lookup keyed by `service_type` with a fallback to the raw value.
+
+- **Starlink** (`https://www.starlink.com/au/residential`) -- JS-rendered
+  (React/MUI SPA) but the three plan cards are baked into the initial render
+  with no address entry needed, so `fetch_js` with `settle_ms=3000` is
+  enough; no login/geofence wall encountered. Plan cards are `<h4>` elements
+  with (hashed, unstable-looking but present-at-capture-time) class
+  `MuiTypography-h4` whose text starts with "Residential"; walk up parents
+  until the ancestor's text contains "SERVICE STARTING AT" to get the full
+  card text, then regex out the `A$<price>/mo` figure. Live prices captured
+  2026-08-18: Residential (100 Mbps) $75/mo, Residential (200 Mbps) $110/mo,
+  Residential Max $150/mo, all unlimited data, no lock-in contract. The page
+  states "No upfront hardware cost in select areas" but never gives a
+  numeric dish/kit price (it's address-dependent) -- per the
+  never-fabricate-data convention, `upfront_hardware_cost` is left `None`
+  rather than hardcoding the commonly-quoted-elsewhere "~$599" figure, which
+  could not be verified on this page.
+- **Activ8me** (`https://www.activ8me.net.au/internet/skymuster`) --
+  genuinely needs `fetch_js`, NOT just JS-rendered-but-inlined like Starlink:
+  `fetch_static` only returns the pre-hydration shell (meta description
+  mentions "from $39.95/mth" but no plan cards exist in the raw HTML at all).
+  With `fetch_js` (`settle_ms=4000`), the "Sky Muster Plus Premium" tab's 3
+  plan cards render without needing an address, as plain text matching
+  `Premium <N> nbn (R) <down>/<up> Unlimited Data Allowance* $<price> /month`.
+  A second copy of the selected plan's summary echoes later in the page
+  under identical text shape -- deduped by plan name (`seen_names`) in
+  `activ8me.py`. Live prices captured 2026-08-18: Premium 25 (25/5) $59/mo,
+  Premium 50 (50/5) $74/mo, Premium 100 (100/5) $99/mo, all unlimited data.
+  No dish/equipment cost disclosed anywhere -- installation is free
+  (government-subsidised) and only optional Wi-Fi routers ($119.95/$174.95/
+  $289.95) are sold separately, so `upfront_hardware_cost=None` is correct,
+  not a placeholder. The plain "nbn Sky Muster" (capped, non-Plus) tab was
+  not scraped in this round -- only the Plus Premium tab's cards were
+  captured/verified; a future pass could add that tab's tiers too.
+- Verified with `pytest` (new fixtures `tests/fixtures/starlink_satellite.html`
+  and `tests/fixtures/activ8me_satellite.html`, live captures from
+  2026-08-18) AND a live call to both `scrape()` functions against the real
+  sites -- both returned the same plans/prices as the fixture-based tests.
+
 ## Workflow note: Claude implements scraper code directly
 
 This project originally had DeepSeek write all new scraper code (parsers,

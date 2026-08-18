@@ -1,13 +1,13 @@
 # au-plans-scraper
 
-Scrapes NBN broadband and mobile phone plan pricing from major Australian
-providers and publishes normalized JSON that a separate app/blog fetches
-directly from this repo (via jsDelivr's GitHub CDN) -- no backend, no
-hosting cost.
+Scrapes NBN broadband, mobile phone, and satellite internet plan pricing from
+major Australian providers and publishes normalized JSON that a separate
+app/blog fetches directly from this repo (via jsDelivr's GitHub CDN) -- no
+backend, no hosting cost.
 
 ## Data
 
-- [`data/deals.json`](data/deals.json) -- merged NBN + mobile deal cards (see shape below)
+- [`data/deals.json`](data/deals.json) -- merged NBN + mobile + satellite deal cards (see shape below)
 - [`data/meta.json`](data/meta.json) -- per-provider last-success timestamp and consecutive-failure count
 - [`data/changelog.json`](data/changelog.json) -- human-readable log of genuine changes each run
   (new providers, new tiers, real price changes) vs. the previous run, most recent first, capped
@@ -54,9 +54,11 @@ two fields get extracted per provider.
 
 **NBN:** Aussie Broadband, Tangerine, Telstra, Dodo, Superloop, Exetel, iiNet,
 Vodafone, SpinTel, TPG, Flip, Swoop, Neptune Internet, More Telecom, Purple Connect,
-Arctel, Optus, Leaptel, amaysim
+Arctel, Optus, Leaptel, amaysim, Kogan Internet
 **Mobile:** TPG, Telstra, amaysim, Vodafone, Kogan Mobile, Felix, Boost Mobile,
 ALDImobile, Dodo, Aussie Broadband, Moose Mobile, MATE
+**Satellite:** Starlink, Activ8me (Sky Muster resale) -- for NBN-dead-area
+customers with no fixed-line option at all
 
 Note some providers appear in both lists under separate scraper modules for
 their NBN and mobile product lines (e.g. amaysim NBN vs. amaysim Mobile, Dodo NBN vs.
