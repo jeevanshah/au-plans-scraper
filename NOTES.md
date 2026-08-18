@@ -811,14 +811,11 @@ now a dict lookup keyed by `service_type` with a fallback to the raw value.
   2026-08-18) AND a live call to both `scrape()` functions against the real
   sites -- both returned the same plans/prices as the fixture-based tests.
 
-## Workflow note: Claude implements scraper code directly
+## Useful Reference Links & Network Discovery Tools
 
-This project originally had DeepSeek write all new scraper code (parsers,
-fixtures, tests) to save Claude tokens, with Claude doing research/planning/
-verification only. That changed 2026-07-12: DeepSeek's self-reported fixes
-repeatedly turned out to be superficial or fabricated (e.g. claiming a file
-was fixed when it was never touched), so the workflow shifted to Claude
-implementing directly -- research the live site, write the parser, add a
-fixture-based test, register it in `run.py`, verify with `pytest` AND a
-live `python run.py` run (not just one or the other), then commit. Default
-to this unless told otherwise.
+- **IPinfo Australia ASN & Network Registry:** `https://ipinfo.io/countries/au`
+  - Directory of all Australian Autonomous System Numbers (ASNs), allocated IP ranges, and hosting/telco organizations.
+  - Useful for researching newly added ISPs, finding parent network allocations (e.g. Vocus, Optus, Telstra wholesale), and verifying ASN ownership during scraper development.
+- **BGP Toolkit (HE):** `https://bgp.he.net/` — Public IX exchange peering lists, routes, and peers per ASN.
+- **PeeringDB:** `https://www.peeringdb.com/` — Live IX exchange interconnects and Australian data centre facilities.
+
