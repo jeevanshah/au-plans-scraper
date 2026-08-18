@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-08-18",
+    "message": "Added MATE mobile plans"
+  },
+  {
     "date": "2026-08-17",
     "message": "Updated Boost Mobile 105GB pricing"
   },
@@ -154,9 +158,5 @@
   {
     "date": "2026-08-16",
     "message": "Added amaysim NBN 100/20 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added amaysim NBN 500/50 plan"
   }
 ]
