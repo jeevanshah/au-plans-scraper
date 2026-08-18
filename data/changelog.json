@@ -13,6 +13,10 @@
   },
   {
     "date": "2026-08-18",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-08-18",
     "message": "Added Kogan Internet NBN plans"
   },
   {
@@ -154,9 +158,5 @@
   {
     "date": "2026-08-16",
     "message": "Added Flip NBN 500/50 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added Optus NBN 25/10 plan"
   }
 ]
