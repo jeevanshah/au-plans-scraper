@@ -15,6 +15,7 @@ from scraper.providers.mobile import aldimobile as mobile_aldi
 from scraper.providers.mobile import dodo_mobile
 from scraper.providers.mobile import aussie_broadband_mobile as mobile_aussie_broadband
 from scraper.providers.mobile import moose_mobile
+from scraper.providers.mobile import mate
 from scraper.providers.nbn import aussie_broadband, dodo, exetel, superloop, tangerine
 from scraper.providers.nbn import spintel_nbn as nbn_spintel
 from scraper.providers.nbn import telstra as nbn_telstra
@@ -779,6 +780,35 @@ def test_moose_mobile(monkeypatch):
         assert p.network == "Vodafone"
         # No promo structure on these plans -- flat pricing only
         assert p.promo_price is None
+
+
+def test_mate_mobile(monkeypatch):
+    monkeypatch.setattr(mate, "fetch_static", lambda url: _soup("mate_mobile.html"))
+    plans = mate.scrape()
+    # 4 real plan cards matched via the exact data-connection="5g"/data-plan-type="standard"
+    # attribute pair -- the "4G Mobile Plans" tab and "DATA ONLY PLANS" filter are
+    # JS-driven and not present in the static HTML at all.
+    assert len(plans) == 4
+    by_name = {p.plan_name: p for p in plans}
+    assert set(by_name) == {"Good Mates", "Better Mates", "Best Mates", "Soul Mates"}
+    assert by_name["Good Mates"].price_monthly == 30.0
+    assert by_name["Good Mates"].data_allowance_gb == 15.0
+    assert by_name["Better Mates"].price_monthly == 38.0
+    assert by_name["Better Mates"].data_allowance_gb == 45.0
+    assert by_name["Best Mates"].price_monthly == 42.0
+    assert by_name["Best Mates"].data_allowance_gb == 60.0
+    assert by_name["Soul Mates"].price_monthly == 58.0
+    assert by_name["Soul Mates"].data_allowance_gb == 160.0
+    for p in plans:
+        assert p.provider == "MATE"
+        assert p.network == "Telstra"
+        assert p.network_tech == "5G"
+        assert p.contract_length == "Month-to-month"
+        # Each card advertises a "double/quadruple data for 6 months" bonus-data
+        # promo, not a price discount -- promo_price must stay unset since the
+        # $/month figure itself never changes (see module docstring).
+        assert p.promo_price is None
+        assert not p.is_unlimited_data
 
 
 def test_swoop_nbn(monkeypatch):

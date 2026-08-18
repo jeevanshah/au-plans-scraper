@@ -660,6 +660,67 @@ Melbourne-based NBN retailer (`leaptel.com.au`), no naming ambiguity.
   download is 700Mbps, not its 750 tier name) -- same pattern seen
   repeatedly elsewhere in this project (Swoop, More Telecom, Arctel).
 
+## MATE Mobile (shipped) -- 2026-08-18
+
+Added by request, scoped to mobile plans only (MATE also sells nbn, out of
+scope for this task). Verified live via WebSearch first: the brand is real
+and currently operating, but the domain is **not** `matecommunicate.com.au`
+as initially assumed -- the live consumer site is `letsbemates.com.au`
+(Mate Communicate is the legal/ABN entity name, `letsbemates.com.au` is the
+actual retail brand site). Mobile plans page:
+`https://www.letsbemates.com.au/mobile/`.
+
+- `fetch_static` works fine, no JS/Playwright needed -- the plan cards are
+  rendered server-side.
+- The page has a "MOBILE PLANS"/"DATA ONLY PLANS" filter and a "5G Mobile
+  Plans"/"4G Mobile Plans" tab pair, which looked like a Felix/Boost-style
+  "real cards mixed with add-ons" risk up front. Turned out to be a
+  non-issue: only the initial 5G/standard tab is rendered in the static
+  HTML at all (`<div data-connection="5g" data-plan-type="standard">`,
+  exactly 4 of them, matching the 4 real plans -- Good/Better/Best/Soul
+  Mates). The 4G tab and data-only filter are populated client-side only
+  (confirmed by a `data-connection="${type}"` JS template-literal literally
+  present in the page's own script, i.e. that attribute value never
+  actually renders server-side) -- so the exact
+  `data-connection="5g"`/`data-plan-type="standard"` attribute pair is
+  both the distinguishing filter and a complete list, no dedup needed.
+- Two separate JSON-LD blocks exist on the page (`Organization`/`WebPage`
+  graph and a `Product` graph with an `offers` array). The `offers` array
+  looks like an obvious structured-data shortcut for price extraction, but
+  it's stale marketing schema, not live data -- it lists "Top Mates" and
+  "Sould Mates" (typo, not a real plan name) at prices ($32/$32/$42/$47/$57)
+  that don't match any of the 4 real cards' names or prices ($30/$38/$42/
+  $58 for Good/Better/Best/Soul Mates). Do not trust `application/ld+json`
+  price data without cross-checking it against the actual rendered cards --
+  this is the same class of trap as trusting a page's marketing copy
+  without checking the real DOM, just one level more convincing since it's
+  structured data.
+- Pricing structure is genuinely different from every other mobile provider
+  scraped so far: there's no promo *price* at all (all 4 tiers are flat
+  $/month, no discount-then-reverts pattern). Instead each plan runs a
+  "double data" (or "quadruple data" on the cheapest tier) bonus for the
+  first 6 months, e.g. Good Mates is $30/month for 15GB, temporarily 60GB
+  for 6 months ("Ends 30 September 2026"). `MobilePlan.promo_price` exists
+  specifically for price discounts (see amaysim's scraper for the bug where
+  `promo_end_date` got set without a real price promo attached), and
+  there's no schema field for a temporary *data* bump, so `mate.py`
+  deliberately leaves `promo_price`/`promo_period_months`/`promo_end_date`
+  unset and reports the steady-state (post-promo, struck-through) GB
+  figure as `data_allowance_gb` -- reporting the temporary 60GB as the
+  plan's data allowance would overstate what the plan actually costs
+  per-GB once the bonus period ends.
+- Network: MATE resells the Telstra Wholesale Mobile Network (confirmed via
+  WebSearch/Finder/BroadbandReviews and the page's own 5G coverage-map
+  copy) -- `network="Telstra"`. No lock-in contract, one-month minimum
+  term, confirmed via the page's own FAQ JSON-LD ("All MATE SIM only
+  mobile plans have no lock-in contracts") -- `contract_length=
+  "Month-to-month"`, same convention as Felix/Moose Mobile.
+- Verified with `pytest` (fixture `tests/fixtures/mate_mobile.html`, a live
+  capture from 2026-08-18) AND a live `mate.scrape()` call against the real
+  site -- output matched the fixture-based test exactly (4 plans: Good
+  Mates $30/15GB, Better Mates $38/45GB, Best Mates $42/60GB, Soul Mates
+  $58/160GB).
+
 ## Workflow note: Claude implements scraper code directly
 
 This project originally had DeepSeek write all new scraper code (parsers,

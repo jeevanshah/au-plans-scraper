@@ -19,6 +19,7 @@ from scraper.providers.mobile import boost as mobile_boost
 from scraper.providers.mobile import dodo_mobile
 from scraper.providers.mobile import felix as mobile_felix
 from scraper.providers.mobile import kogan as mobile_kogan
+from scraper.providers.mobile import mate as mobile_mate
 from scraper.providers.mobile import moose_mobile
 from scraper.providers.mobile import telstra as mobile_telstra
 from scraper.providers.mobile import tpg as mobile_tpg
@@ -75,6 +76,7 @@ PROVIDERS = [
     (nbn_tpg, "nbn", nbn_plan_to_deal),
     (nbn_flip, "nbn", nbn_plan_to_deal),
     (moose_mobile, "mobile", mobile_plan_to_deal),
+    (mobile_mate, "mobile", mobile_plan_to_deal),
     (nbn_swoop, "nbn", nbn_plan_to_deal),
     (nbn_neptune, "nbn", nbn_plan_to_deal),
     (more_nbn, "nbn", nbn_plan_to_deal),

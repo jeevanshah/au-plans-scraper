@@ -56,7 +56,7 @@ two fields get extracted per provider.
 Vodafone, SpinTel, TPG, Flip, Swoop, Neptune Internet, More Telecom, Purple Connect,
 Arctel, Optus, Leaptel, amaysim
 **Mobile:** TPG, Telstra, amaysim, Vodafone, Kogan Mobile, Felix, Boost Mobile,
-ALDImobile, Dodo, Aussie Broadband, Moose Mobile
+ALDImobile, Dodo, Aussie Broadband, Moose Mobile, MATE
 
 Note some providers appear in both lists under separate scraper modules for
 their NBN and mobile product lines (e.g. amaysim NBN vs. amaysim Mobile, Dodo NBN vs.
