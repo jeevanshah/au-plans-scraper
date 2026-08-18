@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T14:41:25.529266+00:00",
+  "generatedAt": "2026-08-18T09:45:20.653904+00:00",
   "providers": {
     "Aussie Broadband": {
       "exchangeCount": 20,
@@ -396,17 +396,15 @@
       "peeringNote": "Direct public Internet Exchange (IX) presence across 2 states."
     },
     "Future Broadband": {
-      "exchangeCount": 5,
+      "exchangeCount": 4,
       "cities": [
         "Brisbane",
-        "Melbourne",
         "Perth",
         "Sydney"
       ],
       "states": [
         "NSW",
         "QLD",
-        "VIC",
         "WA"
       ],
       "asn": 139084,
@@ -414,7 +412,7 @@
       "sourceUrl": "https://bgp.he.net/AS139084",
       "noPublicIxData": false,
       "peeringType": "public_ix",
-      "peeringNote": "Direct public Internet Exchange (IX) presence across 4 states."
+      "peeringNote": "Direct public Internet Exchange (IX) presence across 3 states."
     },
     "Mint Telecom": {
       "exchangeCount": 46,
@@ -490,6 +488,17 @@
       "noPublicIxData": false,
       "peeringType": "public_ix",
       "peeringNote": "Direct public Internet Exchange (IX) presence across 6 states."
+    },
+    "Kogan Internet": {
+      "exchangeCount": 0,
+      "cities": [],
+      "states": [],
+      "asn": 133612,
+      "viaWholesaler": "Vodafone",
+      "sourceUrl": "https://bgp.he.net/AS133612",
+      "noPublicIxData": true,
+      "peeringType": "transit_only",
+      "peeringNote": "Routes via upstream wholesale transit."
     }
   }
 }

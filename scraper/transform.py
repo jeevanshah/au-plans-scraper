@@ -12,9 +12,14 @@ def _slugify(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
 
 
-def _make_id(provider: str, tier: str, scraped_at: str) -> str:
+def _make_id(provider: str, tier: str, scraped_at: str, extra: str | None = None) -> str:
     month_key = scraped_at[:7]  # YYYY-MM
-    return f"{_slugify(provider)}-{_slugify(tier)}-{month_key}"
+    slug = f"{_slugify(provider)}-{_slugify(tier)}"
+    if extra:
+        extra_slug = _slugify(extra)
+        if extra_slug and extra_slug not in slug:
+            slug = f"{slug}-{extra_slug}"
+    return f"{slug}-{month_key}"
 
 
 def _source_note(provider: str, scraped_at: str) -> str:
@@ -37,7 +42,7 @@ def nbn_plan_to_deal(plan: NbnPlan) -> dict:
         title = f"{plan.plan_name.strip()} {plan.speed_tier.strip()}"
 
     return {
-        "id": _make_id(plan.provider, plan.speed_tier, plan.scraped_at),
+        "id": _make_id(plan.provider, plan.speed_tier, plan.scraped_at, extra=plan.plan_name),
         "provider": plan.provider,
         "title": title,
         "category": CATEGORY,
