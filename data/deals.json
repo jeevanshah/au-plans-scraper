@@ -814,11 +814,11 @@
     "provider": "amaysim",
     "title": "30GB 30GB",
     "category": "Utilities",
-    "description": "30GB data mobile plan discounted for the first 1 months for new customers. 28-day expiry.",
-    "promoPrice": 10.0,
+    "description": "30GB data mobile plan. 28-day expiry.",
+    "promoPrice": 25.0,
     "regularPrice": 25.0,
-    "promoMonths": 1,
-    "validUntil": "2026-08-19",
+    "promoMonths": null,
+    "validUntil": null,
     "url": "https://www.amaysim.com.au/sim-plans",
     "serviceType": "mobile",
     "tier": "30GB",
@@ -1941,7 +1941,7 @@
     "techType": "5G",
     "billingCycleDays": 30,
     "postedAt": "2026-08-19",
-    "_source": "MATE official site, verified 2026-08-19"
+    "_source": "Mate official site, verified 2026-08-19"
   },
   {
     "id": "mate-45gb-month-to-month-2026-08",
@@ -1959,7 +1959,7 @@
     "techType": "5G",
     "billingCycleDays": 30,
     "postedAt": "2026-08-19",
-    "_source": "MATE official site, verified 2026-08-19"
+    "_source": "Mate official site, verified 2026-08-19"
   },
   {
     "id": "mate-60gb-month-to-month-2026-08",
@@ -1977,7 +1977,7 @@
     "techType": "5G",
     "billingCycleDays": 30,
     "postedAt": "2026-08-19",
-    "_source": "MATE official site, verified 2026-08-19"
+    "_source": "Mate official site, verified 2026-08-19"
   },
   {
     "id": "mate-160gb-month-to-month-2026-08",
@@ -1995,7 +1995,7 @@
     "techType": "5G",
     "billingCycleDays": 30,
     "postedAt": "2026-08-19",
-    "_source": "MATE official site, verified 2026-08-19"
+    "_source": "Mate official site, verified 2026-08-19"
   },
   {
     "id": "swoop-nbn-25-10-2026-08",
