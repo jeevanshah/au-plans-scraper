@@ -44,6 +44,7 @@ from scraper.providers.nbn import mint_telecom as nbn_mint
 from scraper.providers.nbn import mate as nbn_mate
 from scraper.providers.nbn import launtel as nbn_launtel
 from scraper.providers.nbn import kogan_nbn as nbn_kogan
+from scraper.providers.nbn import carbon_comms as nbn_carbon
 from scraper.providers.opticomm import leaptel_opticomm, swoop_opticomm
 from scraper.providers.satellite import starlink as satellite_starlink
 from scraper.providers.satellite import activ8me as satellite_activ8me
@@ -95,7 +96,8 @@ PROVIDERS = [
     (nbn_mate, "nbn", nbn_plan_to_deal),
     (nbn_launtel, "nbn", nbn_plan_to_deal),
     (nbn_kogan, "nbn", nbn_plan_to_deal),
-        (leaptel_opticomm, "opticomm", opticomm_plan_to_deal),
+            (nbn_carbon, "nbn", nbn_plan_to_deal),
+    (leaptel_opticomm, "opticomm", opticomm_plan_to_deal),
     (swoop_opticomm, "opticomm", opticomm_plan_to_deal),
     (satellite_starlink, "satellite", satellite_plan_to_deal),
     (satellite_activ8me, "satellite", satellite_plan_to_deal),
