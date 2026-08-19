@@ -99,5 +99,33 @@ class SatellitePlan(BaseModel):
         return v
 
 
+class OpticommPlan(BaseModel):
+    provider: str
+    plan_name: str
+    price_monthly: float = Field(gt=0)
+    promo_price: float | None = Field(default=None, gt=0)
+    promo_period_months: int | None = Field(default=None, gt=0)
+    promo_end_date: str | None = None  # ISO date, only set when the page shows a fixed calendar end-date
+    contract_length: str  # e.g. "No lock-in contract"
+    speed_tier: str  # e.g. "OptiComm 100/20", "OptiComm 50/20"
+    typical_evening_speed_mbps: float | None = None
+    tech_type: str | None = "Fibre"  # OptiComm is private fibre
+    source_url: str
+    scraped_at: str
+
+    @field_validator("scraped_at")
+    @classmethod
+    def _validate_iso(cls, v: str) -> str:
+        datetime.fromisoformat(v)
+        return v
+
+    @field_validator("promo_end_date")
+    @classmethod
+    def _validate_end_date(cls, v: str | None) -> str | None:
+        if v is not None:
+            datetime.fromisoformat(v)
+        return v
+
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()

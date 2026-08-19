@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-08-19",
+    "message": "Added amaysim 350GB plan"
+  },
+  {
+    "date": "2026-08-19",
+    "message": "Added Kogan Mobile 25GB plan"
+  },
+  {
+    "date": "2026-08-19",
+    "message": "Added Kogan Mobile 40GB plan"
+  },
+  {
+    "date": "2026-08-19",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-08-19",
+    "message": "Added Leaptel OptiComm plans"
+  },
+  {
+    "date": "2026-08-19",
+    "message": "Added Swoop OptiComm plans"
+  },
+  {
     "date": "2026-08-18",
     "message": "Updated Arctel NBN 500/50 pricing"
   },
@@ -134,29 +158,5 @@
   {
     "date": "2026-08-16",
     "message": "Added TPG NBN 25/10 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added TPG NBN 50/20 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added TPG NBN 750/50 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added TPG NBN 1000/100 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added Flip NBN 25/10 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added Flip NBN 50/20 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added Flip NBN 500/50 plan"
   }
 ]

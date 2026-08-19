@@ -3,7 +3,7 @@ consumed by the blog/app: camelCase fields, a marketing title/description, categ
 and a single merged deals list across NBN and mobile."""
 import re
 
-from scraper.schema import MobilePlan, NbnPlan, SatellitePlan
+from scraper.schema import MobilePlan, NbnPlan, OpticommPlan, SatellitePlan
 
 CATEGORY = "Utilities"
 
@@ -127,6 +127,40 @@ def satellite_plan_to_deal(plan: SatellitePlan) -> dict:
         "tier": tier,
         "techType": plan.network,
         "upfrontHardwareCost": plan.upfront_hardware_cost,
+        "postedAt": plan.scraped_at[:10],
+        "_source": _source_note(plan.provider, plan.scraped_at),
+    }
+
+def opticomm_plan_to_deal(plan: OpticommPlan) -> dict:
+    has_promo = plan.promo_price is not None
+    if has_promo:
+        description = (
+            f"{plan.speed_tier} OptiComm fibre plan discounted for the first {plan.promo_period_months} "
+            f"months for new customers. Unlimited data, {plan.contract_length.lower()}."
+        )
+    else:
+        description = f"{plan.speed_tier} OptiComm fibre plan. Unlimited data, {plan.contract_length.lower()}."
+
+    if plan.plan_name.strip().lower() == plan.speed_tier.strip().lower() or plan.speed_tier.lower() in plan.plan_name.lower():
+        title = plan.plan_name.strip()
+    else:
+        title = f"{plan.plan_name.strip()} {plan.speed_tier.strip()}"
+
+    return {
+        "id": _make_id(plan.provider, plan.speed_tier, plan.scraped_at, extra=plan.plan_name),
+        "provider": plan.provider,
+        "title": title,
+        "category": CATEGORY,
+        "description": description,
+        "promoPrice": plan.promo_price if has_promo else plan.price_monthly,
+        "regularPrice": plan.price_monthly,
+        "promoMonths": plan.promo_period_months if has_promo else None,
+        "validUntil": plan.promo_end_date,
+        "url": plan.source_url,
+        "serviceType": "opticomm",
+        "tier": plan.speed_tier,
+        "typicalEveningSpeed": plan.typical_evening_speed_mbps,
+        "techType": plan.tech_type or "Fibre",
         "postedAt": plan.scraped_at[:10],
         "_source": _source_note(plan.provider, plan.scraped_at),
     }

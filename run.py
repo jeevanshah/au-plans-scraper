@@ -44,10 +44,11 @@ from scraper.providers.nbn import mint_telecom as nbn_mint
 from scraper.providers.nbn import mate as nbn_mate
 from scraper.providers.nbn import launtel as nbn_launtel
 from scraper.providers.nbn import kogan_nbn as nbn_kogan
+from scraper.providers.opticomm import leaptel_opticomm, swoop_opticomm
 from scraper.providers.satellite import starlink as satellite_starlink
 from scraper.providers.satellite import activ8me as satellite_activ8me
 from scraper.schema import now_iso
-from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal, satellite_plan_to_deal
+from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal, opticomm_plan_to_deal, satellite_plan_to_deal
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 logger = logging.getLogger("run")
@@ -94,6 +95,8 @@ PROVIDERS = [
     (nbn_mate, "nbn", nbn_plan_to_deal),
     (nbn_launtel, "nbn", nbn_plan_to_deal),
     (nbn_kogan, "nbn", nbn_plan_to_deal),
+        (leaptel_opticomm, "opticomm", opticomm_plan_to_deal),
+    (swoop_opticomm, "opticomm", opticomm_plan_to_deal),
     (satellite_starlink, "satellite", satellite_plan_to_deal),
     (satellite_activ8me, "satellite", satellite_plan_to_deal),
 ]
@@ -223,7 +226,7 @@ def build_changelog_entries(all_deals: list[dict], previous_deals: list[dict], t
                 # not one per tier (a provider can launch with 7+ at once).
                 if provider_category not in seen_new_provider_categories:
                     seen_new_provider_categories.add(provider_category)
-                    label = {"nbn": "NBN", "mobile": "mobile", "satellite": "satellite"}.get(
+                    label = {"nbn": "NBN", "opticomm": "OptiComm", "mobile": "mobile", "satellite": "satellite"}.get(
                         service_type, service_type
                     )
                     messages.append(f"Added {provider} {label} plans")
