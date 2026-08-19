@@ -803,7 +803,7 @@ def test_mate_mobile(monkeypatch):
     assert by_name["Soul Mates"].price_monthly == 58.0
     assert by_name["Soul Mates"].data_allowance_gb == 160.0
     for p in plans:
-        assert p.provider == "MATE"
+        assert p.provider == "Mate"
         assert p.network == "Telstra"
         assert p.network_tech == "5G"
         assert p.contract_length == "Month-to-month"

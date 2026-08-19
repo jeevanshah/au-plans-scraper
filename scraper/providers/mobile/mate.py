@@ -35,7 +35,7 @@ import re
 from scraper.base import fetch_static, parse_price
 from scraper.schema import MobilePlan, now_iso
 
-PROVIDER = "MATE"
+PROVIDER = "Mate"
 URL = "https://www.letsbemates.com.au/mobile/"
 REQUIRES_JS = False
 
