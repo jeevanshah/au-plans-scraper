@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-08-20",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
     "date": "2026-08-19",
     "message": "Updated amaysim 30GB pricing"
   },
@@ -154,9 +158,5 @@
   {
     "date": "2026-08-16",
     "message": "Added iiNet NBN 500/50 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added iiNet NBN 25/10 plan"
   }
 ]
