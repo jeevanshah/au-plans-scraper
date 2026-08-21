@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-08-21",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
     "date": "2026-08-20",
     "message": "Updated Arctel NBN 500/50 pricing"
   },
@@ -154,9 +158,5 @@
   {
     "date": "2026-08-16",
     "message": "Added Tangerine NBN 1000/100 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added iiNet NBN 500/50 plan"
   }
 ]
