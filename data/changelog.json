@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-08-24",
+    "message": "Updated Telstra NBN 50 pricing"
+  },
+  {
+    "date": "2026-08-24",
+    "message": "Updated Telstra NBN 100 pricing"
+  },
+  {
+    "date": "2026-08-24",
+    "message": "Updated Boost Mobile 75GB pricing"
+  },
+  {
+    "date": "2026-08-24",
+    "message": "Updated Boost Mobile 160GB pricing"
+  },
+  {
+    "date": "2026-08-24",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-08-24",
+    "message": "Updated amaysim NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-08-24",
+    "message": "Updated amaysim NBN 750/50 pricing"
+  },
+  {
     "date": "2026-08-23",
     "message": "Updated Arctel NBN 500/50 pricing"
   },
@@ -130,33 +158,5 @@
   {
     "date": "2026-08-17",
     "message": "Added Kogan Mobile 200GB plan"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Added Kogan Mobile 900GB plan"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Added Mate NBN plans"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added Mint Telecom NBN plans"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added Future Broadband NBN plans"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added Pentanet NBN plans"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added Tangerine NBN 25/10 plan"
-  },
-  {
-    "date": "2026-08-16",
-    "message": "Added Tangerine NBN 50/20 plan"
   }
 ]
