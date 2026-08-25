@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-08-25",
+    "message": "Updated Tangerine NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-08-25",
+    "message": "Updated Tangerine NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-08-25",
+    "message": "Added Kogan Mobile 250GB plan"
+  },
+  {
+    "date": "2026-08-25",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
     "date": "2026-08-24",
     "message": "Updated Telstra NBN 50 pricing"
   },
@@ -142,21 +158,5 @@
   {
     "date": "2026-08-17",
     "message": "Updated Aussie Broadband NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Updated Aussie Broadband NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Updated Aussie Broadband NBN 2000/200 pricing"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Added Kogan Mobile 120GB plan"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Added Kogan Mobile 200GB plan"
   }
 ]
