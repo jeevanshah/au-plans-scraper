@@ -859,13 +859,34 @@ def test_neptune_nbn(monkeypatch):
         assert p.promo_price is None
 
 
-def test_spintel_nbn(monkeypatch):
-    monkeypatch.setattr(nbn_spintel, "fetch_static", lambda url: _soup("spintel_nbn.html"))
+def test_spintel_nbn_partner_lp(monkeypatch):
+    monkeypatch.setattr(nbn_spintel, "fetch_static", lambda url: _soup("spintel_nbn_wo.html"))
     plans = nbn_spintel.scrape()
+    assert len(plans) == 6
+    by_tier = {p.speed_tier: p for p in plans}
+    assert by_tier["NBN 25/10"].price_monthly == 69.95
+    assert by_tier["NBN 25/10"].promo_price == 41.0
+    assert by_tier["NBN 25/10"].deal_channel == "partner_exclusive"
+    assert by_tier["NBN 25/10"].deal_channel_label == "WhistleOut Exclusive LP"
+    assert by_tier["NBN 25/10"].direct_public_promo_price == 44.0
+    assert by_tier["NBN 750/50"].promo_price == 69.0
+    assert by_tier["NBN 750/50"].direct_public_promo_price == 84.0
+    for p in plans:
+        assert p.provider == "SpinTel"
+        assert p.promo_price < p.price_monthly
+        assert p.promo_period_months == 6
+        assert p.contract_length == "No lock-in contract"
+        assert p.deal_channel == "partner_exclusive"
+
+
+def test_spintel_nbn_direct_fallback(monkeypatch):
+    monkeypatch.setattr(nbn_spintel, "fetch_static", lambda url: _soup("spintel_nbn.html"))
+    plans = nbn_spintel.scrape(url=nbn_spintel.DIRECT_URL)
     assert len(plans) == 4
     by_tier = {p.speed_tier: p for p in plans}
     assert by_tier["NBN 25/10"].price_monthly == 69.95
     assert by_tier["NBN 25/10"].promo_price == 59.0
+    assert by_tier["NBN 25/10"].deal_channel == "direct"
     assert by_tier["NBN 100/20"].price_monthly == 89.95
     assert by_tier["NBN 100/20"].promo_price == 76.0
     assert by_tier["NBN 500/50"].price_monthly == 89.95
@@ -877,6 +898,7 @@ def test_spintel_nbn(monkeypatch):
         assert p.promo_price < p.price_monthly
         assert p.promo_period_months == 6
         assert p.contract_length == "No lock-in contract"
+        assert p.deal_channel == "direct"
 
 
 def test_pentanet_nbn(monkeypatch):

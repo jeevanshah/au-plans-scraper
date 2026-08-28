@@ -41,7 +41,7 @@ def nbn_plan_to_deal(plan: NbnPlan) -> dict:
     else:
         title = f"{plan.plan_name.strip()} {plan.speed_tier.strip()}"
 
-    return {
+    deal = {
         "id": _make_id(plan.provider, plan.speed_tier, plan.scraped_at, extra=plan.plan_name),
         "provider": plan.provider,
         "title": title,
@@ -59,6 +59,15 @@ def nbn_plan_to_deal(plan: NbnPlan) -> dict:
         "postedAt": plan.scraped_at[:10],
         "_source": _source_note(plan.provider, plan.scraped_at),
     }
+    if plan.deal_channel is not None:
+        deal["dealChannel"] = plan.deal_channel
+    if plan.deal_channel_label is not None:
+        deal["dealChannelLabel"] = plan.deal_channel_label
+    if plan.direct_public_promo_price is not None:
+        deal["directPublicPromoPrice"] = plan.direct_public_promo_price
+    if plan.how_to_get is not None:
+        deal["howToGet"] = plan.how_to_get
+    return deal
 
 
 def mobile_plan_to_deal(plan: MobilePlan) -> dict:
@@ -79,7 +88,7 @@ def mobile_plan_to_deal(plan: MobilePlan) -> dict:
     # periods (28-day vs 186-day vs 365-day), which would otherwise collide on tier alone.
     id_key = f"{tier}-{plan.contract_length}"
 
-    return {
+    deal = {
         "id": _make_id(plan.provider, id_key, plan.scraped_at),
         "provider": plan.provider,
         "title": f"{plan.plan_name} {tier}",
@@ -97,6 +106,15 @@ def mobile_plan_to_deal(plan: MobilePlan) -> dict:
         "postedAt": plan.scraped_at[:10],
         "_source": _source_note(plan.provider, plan.scraped_at),
     }
+    if plan.deal_channel is not None:
+        deal["dealChannel"] = plan.deal_channel
+    if plan.deal_channel_label is not None:
+        deal["dealChannelLabel"] = plan.deal_channel_label
+    if plan.direct_public_promo_price is not None:
+        deal["directPublicPromoPrice"] = plan.direct_public_promo_price
+    if plan.how_to_get is not None:
+        deal["howToGet"] = plan.how_to_get
+    return deal
 
 
 def satellite_plan_to_deal(plan: SatellitePlan) -> dict:
@@ -112,7 +130,7 @@ def satellite_plan_to_deal(plan: SatellitePlan) -> dict:
     else:
         description = f"{plan.network} satellite plan ({data_desc}). {plan.contract_length}."
 
-    return {
+    deal = {
         "id": _make_id(plan.provider, tier, plan.scraped_at),
         "provider": plan.provider,
         "title": f"{plan.plan_name} ({plan.network})",
@@ -130,6 +148,16 @@ def satellite_plan_to_deal(plan: SatellitePlan) -> dict:
         "postedAt": plan.scraped_at[:10],
         "_source": _source_note(plan.provider, plan.scraped_at),
     }
+    if plan.deal_channel is not None:
+        deal["dealChannel"] = plan.deal_channel
+    if plan.deal_channel_label is not None:
+        deal["dealChannelLabel"] = plan.deal_channel_label
+    if plan.direct_public_promo_price is not None:
+        deal["directPublicPromoPrice"] = plan.direct_public_promo_price
+    if plan.how_to_get is not None:
+        deal["howToGet"] = plan.how_to_get
+    return deal
+
 
 def opticomm_plan_to_deal(plan: OpticommPlan) -> dict:
     has_promo = plan.promo_price is not None
@@ -146,7 +174,7 @@ def opticomm_plan_to_deal(plan: OpticommPlan) -> dict:
     else:
         title = f"{plan.plan_name.strip()} {plan.speed_tier.strip()}"
 
-    return {
+    deal = {
         "id": _make_id(plan.provider, plan.speed_tier, plan.scraped_at, extra=plan.plan_name),
         "provider": plan.provider,
         "title": title,
@@ -164,3 +192,12 @@ def opticomm_plan_to_deal(plan: OpticommPlan) -> dict:
         "postedAt": plan.scraped_at[:10],
         "_source": _source_note(plan.provider, plan.scraped_at),
     }
+    if plan.deal_channel is not None:
+        deal["dealChannel"] = plan.deal_channel
+    if plan.deal_channel_label is not None:
+        deal["dealChannelLabel"] = plan.deal_channel_label
+    if plan.direct_public_promo_price is not None:
+        deal["directPublicPromoPrice"] = plan.direct_public_promo_price
+    if plan.how_to_get is not None:
+        deal["howToGet"] = plan.how_to_get
+    return deal

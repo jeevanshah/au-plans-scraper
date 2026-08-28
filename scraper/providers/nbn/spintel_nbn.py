@@ -1,35 +1,44 @@
 """SpinTel NBN plans scraper. Static HTML.
 
-Pricing: "$X Per Month For N months, then $Y ongoing" pattern.
-Dedup on download speed to avoid duplicate tiers from typical evening vs
-max speed labels in same card.
+Pricing: "$X Per Month For N months, then $Y ongoing" / "$X /month for N months then $Y ongoing" pattern.
+Targets the maximum savings WhistleOut partner LP (https://www.spintel.net.au/lp/home/nbn-wo),
+with automatic fallback to the direct NBN page if unavailable.
 """
+import logging
 import re
 
 from scraper.base import classify_tech_type, fetch_static, normalize_nbn_speed_tier
 from scraper.schema import NbnPlan, now_iso
 
+logger = logging.getLogger("scraper.spintel_nbn")
+
 PROVIDER = "SpinTel"
-URL = "https://www.spintel.net.au/nbn"
+URL = "https://www.spintel.net.au/lp/home/nbn-wo"
+DIRECT_URL = "https://www.spintel.net.au/nbn"
 REQUIRES_JS = False
 
 SPEED_RE = re.compile(r"(\d+)/(\d+)\s*Mbps", re.I)
-# "$59 Per Month For 6 months, then $69.95 ongoing"
+# "$59 Per Month For 6 months, then $69.95 ongoing" or "$41 /month for 6 months then $69.95 ongoing"
 FOR_N_THEN_RE = re.compile(
-    r"\$\s*(\d+\.?\d*)\s*[Pp]er\s+[Mm]onth\s+[Ff]or\s+(\d+)\s+months?\s*,?\s*then\s+\$\s*(\d+\.?\d*)", re.I
+    r"\$\s*(\d+\.?\d*)\s*(?:/\s*month|[Pp]er\s+[Mm]onth)\s+[Ff]or\s+(\d+)\s+months?\s*,?\s*then\s+\$\s*(\d+\.?\d*)",
+    re.I,
 )
 OFFER_ENDS_RE = re.compile(
     r"[Oo]ffer\s+[Ee]nds\s+(\d{1,2})\.(\d{2})\.(\d{2})", re.I
 )
+TYPICAL_RE = re.compile(r"Typical evening speed[^\d]*(\d+)(?:/(\d+))?\s*Mbps", re.I)
+
+# Direct public promotional prices for comparison when partner LP is cheaper
+DIRECT_PROMO_PRICES = {
+    "NBN 25/10": 44.0,
+    "NBN 750/50": 84.0,
+}
 
 
-TYPICAL_RE = re.compile(r"Typical evening speed\s*(\d+)(?:/(\d+))?\s*Mbps", re.I)
-
-
-def scrape():
-    soup = fetch_static(URL)
+def _parse_plans_from_soup(soup, source_url: str) -> list[NbnPlan]:
     scraped_at = now_iso()
     text = soup.get_text(" ", strip=True)
+    is_partner = "nbn-wo" in source_url
 
     plans = []
     seen_tiers = set()
@@ -43,7 +52,7 @@ def scrape():
             continue
 
         start = m.start()
-        end = min(start + 300, len(text))
+        end = min(start + 350, len(text))
         window = text[start:end]
 
         fn_m = FOR_N_THEN_RE.search(window)
@@ -58,7 +67,7 @@ def scrape():
         promo_end_date = None
         if offer_m:
             d, mm, y = offer_m.groups()
-            promo_end_date = "20{}-{}-{}".format(y, mm, d)
+            promo_end_date = f"20{y}-{mm}-{d}"
 
         if regular_price <= 1:
             continue
@@ -68,6 +77,16 @@ def scrape():
 
         has_promo = promo_price < regular_price
         seen_tiers.add(tier)
+
+        deal_channel = "partner_exclusive" if is_partner else "direct"
+        deal_channel_label = "WhistleOut Exclusive LP" if is_partner else "Direct Public Offer"
+        direct_promo = DIRECT_PROMO_PRICES.get(tier) if is_partner else None
+        how_to_get = (
+            "Click through via the exclusive partner link to lock in the promotional rate for 6 months."
+            if is_partner
+            else None
+        )
+
         plans.append(
             NbnPlan(
                 provider=PROVIDER,
@@ -80,11 +99,33 @@ def scrape():
                 speed_tier=tier,
                 typical_evening_speed_mbps=evening_speed,
                 tech_type=classify_tech_type(window),
-                source_url=URL,
+                deal_channel=deal_channel,
+                deal_channel_label=deal_channel_label,
+                direct_public_promo_price=direct_promo,
+                how_to_get=how_to_get,
+                source_url=source_url,
                 scraped_at=scraped_at,
             )
         )
 
-    if not plans:
-        raise RuntimeError("scrape() returned no plans")
     return plans
+
+
+def scrape(url: str | None = None) -> list[NbnPlan]:
+    target_url = url or URL
+    try:
+        soup = fetch_static(target_url)
+        plans = _parse_plans_from_soup(soup, target_url)
+        if plans:
+            return plans
+    except Exception as exc:
+        logger.warning("Failed to scrape SpinTel primary URL %s: %s", target_url, exc)
+
+    if target_url != DIRECT_URL and url is None:
+        logger.info("Falling back to SpinTel direct URL %s", DIRECT_URL)
+        soup = fetch_static(DIRECT_URL)
+        plans = _parse_plans_from_soup(soup, DIRECT_URL)
+        if plans:
+            return plans
+
+    raise RuntimeError("scrape() returned no plans")

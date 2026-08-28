@@ -15,6 +15,10 @@ class NbnPlan(BaseModel):
     speed_tier: str  # e.g. "NBN 100/20", "NBN 25"
     typical_evening_speed_mbps: float | None = None
     tech_type: str | None = None  # e.g. "Fibre", "Fibre and FTTN" -- only set when the page states it
+    deal_channel: str | None = None  # e.g. "partner_exclusive", "bank_perk", "promo_code", "direct"
+    deal_channel_label: str | None = None  # e.g. "WhistleOut Exclusive LP", "CommBank 30% Off", "Promo Code: SLC-6M"
+    direct_public_promo_price: float | None = None  # Baseline direct price when a partner LP is cheaper
+    how_to_get: str | None = None  # 1-sentence actionable instruction
     source_url: str
     scraped_at: str
 
@@ -58,6 +62,10 @@ class MobilePlan(BaseModel):
     is_unlimited_data: bool = False
     network: str | None = None  # e.g. "Telstra", "Optus"
     network_tech: str | None = None  # e.g. "4G", "5G" -- only set when the page states it
+    deal_channel: str | None = None
+    deal_channel_label: str | None = None
+    direct_public_promo_price: float | None = None
+    how_to_get: str | None = None
     source_url: str
     scraped_at: str
 
@@ -89,6 +97,10 @@ class SatellitePlan(BaseModel):
     is_unlimited_data: bool = False
     network: str  # e.g. "Starlink", "Sky Muster"
     contract_length: str
+    deal_channel: str | None = None
+    deal_channel_label: str | None = None
+    direct_public_promo_price: float | None = None
+    how_to_get: str | None = None
     source_url: str
     scraped_at: str
 
@@ -110,6 +122,10 @@ class OpticommPlan(BaseModel):
     speed_tier: str  # e.g. "OptiComm 100/20", "OptiComm 50/20"
     typical_evening_speed_mbps: float | None = None
     tech_type: str | None = "Fibre"  # OptiComm is private fibre
+    deal_channel: str | None = None
+    deal_channel_label: str | None = None
+    direct_public_promo_price: float | None = None
+    how_to_get: str | None = None
     source_url: str
     scraped_at: str
 
