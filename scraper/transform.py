@@ -67,6 +67,8 @@ def nbn_plan_to_deal(plan: NbnPlan) -> dict:
         deal["directPublicPromoPrice"] = plan.direct_public_promo_price
     if plan.how_to_get is not None:
         deal["howToGet"] = plan.how_to_get
+    if plan.direct_url is not None:
+        deal["directUrl"] = plan.direct_url
     return deal
 
 
@@ -114,6 +116,8 @@ def mobile_plan_to_deal(plan: MobilePlan) -> dict:
         deal["directPublicPromoPrice"] = plan.direct_public_promo_price
     if plan.how_to_get is not None:
         deal["howToGet"] = plan.how_to_get
+    if plan.direct_url is not None:
+        deal["directUrl"] = plan.direct_url
     return deal
 
 
@@ -156,6 +160,8 @@ def satellite_plan_to_deal(plan: SatellitePlan) -> dict:
         deal["directPublicPromoPrice"] = plan.direct_public_promo_price
     if plan.how_to_get is not None:
         deal["howToGet"] = plan.how_to_get
+    if plan.direct_url is not None:
+        deal["directUrl"] = plan.direct_url
     return deal
 
 
@@ -200,4 +206,6 @@ def opticomm_plan_to_deal(plan: OpticommPlan) -> dict:
         deal["directPublicPromoPrice"] = plan.direct_public_promo_price
     if plan.how_to_get is not None:
         deal["howToGet"] = plan.how_to_get
+    if plan.direct_url is not None:
+        deal["directUrl"] = plan.direct_url
     return deal

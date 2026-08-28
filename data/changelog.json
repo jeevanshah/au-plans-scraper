@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-08-28",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-08-28",
+    "message": "Added Belong NBN plans"
+  },
+  {
+    "date": "2026-08-28",
+    "message": "Added Southern Phone NBN plans"
+  },
+  {
+    "date": "2026-08-28",
+    "message": "Added SkyMesh NBN plans"
+  },
+  {
+    "date": "2026-08-28",
+    "message": "Added Activ8me NBN plans"
+  },
+  {
+    "date": "2026-08-28",
+    "message": "Added Buddy Telco NBN plans"
+  },
+  {
     "date": "2026-08-27",
     "message": "Updated Arctel NBN 500/50 pricing"
   },
@@ -134,29 +158,5 @@
   {
     "date": "2026-08-18",
     "message": "Added Activ8me satellite plans"
-  },
-  {
-    "date": "2026-08-18",
-    "message": "Added MATE mobile plans"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Updated Boost Mobile 105GB pricing"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Updated Boost Mobile 365GB pricing"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Added Launtel NBN plans"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Updated Aussie Broadband NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-08-17",
-    "message": "Updated Aussie Broadband NBN 50/20 pricing"
   }
 ]

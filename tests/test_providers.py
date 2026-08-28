@@ -37,6 +37,11 @@ from scraper.providers.nbn import mint_telecom as nbn_mint
 from scraper.providers.nbn import mate as nbn_mate
 from scraper.providers.nbn import launtel as nbn_launtel
 from scraper.providers.nbn import kogan_nbn
+from scraper.providers.nbn import belong_nbn
+from scraper.providers.nbn import southern_phone_nbn
+from scraper.providers.nbn import skymesh_nbn
+from scraper.providers.nbn import activ8me_nbn
+from scraper.providers.nbn import buddy_telco_nbn
 from scraper.providers.satellite import starlink as satellite_starlink
 from scraper.providers.satellite import activ8me as satellite_activ8me
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal, satellite_plan_to_deal
@@ -867,8 +872,9 @@ def test_spintel_nbn_partner_lp(monkeypatch):
     assert by_tier["NBN 25/10"].price_monthly == 69.95
     assert by_tier["NBN 25/10"].promo_price == 41.0
     assert by_tier["NBN 25/10"].deal_channel == "partner_exclusive"
-    assert by_tier["NBN 25/10"].deal_channel_label == "WhistleOut Exclusive LP"
+    assert by_tier["NBN 25/10"].deal_channel_label == "WhistleOut Special"
     assert by_tier["NBN 25/10"].direct_public_promo_price == 44.0
+    assert by_tier["NBN 25/10"].direct_url == nbn_spintel.DIRECT_URL
     assert by_tier["NBN 750/50"].promo_price == 69.0
     assert by_tier["NBN 750/50"].direct_public_promo_price == 84.0
     for p in plans:
@@ -877,6 +883,7 @@ def test_spintel_nbn_partner_lp(monkeypatch):
         assert p.promo_period_months == 6
         assert p.contract_length == "No lock-in contract"
         assert p.deal_channel == "partner_exclusive"
+        assert p.direct_url == nbn_spintel.DIRECT_URL
 
 
 def test_spintel_nbn_direct_fallback(monkeypatch):
@@ -1203,7 +1210,62 @@ def test_transform_satellite_deal_shape(monkeypatch):
         "id", "provider", "title", "category", "description", "promoPrice",
         "regularPrice", "promoMonths", "validUntil", "url", "serviceType",
         "tier", "techType", "upfrontHardwareCost", "postedAt", "_source",
+        "directUrl", "dealChannel", "dealChannelLabel",
     }
     assert set(deal.keys()) == expected_keys
     assert deal["serviceType"] == "satellite"
     assert deal["promoPrice"] == deal["regularPrice"]
+
+def test_belong_nbn(monkeypatch):
+    monkeypatch.setattr(belong_nbn, "fetch_static", lambda url: _soup("belong_nbn.html"))
+    plans = belong_nbn.scrape()
+    assert len(plans) == 5
+    for p in plans:
+        assert p.provider == "Belong"
+        assert p.price_monthly > 0
+        assert p.typical_evening_speed_mbps > 0
+        assert p.direct_url == "https://www.belong.com.au/broadband/nbn"
+
+
+def test_southern_phone_nbn(monkeypatch):
+    monkeypatch.setattr(southern_phone_nbn, "fetch_static", lambda url: _soup("southern_phone_nbn.html"))
+    plans = southern_phone_nbn.scrape()
+    assert len(plans) == 5
+    for p in plans:
+        assert p.provider == "Southern Phone"
+        assert p.price_monthly > 0
+        assert p.typical_evening_speed_mbps > 0
+        assert p.direct_url == "https://www.southernphone.com.au/personal/broadband"
+
+
+def test_skymesh_nbn(monkeypatch):
+    monkeypatch.setattr(skymesh_nbn, "fetch_js", lambda url, **kw: _soup("skymesh_nbn.html"))
+    plans = skymesh_nbn.scrape()
+    assert len(plans) == 4
+    for p in plans:
+        assert p.provider == "SkyMesh"
+        assert p.price_monthly > 0
+        assert p.typical_evening_speed_mbps > 0
+        assert p.direct_url == "https://www.skymesh.net.au/nbn-services/nbn-fibre"
+
+
+def test_activ8me_nbn(monkeypatch):
+    monkeypatch.setattr(activ8me_nbn, "fetch_js", lambda url, **kw: _soup("activ8me_nbn.html"))
+    plans = activ8me_nbn.scrape()
+    assert len(plans) == 3
+    for p in plans:
+        assert p.provider == "Activ8me"
+        assert p.price_monthly > 0
+        assert p.typical_evening_speed_mbps > 0
+        assert p.direct_url == "https://www.activ8me.net.au/internet/nbn-plans/"
+
+
+def test_buddy_telco_nbn(monkeypatch):
+    monkeypatch.setattr(buddy_telco_nbn, "fetch_static", lambda url: _soup("buddy_telco_nbn.html"))
+    plans = buddy_telco_nbn.scrape()
+    assert len(plans) == 4
+    for p in plans:
+        assert p.provider == "Buddy Telco"
+        assert p.price_monthly > 0
+        assert p.typical_evening_speed_mbps > 0
+        assert p.direct_url == "https://www.buddytelco.com.au/"

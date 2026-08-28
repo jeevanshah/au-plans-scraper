@@ -8,6 +8,7 @@ from scraper.schema import SatellitePlan, now_iso
 
 PROVIDER = "Activ8me"
 URL = "https://www.activ8me.net.au/internet/skymuster"
+DIRECT_URL = "https://www.activ8me.net.au/internet/skymuster"
 REQUIRES_JS = True
 
 CARD_RE = re.compile(
@@ -27,7 +28,7 @@ def scrape() -> list[SatellitePlan]:
     for match in CARD_RE.finditer(text):
         plan_name = match.group("name")
         if plan_name in seen_names:
-            continue  # the selected plan's summary echoes further down the page
+            continue
         seen_names.add(plan_name)
 
         speed_tier = match.group("speed")
@@ -40,13 +41,14 @@ def scrape() -> list[SatellitePlan]:
                 price_monthly=price_monthly,
                 promo_price=None,
                 promo_period_months=None,
-                # Free standard installation, no dish/equipment charge disclosed --
-                # only optional routers are sold separately, which aren't required.
                 upfront_hardware_cost=None,
                 data_allowance_gb=None,
                 is_unlimited_data=True,
                 network="Sky Muster",
                 contract_length="Month-to-month contract",
+                deal_channel="direct",
+                deal_channel_label="Direct Public Offer",
+                direct_url=DIRECT_URL,
                 source_url=URL,
                 scraped_at=scraped_at,
             )

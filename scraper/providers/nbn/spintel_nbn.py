@@ -79,13 +79,14 @@ def _parse_plans_from_soup(soup, source_url: str) -> list[NbnPlan]:
         seen_tiers.add(tier)
 
         deal_channel = "partner_exclusive" if is_partner else "direct"
-        deal_channel_label = "WhistleOut Exclusive LP" if is_partner else "Direct Public Offer"
+        deal_channel_label = "WhistleOut Special" if is_partner else "Direct Public Offer"
         direct_promo = DIRECT_PROMO_PRICES.get(tier) if is_partner else None
         how_to_get = (
-            "Click through via the exclusive partner link to lock in the promotional rate for 6 months."
+            "Discounted via SpinTel's WhistleOut partner campaign. Saves an extra $3/mo for 6 months compared to the direct website."
             if is_partner
             else None
         )
+        direct_url = DIRECT_URL if is_partner else None
 
         plans.append(
             NbnPlan(
@@ -103,6 +104,7 @@ def _parse_plans_from_soup(soup, source_url: str) -> list[NbnPlan]:
                 deal_channel_label=deal_channel_label,
                 direct_public_promo_price=direct_promo,
                 how_to_get=how_to_get,
+                direct_url=direct_url,
                 source_url=source_url,
                 scraped_at=scraped_at,
             )

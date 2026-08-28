@@ -7,6 +7,7 @@ from scraper.schema import SatellitePlan, now_iso
 
 PROVIDER = "Starlink"
 URL = "https://www.starlink.com/au/residential"
+DIRECT_URL = "https://www.starlink.com/au/residential"
 REQUIRES_JS = True
 
 PRICE_RE = re.compile(r"SERVICE STARTING AT A\$(?P<price>[\d.]+)\s*/mo")
@@ -56,6 +57,9 @@ def scrape() -> list[SatellitePlan]:
                 is_unlimited_data=True,
                 network="Starlink",
                 contract_length="No lock-in contract",
+                deal_channel="direct",
+                deal_channel_label="Direct Public Offer",
+                direct_url=DIRECT_URL,
                 source_url=URL,
                 scraped_at=scraped_at,
             )
