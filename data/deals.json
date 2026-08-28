@@ -4022,28 +4022,6 @@
     "_source": "Carbon Comms official site, verified 2026-08-28"
   },
   {
-    "id": "belong-nbn-100-20-nbn-100-20-premium-2026-08",
-    "provider": "Belong",
-    "title": "NBN 100/20 (Premium)",
-    "category": "Utilities",
-    "description": "NBN 100/20 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
-    "promoPrice": 69.0,
-    "regularPrice": 95.0,
-    "promoMonths": 6,
-    "validUntil": "2026-09-16",
-    "url": "https://www.belong.com.au/broadband/nbn",
-    "serviceType": "nbn",
-    "tier": "NBN 100/20",
-    "typicalEveningSpeed": 100.0,
-    "techType": null,
-    "postedAt": "2026-08-28",
-    "_source": "Belong official site, verified 2026-08-28",
-    "dealChannel": "direct",
-    "dealChannelLabel": "Direct Public Offer",
-    "directPublicPromoPrice": 69.0,
-    "directUrl": "https://www.belong.com.au/broadband/nbn"
-  },
-  {
     "id": "belong-nbn-500-50-nbn-500-50-fast-2026-08",
     "provider": "Belong",
     "title": "NBN 500/50 (Fast)",
@@ -4063,27 +4041,6 @@
     "dealChannel": "direct",
     "dealChannelLabel": "Direct Public Offer",
     "directPublicPromoPrice": 69.0,
-    "directUrl": "https://www.belong.com.au/broadband/nbn"
-  },
-  {
-    "id": "belong-nbn-25-10-nbn-25-10-starter-2026-08",
-    "provider": "Belong",
-    "title": "NBN 25/10 (Starter)",
-    "category": "Utilities",
-    "description": "NBN 25/10 plan. Unlimited data, no lock-in contract.",
-    "promoPrice": 75.0,
-    "regularPrice": 75.0,
-    "promoMonths": null,
-    "validUntil": null,
-    "url": "https://www.belong.com.au/broadband/nbn",
-    "serviceType": "nbn",
-    "tier": "NBN 25/10",
-    "typicalEveningSpeed": 25.0,
-    "techType": null,
-    "postedAt": "2026-08-28",
-    "_source": "Belong official site, verified 2026-08-28",
-    "dealChannel": "direct",
-    "dealChannelLabel": "Direct Public Offer",
     "directUrl": "https://www.belong.com.au/broadband/nbn"
   },
   {
@@ -4126,6 +4083,49 @@
     "_source": "Belong official site, verified 2026-08-28",
     "dealChannel": "direct",
     "dealChannelLabel": "Direct Public Offer",
+    "directUrl": "https://www.belong.com.au/broadband/nbn"
+  },
+  {
+    "id": "belong-nbn-25-10-nbn-25-10-starter-2026-08",
+    "provider": "Belong",
+    "title": "NBN 25/10 (Starter)",
+    "category": "Utilities",
+    "description": "NBN 25/10 plan. Unlimited data, no lock-in contract.",
+    "promoPrice": 75.0,
+    "regularPrice": 75.0,
+    "promoMonths": null,
+    "validUntil": null,
+    "url": "https://www.belong.com.au/broadband/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 25/10",
+    "typicalEveningSpeed": 25.0,
+    "techType": null,
+    "postedAt": "2026-08-28",
+    "_source": "Belong official site, verified 2026-08-28",
+    "dealChannel": "direct",
+    "dealChannelLabel": "Direct Public Offer",
+    "directUrl": "https://www.belong.com.au/broadband/nbn"
+  },
+  {
+    "id": "belong-nbn-100-20-nbn-100-20-premium-2026-08",
+    "provider": "Belong",
+    "title": "NBN 100/20 (Premium)",
+    "category": "Utilities",
+    "description": "NBN 100/20 plan discounted for the first 6 months for new customers. Unlimited data, no lock-in contract.",
+    "promoPrice": 69.0,
+    "regularPrice": 95.0,
+    "promoMonths": 6,
+    "validUntil": "2026-09-16",
+    "url": "https://www.belong.com.au/broadband/nbn",
+    "serviceType": "nbn",
+    "tier": "NBN 100/20",
+    "typicalEveningSpeed": 100.0,
+    "techType": null,
+    "postedAt": "2026-08-28",
+    "_source": "Belong official site, verified 2026-08-28",
+    "dealChannel": "direct",
+    "dealChannelLabel": "Direct Public Offer",
+    "directPublicPromoPrice": 69.0,
     "directUrl": "https://www.belong.com.au/broadband/nbn"
   },
   {
@@ -4759,7 +4759,10 @@
     "techType": "Starlink",
     "upfrontHardwareCost": null,
     "postedAt": "2026-08-28",
-    "_source": "Starlink official site, verified 2026-08-28"
+    "_source": "Starlink official site, verified 2026-08-28",
+    "dealChannel": "direct",
+    "dealChannelLabel": "Direct Public Offer",
+    "directUrl": "https://www.starlink.com/au/residential"
   },
   {
     "id": "starlink-starlink-residential-200-mbps-2026-08",
@@ -4777,7 +4780,10 @@
     "techType": "Starlink",
     "upfrontHardwareCost": null,
     "postedAt": "2026-08-28",
-    "_source": "Starlink official site, verified 2026-08-28"
+    "_source": "Starlink official site, verified 2026-08-28",
+    "dealChannel": "direct",
+    "dealChannelLabel": "Direct Public Offer",
+    "directUrl": "https://www.starlink.com/au/residential"
   },
   {
     "id": "starlink-starlink-residential-max-2026-08",
@@ -4795,7 +4801,10 @@
     "techType": "Starlink",
     "upfrontHardwareCost": null,
     "postedAt": "2026-08-28",
-    "_source": "Starlink official site, verified 2026-08-28"
+    "_source": "Starlink official site, verified 2026-08-28",
+    "dealChannel": "direct",
+    "dealChannelLabel": "Direct Public Offer",
+    "directUrl": "https://www.starlink.com/au/residential"
   },
   {
     "id": "activ8me-sky-muster-premium-25-25-5-2026-08",
@@ -4813,7 +4822,10 @@
     "techType": "Sky Muster",
     "upfrontHardwareCost": null,
     "postedAt": "2026-08-28",
-    "_source": "Activ8me official site, verified 2026-08-28"
+    "_source": "Activ8me official site, verified 2026-08-28",
+    "dealChannel": "direct",
+    "dealChannelLabel": "Direct Public Offer",
+    "directUrl": "https://www.activ8me.net.au/internet/skymuster"
   },
   {
     "id": "activ8me-sky-muster-premium-50-50-5-2026-08",
@@ -4831,7 +4843,10 @@
     "techType": "Sky Muster",
     "upfrontHardwareCost": null,
     "postedAt": "2026-08-28",
-    "_source": "Activ8me official site, verified 2026-08-28"
+    "_source": "Activ8me official site, verified 2026-08-28",
+    "dealChannel": "direct",
+    "dealChannelLabel": "Direct Public Offer",
+    "directUrl": "https://www.activ8me.net.au/internet/skymuster"
   },
   {
     "id": "activ8me-sky-muster-premium-100-100-5-2026-08",
@@ -4849,6 +4864,9 @@
     "techType": "Sky Muster",
     "upfrontHardwareCost": null,
     "postedAt": "2026-08-28",
-    "_source": "Activ8me official site, verified 2026-08-28"
+    "_source": "Activ8me official site, verified 2026-08-28",
+    "dealChannel": "direct",
+    "dealChannelLabel": "Direct Public Offer",
+    "directUrl": "https://www.activ8me.net.au/internet/skymuster"
   }
 ]

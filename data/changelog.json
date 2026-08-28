@@ -5,6 +5,10 @@
   },
   {
     "date": "2026-08-28",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-08-28",
     "message": "Added Belong NBN plans"
   },
   {
@@ -154,9 +158,5 @@
   {
     "date": "2026-08-18",
     "message": "Added Starlink satellite plans"
-  },
-  {
-    "date": "2026-08-18",
-    "message": "Added Activ8me satellite plans"
   }
 ]
