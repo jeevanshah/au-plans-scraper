@@ -1,7 +1,27 @@
 [
   {
-    "date": "2026-08-28",
+    "date": "2026-08-29",
+    "message": "Added Superloop NBN 250/100 plan"
+  },
+  {
+    "date": "2026-08-29",
+    "message": "Added Superloop NBN 2000/200 plan"
+  },
+  {
+    "date": "2026-08-29",
     "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-08-29",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-08-29",
+    "message": "Updated Arctel NBN 750/50 pricing"
+  },
+  {
+    "date": "2026-08-29",
+    "message": "Updated Arctel NBN 1000/100 pricing"
   },
   {
     "date": "2026-08-28",
@@ -138,25 +158,5 @@
   {
     "date": "2026-08-19",
     "message": "Added Swoop OptiComm plans"
-  },
-  {
-    "date": "2026-08-18",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-18",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-18",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-18",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-18",
-    "message": "Added Kogan Internet NBN plans"
   }
 ]
