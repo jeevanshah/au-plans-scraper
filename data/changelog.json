@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-31",
+    "message": "Updated Boost Mobile 365GB pricing"
+  },
+  {
+    "date": "2026-08-31",
+    "message": "Updated Flip NBN 25/10 pricing"
+  },
+  {
     "date": "2026-08-29",
     "message": "Added Superloop NBN 250/100 plan"
   },
@@ -150,13 +158,5 @@
   {
     "date": "2026-08-19",
     "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-19",
-    "message": "Added Leaptel OptiComm plans"
-  },
-  {
-    "date": "2026-08-19",
-    "message": "Added Swoop OptiComm plans"
   }
 ]
