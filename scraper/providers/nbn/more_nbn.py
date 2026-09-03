@@ -31,7 +31,7 @@ TYPICAL_SPEED_RE = re.compile(r"([\d.]+)\s*Mbps\s*Download.*?([\d.]+)\s*Mbps\s*U
 
 def scrape() -> list[NbnPlan]:
     soup = fetch_static(URL)
-    cards = soup.find_all("div", attrs={"data-offer": "false"})
+    cards = soup.find_all("div", attrs={"data-offer": True})
     plans = []
     scraped_at = now_iso()
 
