@@ -300,6 +300,7 @@ def test_leaptel_nbn(monkeypatch):
 
 def test_amaysim_nbn(monkeypatch):
     monkeypatch.setattr(amaysim_nbn, "fetch_static", lambda url: _soup("amaysim_nbn.html"))
+    monkeypatch.setattr(amaysim_nbn, "now_iso", lambda: "2026-08-15T00:00:00+00:00")
     plans = amaysim_nbn.scrape()
     assert len(plans) == 6
     by_tier = {p.speed_tier: p for p in plans}

@@ -3,3 +3,10 @@ __pycache__/
 .pytest_cache/
 .venv/
 venv/
+
+# Local data dumps & scratch scripts
+data/daily/
+data/consumer_pain/
+*.jsonl
+data/.seen_*.json
+run_daily.py
