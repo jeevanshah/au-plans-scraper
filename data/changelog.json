@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-09-03",
+    "message": "Updated Kogan Mobile 250GB pricing"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Added Kogan Mobile 400GB plan"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Added Kogan Mobile 500GB plan"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Added SpinTel NBN 1000/400 plan"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Updated amaysim NBN 100/20 pricing"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Updated amaysim NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Updated Kogan Internet NBN 50 pricing"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Updated Kogan Internet NBN 100 pricing"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Updated Kogan Internet NBN 500 pricing"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Updated SkyMesh NBN 25/5 pricing"
+  },
+  {
+    "date": "2026-09-03",
+    "message": "Updated SkyMesh NBN 50/20 pricing"
+  },
+  {
     "date": "2026-08-31",
     "message": "Updated Boost Mobile 365GB pricing"
   },
@@ -110,53 +158,5 @@
   {
     "date": "2026-08-24",
     "message": "Updated amaysim NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-08-23",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-22",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-21",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-20",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-19",
-    "message": "Updated amaysim 30GB pricing"
-  },
-  {
-    "date": "2026-08-19",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-19",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-19",
-    "message": "Added Carbon Comms NBN plans"
-  },
-  {
-    "date": "2026-08-19",
-    "message": "Added amaysim 350GB plan"
-  },
-  {
-    "date": "2026-08-19",
-    "message": "Added Kogan Mobile 25GB plan"
-  },
-  {
-    "date": "2026-08-19",
-    "message": "Added Kogan Mobile 40GB plan"
-  },
-  {
-    "date": "2026-08-19",
-    "message": "Updated Arctel NBN 500/50 pricing"
   }
 ]
