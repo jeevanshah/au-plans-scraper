@@ -53,6 +53,7 @@ from scraper.providers.nbn import buddy_telco_nbn
 from scraper.providers.opticomm import leaptel_opticomm, swoop_opticomm
 from scraper.providers.satellite import starlink as satellite_starlink
 from scraper.providers.satellite import activ8me as satellite_activ8me
+from scraper.bundles import generate_bundles
 from scraper.schema import now_iso
 from scraper.transform import mobile_plan_to_deal, nbn_plan_to_deal, opticomm_plan_to_deal, satellite_plan_to_deal
 
@@ -331,6 +332,10 @@ def main() -> int:
 
     (DATA_DIR / "deals.json").write_text(json.dumps(all_deals, indent=2), encoding="utf-8")
     (DATA_DIR / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
+
+    bundles = generate_bundles(all_deals)
+    (DATA_DIR / "bundles.json").write_text(json.dumps(bundles, indent=2), encoding="utf-8")
+    logger.info("Generated and wrote %d bundle deals to %s", len(bundles), DATA_DIR / "bundles.json")
 
     any_stale = any(
         m.get("consecutive_failures", 0) >= CONSECUTIVE_FAILURE_ISSUE_THRESHOLD for m in meta.values()
