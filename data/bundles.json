@@ -16,7 +16,18 @@
     "totalSixMonth": 528.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.aussiebroadband.com.au/nbn-plans/"
+    "url": "https://www.aussiebroadband.com.au/nbn-plans/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with Aussie Broadband SIM",
+      "description": "Save $5/mo off broadband when maintaining an active eligible mobile SIM on the same account.",
+      "howToGet": "Add an eligible mobile SIM to your broadband account at checkout.",
+      "realityCheck": "Verify that Aussie BB's $15\u2013$25/mo mobile SIM matches your data needs vs using a standalone budget MVNO.",
+      "cisUrl": "https://www.aussiebroadband.com.au/legal/"
+    }
   },
   {
     "id": "bundle-aussie-broadband-nbn-50-20gb-5g-sim",
@@ -35,7 +46,18 @@
     "totalSixMonth": 630.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.aussiebroadband.com.au/nbn-plans/"
+    "url": "https://www.aussiebroadband.com.au/nbn-plans/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with Aussie Broadband SIM",
+      "description": "Save $5/mo off broadband when maintaining an active eligible mobile SIM on the same account.",
+      "howToGet": "Add an eligible mobile SIM to your broadband account at checkout.",
+      "realityCheck": "Verify that Aussie BB's $15\u2013$25/mo mobile SIM matches your data needs vs using a standalone budget MVNO.",
+      "cisUrl": "https://www.aussiebroadband.com.au/legal/"
+    }
   },
   {
     "id": "bundle-aussie-broadband-nbn-100-20gb-5g-sim",
@@ -54,7 +76,18 @@
     "totalSixMonth": 654.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.aussiebroadband.com.au/nbn-plans/"
+    "url": "https://www.aussiebroadband.com.au/nbn-plans/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with Aussie Broadband SIM",
+      "description": "Save $5/mo off broadband when maintaining an active eligible mobile SIM on the same account.",
+      "howToGet": "Add an eligible mobile SIM to your broadband account at checkout.",
+      "realityCheck": "Verify that Aussie BB's $15\u2013$25/mo mobile SIM matches your data needs vs using a standalone budget MVNO.",
+      "cisUrl": "https://www.aussiebroadband.com.au/legal/"
+    }
   },
   {
     "id": "bundle-aussie-broadband-nbn-500-20gb-5g-sim",
@@ -73,7 +106,18 @@
     "totalSixMonth": 654.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.aussiebroadband.com.au/nbn-plans/"
+    "url": "https://www.aussiebroadband.com.au/nbn-plans/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with Aussie Broadband SIM",
+      "description": "Save $5/mo off broadband when maintaining an active eligible mobile SIM on the same account.",
+      "howToGet": "Add an eligible mobile SIM to your broadband account at checkout.",
+      "realityCheck": "Verify that Aussie BB's $15\u2013$25/mo mobile SIM matches your data needs vs using a standalone budget MVNO.",
+      "cisUrl": "https://www.aussiebroadband.com.au/legal/"
+    }
   },
   {
     "id": "bundle-aussie-broadband-nbn-1000-20gb-5g-sim",
@@ -92,7 +136,18 @@
     "totalSixMonth": 834.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.aussiebroadband.com.au/nbn-plans/"
+    "url": "https://www.aussiebroadband.com.au/nbn-plans/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with Aussie Broadband SIM",
+      "description": "Save $5/mo off broadband when maintaining an active eligible mobile SIM on the same account.",
+      "howToGet": "Add an eligible mobile SIM to your broadband account at checkout.",
+      "realityCheck": "Verify that Aussie BB's $15\u2013$25/mo mobile SIM matches your data needs vs using a standalone budget MVNO.",
+      "cisUrl": "https://www.aussiebroadband.com.au/legal/"
+    }
   },
   {
     "id": "bundle-aussie-broadband-nbn-2000-20gb-5g-sim",
@@ -111,7 +166,18 @@
     "totalSixMonth": 1194.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.aussiebroadband.com.au/nbn-plans/"
+    "url": "https://www.aussiebroadband.com.au/nbn-plans/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with Aussie Broadband SIM",
+      "description": "Save $5/mo off broadband when maintaining an active eligible mobile SIM on the same account.",
+      "howToGet": "Add an eligible mobile SIM to your broadband account at checkout.",
+      "realityCheck": "Verify that Aussie BB's $15\u2013$25/mo mobile SIM matches your data needs vs using a standalone budget MVNO.",
+      "cisUrl": "https://www.aussiebroadband.com.au/legal/"
+    }
   },
   {
     "id": "bundle-superloop-nbn-25-1sim",
@@ -130,7 +196,18 @@
     "totalSixMonth": 438.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with 1 SIM",
+      "label": "Save $5/mo with Superloop Mobile SIM",
+      "description": "Get $5/mo off your broadband bill when maintaining 1 active Superloop mobile SIM plan on the same account.",
+      "howToGet": "Add a Superloop SIM plan to your account to automatically trigger monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-25-2sims",
@@ -149,7 +226,18 @@
     "totalSixMonth": 528.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with 2 SIMs",
+      "label": "Save $10/mo with 2x Superloop Mobile SIMs",
+      "description": "Get $10/mo off your broadband bill when maintaining 2 active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 2 Superloop SIM plans to your account to automatically trigger tier-2 monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-25-3sims",
@@ -168,7 +256,18 @@
     "totalSixMonth": 618.0,
     "annualSavings": 180.0,
     "discountMonthly": 15.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 15.0,
+      "shortLabel": "Save $15/mo with 3 SIMs",
+      "label": "Save $15/mo with 3+ Superloop Mobile SIMs",
+      "description": "Get $15/mo off your broadband bill when maintaining 3 or more active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 3+ Superloop SIM plans to your account to automatically trigger tier-3 monthly bill credits.",
+      "realityCheck": "Compare total family mobile spend against standalone multi-SIM discounts.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-50-1sim",
@@ -187,7 +286,18 @@
     "totalSixMonth": 504.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with 1 SIM",
+      "label": "Save $5/mo with Superloop Mobile SIM",
+      "description": "Get $5/mo off your broadband bill when maintaining 1 active Superloop mobile SIM plan on the same account.",
+      "howToGet": "Add a Superloop SIM plan to your account to automatically trigger monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-50-2sims",
@@ -206,7 +316,18 @@
     "totalSixMonth": 594.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with 2 SIMs",
+      "label": "Save $10/mo with 2x Superloop Mobile SIMs",
+      "description": "Get $10/mo off your broadband bill when maintaining 2 active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 2 Superloop SIM plans to your account to automatically trigger tier-2 monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-50-3sims",
@@ -225,7 +346,18 @@
     "totalSixMonth": 684.0,
     "annualSavings": 180.0,
     "discountMonthly": 15.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 15.0,
+      "shortLabel": "Save $15/mo with 3 SIMs",
+      "label": "Save $15/mo with 3+ Superloop Mobile SIMs",
+      "description": "Get $15/mo off your broadband bill when maintaining 3 or more active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 3+ Superloop SIM plans to your account to automatically trigger tier-3 monthly bill credits.",
+      "realityCheck": "Compare total family mobile spend against standalone multi-SIM discounts.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-250-1sim",
@@ -244,7 +376,18 @@
     "totalSixMonth": 582.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with 1 SIM",
+      "label": "Save $5/mo with Superloop Mobile SIM",
+      "description": "Get $5/mo off your broadband bill when maintaining 1 active Superloop mobile SIM plan on the same account.",
+      "howToGet": "Add a Superloop SIM plan to your account to automatically trigger monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-250-2sims",
@@ -263,7 +406,18 @@
     "totalSixMonth": 672.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with 2 SIMs",
+      "label": "Save $10/mo with 2x Superloop Mobile SIMs",
+      "description": "Get $10/mo off your broadband bill when maintaining 2 active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 2 Superloop SIM plans to your account to automatically trigger tier-2 monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-250-3sims",
@@ -282,7 +436,18 @@
     "totalSixMonth": 762.0,
     "annualSavings": 180.0,
     "discountMonthly": 15.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 15.0,
+      "shortLabel": "Save $15/mo with 3 SIMs",
+      "label": "Save $15/mo with 3+ Superloop Mobile SIMs",
+      "description": "Get $15/mo off your broadband bill when maintaining 3 or more active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 3+ Superloop SIM plans to your account to automatically trigger tier-3 monthly bill credits.",
+      "realityCheck": "Compare total family mobile spend against standalone multi-SIM discounts.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-500-1sim",
@@ -301,7 +466,18 @@
     "totalSixMonth": 480.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with 1 SIM",
+      "label": "Save $5/mo with Superloop Mobile SIM",
+      "description": "Get $5/mo off your broadband bill when maintaining 1 active Superloop mobile SIM plan on the same account.",
+      "howToGet": "Add a Superloop SIM plan to your account to automatically trigger monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-500-2sims",
@@ -320,7 +496,18 @@
     "totalSixMonth": 570.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with 2 SIMs",
+      "label": "Save $10/mo with 2x Superloop Mobile SIMs",
+      "description": "Get $10/mo off your broadband bill when maintaining 2 active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 2 Superloop SIM plans to your account to automatically trigger tier-2 monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-500-3sims",
@@ -339,7 +526,18 @@
     "totalSixMonth": 660.0,
     "annualSavings": 180.0,
     "discountMonthly": 15.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 15.0,
+      "shortLabel": "Save $15/mo with 3 SIMs",
+      "label": "Save $15/mo with 3+ Superloop Mobile SIMs",
+      "description": "Get $15/mo off your broadband bill when maintaining 3 or more active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 3+ Superloop SIM plans to your account to automatically trigger tier-3 monthly bill credits.",
+      "realityCheck": "Compare total family mobile spend against standalone multi-SIM discounts.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-750-1sim",
@@ -358,7 +556,18 @@
     "totalSixMonth": 534.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with 1 SIM",
+      "label": "Save $5/mo with Superloop Mobile SIM",
+      "description": "Get $5/mo off your broadband bill when maintaining 1 active Superloop mobile SIM plan on the same account.",
+      "howToGet": "Add a Superloop SIM plan to your account to automatically trigger monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-750-2sims",
@@ -377,7 +586,18 @@
     "totalSixMonth": 624.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with 2 SIMs",
+      "label": "Save $10/mo with 2x Superloop Mobile SIMs",
+      "description": "Get $10/mo off your broadband bill when maintaining 2 active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 2 Superloop SIM plans to your account to automatically trigger tier-2 monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-750-3sims",
@@ -396,7 +616,18 @@
     "totalSixMonth": 714.0,
     "annualSavings": 180.0,
     "discountMonthly": 15.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 15.0,
+      "shortLabel": "Save $15/mo with 3 SIMs",
+      "label": "Save $15/mo with 3+ Superloop Mobile SIMs",
+      "description": "Get $15/mo off your broadband bill when maintaining 3 or more active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 3+ Superloop SIM plans to your account to automatically trigger tier-3 monthly bill credits.",
+      "realityCheck": "Compare total family mobile spend against standalone multi-SIM discounts.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-1000-1sim",
@@ -415,7 +646,18 @@
     "totalSixMonth": 594.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with 1 SIM",
+      "label": "Save $5/mo with Superloop Mobile SIM",
+      "description": "Get $5/mo off your broadband bill when maintaining 1 active Superloop mobile SIM plan on the same account.",
+      "howToGet": "Add a Superloop SIM plan to your account to automatically trigger monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-1000-2sims",
@@ -434,7 +676,18 @@
     "totalSixMonth": 684.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with 2 SIMs",
+      "label": "Save $10/mo with 2x Superloop Mobile SIMs",
+      "description": "Get $10/mo off your broadband bill when maintaining 2 active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 2 Superloop SIM plans to your account to automatically trigger tier-2 monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-1000-3sims",
@@ -453,7 +706,18 @@
     "totalSixMonth": 774.0,
     "annualSavings": 180.0,
     "discountMonthly": 15.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 15.0,
+      "shortLabel": "Save $15/mo with 3 SIMs",
+      "label": "Save $15/mo with 3+ Superloop Mobile SIMs",
+      "description": "Get $15/mo off your broadband bill when maintaining 3 or more active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 3+ Superloop SIM plans to your account to automatically trigger tier-3 monthly bill credits.",
+      "realityCheck": "Compare total family mobile spend against standalone multi-SIM discounts.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-2000-1sim",
@@ -472,7 +736,18 @@
     "totalSixMonth": 978.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with 1 SIM",
+      "label": "Save $5/mo with Superloop Mobile SIM",
+      "description": "Get $5/mo off your broadband bill when maintaining 1 active Superloop mobile SIM plan on the same account.",
+      "howToGet": "Add a Superloop SIM plan to your account to automatically trigger monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-2000-2sims",
@@ -491,7 +766,18 @@
     "totalSixMonth": 1068.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with 2 SIMs",
+      "label": "Save $10/mo with 2x Superloop Mobile SIMs",
+      "description": "Get $10/mo off your broadband bill when maintaining 2 active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 2 Superloop SIM plans to your account to automatically trigger tier-2 monthly bill credits.",
+      "realityCheck": "Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-superloop-nbn-2000-3sims",
@@ -510,7 +796,18 @@
     "totalSixMonth": 1158.0,
     "annualSavings": 180.0,
     "discountMonthly": 15.0,
-    "url": "https://www.superloop.com/internet/nbn/"
+    "url": "https://www.superloop.com/internet/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 15.0,
+      "shortLabel": "Save $15/mo with 3 SIMs",
+      "label": "Save $15/mo with 3+ Superloop Mobile SIMs",
+      "description": "Get $15/mo off your broadband bill when maintaining 3 or more active Superloop mobile SIM plans on the same account.",
+      "howToGet": "Add 3+ Superloop SIM plans to your account to automatically trigger tier-3 monthly bill credits.",
+      "realityCheck": "Compare total family mobile spend against standalone multi-SIM discounts.",
+      "cisUrl": "https://www.superloop.com/legal/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-tpg-nbn-100-25gb-mobile-sim",
@@ -529,7 +826,18 @@
     "totalSixMonth": 539.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.tpg.com.au/nbn"
+    "url": "https://www.tpg.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with TPG Mobile SIM",
+      "description": "Save $5/mo when bundling an eligible TPG NBN plan with a TPG Mobile plan on the same billing account.",
+      "howToGet": "Link your TPG Mobile service with your TPG NBN account in My Account.",
+      "realityCheck": "TPG mobile operates on the Vodafone 4G/5G mobile network; ensure coverage suits your daily locations.",
+      "cisUrl": "https://www.tpg.com.au/terms-and-conditions"
+    }
   },
   {
     "id": "bundle-tpg-nbn-500-25gb-mobile-sim",
@@ -548,7 +856,18 @@
     "totalSixMonth": 539.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.tpg.com.au/nbn"
+    "url": "https://www.tpg.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with TPG Mobile SIM",
+      "description": "Save $5/mo when bundling an eligible TPG NBN plan with a TPG Mobile plan on the same billing account.",
+      "howToGet": "Link your TPG Mobile service with your TPG NBN account in My Account.",
+      "realityCheck": "TPG mobile operates on the Vodafone 4G/5G mobile network; ensure coverage suits your daily locations.",
+      "cisUrl": "https://www.tpg.com.au/terms-and-conditions"
+    }
   },
   {
     "id": "bundle-tpg-nbn-25-25gb-mobile-sim",
@@ -567,7 +886,18 @@
     "totalSixMonth": 479.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.tpg.com.au/nbn"
+    "url": "https://www.tpg.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with TPG Mobile SIM",
+      "description": "Save $5/mo when bundling an eligible TPG NBN plan with a TPG Mobile plan on the same billing account.",
+      "howToGet": "Link your TPG Mobile service with your TPG NBN account in My Account.",
+      "realityCheck": "TPG mobile operates on the Vodafone 4G/5G mobile network; ensure coverage suits your daily locations.",
+      "cisUrl": "https://www.tpg.com.au/terms-and-conditions"
+    }
   },
   {
     "id": "bundle-tpg-nbn-50-25gb-mobile-sim",
@@ -586,7 +916,18 @@
     "totalSixMonth": 539.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.tpg.com.au/nbn"
+    "url": "https://www.tpg.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with TPG Mobile SIM",
+      "description": "Save $5/mo when bundling an eligible TPG NBN plan with a TPG Mobile plan on the same billing account.",
+      "howToGet": "Link your TPG Mobile service with your TPG NBN account in My Account.",
+      "realityCheck": "TPG mobile operates on the Vodafone 4G/5G mobile network; ensure coverage suits your daily locations.",
+      "cisUrl": "https://www.tpg.com.au/terms-and-conditions"
+    }
   },
   {
     "id": "bundle-tpg-nbn-750-25gb-mobile-sim",
@@ -605,7 +946,18 @@
     "totalSixMonth": 569.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.tpg.com.au/nbn"
+    "url": "https://www.tpg.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with TPG Mobile SIM",
+      "description": "Save $5/mo when bundling an eligible TPG NBN plan with a TPG Mobile plan on the same billing account.",
+      "howToGet": "Link your TPG Mobile service with your TPG NBN account in My Account.",
+      "realityCheck": "TPG mobile operates on the Vodafone 4G/5G mobile network; ensure coverage suits your daily locations.",
+      "cisUrl": "https://www.tpg.com.au/terms-and-conditions"
+    }
   },
   {
     "id": "bundle-tpg-nbn-1000-25gb-mobile-sim",
@@ -624,7 +976,18 @@
     "totalSixMonth": 629.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.tpg.com.au/nbn"
+    "url": "https://www.tpg.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo bundled with TPG Mobile SIM",
+      "description": "Save $5/mo when bundling an eligible TPG NBN plan with a TPG Mobile plan on the same billing account.",
+      "howToGet": "Link your TPG Mobile service with your TPG NBN account in My Account.",
+      "realityCheck": "TPG mobile operates on the Vodafone 4G/5G mobile network; ensure coverage suits your daily locations.",
+      "cisUrl": "https://www.tpg.com.au/terms-and-conditions"
+    }
   },
   {
     "id": "bundle-vodafone-nbn-1000-65gb-postpaid-sim",
@@ -643,7 +1006,18 @@
     "totalSixMonth": 804.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.vodafone.com.au/home-internet/nbn"
+    "url": "https://www.vodafone.com.au/home-internet/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Bundle & Save $5/mo",
+      "label": "Bundle & Save $5/mo on NBN with Postpaid Mobile",
+      "description": "Save $5/mo off your NBN plan when combined under the same account with an active Vodafone postpaid mobile service.",
+      "howToGet": "Link your NBN service to your existing Vodafone postpaid mobile billing account.",
+      "realityCheck": "Vodafone Bundle & Save requires active postpaid mobile; prepaid services are excluded.",
+      "cisUrl": "https://www.vodafone.com.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-vodafone-nbn-750-65gb-postpaid-sim",
@@ -662,7 +1036,18 @@
     "totalSixMonth": 744.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.vodafone.com.au/home-internet/nbn"
+    "url": "https://www.vodafone.com.au/home-internet/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Bundle & Save $5/mo",
+      "label": "Bundle & Save $5/mo on NBN with Postpaid Mobile",
+      "description": "Save $5/mo off your NBN plan when combined under the same account with an active Vodafone postpaid mobile service.",
+      "howToGet": "Link your NBN service to your existing Vodafone postpaid mobile billing account.",
+      "realityCheck": "Vodafone Bundle & Save requires active postpaid mobile; prepaid services are excluded.",
+      "cisUrl": "https://www.vodafone.com.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-vodafone-nbn-500-65gb-postpaid-sim",
@@ -681,7 +1066,18 @@
     "totalSixMonth": 714.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.vodafone.com.au/home-internet/nbn"
+    "url": "https://www.vodafone.com.au/home-internet/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Bundle & Save $5/mo",
+      "label": "Bundle & Save $5/mo on NBN with Postpaid Mobile",
+      "description": "Save $5/mo off your NBN plan when combined under the same account with an active Vodafone postpaid mobile service.",
+      "howToGet": "Link your NBN service to your existing Vodafone postpaid mobile billing account.",
+      "realityCheck": "Vodafone Bundle & Save requires active postpaid mobile; prepaid services are excluded.",
+      "cisUrl": "https://www.vodafone.com.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-vodafone-nbn-50-65gb-postpaid-sim",
@@ -700,7 +1096,18 @@
     "totalSixMonth": 804.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.vodafone.com.au/home-internet/nbn"
+    "url": "https://www.vodafone.com.au/home-internet/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Bundle & Save $5/mo",
+      "label": "Bundle & Save $5/mo on NBN with Postpaid Mobile",
+      "description": "Save $5/mo off your NBN plan when combined under the same account with an active Vodafone postpaid mobile service.",
+      "howToGet": "Link your NBN service to your existing Vodafone postpaid mobile billing account.",
+      "realityCheck": "Vodafone Bundle & Save requires active postpaid mobile; prepaid services are excluded.",
+      "cisUrl": "https://www.vodafone.com.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-vodafone-nbn-25-65gb-postpaid-sim",
@@ -719,7 +1126,18 @@
     "totalSixMonth": 744.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.vodafone.com.au/home-internet/nbn"
+    "url": "https://www.vodafone.com.au/home-internet/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Bundle & Save $5/mo",
+      "label": "Bundle & Save $5/mo on NBN with Postpaid Mobile",
+      "description": "Save $5/mo off your NBN plan when combined under the same account with an active Vodafone postpaid mobile service.",
+      "howToGet": "Link your NBN service to your existing Vodafone postpaid mobile billing account.",
+      "realityCheck": "Vodafone Bundle & Save requires active postpaid mobile; prepaid services are excluded.",
+      "cisUrl": "https://www.vodafone.com.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-mate-nbn-25-good-mates-15gb-sim",
@@ -738,7 +1156,18 @@
     "totalSixMonth": 450.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.letsbemates.com.au/nbn/"
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Mobile",
+      "label": "Save $10/mo ongoing with MATE Mobile SIM",
+      "description": "Enjoy an ongoing $10/mo discount on your broadband service as long as you have an active MATE mobile service on the same account.",
+      "howToGet": "Add any MATE mobile SIM to your account; the $10/mo discount applies automatically to your broadband bill.",
+      "realityCheck": "MATE mobile runs on Telstra wholesale with uncapped speeds; verify if 15GB\u201360GB allowances match your monthly usage.",
+      "cisUrl": "https://www.letsbemates.com.au/terms/"
+    }
   },
   {
     "id": "bundle-mate-nbn-50-good-mates-15gb-sim",
@@ -757,7 +1186,18 @@
     "totalSixMonth": 540.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.letsbemates.com.au/nbn/"
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Mobile",
+      "label": "Save $10/mo ongoing with MATE Mobile SIM",
+      "description": "Enjoy an ongoing $10/mo discount on your broadband service as long as you have an active MATE mobile service on the same account.",
+      "howToGet": "Add any MATE mobile SIM to your account; the $10/mo discount applies automatically to your broadband bill.",
+      "realityCheck": "MATE mobile runs on Telstra wholesale with uncapped speeds; verify if 15GB\u201360GB allowances match your monthly usage.",
+      "cisUrl": "https://www.letsbemates.com.au/terms/"
+    }
   },
   {
     "id": "bundle-mate-nbn-100-good-mates-15gb-sim",
@@ -776,7 +1216,18 @@
     "totalSixMonth": 570.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.letsbemates.com.au/nbn/"
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Mobile",
+      "label": "Save $10/mo ongoing with MATE Mobile SIM",
+      "description": "Enjoy an ongoing $10/mo discount on your broadband service as long as you have an active MATE mobile service on the same account.",
+      "howToGet": "Add any MATE mobile SIM to your account; the $10/mo discount applies automatically to your broadband bill.",
+      "realityCheck": "MATE mobile runs on Telstra wholesale with uncapped speeds; verify if 15GB\u201360GB allowances match your monthly usage.",
+      "cisUrl": "https://www.letsbemates.com.au/terms/"
+    }
   },
   {
     "id": "bundle-mate-nbn-500-good-mates-15gb-sim",
@@ -795,7 +1246,18 @@
     "totalSixMonth": 570.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.letsbemates.com.au/nbn/"
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Mobile",
+      "label": "Save $10/mo ongoing with MATE Mobile SIM",
+      "description": "Enjoy an ongoing $10/mo discount on your broadband service as long as you have an active MATE mobile service on the same account.",
+      "howToGet": "Add any MATE mobile SIM to your account; the $10/mo discount applies automatically to your broadband bill.",
+      "realityCheck": "MATE mobile runs on Telstra wholesale with uncapped speeds; verify if 15GB\u201360GB allowances match your monthly usage.",
+      "cisUrl": "https://www.letsbemates.com.au/terms/"
+    }
   },
   {
     "id": "bundle-mate-nbn-750-good-mates-15gb-sim",
@@ -814,7 +1276,18 @@
     "totalSixMonth": 720.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.letsbemates.com.au/nbn/"
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Mobile",
+      "label": "Save $10/mo ongoing with MATE Mobile SIM",
+      "description": "Enjoy an ongoing $10/mo discount on your broadband service as long as you have an active MATE mobile service on the same account.",
+      "howToGet": "Add any MATE mobile SIM to your account; the $10/mo discount applies automatically to your broadband bill.",
+      "realityCheck": "MATE mobile runs on Telstra wholesale with uncapped speeds; verify if 15GB\u201360GB allowances match your monthly usage.",
+      "cisUrl": "https://www.letsbemates.com.au/terms/"
+    }
   },
   {
     "id": "bundle-mate-nbn-1000-good-mates-15gb-sim",
@@ -833,7 +1306,18 @@
     "totalSixMonth": 726.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.letsbemates.com.au/nbn/"
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Mobile",
+      "label": "Save $10/mo ongoing with MATE Mobile SIM",
+      "description": "Enjoy an ongoing $10/mo discount on your broadband service as long as you have an active MATE mobile service on the same account.",
+      "howToGet": "Add any MATE mobile SIM to your account; the $10/mo discount applies automatically to your broadband bill.",
+      "realityCheck": "MATE mobile runs on Telstra wholesale with uncapped speeds; verify if 15GB\u201360GB allowances match your monthly usage.",
+      "cisUrl": "https://www.letsbemates.com.au/terms/"
+    }
   },
   {
     "id": "bundle-mate-nbn-2000-good-mates-15gb-sim",
@@ -852,7 +1336,18 @@
     "totalSixMonth": 966.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.letsbemates.com.au/nbn/"
+    "url": "https://www.letsbemates.com.au/nbn/",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Mobile",
+      "label": "Save $10/mo ongoing with MATE Mobile SIM",
+      "description": "Enjoy an ongoing $10/mo discount on your broadband service as long as you have an active MATE mobile service on the same account.",
+      "howToGet": "Add any MATE mobile SIM to your account; the $10/mo discount applies automatically to your broadband bill.",
+      "realityCheck": "MATE mobile runs on Telstra wholesale with uncapped speeds; verify if 15GB\u201360GB allowances match your monthly usage.",
+      "cisUrl": "https://www.letsbemates.com.au/terms/"
+    }
   },
   {
     "id": "bundle-spintel-nbn-25-22gb-5g-sim",
@@ -871,7 +1366,18 @@
     "totalSixMonth": 306.0,
     "annualSavings": 48.0,
     "discountMonthly": 4.0,
-    "url": "https://www.spintel.net.au/lp/home/nbn-wo"
+    "url": "https://www.spintel.net.au/lp/home/nbn-wo",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 4.0,
+      "shortLabel": "Save $4/mo on Mobile",
+      "label": "Save $3\u2013$5/mo on Mobile SIM when active with Broadband",
+      "description": "Get a recurring $4/mo discount on your SpinTel mobile SIM service when maintained alongside an active SpinTel broadband connection.",
+      "howToGet": "Select the broadband bundle discount option when ordering your SpinTel SIM in the customer portal.",
+      "realityCheck": "Discount applies directly to the mobile service charge on your combined monthly bill.",
+      "cisUrl": "https://www.spintel.net.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-spintel-nbn-500-22gb-5g-sim",
@@ -890,7 +1396,18 @@
     "totalSixMonth": 474.0,
     "annualSavings": 48.0,
     "discountMonthly": 4.0,
-    "url": "https://www.spintel.net.au/lp/home/nbn-wo"
+    "url": "https://www.spintel.net.au/lp/home/nbn-wo",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 4.0,
+      "shortLabel": "Save $4/mo on Mobile",
+      "label": "Save $3\u2013$5/mo on Mobile SIM when active with Broadband",
+      "description": "Get a recurring $4/mo discount on your SpinTel mobile SIM service when maintained alongside an active SpinTel broadband connection.",
+      "howToGet": "Select the broadband bundle discount option when ordering your SpinTel SIM in the customer portal.",
+      "realityCheck": "Discount applies directly to the mobile service charge on your combined monthly bill.",
+      "cisUrl": "https://www.spintel.net.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-spintel-nbn-750-22gb-5g-sim",
@@ -909,7 +1426,18 @@
     "totalSixMonth": 474.0,
     "annualSavings": 48.0,
     "discountMonthly": 4.0,
-    "url": "https://www.spintel.net.au/lp/home/nbn-wo"
+    "url": "https://www.spintel.net.au/lp/home/nbn-wo",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 4.0,
+      "shortLabel": "Save $4/mo on Mobile",
+      "label": "Save $3\u2013$5/mo on Mobile SIM when active with Broadband",
+      "description": "Get a recurring $4/mo discount on your SpinTel mobile SIM service when maintained alongside an active SpinTel broadband connection.",
+      "howToGet": "Select the broadband bundle discount option when ordering your SpinTel SIM in the customer portal.",
+      "realityCheck": "Discount applies directly to the mobile service charge on your combined monthly bill.",
+      "cisUrl": "https://www.spintel.net.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-spintel-nbn-250-22gb-5g-sim",
@@ -928,7 +1456,18 @@
     "totalSixMonth": 534.0,
     "annualSavings": 48.0,
     "discountMonthly": 4.0,
-    "url": "https://www.spintel.net.au/lp/home/nbn-wo"
+    "url": "https://www.spintel.net.au/lp/home/nbn-wo",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 4.0,
+      "shortLabel": "Save $4/mo on Mobile",
+      "label": "Save $3\u2013$5/mo on Mobile SIM when active with Broadband",
+      "description": "Get a recurring $4/mo discount on your SpinTel mobile SIM service when maintained alongside an active SpinTel broadband connection.",
+      "howToGet": "Select the broadband bundle discount option when ordering your SpinTel SIM in the customer portal.",
+      "realityCheck": "Discount applies directly to the mobile service charge on your combined monthly bill.",
+      "cisUrl": "https://www.spintel.net.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-spintel-nbn-1000-22gb-5g-sim",
@@ -947,7 +1486,18 @@
     "totalSixMonth": 624.0,
     "annualSavings": 48.0,
     "discountMonthly": 4.0,
-    "url": "https://www.spintel.net.au/lp/home/nbn-wo"
+    "url": "https://www.spintel.net.au/lp/home/nbn-wo",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 4.0,
+      "shortLabel": "Save $4/mo on Mobile",
+      "label": "Save $3\u2013$5/mo on Mobile SIM when active with Broadband",
+      "description": "Get a recurring $4/mo discount on your SpinTel mobile SIM service when maintained alongside an active SpinTel broadband connection.",
+      "howToGet": "Select the broadband bundle discount option when ordering your SpinTel SIM in the customer portal.",
+      "realityCheck": "Discount applies directly to the mobile service charge on your combined monthly bill.",
+      "cisUrl": "https://www.spintel.net.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-25-electricity",
@@ -966,7 +1516,18 @@
     "totalSixMonth": 233.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Electricity",
+      "label": "Save $5/mo on Broadband with Dodo Electricity",
+      "description": "Save $5/mo off your Dodo broadband bill when bundling with an active Dodo Electricity service at the same address.",
+      "howToGet": "Sign up for Dodo Electricity using the same account and residential address as your Dodo broadband.",
+      "realityCheck": "Compare Dodo's underlying electricity kWh supply and usage rates against the default market offer (DMO/VDO).",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-25-dual-energy",
@@ -985,7 +1546,18 @@
     "totalSixMonth": 203.94,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Dual Fuel",
+      "label": "Save $10/mo on Broadband with Electricity & Gas",
+      "description": "Save $10/mo off your Dodo broadband bill when bundling with both Dodo Electricity and Natural Gas at the same address.",
+      "howToGet": "Sign up for both Dodo Electricity and Gas on the same account and address as your Dodo broadband.",
+      "realityCheck": "Compare dual-fuel utility rates against regional benchmarks to ensure net savings.",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-50-electricity",
@@ -1004,7 +1576,18 @@
     "totalSixMonth": 317.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Electricity",
+      "label": "Save $5/mo on Broadband with Dodo Electricity",
+      "description": "Save $5/mo off your Dodo broadband bill when bundling with an active Dodo Electricity service at the same address.",
+      "howToGet": "Sign up for Dodo Electricity using the same account and residential address as your Dodo broadband.",
+      "realityCheck": "Compare Dodo's underlying electricity kWh supply and usage rates against the default market offer (DMO/VDO).",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-50-dual-energy",
@@ -1023,7 +1606,18 @@
     "totalSixMonth": 287.94,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Dual Fuel",
+      "label": "Save $10/mo on Broadband with Electricity & Gas",
+      "description": "Save $10/mo off your Dodo broadband bill when bundling with both Dodo Electricity and Natural Gas at the same address.",
+      "howToGet": "Sign up for both Dodo Electricity and Gas on the same account and address as your Dodo broadband.",
+      "realityCheck": "Compare dual-fuel utility rates against regional benchmarks to ensure net savings.",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-100-electricity",
@@ -1042,7 +1636,18 @@
     "totalSixMonth": 347.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Electricity",
+      "label": "Save $5/mo on Broadband with Dodo Electricity",
+      "description": "Save $5/mo off your Dodo broadband bill when bundling with an active Dodo Electricity service at the same address.",
+      "howToGet": "Sign up for Dodo Electricity using the same account and residential address as your Dodo broadband.",
+      "realityCheck": "Compare Dodo's underlying electricity kWh supply and usage rates against the default market offer (DMO/VDO).",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-100-dual-energy",
@@ -1061,7 +1666,18 @@
     "totalSixMonth": 317.94,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Dual Fuel",
+      "label": "Save $10/mo on Broadband with Electricity & Gas",
+      "description": "Save $10/mo off your Dodo broadband bill when bundling with both Dodo Electricity and Natural Gas at the same address.",
+      "howToGet": "Sign up for both Dodo Electricity and Gas on the same account and address as your Dodo broadband.",
+      "realityCheck": "Compare dual-fuel utility rates against regional benchmarks to ensure net savings.",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-500-electricity",
@@ -1080,7 +1696,18 @@
     "totalSixMonth": 347.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Electricity",
+      "label": "Save $5/mo on Broadband with Dodo Electricity",
+      "description": "Save $5/mo off your Dodo broadband bill when bundling with an active Dodo Electricity service at the same address.",
+      "howToGet": "Sign up for Dodo Electricity using the same account and residential address as your Dodo broadband.",
+      "realityCheck": "Compare Dodo's underlying electricity kWh supply and usage rates against the default market offer (DMO/VDO).",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-500-dual-energy",
@@ -1099,7 +1726,18 @@
     "totalSixMonth": 317.94,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Dual Fuel",
+      "label": "Save $10/mo on Broadband with Electricity & Gas",
+      "description": "Save $10/mo off your Dodo broadband bill when bundling with both Dodo Electricity and Natural Gas at the same address.",
+      "howToGet": "Sign up for both Dodo Electricity and Gas on the same account and address as your Dodo broadband.",
+      "realityCheck": "Compare dual-fuel utility rates against regional benchmarks to ensure net savings.",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-750-electricity",
@@ -1118,7 +1756,18 @@
     "totalSixMonth": 389.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Electricity",
+      "label": "Save $5/mo on Broadband with Dodo Electricity",
+      "description": "Save $5/mo off your Dodo broadband bill when bundling with an active Dodo Electricity service at the same address.",
+      "howToGet": "Sign up for Dodo Electricity using the same account and residential address as your Dodo broadband.",
+      "realityCheck": "Compare Dodo's underlying electricity kWh supply and usage rates against the default market offer (DMO/VDO).",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-750-dual-energy",
@@ -1137,7 +1786,18 @@
     "totalSixMonth": 359.94,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Dual Fuel",
+      "label": "Save $10/mo on Broadband with Electricity & Gas",
+      "description": "Save $10/mo off your Dodo broadband bill when bundling with both Dodo Electricity and Natural Gas at the same address.",
+      "howToGet": "Sign up for both Dodo Electricity and Gas on the same account and address as your Dodo broadband.",
+      "realityCheck": "Compare dual-fuel utility rates against regional benchmarks to ensure net savings.",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-1000-electricity",
@@ -1156,7 +1816,18 @@
     "totalSixMonth": 449.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Electricity",
+      "label": "Save $5/mo on Broadband with Dodo Electricity",
+      "description": "Save $5/mo off your Dodo broadband bill when bundling with an active Dodo Electricity service at the same address.",
+      "howToGet": "Sign up for Dodo Electricity using the same account and residential address as your Dodo broadband.",
+      "realityCheck": "Compare Dodo's underlying electricity kWh supply and usage rates against the default market offer (DMO/VDO).",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-dodo-nbn-1000-dual-energy",
@@ -1175,7 +1846,18 @@
     "totalSixMonth": 419.94,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.dodo.com/nbn"
+    "url": "https://www.dodo.com/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "energy",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with Dual Fuel",
+      "label": "Save $10/mo on Broadband with Electricity & Gas",
+      "description": "Save $10/mo off your Dodo broadband bill when bundling with both Dodo Electricity and Natural Gas at the same address.",
+      "howToGet": "Sign up for both Dodo Electricity and Gas on the same account and address as your Dodo broadband.",
+      "realityCheck": "Compare dual-fuel utility rates against regional benchmarks to ensure net savings.",
+      "cisUrl": "https://www.dodo.com/regulatory/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-tangerine-nbn-25-cba-perk",
@@ -1194,7 +1876,18 @@
     "totalSixMonth": 306.18,
     "annualSavings": 262.44,
     "discountMonthly": 21.87,
-    "url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband"
+    "url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "bank_perk",
+      "discountMonthly": 21.87,
+      "shortLabel": "30% Off for CBA Customers",
+      "label": "30% off NBN for 12 months for CommBank Customers",
+      "description": "Commonwealth Bank (CBA) customers receive an exclusive 30% discount on Tangerine NBN plans for the first 12 months.",
+      "howToGet": "Sign up via the CommBank app Yello perks section or pay your Tangerine bill using an eligible CommBank card.",
+      "realityCheck": "After month 12, the discount ends and reverts to Tangerine's standard in-market rate; set a calendar reminder to review.",
+      "cisUrl": "https://www.tangerinetelecom.com.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-tangerine-nbn-50-cba-perk",
@@ -1213,7 +1906,18 @@
     "totalSixMonth": 377.58,
     "annualSavings": 323.64,
     "discountMonthly": 26.97,
-    "url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband"
+    "url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "bank_perk",
+      "discountMonthly": 26.97,
+      "shortLabel": "30% Off for CBA Customers",
+      "label": "30% off NBN for 12 months for CommBank Customers",
+      "description": "Commonwealth Bank (CBA) customers receive an exclusive 30% discount on Tangerine NBN plans for the first 12 months.",
+      "howToGet": "Sign up via the CommBank app Yello perks section or pay your Tangerine bill using an eligible CommBank card.",
+      "realityCheck": "After month 12, the discount ends and reverts to Tangerine's standard in-market rate; set a calendar reminder to review.",
+      "cisUrl": "https://www.tangerinetelecom.com.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-tangerine-nbn-500-cba-perk",
@@ -1232,7 +1936,18 @@
     "totalSixMonth": 390.18,
     "annualSavings": 334.44,
     "discountMonthly": 27.87,
-    "url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband"
+    "url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "bank_perk",
+      "discountMonthly": 27.87,
+      "shortLabel": "30% Off for CBA Customers",
+      "label": "30% off NBN for 12 months for CommBank Customers",
+      "description": "Commonwealth Bank (CBA) customers receive an exclusive 30% discount on Tangerine NBN plans for the first 12 months.",
+      "howToGet": "Sign up via the CommBank app Yello perks section or pay your Tangerine bill using an eligible CommBank card.",
+      "realityCheck": "After month 12, the discount ends and reverts to Tangerine's standard in-market rate; set a calendar reminder to review.",
+      "cisUrl": "https://www.tangerinetelecom.com.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-tangerine-nbn-1000-cba-perk",
@@ -1251,7 +1966,18 @@
     "totalSixMonth": 482.58,
     "annualSavings": 413.64,
     "discountMonthly": 34.47,
-    "url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband"
+    "url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "bank_perk",
+      "discountMonthly": 34.47,
+      "shortLabel": "30% Off for CBA Customers",
+      "label": "30% off NBN for 12 months for CommBank Customers",
+      "description": "Commonwealth Bank (CBA) customers receive an exclusive 30% discount on Tangerine NBN plans for the first 12 months.",
+      "howToGet": "Sign up via the CommBank app Yello perks section or pay your Tangerine bill using an eligible CommBank card.",
+      "realityCheck": "After month 12, the discount ends and reverts to Tangerine's standard in-market rate; set a calendar reminder to review.",
+      "cisUrl": "https://www.tangerinetelecom.com.au/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-amaysim-nbn-25-15gb-mobile-sim",
@@ -1270,7 +1996,18 @@
     "totalSixMonth": 300.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.amaysim.com.au/nbn"
+    "url": "https://www.amaysim.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with SIM",
+      "label": "Save $10/mo ongoing on NBN with active amaysim SIM",
+      "description": "Save $10/mo ongoing on your amaysim NBN plan after intro offers for as long as you maintain an active amaysim mobile SIM plan.",
+      "howToGet": "Sign up for amaysim NBN using the same amaysim account as your active mobile SIM service.",
+      "realityCheck": "Even amaysim's cheapest $15/28-day SIM qualifies you for the $10/mo NBN discount, yielding net $5/mo SIM cost.",
+      "cisUrl": "https://www.amaysim.com.au/terms-conditions"
+    }
   },
   {
     "id": "bundle-amaysim-nbn-50-15gb-mobile-sim",
@@ -1289,7 +2026,18 @@
     "totalSixMonth": 570.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.amaysim.com.au/nbn"
+    "url": "https://www.amaysim.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with SIM",
+      "label": "Save $10/mo ongoing on NBN with active amaysim SIM",
+      "description": "Save $10/mo ongoing on your amaysim NBN plan after intro offers for as long as you maintain an active amaysim mobile SIM plan.",
+      "howToGet": "Sign up for amaysim NBN using the same amaysim account as your active mobile SIM service.",
+      "realityCheck": "Even amaysim's cheapest $15/28-day SIM qualifies you for the $10/mo NBN discount, yielding net $5/mo SIM cost.",
+      "cisUrl": "https://www.amaysim.com.au/terms-conditions"
+    }
   },
   {
     "id": "bundle-amaysim-nbn-100-15gb-mobile-sim",
@@ -1308,7 +2056,18 @@
     "totalSixMonth": 600.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.amaysim.com.au/nbn"
+    "url": "https://www.amaysim.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with SIM",
+      "label": "Save $10/mo ongoing on NBN with active amaysim SIM",
+      "description": "Save $10/mo ongoing on your amaysim NBN plan after intro offers for as long as you maintain an active amaysim mobile SIM plan.",
+      "howToGet": "Sign up for amaysim NBN using the same amaysim account as your active mobile SIM service.",
+      "realityCheck": "Even amaysim's cheapest $15/28-day SIM qualifies you for the $10/mo NBN discount, yielding net $5/mo SIM cost.",
+      "cisUrl": "https://www.amaysim.com.au/terms-conditions"
+    }
   },
   {
     "id": "bundle-amaysim-nbn-500-15gb-mobile-sim",
@@ -1327,7 +2086,18 @@
     "totalSixMonth": 600.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.amaysim.com.au/nbn"
+    "url": "https://www.amaysim.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with SIM",
+      "label": "Save $10/mo ongoing on NBN with active amaysim SIM",
+      "description": "Save $10/mo ongoing on your amaysim NBN plan after intro offers for as long as you maintain an active amaysim mobile SIM plan.",
+      "howToGet": "Sign up for amaysim NBN using the same amaysim account as your active mobile SIM service.",
+      "realityCheck": "Even amaysim's cheapest $15/28-day SIM qualifies you for the $10/mo NBN discount, yielding net $5/mo SIM cost.",
+      "cisUrl": "https://www.amaysim.com.au/terms-conditions"
+    }
   },
   {
     "id": "bundle-amaysim-nbn-750-15gb-mobile-sim",
@@ -1346,7 +2116,18 @@
     "totalSixMonth": 480.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.amaysim.com.au/nbn"
+    "url": "https://www.amaysim.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with SIM",
+      "label": "Save $10/mo ongoing on NBN with active amaysim SIM",
+      "description": "Save $10/mo ongoing on your amaysim NBN plan after intro offers for as long as you maintain an active amaysim mobile SIM plan.",
+      "howToGet": "Sign up for amaysim NBN using the same amaysim account as your active mobile SIM service.",
+      "realityCheck": "Even amaysim's cheapest $15/28-day SIM qualifies you for the $10/mo NBN discount, yielding net $5/mo SIM cost.",
+      "cisUrl": "https://www.amaysim.com.au/terms-conditions"
+    }
   },
   {
     "id": "bundle-amaysim-nbn-1000-15gb-mobile-sim",
@@ -1365,7 +2146,18 @@
     "totalSixMonth": 720.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.amaysim.com.au/nbn"
+    "url": "https://www.amaysim.com.au/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with SIM",
+      "label": "Save $10/mo ongoing on NBN with active amaysim SIM",
+      "description": "Save $10/mo ongoing on your amaysim NBN plan after intro offers for as long as you maintain an active amaysim mobile SIM plan.",
+      "howToGet": "Sign up for amaysim NBN using the same amaysim account as your active mobile SIM service.",
+      "realityCheck": "Even amaysim's cheapest $15/28-day SIM qualifies you for the $10/mo NBN discount, yielding net $5/mo SIM cost.",
+      "cisUrl": "https://www.amaysim.com.au/terms-conditions"
+    }
   },
   {
     "id": "bundle-more-telecom-nbn-25-cba-perk",
@@ -1384,7 +2176,18 @@
     "totalSixMonth": 330.0,
     "annualSavings": 300.0,
     "discountMonthly": 25.0,
-    "url": "https://www.more.com.au/personal/nbn-plans"
+    "url": "https://www.more.com.au/personal/nbn-plans",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "bank_perk",
+      "discountMonthly": 25.0,
+      "shortLabel": "Save $25/mo for CBA Customers",
+      "label": "Save $25/mo off NBN for CommBank Customers",
+      "description": "CommBank customers enjoy an exclusive $25/mo discount off More Telecom NBN plans for the first 36 months, reverting to $10/mo ongoing.",
+      "howToGet": "Link your CommBank credit or debit card as your recurring payment method during More Telecom NBN sign-up.",
+      "realityCheck": "Requires paying with a CommBank card; reverting to non-CommBank payment forfeits the $25/mo discount.",
+      "cisUrl": "https://www.more.com.au/about/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-more-telecom-nbn-50-cba-perk",
@@ -1403,7 +2206,18 @@
     "totalSixMonth": 450.0,
     "annualSavings": 300.0,
     "discountMonthly": 25.0,
-    "url": "https://www.more.com.au/personal/nbn-plans"
+    "url": "https://www.more.com.au/personal/nbn-plans",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "bank_perk",
+      "discountMonthly": 25.0,
+      "shortLabel": "Save $25/mo for CBA Customers",
+      "label": "Save $25/mo off NBN for CommBank Customers",
+      "description": "CommBank customers enjoy an exclusive $25/mo discount off More Telecom NBN plans for the first 36 months, reverting to $10/mo ongoing.",
+      "howToGet": "Link your CommBank credit or debit card as your recurring payment method during More Telecom NBN sign-up.",
+      "realityCheck": "Requires paying with a CommBank card; reverting to non-CommBank payment forfeits the $25/mo discount.",
+      "cisUrl": "https://www.more.com.au/about/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-more-telecom-nbn-500-cba-perk",
@@ -1422,7 +2236,18 @@
     "totalSixMonth": 480.0,
     "annualSavings": 300.0,
     "discountMonthly": 25.0,
-    "url": "https://www.more.com.au/personal/nbn-plans"
+    "url": "https://www.more.com.au/personal/nbn-plans",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "bank_perk",
+      "discountMonthly": 25.0,
+      "shortLabel": "Save $25/mo for CBA Customers",
+      "label": "Save $25/mo off NBN for CommBank Customers",
+      "description": "CommBank customers enjoy an exclusive $25/mo discount off More Telecom NBN plans for the first 36 months, reverting to $10/mo ongoing.",
+      "howToGet": "Link your CommBank credit or debit card as your recurring payment method during More Telecom NBN sign-up.",
+      "realityCheck": "Requires paying with a CommBank card; reverting to non-CommBank payment forfeits the $25/mo discount.",
+      "cisUrl": "https://www.more.com.au/about/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-more-telecom-nbn-1000-cba-perk",
@@ -1441,7 +2266,18 @@
     "totalSixMonth": 600.0,
     "annualSavings": 300.0,
     "discountMonthly": 25.0,
-    "url": "https://www.more.com.au/personal/nbn-plans"
+    "url": "https://www.more.com.au/personal/nbn-plans",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "bank_perk",
+      "discountMonthly": 25.0,
+      "shortLabel": "Save $25/mo for CBA Customers",
+      "label": "Save $25/mo off NBN for CommBank Customers",
+      "description": "CommBank customers enjoy an exclusive $25/mo discount off More Telecom NBN plans for the first 36 months, reverting to $10/mo ongoing.",
+      "howToGet": "Link your CommBank credit or debit card as your recurring payment method during More Telecom NBN sign-up.",
+      "realityCheck": "Requires paying with a CommBank card; reverting to non-CommBank payment forfeits the $25/mo discount.",
+      "cisUrl": "https://www.more.com.au/about/critical-information-summaries"
+    }
   },
   {
     "id": "bundle-iinet-nbn-500-50gb-mobile-sim",
@@ -1460,7 +2296,18 @@
     "totalSixMonth": 569.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.iinet.net.au/internet-product/broadband/nbn/plans/fibre"
+    "url": "https://www.iinet.net.au/internet-product/broadband/nbn/plans/fibre",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo on Mobile when linked with iiNet Internet",
+      "description": "Receive a $5/mo bundling discount on eligible iiNet mobile SIM plans when linked to your active iiNet broadband account.",
+      "howToGet": "Link your iiNet mobile plan to your internet account via the iiNet Toolbox dashboard.",
+      "realityCheck": "Discount takes effect on the next billing cycle following successful account linking.",
+      "cisUrl": "https://www.iinet.net.au/about/legal/cis/"
+    }
   },
   {
     "id": "bundle-iinet-nbn-25-50gb-mobile-sim",
@@ -1479,7 +2326,18 @@
     "totalSixMonth": 479.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.iinet.net.au/internet-product/broadband/nbn/plans/fibre"
+    "url": "https://www.iinet.net.au/internet-product/broadband/nbn/plans/fibre",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo on Mobile when linked with iiNet Internet",
+      "description": "Receive a $5/mo bundling discount on eligible iiNet mobile SIM plans when linked to your active iiNet broadband account.",
+      "howToGet": "Link your iiNet mobile plan to your internet account via the iiNet Toolbox dashboard.",
+      "realityCheck": "Discount takes effect on the next billing cycle following successful account linking.",
+      "cisUrl": "https://www.iinet.net.au/about/legal/cis/"
+    }
   },
   {
     "id": "bundle-iinet-nbn-50-50gb-mobile-sim",
@@ -1498,7 +2356,18 @@
     "totalSixMonth": 539.94,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.iinet.net.au/internet-product/broadband/nbn/plans/fibre"
+    "url": "https://www.iinet.net.au/internet-product/broadband/nbn/plans/fibre",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo on Mobile when linked with iiNet Internet",
+      "description": "Receive a $5/mo bundling discount on eligible iiNet mobile SIM plans when linked to your active iiNet broadband account.",
+      "howToGet": "Link your iiNet mobile plan to your internet account via the iiNet Toolbox dashboard.",
+      "realityCheck": "Discount takes effect on the next billing cycle following successful account linking.",
+      "cisUrl": "https://www.iinet.net.au/about/legal/cis/"
+    }
   },
   {
     "id": "bundle-exetel-nbn-500-1sim",
@@ -1517,7 +2386,18 @@
     "totalSixMonth": 570.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.exetel.com.au/broadband/nbn"
+    "url": "https://www.exetel.com.au/broadband/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with 1 SIM",
+      "label": "Save $5/mo with Exetel Slash My Bill",
+      "description": "Slash My Bill offers $5/mo off broadband with 1 mobile SIM plan active on the same account.",
+      "howToGet": "Add an eligible Exetel mobile SIM service to your primary broadband account.",
+      "realityCheck": "Exetel uses Telstra wholesale network; all services must share the identical residential account.",
+      "cisUrl": "https://www.exetel.com.au/terms"
+    }
   },
   {
     "id": "bundle-exetel-nbn-500-2sims",
@@ -1536,7 +2416,18 @@
     "totalSixMonth": 675.0,
     "annualSavings": 90.0,
     "discountMonthly": 7.5,
-    "url": "https://www.exetel.com.au/broadband/nbn"
+    "url": "https://www.exetel.com.au/broadband/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 7.5,
+      "shortLabel": "Save $7.50/mo with 2 SIMs",
+      "label": "Save $7.50/mo with 2x Exetel Mobile SIMs",
+      "description": "Slash My Bill offers $7.50/mo off broadband with 2 mobile SIM plans active on the same account.",
+      "howToGet": "Add 2 eligible Exetel mobile SIM services to your primary broadband account.",
+      "realityCheck": "Exetel uses Telstra wholesale network; all services must share the identical residential account.",
+      "cisUrl": "https://www.exetel.com.au/terms"
+    }
   },
   {
     "id": "bundle-exetel-nbn-500-3sims",
@@ -1555,7 +2446,18 @@
     "totalSixMonth": 780.0,
     "annualSavings": 120.0,
     "discountMonthly": 10.0,
-    "url": "https://www.exetel.com.au/broadband/nbn"
+    "url": "https://www.exetel.com.au/broadband/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 10.0,
+      "shortLabel": "Save $10/mo with 3 SIMs",
+      "label": "Save $10/mo with 3+ Exetel Mobile SIMs",
+      "description": "Slash My Bill offers $10/mo off broadband with 3 or more mobile SIM plans active on the same account.",
+      "howToGet": "Add 3+ eligible Exetel mobile SIM services to your primary broadband account.",
+      "realityCheck": "Exetel uses Telstra wholesale network; all services must share the identical residential account.",
+      "cisUrl": "https://www.exetel.com.au/terms"
+    }
   },
   {
     "id": "bundle-optus-nbn-25-50gb-mobile-sim",
@@ -1574,7 +2476,18 @@
     "totalSixMonth": 678.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.optus.com.au/internet/nbn"
+    "url": "https://www.optus.com.au/internet/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo Multi-Service",
+      "label": "Save $5/mo with Optus Multi-Service Discount",
+      "description": "Save $5/mo off your account total when combining an eligible Optus home broadband plan with an Optus postpaid mobile plan.",
+      "howToGet": "Ensure your Optus broadband and postpaid mobile services share the same My Account login and single monthly bill.",
+      "realityCheck": "Both services must remain in active postpaid standing under the same account holder.",
+      "cisUrl": "https://www.optus.com.au/about/legal/standard-forms-agreement"
+    }
   },
   {
     "id": "bundle-optus-nbn-50-50gb-mobile-sim",
@@ -1593,7 +2506,18 @@
     "totalSixMonth": 762.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.optus.com.au/internet/nbn"
+    "url": "https://www.optus.com.au/internet/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo Multi-Service",
+      "label": "Save $5/mo with Optus Multi-Service Discount",
+      "description": "Save $5/mo off your account total when combining an eligible Optus home broadband plan with an Optus postpaid mobile plan.",
+      "howToGet": "Ensure your Optus broadband and postpaid mobile services share the same My Account login and single monthly bill.",
+      "realityCheck": "Both services must remain in active postpaid standing under the same account holder.",
+      "cisUrl": "https://www.optus.com.au/about/legal/standard-forms-agreement"
+    }
   },
   {
     "id": "bundle-optus-nbn-500-50gb-mobile-sim",
@@ -1612,7 +2536,18 @@
     "totalSixMonth": 654.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.optus.com.au/internet/nbn"
+    "url": "https://www.optus.com.au/internet/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo Multi-Service",
+      "label": "Save $5/mo with Optus Multi-Service Discount",
+      "description": "Save $5/mo off your account total when combining an eligible Optus home broadband plan with an Optus postpaid mobile plan.",
+      "howToGet": "Ensure your Optus broadband and postpaid mobile services share the same My Account login and single monthly bill.",
+      "realityCheck": "Both services must remain in active postpaid standing under the same account holder.",
+      "cisUrl": "https://www.optus.com.au/about/legal/standard-forms-agreement"
+    }
   },
   {
     "id": "bundle-optus-nbn-1000-50gb-mobile-sim",
@@ -1631,7 +2566,18 @@
     "totalSixMonth": 954.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://www.optus.com.au/internet/nbn"
+    "url": "https://www.optus.com.au/internet/nbn",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo Multi-Service",
+      "label": "Save $5/mo with Optus Multi-Service Discount",
+      "description": "Save $5/mo off your account total when combining an eligible Optus home broadband plan with an Optus postpaid mobile plan.",
+      "howToGet": "Ensure your Optus broadband and postpaid mobile services share the same My Account login and single monthly bill.",
+      "realityCheck": "Both services must remain in active postpaid standing under the same account holder.",
+      "cisUrl": "https://www.optus.com.au/about/legal/standard-forms-agreement"
+    }
   },
   {
     "id": "bundle-flip-nbn-25-20gb-mobile-sim",
@@ -1650,7 +2596,18 @@
     "totalSixMonth": 348.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://flipconnect.com.au/cheap-nbn-plans"
+    "url": "https://flipconnect.com.au/cheap-nbn-plans",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo on Mobile SIM bundled with Flip NBN",
+      "description": "Receive a $5/mo discount on your companion Flip mobile plan when maintained with an active Flip NBN service.",
+      "howToGet": "Order a companion Flip mobile SIM plan through the Flip customer portal under your existing NBN account.",
+      "realityCheck": "Limited to eligible companion SIM tiers; check data allowance needs.",
+      "cisUrl": "https://flipconnect.com.au/terms-and-conditions"
+    }
   },
   {
     "id": "bundle-flip-nbn-50-20gb-mobile-sim",
@@ -1669,7 +2626,18 @@
     "totalSixMonth": 468.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://flipconnect.com.au/cheap-nbn-plans"
+    "url": "https://flipconnect.com.au/cheap-nbn-plans",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo on Mobile SIM bundled with Flip NBN",
+      "description": "Receive a $5/mo discount on your companion Flip mobile plan when maintained with an active Flip NBN service.",
+      "howToGet": "Order a companion Flip mobile SIM plan through the Flip customer portal under your existing NBN account.",
+      "realityCheck": "Limited to eligible companion SIM tiers; check data allowance needs.",
+      "cisUrl": "https://flipconnect.com.au/terms-and-conditions"
+    }
   },
   {
     "id": "bundle-flip-nbn-500-20gb-mobile-sim",
@@ -1688,6 +2656,17 @@
     "totalSixMonth": 474.0,
     "annualSavings": 60.0,
     "discountMonthly": 5.0,
-    "url": "https://flipconnect.com.au/cheap-nbn-plans"
+    "url": "https://flipconnect.com.au/cheap-nbn-plans",
+    "bundleRule": {
+      "hasBundle": true,
+      "type": "mobile",
+      "discountMonthly": 5.0,
+      "shortLabel": "Save $5/mo with Mobile",
+      "label": "Save $5/mo on Mobile SIM bundled with Flip NBN",
+      "description": "Receive a $5/mo discount on your companion Flip mobile plan when maintained with an active Flip NBN service.",
+      "howToGet": "Order a companion Flip mobile SIM plan through the Flip customer portal under your existing NBN account.",
+      "realityCheck": "Limited to eligible companion SIM tiers; check data allowance needs.",
+      "cisUrl": "https://flipconnect.com.au/terms-and-conditions"
+    }
   }
 ]

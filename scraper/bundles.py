@@ -2,13 +2,25 @@
 
 Models bundle discounts across Australian telcos when pairing NBN broadband
 with Mobile SIMs, Energy plans, or Banking perks. Outputs structured bundle
-records conforming to the Bundles front-end schema.
+records conforming to the exact jrsdigital-site front-end schema.
 """
 from __future__ import annotations
 
 import re
 from typing import Literal
 from pydantic import BaseModel, Field
+
+
+class BundleRuleInfo(BaseModel):
+    hasBundle: bool = True
+    type: Literal["mobile", "energy", "bank_perk"]
+    discountMonthly: float = Field(gt=0)
+    shortLabel: str
+    label: str
+    description: str
+    howToGet: str
+    realityCheck: str
+    cisUrl: str
 
 
 class BundleDeal(BaseModel):
@@ -29,6 +41,7 @@ class BundleDeal(BaseModel):
     annualSavings: float = Field(ge=0)
     discountMonthly: float = Field(gt=0)
     url: str
+    bundleRule: BundleRuleInfo
 
 
 def _slugify(text: str) -> str:
@@ -103,6 +116,17 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
     abb_sim = next((m for m in abb_mob if "20GB" in m.get("tier", "")), None)
     sim_reg = abb_sim.get("regularPrice", 30.0) if abb_sim else 30.0
     sim_name = "20GB 5G SIM"
+    abb_rule = BundleRuleInfo(
+        hasBundle=True,
+        type="mobile",
+        discountMonthly=5.0,
+        shortLabel="Save $5/mo with Mobile",
+        label="Save $5/mo bundled with Aussie Broadband SIM",
+        description="Save $5/mo off broadband when maintaining an active eligible mobile SIM on the same account.",
+        howToGet="Add an eligible mobile SIM to your broadband account at checkout.",
+        realityCheck="Verify that Aussie BB's $15–$25/mo mobile SIM matches your data needs vs using a standalone budget MVNO.",
+        cisUrl="https://www.aussiebroadband.com.au/legal/",
+    )
 
     for nbn in abb_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
@@ -133,20 +157,69 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=5.0,
                 url=nbn.get("url", "https://www.aussiebroadband.com.au/nbn-plans/"),
+                bundleRule=abb_rule,
             )
         )
 
     # 2. Superloop: $5/mo with 1 SIM, $10/mo with 2 SIMs, $15/mo with 3+ SIMs
     sloop_nbn = nbn_by_provider.get("Superloop", [])
     sim_options = [
-        ("1x 25GB Mobile SIM", 20.0, 5.0, "1sim"),
-        ("2x 25GB Mobile SIMs", 40.0, 10.0, "2sims"),
-        ("3x 25GB Mobile SIMs", 60.0, 15.0, "3sims"),
+        (
+            "1x 25GB Mobile SIM",
+            20.0,
+            5.0,
+            "1sim",
+            BundleRuleInfo(
+                hasBundle=True,
+                type="mobile",
+                discountMonthly=5.0,
+                shortLabel="Save $5/mo with 1 SIM",
+                label="Save $5/mo with Superloop Mobile SIM",
+                description="Get $5/mo off your broadband bill when maintaining 1 active Superloop mobile SIM plan on the same account.",
+                howToGet="Add a Superloop SIM plan to your account to automatically trigger monthly bill credits.",
+                realityCheck="Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+                cisUrl="https://www.superloop.com/legal/critical-information-summaries",
+            ),
+        ),
+        (
+            "2x 25GB Mobile SIMs",
+            40.0,
+            10.0,
+            "2sims",
+            BundleRuleInfo(
+                hasBundle=True,
+                type="mobile",
+                discountMonthly=10.0,
+                shortLabel="Save $10/mo with 2 SIMs",
+                label="Save $10/mo with 2x Superloop Mobile SIMs",
+                description="Get $10/mo off your broadband bill when maintaining 2 active Superloop mobile SIM plans on the same account.",
+                howToGet="Add 2 Superloop SIM plans to your account to automatically trigger tier-2 monthly bill credits.",
+                realityCheck="Superloop mobile operates on the Telstra wholesale network; check your local coverage.",
+                cisUrl="https://www.superloop.com/legal/critical-information-summaries",
+            ),
+        ),
+        (
+            "3x 25GB Mobile SIMs",
+            60.0,
+            15.0,
+            "3sims",
+            BundleRuleInfo(
+                hasBundle=True,
+                type="mobile",
+                discountMonthly=15.0,
+                shortLabel="Save $15/mo with 3 SIMs",
+                label="Save $15/mo with 3+ Superloop Mobile SIMs",
+                description="Get $15/mo off your broadband bill when maintaining 3 or more active Superloop mobile SIM plans on the same account.",
+                howToGet="Add 3+ Superloop SIM plans to your account to automatically trigger tier-3 monthly bill credits.",
+                realityCheck="Compare total family mobile spend against standalone multi-SIM discounts.",
+                cisUrl="https://www.superloop.com/legal/critical-information-summaries",
+            ),
+        ),
     ]
     for nbn in sloop_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
         speed_label = _broadband_speed(nbn.get("tier", "50/20"))
-        for s_name, s_price, s_discount, s_slug in sim_options:
+        for s_name, s_price, s_discount, s_slug, s_rule in sim_options:
             reg_p, promo_p, promo_m, t1y, t6m, sav = _calc_totals(
                 bb_reg=nbn.get("regularPrice", 79.0),
                 bb_promo=nbn.get("promoPrice"),
@@ -173,6 +246,7 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                     annualSavings=sav,
                     discountMonthly=s_discount,
                     url=nbn.get("url", "https://www.superloop.com/internet/nbn/"),
+                    bundleRule=s_rule,
                 )
             )
 
@@ -182,6 +256,17 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
     tpg_sim = next((m for m in tpg_mob if "25GB" in m.get("tier", "")), None)
     tpg_sim_reg = tpg_sim.get("regularPrice", 25.0) if tpg_sim else 25.0
     tpg_sim_name = "25GB Mobile SIM"
+    tpg_rule = BundleRuleInfo(
+        hasBundle=True,
+        type="mobile",
+        discountMonthly=5.0,
+        shortLabel="Save $5/mo with Mobile",
+        label="Save $5/mo bundled with TPG Mobile SIM",
+        description="Save $5/mo when bundling an eligible TPG NBN plan with a TPG Mobile plan on the same billing account.",
+        howToGet="Link your TPG Mobile service with your TPG NBN account in My Account.",
+        realityCheck="TPG mobile operates on the Vodafone 4G/5G mobile network; ensure coverage suits your daily locations.",
+        cisUrl="https://www.tpg.com.au/terms-and-conditions",
+    )
 
     for nbn in tpg_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
@@ -212,6 +297,7 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=5.0,
                 url=nbn.get("url", "https://www.tpg.com.au/nbn"),
+                bundleRule=tpg_rule,
             )
         )
 
@@ -221,6 +307,17 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
     voda_sim = next((m for m in voda_mob if "65GB" in m.get("tier", "")), None)
     voda_sim_reg = voda_sim.get("regularPrice", 45.0) if voda_sim else 45.0
     voda_sim_name = "65GB Postpaid SIM"
+    voda_rule = BundleRuleInfo(
+        hasBundle=True,
+        type="mobile",
+        discountMonthly=5.0,
+        shortLabel="Bundle & Save $5/mo",
+        label="Bundle & Save $5/mo on NBN with Postpaid Mobile",
+        description="Save $5/mo off your NBN plan when combined under the same account with an active Vodafone postpaid mobile service.",
+        howToGet="Link your NBN service to your existing Vodafone postpaid mobile billing account.",
+        realityCheck="Vodafone Bundle & Save requires active postpaid mobile; prepaid services are excluded.",
+        cisUrl="https://www.vodafone.com.au/critical-information-summaries",
+    )
 
     for nbn in voda_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
@@ -251,6 +348,7 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=5.0,
                 url=nbn.get("url", "https://www.vodafone.com.au/home-internet/nbn"),
+                bundleRule=voda_rule,
             )
         )
 
@@ -260,6 +358,17 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
     mate_sim = next((m for m in mate_mob if "15GB" in m.get("tier", "")), None)
     mate_sim_reg = mate_sim.get("regularPrice", 30.0) if mate_sim else 30.0
     mate_sim_name = "Good Mates 15GB SIM"
+    mate_rule = BundleRuleInfo(
+        hasBundle=True,
+        type="mobile",
+        discountMonthly=10.0,
+        shortLabel="Save $10/mo with Mobile",
+        label="Save $10/mo ongoing with MATE Mobile SIM",
+        description="Enjoy an ongoing $10/mo discount on your broadband service as long as you have an active MATE mobile service on the same account.",
+        howToGet="Add any MATE mobile SIM to your account; the $10/mo discount applies automatically to your broadband bill.",
+        realityCheck="MATE mobile runs on Telstra wholesale with uncapped speeds; verify if 15GB–60GB allowances match your monthly usage.",
+        cisUrl="https://www.letsbemates.com.au/terms/",
+    )
 
     for nbn in mate_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
@@ -290,6 +399,7 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=10.0,
                 url=nbn.get("url", "https://www.letsbemates.com.au/nbn/"),
+                bundleRule=mate_rule,
             )
         )
 
@@ -298,6 +408,17 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
     spintel_sim_name = "22GB 5G SIM"
     spintel_sim_reg = 14.0
     spintel_discount = 4.0  # $4/mo discount in the $3-$5 range
+    spintel_rule = BundleRuleInfo(
+        hasBundle=True,
+        type="mobile",
+        discountMonthly=spintel_discount,
+        shortLabel="Save $4/mo on Mobile",
+        label="Save $3–$5/mo on Mobile SIM when active with Broadband",
+        description="Get a recurring $4/mo discount on your SpinTel mobile SIM service when maintained alongside an active SpinTel broadband connection.",
+        howToGet="Select the broadband bundle discount option when ordering your SpinTel SIM in the customer portal.",
+        realityCheck="Discount applies directly to the mobile service charge on your combined monthly bill.",
+        cisUrl="https://www.spintel.net.au/critical-information-summaries",
+    )
 
     for nbn in spintel_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
@@ -328,19 +449,50 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=spintel_discount,
                 url=nbn.get("url", "https://www.spintel.net.au/lp/home/nbn-wo"),
+                bundleRule=spintel_rule,
             )
         )
 
     # 7. Dodo: $5/mo broadband discount with 1 energy service, or $10/mo when bundling Electricity + Gas
     dodo_nbn = nbn_by_provider.get("Dodo", [])
     dodo_energy_options = [
-        ("Dodo Electricity", 5.0, "electricity"),
-        ("Dodo Electricity & Gas", 10.0, "dual-energy"),
+        (
+            "Dodo Electricity",
+            5.0,
+            "electricity",
+            BundleRuleInfo(
+                hasBundle=True,
+                type="energy",
+                discountMonthly=5.0,
+                shortLabel="Save $5/mo with Electricity",
+                label="Save $5/mo on Broadband with Dodo Electricity",
+                description="Save $5/mo off your Dodo broadband bill when bundling with an active Dodo Electricity service at the same address.",
+                howToGet="Sign up for Dodo Electricity using the same account and residential address as your Dodo broadband.",
+                realityCheck="Compare Dodo's underlying electricity kWh supply and usage rates against the default market offer (DMO/VDO).",
+                cisUrl="https://www.dodo.com/regulatory/critical-information-summaries",
+            ),
+        ),
+        (
+            "Dodo Electricity & Gas",
+            10.0,
+            "dual-energy",
+            BundleRuleInfo(
+                hasBundle=True,
+                type="energy",
+                discountMonthly=10.0,
+                shortLabel="Save $10/mo with Dual Fuel",
+                label="Save $10/mo on Broadband with Electricity & Gas",
+                description="Save $10/mo off your Dodo broadband bill when bundling with both Dodo Electricity and Natural Gas at the same address.",
+                howToGet="Sign up for both Dodo Electricity and Gas on the same account and address as your Dodo broadband.",
+                realityCheck="Compare dual-fuel utility rates against regional benchmarks to ensure net savings.",
+                cisUrl="https://www.dodo.com/regulatory/critical-information-summaries",
+            ),
+        ),
     ]
     for nbn in dodo_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
         speed_label = _broadband_speed(nbn.get("tier", "50/20"))
-        for e_name, e_discount, e_slug in dodo_energy_options:
+        for e_name, e_discount, e_slug, e_rule in dodo_energy_options:
             reg_p, promo_p, promo_m, t1y, t6m, sav = _calc_totals(
                 bb_reg=nbn.get("regularPrice", 75.0),
                 bb_promo=nbn.get("promoPrice"),
@@ -367,6 +519,7 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                     annualSavings=sav,
                     discountMonthly=e_discount,
                     url=nbn.get("url", "https://www.dodo.com/nbn"),
+                    bundleRule=e_rule,
                 )
             )
 
@@ -385,6 +538,17 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
             sec_reg=0.0,
             discount_monthly=cba_discount_monthly,
             bundle_discount_months=12,
+        )
+        tang_rule = BundleRuleInfo(
+            hasBundle=True,
+            type="bank_perk",
+            discountMonthly=cba_discount_monthly,
+            shortLabel="30% Off for CBA Customers",
+            label="30% off NBN for 12 months for CommBank Customers",
+            description="Commonwealth Bank (CBA) customers receive an exclusive 30% discount on Tangerine NBN plans for the first 12 months.",
+            howToGet="Sign up via the CommBank app Yello perks section or pay your Tangerine bill using an eligible CommBank card.",
+            realityCheck="After month 12, the discount ends and reverts to Tangerine's standard in-market rate; set a calendar reminder to review.",
+            cisUrl="https://www.tangerinetelecom.com.au/critical-information-summaries",
         )
         b_id = f"bundle-tangerine-{_slugify(tier_label)}-cba-perk"
         bundles.append(
@@ -405,6 +569,7 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=cba_discount_monthly,
                 url=nbn.get("url", "https://www.tangerinetelecom.com.au/nbn/nbn-broadband"),
+                bundleRule=tang_rule,
             )
         )
 
@@ -414,6 +579,17 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
     amay_sim = next((m for m in amay_mob if "15GB" in m.get("tier", "")), None)
     amay_sim_reg = amay_sim.get("regularPrice", 15.0) if amay_sim else 15.0
     amay_sim_name = "15GB Mobile SIM"
+    amay_rule = BundleRuleInfo(
+        hasBundle=True,
+        type="mobile",
+        discountMonthly=10.0,
+        shortLabel="Save $10/mo with SIM",
+        label="Save $10/mo ongoing on NBN with active amaysim SIM",
+        description="Save $10/mo ongoing on your amaysim NBN plan after intro offers for as long as you maintain an active amaysim mobile SIM plan.",
+        howToGet="Sign up for amaysim NBN using the same amaysim account as your active mobile SIM service.",
+        realityCheck="Even amaysim's cheapest $15/28-day SIM qualifies you for the $10/mo NBN discount, yielding net $5/mo SIM cost.",
+        cisUrl="https://www.amaysim.com.au/terms-conditions",
+    )
 
     for nbn in amay_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
@@ -444,12 +620,24 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=10.0,
                 url=nbn.get("url", "https://www.amaysim.com.au/nbn"),
+                bundleRule=amay_rule,
             )
         )
 
     # 10. More Telecom: $25/mo off for Commonwealth Bank (CBA) customers
     more_nbn = nbn_by_provider.get("More Telecom", [])
     more_cba_perk = "Commonwealth Bank Customer Perk"
+    more_rule = BundleRuleInfo(
+        hasBundle=True,
+        type="bank_perk",
+        discountMonthly=25.0,
+        shortLabel="Save $25/mo for CBA Customers",
+        label="Save $25/mo off NBN for CommBank Customers",
+        description="CommBank customers enjoy an exclusive $25/mo discount off More Telecom NBN plans for the first 36 months, reverting to $10/mo ongoing.",
+        howToGet="Link your CommBank credit or debit card as your recurring payment method during More Telecom NBN sign-up.",
+        realityCheck="Requires paying with a CommBank card; reverting to non-CommBank payment forfeits the $25/mo discount.",
+        cisUrl="https://www.more.com.au/about/critical-information-summaries",
+    )
     for nbn in more_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
         speed_label = _broadband_speed(nbn.get("tier", "50/20"))
@@ -482,6 +670,7 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=more_discount,
                 url=nbn.get("url", "https://www.more.com.au/personal/nbn-plans"),
+                bundleRule=more_rule,
             )
         )
 
@@ -489,6 +678,17 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
     iinet_nbn = nbn_by_provider.get("iiNet", [])
     iinet_sim_name = "50GB Mobile SIM"
     iinet_sim_reg = 25.0
+    iinet_rule = BundleRuleInfo(
+        hasBundle=True,
+        type="mobile",
+        discountMonthly=5.0,
+        shortLabel="Save $5/mo with Mobile",
+        label="Save $5/mo on Mobile when linked with iiNet Internet",
+        description="Receive a $5/mo bundling discount on eligible iiNet mobile SIM plans when linked to your active iiNet broadband account.",
+        howToGet="Link your iiNet mobile plan to your internet account via the iiNet Toolbox dashboard.",
+        realityCheck="Discount takes effect on the next billing cycle following successful account linking.",
+        cisUrl="https://www.iinet.net.au/about/legal/cis/",
+    )
     for nbn in iinet_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
         speed_label = _broadband_speed(nbn.get("tier", "50/20"))
@@ -518,20 +718,69 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=5.0,
                 url=nbn.get("url", "https://www.iinet.net.au/internet/broadband/nbn"),
+                bundleRule=iinet_rule,
             )
         )
 
     # 12. Exetel: Slash My Bill $5/mo (1 service), $7.50/mo (2 services), $10/mo (3 services)
     exetel_nbn = nbn_by_provider.get("Exetel", [])
     exetel_options = [
-        ("1x Exetel Mobile SIM", 20.0, 5.0, "1sim"),
-        ("2x Exetel Mobile SIMs", 40.0, 7.50, "2sims"),
-        ("3x Exetel Mobile SIMs", 60.0, 10.0, "3sims"),
+        (
+            "1x Exetel Mobile SIM",
+            20.0,
+            5.0,
+            "1sim",
+            BundleRuleInfo(
+                hasBundle=True,
+                type="mobile",
+                discountMonthly=5.0,
+                shortLabel="Save $5/mo with 1 SIM",
+                label="Save $5/mo with Exetel Slash My Bill",
+                description="Slash My Bill offers $5/mo off broadband with 1 mobile SIM plan active on the same account.",
+                howToGet="Add an eligible Exetel mobile SIM service to your primary broadband account.",
+                realityCheck="Exetel uses Telstra wholesale network; all services must share the identical residential account.",
+                cisUrl="https://www.exetel.com.au/terms",
+            ),
+        ),
+        (
+            "2x Exetel Mobile SIMs",
+            40.0,
+            7.50,
+            "2sims",
+            BundleRuleInfo(
+                hasBundle=True,
+                type="mobile",
+                discountMonthly=7.50,
+                shortLabel="Save $7.50/mo with 2 SIMs",
+                label="Save $7.50/mo with 2x Exetel Mobile SIMs",
+                description="Slash My Bill offers $7.50/mo off broadband with 2 mobile SIM plans active on the same account.",
+                howToGet="Add 2 eligible Exetel mobile SIM services to your primary broadband account.",
+                realityCheck="Exetel uses Telstra wholesale network; all services must share the identical residential account.",
+                cisUrl="https://www.exetel.com.au/terms",
+            ),
+        ),
+        (
+            "3x Exetel Mobile SIMs",
+            60.0,
+            10.0,
+            "3sims",
+            BundleRuleInfo(
+                hasBundle=True,
+                type="mobile",
+                discountMonthly=10.0,
+                shortLabel="Save $10/mo with 3 SIMs",
+                label="Save $10/mo with 3+ Exetel Mobile SIMs",
+                description="Slash My Bill offers $10/mo off broadband with 3 or more mobile SIM plans active on the same account.",
+                howToGet="Add 3+ eligible Exetel mobile SIM services to your primary broadband account.",
+                realityCheck="Exetel uses Telstra wholesale network; all services must share the identical residential account.",
+                cisUrl="https://www.exetel.com.au/terms",
+            ),
+        ),
     ]
     for nbn in exetel_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 500"))
         speed_label = _broadband_speed(nbn.get("tier", "500/50"))
-        for s_name, s_price, s_discount, s_slug in exetel_options:
+        for s_name, s_price, s_discount, s_slug, s_rule in exetel_options:
             reg_p, promo_p, promo_m, t1y, t6m, sav = _calc_totals(
                 bb_reg=nbn.get("regularPrice", 80.0),
                 bb_promo=nbn.get("promoPrice"),
@@ -558,6 +807,7 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                     annualSavings=sav,
                     discountMonthly=s_discount,
                     url=nbn.get("url", "https://www.exetel.com.au/broadband/nbn"),
+                    bundleRule=s_rule,
                 )
             )
 
@@ -565,6 +815,17 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
     optus_nbn = nbn_by_provider.get("Optus", [])
     optus_sim_name = "50GB Mobile SIM"
     optus_sim_reg = 45.0
+    optus_rule = BundleRuleInfo(
+        hasBundle=True,
+        type="mobile",
+        discountMonthly=5.0,
+        shortLabel="Save $5/mo Multi-Service",
+        label="Save $5/mo with Optus Multi-Service Discount",
+        description="Save $5/mo off your account total when combining an eligible Optus home broadband plan with an Optus postpaid mobile plan.",
+        howToGet="Ensure your Optus broadband and postpaid mobile services share the same My Account login and single monthly bill.",
+        realityCheck="Both services must remain in active postpaid standing under the same account holder.",
+        cisUrl="https://www.optus.com.au/about/legal/standard-forms-agreement",
+    )
     for nbn in optus_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
         speed_label = _broadband_speed(nbn.get("tier", "50/20"))
@@ -594,6 +855,7 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=5.0,
                 url=nbn.get("url", "https://www.optus.com.au/broadband-nbn/home-broadband/plans"),
+                bundleRule=optus_rule,
             )
         )
 
@@ -601,6 +863,17 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
     flip_nbn = nbn_by_provider.get("Flip", [])
     flip_sim_name = "20GB Mobile SIM"
     flip_sim_reg = 15.0
+    flip_rule = BundleRuleInfo(
+        hasBundle=True,
+        type="mobile",
+        discountMonthly=5.0,
+        shortLabel="Save $5/mo with Mobile",
+        label="Save $5/mo on Mobile SIM bundled with Flip NBN",
+        description="Receive a $5/mo discount on your companion Flip mobile plan when maintained with an active Flip NBN service.",
+        howToGet="Order a companion Flip mobile SIM plan through the Flip customer portal under your existing NBN account.",
+        realityCheck="Limited to eligible companion SIM tiers; check data allowance needs.",
+        cisUrl="https://flipconnect.com.au/terms-and-conditions",
+    )
     for nbn in flip_nbn:
         tier_label = _normalize_tier(nbn.get("tier", "NBN 50"))
         speed_label = _broadband_speed(nbn.get("tier", "50/20"))
@@ -630,6 +903,7 @@ def generate_bundles(all_deals: list[dict], month_key: str | None = None) -> lis
                 annualSavings=sav,
                 discountMonthly=5.0,
                 url=nbn.get("url", "https://flipconnect.com.au/nbn"),
+                bundleRule=flip_rule,
             )
         )
 

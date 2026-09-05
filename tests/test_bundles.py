@@ -30,6 +30,18 @@ def test_bundle_schema_validation(deals_data):
         assert validated.totalFirstYear > 0
         assert validated.totalSixMonth > 0
 
+        # Validate bundleRule nested object
+        rule = validated.bundleRule
+        assert rule.hasBundle is True
+        assert rule.type == validated.secondaryType
+        assert rule.discountMonthly == validated.discountMonthly
+        assert len(rule.shortLabel) > 0
+        assert len(rule.label) > 0
+        assert len(rule.description) > 0
+        assert len(rule.howToGet) > 0
+        assert len(rule.realityCheck) > 0
+        assert rule.cisUrl.startswith("https://")
+
 
 def test_all_fourteen_providers_covered(deals_data):
     bundles = generate_bundles(deals_data)
