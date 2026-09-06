@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-06",
+    "message": "Updated Kogan Mobile 250GB pricing"
+  },
+  {
     "date": "2026-09-05",
     "message": "Updated Kogan Mobile 250GB pricing"
   },
@@ -154,9 +158,5 @@
   {
     "date": "2026-08-24",
     "message": "Updated Boost Mobile 75GB pricing"
-  },
-  {
-    "date": "2026-08-24",
-    "message": "Updated Boost Mobile 160GB pricing"
   }
 ]
