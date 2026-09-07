@@ -1,5 +1,41 @@
 [
   {
+    "date": "2026-09-07",
+    "message": "Updated Kogan Mobile 250GB pricing"
+  },
+  {
+    "date": "2026-09-07",
+    "message": "Updated Boost Mobile 60GB pricing"
+  },
+  {
+    "date": "2026-09-07",
+    "message": "Updated Boost Mobile 75GB pricing"
+  },
+  {
+    "date": "2026-09-07",
+    "message": "Added Boost Mobile 180GB plan"
+  },
+  {
+    "date": "2026-09-07",
+    "message": "Updated Boost Mobile 290GB pricing"
+  },
+  {
+    "date": "2026-09-07",
+    "message": "Updated Optus NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-09-07",
+    "message": "Updated Optus NBN 50/20 pricing"
+  },
+  {
+    "date": "2026-09-07",
+    "message": "Updated Optus NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-09-07",
+    "message": "Updated Optus NBN 1000/100 pricing"
+  },
+  {
     "date": "2026-09-06",
     "message": "Updated Kogan Mobile 250GB pricing"
   },
@@ -122,41 +158,5 @@
   {
     "date": "2026-08-28",
     "message": "Added Buddy Telco NBN plans"
-  },
-  {
-    "date": "2026-08-27",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-26",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-25",
-    "message": "Updated Tangerine NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-08-25",
-    "message": "Updated Tangerine NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-25",
-    "message": "Added Kogan Mobile 250GB plan"
-  },
-  {
-    "date": "2026-08-25",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-24",
-    "message": "Updated Telstra NBN 50 pricing"
-  },
-  {
-    "date": "2026-08-24",
-    "message": "Updated Telstra NBN 100 pricing"
-  },
-  {
-    "date": "2026-08-24",
-    "message": "Updated Boost Mobile 75GB pricing"
   }
 ]
