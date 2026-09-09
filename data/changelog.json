@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-09-09",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-09-09",
+    "message": "Added Boost Mobile 160GB plan"
+  },
+  {
     "date": "2026-09-08",
     "message": "Added Kogan Mobile 300GB plan"
   },
@@ -150,13 +158,5 @@
   {
     "date": "2026-08-29",
     "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-29",
-    "message": "Updated Arctel NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-08-29",
-    "message": "Updated Arctel NBN 1000/100 pricing"
   }
 ]
