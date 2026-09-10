@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-09-10",
+    "message": "Updated Aussie Broadband NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-09-10",
+    "message": "Updated Aussie Broadband NBN 50/20 pricing"
+  },
+  {
+    "date": "2026-09-10",
+    "message": "Updated Aussie Broadband NBN 100/20 pricing"
+  },
+  {
+    "date": "2026-09-10",
+    "message": "Updated Aussie Broadband NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-09-10",
+    "message": "Updated Aussie Broadband NBN 1000/100 pricing"
+  },
+  {
+    "date": "2026-09-10",
+    "message": "Updated Aussie Broadband NBN 2000/200 pricing"
+  },
+  {
+    "date": "2026-09-10",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
     "date": "2026-09-09",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -130,33 +158,5 @@
   {
     "date": "2026-09-03",
     "message": "Updated SkyMesh NBN 25/5 pricing"
-  },
-  {
-    "date": "2026-09-03",
-    "message": "Updated SkyMesh NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-08-31",
-    "message": "Updated Boost Mobile 365GB pricing"
-  },
-  {
-    "date": "2026-08-31",
-    "message": "Updated Flip NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-08-29",
-    "message": "Added Superloop NBN 250/100 plan"
-  },
-  {
-    "date": "2026-08-29",
-    "message": "Added Superloop NBN 2000/200 plan"
-  },
-  {
-    "date": "2026-08-29",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-08-29",
-    "message": "Updated Arctel NBN 500/50 pricing"
   }
 ]
