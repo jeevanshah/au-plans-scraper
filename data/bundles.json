@@ -1890,36 +1890,6 @@
     }
   },
   {
-    "id": "bundle-tangerine-nbn-50-cba-perk",
-    "provider": "Tangerine",
-    "title": "NBN 50 + CBA 30% Off Perk",
-    "tier": "NBN 50",
-    "serviceType": "bundle",
-    "broadbandName": "Value Plus NBN 50/20",
-    "broadbandSpeed": "50/20 Mbps",
-    "secondaryName": "Commonwealth Bank Customer Perk",
-    "secondaryType": "bank_perk",
-    "promoPrice": 62.93,
-    "regularPrice": 89.9,
-    "promoMonths": 12,
-    "totalFirstYear": 755.16,
-    "totalSixMonth": 377.58,
-    "annualSavings": 323.64,
-    "discountMonthly": 26.97,
-    "url": "https://www.tangerinetelecom.com.au/nbn/nbn-broadband",
-    "bundleRule": {
-      "hasBundle": true,
-      "type": "bank_perk",
-      "discountMonthly": 26.97,
-      "shortLabel": "30% Off for CBA Customers",
-      "label": "30% off NBN for 12 months for CommBank Customers",
-      "description": "Commonwealth Bank (CBA) customers receive an exclusive 30% discount on Tangerine NBN plans for the first 12 months.",
-      "howToGet": "Sign up via the CommBank app Yello perks section or pay your Tangerine bill using an eligible CommBank card.",
-      "realityCheck": "After month 12, the discount ends and reverts to Tangerine's standard in-market rate; set a calendar reminder to review.",
-      "cisUrl": "https://www.tangerinetelecom.com.au/critical-information-summaries"
-    }
-  },
-  {
     "id": "bundle-tangerine-nbn-500-cba-perk",
     "provider": "Tangerine",
     "title": "NBN 500 + CBA 30% Off Perk",

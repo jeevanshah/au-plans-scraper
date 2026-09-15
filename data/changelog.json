@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-09-15",
+    "message": "Updated Tangerine NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-09-15",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
     "date": "2026-09-14",
     "message": "Added Kogan Mobile 30GB plan"
   },
@@ -150,13 +158,5 @@
   {
     "date": "2026-09-06",
     "message": "Updated Kogan Mobile 250GB pricing"
-  },
-  {
-    "date": "2026-09-05",
-    "message": "Updated Kogan Mobile 250GB pricing"
-  },
-  {
-    "date": "2026-09-05",
-    "message": "Updated Arctel NBN 500/50 pricing"
   }
 ]
