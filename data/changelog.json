@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-09-16",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-09-16",
+    "message": "Updated Belong NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-09-16",
+    "message": "Updated Belong NBN 100/20 pricing"
+  },
+  {
+    "date": "2026-09-16",
+    "message": "Updated Belong NBN 50/20 pricing"
+  },
+  {
+    "date": "2026-09-16",
+    "message": "Updated Belong NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-09-16",
+    "message": "Updated Belong NBN 1000/100 pricing"
+  },
+  {
     "date": "2026-09-15",
     "message": "Updated Tangerine NBN 500/50 pricing"
   },
@@ -134,29 +158,5 @@
   {
     "date": "2026-09-07",
     "message": "Added Boost Mobile 180GB plan"
-  },
-  {
-    "date": "2026-09-07",
-    "message": "Updated Boost Mobile 290GB pricing"
-  },
-  {
-    "date": "2026-09-07",
-    "message": "Updated Optus NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-09-07",
-    "message": "Updated Optus NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-09-07",
-    "message": "Updated Optus NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-09-07",
-    "message": "Updated Optus NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-09-06",
-    "message": "Updated Kogan Mobile 250GB pricing"
   }
 ]

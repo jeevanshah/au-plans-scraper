@@ -1,211 +1,211 @@
 {
   "Aussie Broadband (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:07:03.887390+00:00",
+    "last_success": "2026-09-16T14:07:29.802775+00:00",
     "consecutive_failures": 0,
     "plan_count": 6
   },
   "Tangerine (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:07:08.457114+00:00",
+    "last_success": "2026-09-16T14:07:35.940385+00:00",
     "consecutive_failures": 0,
     "plan_count": 3
   },
   "Telstra (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:07:10.669147+00:00",
+    "last_success": "2026-09-16T14:07:38.535174+00:00",
     "consecutive_failures": 0,
     "plan_count": 5
   },
   "Dodo (nbn)": {
     "status": "error",
     "last_success": "2026-08-29T03:34:21.865103+00:00",
-    "consecutive_failures": 17,
+    "consecutive_failures": 18,
     "plan_count": 6
   },
   "Superloop (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:07:27.942140+00:00",
+    "last_success": "2026-09-16T14:07:57.971041+00:00",
     "consecutive_failures": 0,
     "plan_count": 7
   },
   "Exetel (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:07:31.192172+00:00",
+    "last_success": "2026-09-16T14:08:00.727183+00:00",
     "consecutive_failures": 0,
     "plan_count": 1
   },
   "TPG (mobile)": {
-    "status": "ok",
+    "status": "error",
     "last_success": "2026-09-15T14:07:49.205506+00:00",
-    "consecutive_failures": 0,
+    "consecutive_failures": 1,
     "plan_count": 2
   },
   "Telstra (mobile)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:07:51.239568+00:00",
+    "last_success": "2026-09-16T14:08:22.150267+00:00",
     "consecutive_failures": 0,
     "plan_count": 3
   },
   "iiNet (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:07:42.485886+00:00",
+    "last_success": "2026-09-16T14:08:13.199261+00:00",
     "consecutive_failures": 0,
     "plan_count": 3
   },
   "amaysim (mobile)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:07:54.360213+00:00",
+    "last_success": "2026-09-16T14:08:25.702499+00:00",
     "consecutive_failures": 0,
     "plan_count": 13
   },
   "Vodafone (mobile)": {
     "status": "error",
     "last_success": "2026-08-29T03:35:05.247487+00:00",
-    "consecutive_failures": 17,
+    "consecutive_failures": 18,
     "plan_count": 3
   },
   "Kogan Mobile (mobile)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:08:07.406154+00:00",
+    "last_success": "2026-09-16T14:08:38.004773+00:00",
     "consecutive_failures": 0,
     "plan_count": 7
   },
   "Felix (mobile)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:08:09.049512+00:00",
+    "last_success": "2026-09-16T14:08:40.602147+00:00",
     "consecutive_failures": 0,
     "plan_count": 3
   },
   "Boost Mobile (mobile)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:08:10.789909+00:00",
+    "last_success": "2026-09-16T14:08:43.455339+00:00",
     "consecutive_failures": 0,
     "plan_count": 9
   },
   "ALDImobile (mobile)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:08:16.466616+00:00",
+    "last_success": "2026-09-16T14:08:46.376105+00:00",
     "consecutive_failures": 0,
     "plan_count": 6
   },
   "Dodo (mobile)": {
     "status": "error",
     "last_success": "2026-08-29T03:35:18.260328+00:00",
-    "consecutive_failures": 17,
+    "consecutive_failures": 18,
     "plan_count": 3
   },
   "Aussie Broadband (mobile)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:08:27.001683+00:00",
+    "last_success": "2026-09-16T14:08:57.822892+00:00",
     "consecutive_failures": 0,
     "plan_count": 4
   },
   "Vodafone (nbn)": {
     "status": "error",
     "last_success": "2026-08-29T03:35:21.748766+00:00",
-    "consecutive_failures": 17,
+    "consecutive_failures": 18,
     "plan_count": 5
   },
   "SpinTel (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:08:39.157668+00:00",
+    "last_success": "2026-09-16T14:09:09.817906+00:00",
     "consecutive_failures": 0,
     "plan_count": 7
   },
   "TPG (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:08:41.803419+00:00",
+    "last_success": "2026-09-16T14:09:13.264708+00:00",
     "consecutive_failures": 0,
     "plan_count": 6
   },
   "Flip (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:08:52.114569+00:00",
+    "last_success": "2026-09-16T14:09:23.965320+00:00",
     "consecutive_failures": 0,
     "plan_count": 3
   },
   "Moose Mobile (mobile)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:09:04.780448+00:00",
+    "last_success": "2026-09-16T14:09:37.314587+00:00",
     "consecutive_failures": 0,
     "plan_count": 4
   },
   "Swoop (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:09:09.737221+00:00",
+    "last_success": "2026-09-16T14:09:42.654062+00:00",
     "consecutive_failures": 0,
     "plan_count": 4
   },
   "Neptune Internet (nbn)": {
     "status": "error",
     "last_success": "2026-08-29T03:36:00.424151+00:00",
-    "consecutive_failures": 17,
+    "consecutive_failures": 18,
     "plan_count": 12
   },
   "More Telecom (nbn)": {
     "status": "error",
     "last_success": "2026-09-07T14:09:32.491192+00:00",
-    "consecutive_failures": 8,
+    "consecutive_failures": 9,
     "plan_count": 4
   },
   "Purple Connect (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:09:24.035739+00:00",
+    "last_success": "2026-09-16T14:10:00.369687+00:00",
     "consecutive_failures": 0,
     "plan_count": 7
   },
   "Arctel (nbn)": {
-    "status": "error",
-    "last_success": "2026-09-14T14:10:05.176172+00:00",
-    "consecutive_failures": 1,
+    "status": "ok",
+    "last_success": "2026-09-16T14:10:06.307170+00:00",
+    "consecutive_failures": 0,
     "plan_count": 4
   },
   "Optus (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:09:39.558959+00:00",
+    "last_success": "2026-09-16T14:10:20.757117+00:00",
     "consecutive_failures": 0,
     "plan_count": 4
   },
   "Leaptel (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:09:49.055488+00:00",
+    "last_success": "2026-09-16T14:10:31.507728+00:00",
     "consecutive_failures": 0,
     "plan_count": 13
   },
   "amaysim (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:09:52.202966+00:00",
+    "last_success": "2026-09-16T14:10:35.689446+00:00",
     "consecutive_failures": 0,
     "plan_count": 6
   },
   "Pentanet (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:09:54.314253+00:00",
+    "last_success": "2026-09-16T14:10:37.304272+00:00",
     "consecutive_failures": 0,
     "plan_count": 7
   },
   "Future Broadband (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:09:58.256917+00:00",
+    "last_success": "2026-09-16T14:10:41.430331+00:00",
     "consecutive_failures": 0,
     "plan_count": 8
   },
   "Mint Telecom (nbn)": {
     "status": "error",
     "last_success": "2026-08-29T03:36:40.202458+00:00",
-    "consecutive_failures": 17,
+    "consecutive_failures": 18,
     "plan_count": 5
   },
   "Mate (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:10:08.848275+00:00",
+    "last_success": "2026-09-16T14:10:52.470210+00:00",
     "consecutive_failures": 0,
     "plan_count": 8
   },
   "Launtel (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:10:11.678862+00:00",
+    "last_success": "2026-09-16T14:10:55.794330+00:00",
     "consecutive_failures": 0,
     "plan_count": 11
   },
@@ -217,73 +217,73 @@
   },
   "Kogan Internet (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:10:15.518262+00:00",
+    "last_success": "2026-09-16T14:10:59.531242+00:00",
     "consecutive_failures": 0,
     "plan_count": 6
   },
   "Starlink (satellite)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:11:18.564829+00:00",
+    "last_success": "2026-09-16T14:12:02.598010+00:00",
     "consecutive_failures": 0,
     "plan_count": 3
   },
   "Activ8me (satellite)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:11:28.310227+00:00",
+    "last_success": "2026-09-16T14:12:12.499532+00:00",
     "consecutive_failures": 0,
     "plan_count": 3
   },
   "Leaptel (opticomm)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:11:10.968765+00:00",
+    "last_success": "2026-09-16T14:11:55.366318+00:00",
     "consecutive_failures": 0,
     "plan_count": 11
   },
   "Swoop (opticomm)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:11:12.550107+00:00",
+    "last_success": "2026-09-16T14:11:56.928988+00:00",
     "consecutive_failures": 0,
     "plan_count": 4
   },
   "Carbon Comms (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:10:23.017609+00:00",
+    "last_success": "2026-09-16T14:11:08.054200+00:00",
     "consecutive_failures": 0,
     "plan_count": 9
   },
   "Mate (mobile)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:09:08.161111+00:00",
+    "last_success": "2026-09-16T14:09:40.669124+00:00",
     "consecutive_failures": 0,
     "plan_count": 4
   },
   "Belong (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:10:26.970614+00:00",
+    "last_success": "2026-09-16T14:11:11.747963+00:00",
     "consecutive_failures": 0,
     "plan_count": 5
   },
   "Southern Phone (nbn)": {
     "status": "error",
     "last_success": "2026-08-29T03:37:00.555378+00:00",
-    "consecutive_failures": 17,
+    "consecutive_failures": 18,
     "plan_count": 5
   },
   "SkyMesh (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:10:45.417620+00:00",
+    "last_success": "2026-09-16T14:11:31.087224+00:00",
     "consecutive_failures": 0,
     "plan_count": 4
   },
   "Activ8me (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:10:55.182702+00:00",
+    "last_success": "2026-09-16T14:11:39.883534+00:00",
     "consecutive_failures": 0,
     "plan_count": 3
   },
   "Buddy Telco (nbn)": {
     "status": "ok",
-    "last_success": "2026-09-15T14:10:59.961543+00:00",
+    "last_success": "2026-09-16T14:11:45.346600+00:00",
     "consecutive_failures": 0,
     "plan_count": 4
   }
