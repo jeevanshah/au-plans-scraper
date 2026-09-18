@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-09-18",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-09-18",
+    "message": "Added Future Broadband NBN 12/1 plan"
+  },
+  {
     "date": "2026-09-17",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -150,13 +158,5 @@
   {
     "date": "2026-09-07",
     "message": "Updated Kogan Mobile 250GB pricing"
-  },
-  {
-    "date": "2026-09-07",
-    "message": "Updated Boost Mobile 60GB pricing"
-  },
-  {
-    "date": "2026-09-07",
-    "message": "Updated Boost Mobile 75GB pricing"
   }
 ]
