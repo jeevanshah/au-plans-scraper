@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-09-20",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-09-20",
+    "message": "Updated amaysim NBN 100/20 pricing"
+  },
+  {
+    "date": "2026-09-20",
+    "message": "Updated amaysim NBN 500/50 pricing"
+  },
+  {
     "date": "2026-09-19",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -146,17 +158,5 @@
   {
     "date": "2026-09-08",
     "message": "Updated TPG NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-09-08",
-    "message": "Updated Kogan Internet NBN 50 pricing"
-  },
-  {
-    "date": "2026-09-08",
-    "message": "Updated Kogan Internet NBN 100 pricing"
-  },
-  {
-    "date": "2026-09-08",
-    "message": "Updated Kogan Internet NBN 500 pricing"
   }
 ]
