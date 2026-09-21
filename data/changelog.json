@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-09-21",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-09-21",
+    "message": "Added Kogan Mobile 40GB plan"
+  },
+  {
     "date": "2026-09-20",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -150,13 +158,5 @@
   {
     "date": "2026-09-08",
     "message": "Added Kogan Mobile 140GB plan"
-  },
-  {
-    "date": "2026-09-08",
-    "message": "Updated TPG NBN 100/20 pricing"
-  },
-  {
-    "date": "2026-09-08",
-    "message": "Updated TPG NBN 500/50 pricing"
   }
 ]
