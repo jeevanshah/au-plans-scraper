@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-23",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
     "date": "2026-09-22",
     "message": "Updated Telstra NBN 50 pricing"
   },
@@ -153,10 +157,6 @@
   },
   {
     "date": "2026-09-10",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-09",
     "message": "Updated Kogan Mobile 300GB pricing"
   }
 ]
