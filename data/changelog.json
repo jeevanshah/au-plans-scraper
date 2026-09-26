@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-26",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
     "date": "2026-09-25",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -154,9 +158,5 @@
   {
     "date": "2026-09-10",
     "message": "Updated Aussie Broadband NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-09-10",
-    "message": "Updated Aussie Broadband NBN 1000/100 pricing"
   }
 ]
