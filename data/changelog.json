@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-09-28",
+    "message": "Added Kogan Mobile 220GB plan"
+  },
+  {
+    "date": "2026-09-28",
+    "message": "Added Kogan Mobile 250GB plan"
+  },
+  {
+    "date": "2026-09-28",
+    "message": "Added Kogan Mobile 400GB plan"
+  },
+  {
+    "date": "2026-09-28",
+    "message": "Added Kogan Mobile 500GB plan"
+  },
+  {
+    "date": "2026-09-28",
+    "message": "Added Kogan Mobile 25GB plan"
+  },
+  {
+    "date": "2026-09-28",
+    "message": "Added Kogan Mobile 60GB plan"
+  },
+  {
+    "date": "2026-09-28",
+    "message": "Updated Boost Mobile 290GB pricing"
+  },
+  {
+    "date": "2026-09-28",
+    "message": "Updated Boost Mobile 365GB pricing"
+  },
+  {
     "date": "2026-09-27",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -126,37 +158,5 @@
   {
     "date": "2026-09-14",
     "message": "Updated amaysim NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-09-14",
-    "message": "Updated amaysim NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-09-14",
-    "message": "Updated amaysim NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-09-13",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-12",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-11",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-10",
-    "message": "Updated Aussie Broadband NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-09-10",
-    "message": "Updated Aussie Broadband NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-09-10",
-    "message": "Updated Aussie Broadband NBN 100/20 pricing"
   }
 ]
