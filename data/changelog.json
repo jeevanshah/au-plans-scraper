@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-09-30",
+    "message": "Updated Superloop NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-09-30",
+    "message": "Updated Superloop NBN 750/50 pricing"
+  },
+  {
+    "date": "2026-09-30",
+    "message": "Updated Superloop NBN 1000/100 pricing"
+  },
+  {
+    "date": "2026-09-30",
+    "message": "Updated ALDImobile 12GB pricing"
+  },
+  {
+    "date": "2026-09-30",
+    "message": "Added ALDImobile 45GB plan"
+  },
+  {
+    "date": "2026-09-30",
+    "message": "Updated SpinTel NBN 1000/100 pricing"
+  },
+  {
     "date": "2026-09-28",
     "message": "Added Kogan Mobile 220GB plan"
   },
@@ -134,29 +158,5 @@
   {
     "date": "2026-09-14",
     "message": "Added Kogan Mobile 30GB plan"
-  },
-  {
-    "date": "2026-09-14",
-    "message": "Added Kogan Mobile 60GB plan"
-  },
-  {
-    "date": "2026-09-14",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-14",
-    "message": "Added Kogan Mobile 900GB plan"
-  },
-  {
-    "date": "2026-09-14",
-    "message": "Added Kogan Mobile 80GB plan"
-  },
-  {
-    "date": "2026-09-14",
-    "message": "Updated amaysim NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-09-14",
-    "message": "Updated amaysim NBN 50/20 pricing"
   }
 ]
