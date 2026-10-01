@@ -4868,13 +4868,16 @@
     "regularPrice": 30.0,
     "promoMonths": 6,
     "validUntil": null,
-    "url": "https://www.lycamobile.com.au/en/bundle/unlimited-plan-s/",
+    "url": "https://t.cfjump.com/94613/t/45861?Url=https%3A%2F%2Fwww.lycamobile.com.au%2Fen%2Fbundle%2Funlimited-plan-s%2F",
     "serviceType": "mobile",
     "tier": "50GB",
     "techType": "5G",
     "billingCycleDays": 28,
     "postedAt": "2026-10-01",
-    "_source": "Lyca Mobile official site, verified 2026-10-01"
+    "_source": "Lyca Mobile official site, verified 2026-10-01",
+    "dealChannel": "affiliate",
+    "dealChannelLabel": "Lyca Partner Link",
+    "directUrl": "https://www.lycamobile.com.au/en/bundle/unlimited-plan-s/"
   },
   {
     "id": "lyca-mobile-120gb-28-day-expiry-2026-10",
@@ -4886,13 +4889,16 @@
     "regularPrice": 40.0,
     "promoMonths": 6,
     "validUntil": null,
-    "url": "https://www.lycamobile.com.au/en/bundle/unlimited-plan-m/",
+    "url": "https://t.cfjump.com/94613/t/45861?Url=https%3A%2F%2Fwww.lycamobile.com.au%2Fen%2Fbundle%2Funlimited-plan-m%2F",
     "serviceType": "mobile",
     "tier": "120GB",
     "techType": "5G",
     "billingCycleDays": 28,
     "postedAt": "2026-10-01",
-    "_source": "Lyca Mobile official site, verified 2026-10-01"
+    "_source": "Lyca Mobile official site, verified 2026-10-01",
+    "dealChannel": "affiliate",
+    "dealChannelLabel": "Lyca Partner Link",
+    "directUrl": "https://www.lycamobile.com.au/en/bundle/unlimited-plan-m/"
   },
   {
     "id": "lyca-mobile-300gb-28-day-expiry-2026-10",
@@ -4904,13 +4910,16 @@
     "regularPrice": 50.0,
     "promoMonths": null,
     "validUntil": null,
-    "url": "https://www.lycamobile.com.au/en/bundle/unlimited-plan-xl/",
+    "url": "https://t.cfjump.com/94613/t/45861?Url=https%3A%2F%2Fwww.lycamobile.com.au%2Fen%2Fbundle%2Funlimited-plan-xl%2F",
     "serviceType": "mobile",
     "tier": "300GB",
     "techType": "5G",
     "billingCycleDays": 28,
     "postedAt": "2026-10-01",
-    "_source": "Lyca Mobile official site, verified 2026-10-01"
+    "_source": "Lyca Mobile official site, verified 2026-10-01",
+    "dealChannel": "affiliate",
+    "dealChannelLabel": "Lyca Partner Link",
+    "directUrl": "https://www.lycamobile.com.au/en/bundle/unlimited-plan-xl/"
   },
   {
     "id": "lyca-mobile-120gb-180-day-expiry-2026-10",
@@ -4922,13 +4931,16 @@
     "regularPrice": 120.0,
     "promoMonths": 6,
     "validUntil": null,
-    "url": "https://www.lycamobile.com.au/en/bundle/small/",
+    "url": "https://t.cfjump.com/94613/t/45861?Url=https%3A%2F%2Fwww.lycamobile.com.au%2Fen%2Fbundle%2Fsmall%2F",
     "serviceType": "mobile",
     "tier": "120GB",
     "techType": "5G",
     "billingCycleDays": 180,
     "postedAt": "2026-10-01",
-    "_source": "Lyca Mobile official site, verified 2026-10-01"
+    "_source": "Lyca Mobile official site, verified 2026-10-01",
+    "dealChannel": "affiliate",
+    "dealChannelLabel": "Lyca Partner Link",
+    "directUrl": "https://www.lycamobile.com.au/en/bundle/small/"
   },
   {
     "id": "lyca-mobile-360gb-360-day-expiry-2026-10",
@@ -4940,13 +4952,16 @@
     "regularPrice": 240.0,
     "promoMonths": 12,
     "validUntil": null,
-    "url": "https://www.lycamobile.com.au/en/bundle/medium/",
+    "url": "https://t.cfjump.com/94613/t/45861?Url=https%3A%2F%2Fwww.lycamobile.com.au%2Fen%2Fbundle%2Fmedium%2F",
     "serviceType": "mobile",
     "tier": "360GB",
     "techType": "5G",
     "billingCycleDays": 360,
     "postedAt": "2026-10-01",
-    "_source": "Lyca Mobile official site, verified 2026-10-01"
+    "_source": "Lyca Mobile official site, verified 2026-10-01",
+    "dealChannel": "affiliate",
+    "dealChannelLabel": "Lyca Partner Link",
+    "directUrl": "https://www.lycamobile.com.au/en/bundle/medium/"
   },
   {
     "id": "lyca-mobile-900gb-360-day-expiry-2026-10",
@@ -4958,12 +4973,15 @@
     "regularPrice": 480.0,
     "promoMonths": 12,
     "validUntil": null,
-    "url": "https://www.lycamobile.com.au/en/bundle/large/",
+    "url": "https://t.cfjump.com/94613/t/45861?Url=https%3A%2F%2Fwww.lycamobile.com.au%2Fen%2Fbundle%2Flarge%2F",
     "serviceType": "mobile",
     "tier": "900GB",
     "techType": "5G",
     "billingCycleDays": 360,
     "postedAt": "2026-10-01",
-    "_source": "Lyca Mobile official site, verified 2026-10-01"
+    "_source": "Lyca Mobile official site, verified 2026-10-01",
+    "dealChannel": "affiliate",
+    "dealChannelLabel": "Lyca Partner Link",
+    "directUrl": "https://www.lycamobile.com.au/en/bundle/large/"
   }
 ]

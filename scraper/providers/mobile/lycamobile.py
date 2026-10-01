@@ -1,17 +1,18 @@
-"""Lyca Mobile prepaid mobile plans scraper.
+"""Lyca Mobile prepaid mobile plans scraper with Commission Factory affiliate tracking.
 
 Covers 28-day prepaid SIM tiers (LycaPlan S, M, XL) and long-term
 packs (180-day and 360-day options).
 All plans run on the Vodafone 4G/5G mobile network.
+Affiliate tracking routes via Commission Factory (Affiliate: 94613, Merchant: 45861).
 """
-import re
-from bs4 import BeautifulSoup
-from scraper.base import fetch_static
+import urllib.parse
 from scraper.schema import MobilePlan, now_iso
 
 PROVIDER = "Lyca Mobile"
 URL = "https://www.lycamobile.com.au/en/bundles/prepaid-plans/"
 REQUIRES_JS = False
+
+AFFILIATE_BASE = "https://t.cfjump.com/94613/t/45861"
 
 PLANS_CONFIG = [
     {
@@ -77,11 +78,16 @@ PLANS_CONFIG = [
 ]
 
 
+def make_affiliate_url(direct_url: str) -> str:
+    return f"{AFFILIATE_BASE}?Url={urllib.parse.quote(direct_url, safe='')}"
+
+
 def scrape() -> list[MobilePlan]:
     scraped_at = now_iso()
     plans: list[MobilePlan] = []
 
     for cfg in PLANS_CONFIG:
+        affiliate_url = make_affiliate_url(cfg["url"])
         plans.append(
             MobilePlan(
                 provider=PROVIDER,
@@ -96,7 +102,10 @@ def scrape() -> list[MobilePlan]:
                 is_unlimited_data=False,
                 network="Vodafone",
                 network_tech="5G",
-                source_url=cfg["url"],
+                deal_channel="affiliate",
+                deal_channel_label="Lyca Partner Link",
+                direct_url=cfg["url"],
+                source_url=affiliate_url,
                 scraped_at=scraped_at,
             )
         )
