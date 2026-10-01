@@ -24,6 +24,7 @@ from scraper.providers.mobile import moose_mobile
 from scraper.providers.mobile import telstra as mobile_telstra
 from scraper.providers.mobile import tpg as mobile_tpg
 from scraper.providers.mobile import vodafone as mobile_vodafone
+from scraper.providers.mobile import lycamobile as mobile_lyca
 from scraper.providers.nbn import aussie_broadband, dodo, exetel, iinet, superloop, tangerine
 from scraper.providers.nbn import spintel_nbn as nbn_spintel
 from scraper.providers.nbn import telstra as nbn_telstra
@@ -82,6 +83,7 @@ PROVIDERS = [
     (mobile_aldi, "mobile", mobile_plan_to_deal),
     (dodo_mobile, "mobile", mobile_plan_to_deal),
     (mobile_aussiebb, "mobile", mobile_plan_to_deal),
+    (mobile_lyca, "mobile", mobile_plan_to_deal),
     (nbn_vodafone, "nbn", nbn_plan_to_deal),
     (nbn_spintel, "nbn", nbn_plan_to_deal),
     (nbn_tpg, "nbn", nbn_plan_to_deal),
