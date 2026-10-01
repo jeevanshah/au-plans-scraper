@@ -179,9 +179,11 @@ def normalize_nbn_speed_tier(down: float | int, up: float | int | None = None) -
     elif down_f <= 600:
         nom_down = 500
         nom_up = 200 if (up_f is not None and up_f >= 150) else 50
-    elif down_f <= 790 and (up_f is None or up_f <= 60):
+    elif down_f <= 790:
         nom_down = 750
         nom_up = 50
+        if up_f is not None and up_f > 60:
+            up_f = 50.0
     elif down_f <= 1400:
         nom_down = 1000
         if up_f is not None and up_f >= 300:

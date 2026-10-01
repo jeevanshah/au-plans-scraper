@@ -878,6 +878,9 @@ def test_spintel_nbn_partner_lp(monkeypatch):
     assert by_tier["NBN 25/10"].direct_url == nbn_spintel.DIRECT_URL
     assert by_tier["NBN 750/50"].promo_price == 69.0
     assert by_tier["NBN 750/50"].direct_public_promo_price == 84.0
+    assert "NBN 1000/400" not in by_tier
+    from scraper.base import normalize_nbn_speed_tier
+    assert normalize_nbn_speed_tier(750, 500) == ("NBN 750/50", 750.0, 50.0)
     for p in plans:
         assert p.provider == "SpinTel"
         assert p.promo_price < p.price_monthly

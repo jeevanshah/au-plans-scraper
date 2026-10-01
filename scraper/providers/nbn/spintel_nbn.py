@@ -45,6 +45,9 @@ def _parse_plans_from_soup(soup, source_url: str) -> list[NbnPlan]:
 
     for m in SPEED_RE.finditer(text):
         down, up = m.groups()
+        # SpinTel landing page typo: "750/500 Mbps" on Fibre Upgrade 750 card
+        if down == "750" and up == "500":
+            up = "50"
         tier, _, _ = normalize_nbn_speed_tier(down, up)
 
         # Dedup on normalized speed tier (e.g. NBN 1000/100)
