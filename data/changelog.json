@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-10-01",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-01",
+    "message": "Updated Moose Mobile 30GB pricing"
+  },
+  {
+    "date": "2026-10-01",
+    "message": "Updated Moose Mobile 50GB pricing"
+  },
+  {
+    "date": "2026-10-01",
+    "message": "Updated Moose Mobile 100GB pricing"
+  },
+  {
+    "date": "2026-10-01",
+    "message": "Updated Moose Mobile 250GB pricing"
+  },
+  {
+    "date": "2026-10-01",
+    "message": "Updated amaysim NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-10-01",
+    "message": "Updated amaysim NBN 750/50 pricing"
+  },
+  {
+    "date": "2026-10-01",
+    "message": "Updated Kogan Internet NBN 25 pricing"
+  },
+  {
     "date": "2026-09-30",
     "message": "Updated Superloop NBN 500/50 pricing"
   },
@@ -126,37 +158,5 @@
   {
     "date": "2026-09-16",
     "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-16",
-    "message": "Updated Belong NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-09-16",
-    "message": "Updated Belong NBN 100/20 pricing"
-  },
-  {
-    "date": "2026-09-16",
-    "message": "Updated Belong NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-09-16",
-    "message": "Updated Belong NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-09-16",
-    "message": "Updated Belong NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-09-15",
-    "message": "Updated Tangerine NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-09-15",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-14",
-    "message": "Added Kogan Mobile 30GB plan"
   }
 ]
