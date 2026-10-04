@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-10-04",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-04",
+    "message": "Updated amaysim NBN 50/20 pricing"
+  },
+  {
+    "date": "2026-10-04",
+    "message": "Updated amaysim NBN 1000/100 pricing"
+  },
+  {
     "date": "2026-10-03",
     "message": "Updated Lyca Mobile 120GB pricing"
   },
@@ -146,17 +158,5 @@
   {
     "date": "2026-09-20",
     "message": "Updated amaysim NBN 100/20 pricing"
-  },
-  {
-    "date": "2026-09-20",
-    "message": "Updated amaysim NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-09-19",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-18",
-    "message": "Updated Kogan Mobile 300GB pricing"
   }
 ]
