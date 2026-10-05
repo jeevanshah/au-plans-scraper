@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-10-05",
+    "message": "Updated Telstra NBN 50 pricing"
+  },
+  {
+    "date": "2026-10-05",
+    "message": "Updated Telstra NBN 100 pricing"
+  },
+  {
+    "date": "2026-10-05",
+    "message": "Updated Telstra NBN 750 pricing"
+  },
+  {
+    "date": "2026-10-05",
+    "message": "Updated Telstra NBN 1000 pricing"
+  },
+  {
+    "date": "2026-10-05",
+    "message": "Updated Boost Mobile 60GB pricing"
+  },
+  {
+    "date": "2026-10-05",
+    "message": "Updated Boost Mobile 75GB pricing"
+  },
+  {
+    "date": "2026-10-05",
+    "message": "Updated Boost Mobile 160GB pricing"
+  },
+  {
+    "date": "2026-10-05",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
     "date": "2026-10-04",
     "message": "Updated Lyca Mobile 120GB pricing"
   },
@@ -126,37 +158,5 @@
   {
     "date": "2026-09-24",
     "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-23",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-22",
-    "message": "Updated Telstra NBN 50 pricing"
-  },
-  {
-    "date": "2026-09-22",
-    "message": "Updated Telstra NBN 100 pricing"
-  },
-  {
-    "date": "2026-09-22",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-21",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-21",
-    "message": "Added Kogan Mobile 40GB plan"
-  },
-  {
-    "date": "2026-09-20",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-20",
-    "message": "Updated amaysim NBN 100/20 pricing"
   }
 ]
