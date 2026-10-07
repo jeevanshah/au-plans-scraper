@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-10-07",
+    "message": "Updated iiNet NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-10-07",
+    "message": "Updated iiNet NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-10-07",
+    "message": "Updated iiNet NBN 50/20 pricing"
+  },
+  {
+    "date": "2026-10-07",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-07",
+    "message": "Updated Optus NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-10-07",
+    "message": "Updated Optus NBN 50/20 pricing"
+  },
+  {
+    "date": "2026-10-07",
+    "message": "Updated Optus NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-10-07",
+    "message": "Updated Optus NBN 1000/100 pricing"
+  },
+  {
     "date": "2026-10-06",
     "message": "Updated Lyca Mobile 120GB pricing"
   },
@@ -126,37 +158,5 @@
   {
     "date": "2026-09-28",
     "message": "Added Kogan Mobile 400GB plan"
-  },
-  {
-    "date": "2026-09-28",
-    "message": "Added Kogan Mobile 500GB plan"
-  },
-  {
-    "date": "2026-09-28",
-    "message": "Added Kogan Mobile 25GB plan"
-  },
-  {
-    "date": "2026-09-28",
-    "message": "Added Kogan Mobile 60GB plan"
-  },
-  {
-    "date": "2026-09-28",
-    "message": "Updated Boost Mobile 290GB pricing"
-  },
-  {
-    "date": "2026-09-28",
-    "message": "Updated Boost Mobile 365GB pricing"
-  },
-  {
-    "date": "2026-09-27",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-26",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-09-25",
-    "message": "Updated Kogan Mobile 300GB pricing"
   }
 ]
