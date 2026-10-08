@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-08",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
     "date": "2026-10-07",
     "message": "Updated iiNet NBN 500/50 pricing"
   },
@@ -154,9 +158,5 @@
   {
     "date": "2026-09-28",
     "message": "Added Kogan Mobile 250GB plan"
-  },
-  {
-    "date": "2026-09-28",
-    "message": "Added Kogan Mobile 400GB plan"
   }
 ]
