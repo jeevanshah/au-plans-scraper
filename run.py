@@ -12,6 +12,8 @@ import sys
 import time
 from pathlib import Path
 
+from scraper.price_history import build_price_events, write_history
+
 from scraper.providers.mobile import aldimobile as mobile_aldi
 from scraper.providers.mobile import amaysim as mobile_amaysim
 from scraper.providers.mobile import aussie_broadband_mobile as mobile_aussiebb
@@ -331,6 +333,10 @@ def main() -> int:
 
     changelog_entries = build_changelog_entries(all_deals, previous_deals, now_iso()[:10])
     _write_changelog(changelog_entries)
+
+    price_events = build_price_events(all_deals, previous_deals, now_iso()[:10])
+    history_size = write_history(DATA_DIR / "price_history.json", price_events, now_iso()[:10])
+    logger.info("Recorded %d price changes (%d in history)", len(price_events), history_size)
 
     (DATA_DIR / "deals.json").write_text(json.dumps(all_deals, indent=2), encoding="utf-8")
     (DATA_DIR / "meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
