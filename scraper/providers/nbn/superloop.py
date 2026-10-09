@@ -5,6 +5,7 @@ static fetch and even right after Playwright's "load" event -- the cards
 hydrate a moment later, so fetch_js needs an explicit settle_ms wait.
 """
 import re
+import urllib.parse
 
 from scraper.base import fetch_js, parse_price
 from scraper.schema import NbnPlan, now_iso
@@ -12,6 +13,12 @@ from scraper.schema import NbnPlan, now_iso
 PROVIDER = "Superloop"
 URL = "https://www.superloop.com/internet/nbn/"
 REQUIRES_JS = True
+
+AFFILIATE_BASE = "https://t.cfjump.com/94613/t/88747"
+
+
+def make_affiliate_url(direct_url: str) -> str:
+    return f"{AFFILIATE_BASE}?Url={urllib.parse.quote(direct_url, safe='')}"
 
 SPEED_RE = re.compile(r"Download\s*(\d+)\s*Mbps\s*Upload\s*(\d+)\s*Mbps", re.I)
 PRICE_RE = re.compile(r"\$(\d+(?:\.\d+)?)\s*\$(\d+(?:\.\d+)?)\s*/mth", re.I)
@@ -91,7 +98,10 @@ def scrape() -> list[NbnPlan]:
                 contract_length="No lock-in contract",
                 speed_tier=f"NBN {down_mbps}/{up_mbps}",
                 typical_evening_speed_mbps=float(typical_match.group(1)) if typical_match else None,
-                source_url=URL,
+                deal_channel="affiliate",
+                deal_channel_label="Superloop Partner Link",
+                direct_url=URL,
+                source_url=make_affiliate_url(URL),
                 scraped_at=scraped_at,
             )
         )
