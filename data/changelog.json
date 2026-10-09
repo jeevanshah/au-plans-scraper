@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-10-09",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-09",
+    "message": "Updated Pentanet NBN 100/20 pricing"
+  },
+  {
+    "date": "2026-10-09",
+    "message": "Updated Pentanet NBN 100/40 pricing"
+  },
+  {
+    "date": "2026-10-09",
+    "message": "Updated Pentanet NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-10-09",
+    "message": "Updated Pentanet NBN 750/50 pricing"
+  },
+  {
+    "date": "2026-10-09",
+    "message": "Updated Pentanet NBN 1000/100 pricing"
+  },
+  {
     "date": "2026-10-08",
     "message": "Updated Lyca Mobile 120GB pricing"
   },
@@ -134,29 +158,5 @@
   {
     "date": "2026-09-30",
     "message": "Updated Superloop NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-09-30",
-    "message": "Updated Superloop NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-09-30",
-    "message": "Updated ALDImobile 12GB pricing"
-  },
-  {
-    "date": "2026-09-30",
-    "message": "Added ALDImobile 45GB plan"
-  },
-  {
-    "date": "2026-09-30",
-    "message": "Updated SpinTel NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-09-28",
-    "message": "Added Kogan Mobile 220GB plan"
-  },
-  {
-    "date": "2026-09-28",
-    "message": "Added Kogan Mobile 250GB plan"
   }
 ]
