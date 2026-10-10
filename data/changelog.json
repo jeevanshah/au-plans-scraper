@@ -1,6 +1,10 @@
 [
   {
     "date": "2026-10-10",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-10",
     "message": "Updated Vodafone 220GB pricing"
   },
   {
@@ -154,9 +158,5 @@
   {
     "date": "2026-10-04",
     "message": "Updated amaysim NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-10-04",
-    "message": "Updated amaysim NBN 1000/100 pricing"
   }
 ]
