@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-10-10",
+    "provider": "Vodafone",
+    "serviceType": "mobile",
+    "tier": "220GB",
+    "title": "Medium Plan 220GB",
+    "billingCycleDays": 30,
+    "changes": {
+      "promoPrice": [
+        55.0,
+        50.0
+      ],
+      "regularPrice": [
+        55.0,
+        50.0
+      ]
+    }
+  },
+  {
+    "date": "2026-10-10",
+    "provider": "Vodafone",
+    "serviceType": "mobile",
+    "tier": "420GB",
+    "title": "Large Plan 420GB",
+    "billingCycleDays": 30,
+    "changes": {
+      "promoPrice": [
+        65.0,
+        55.0
+      ],
+      "regularPrice": [
+        65.0,
+        55.0
+      ]
+    }
+  },
+  {
+    "date": "2026-10-10",
+    "provider": "Vodafone",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "title": "nbn Home Fast+ NBN 500/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        79.0,
+        89.0
+      ],
+      "promoMonths": [
+        12,
+        null
+      ]
+    }
+  },
+  {
+    "date": "2026-10-10",
+    "provider": "Vodafone",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "title": "nbn Home Superfast NBN 750/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        84.0,
+        94.0
+      ],
+      "promoMonths": [
+        12,
+        null
+      ]
+    }
+  },
+  {
+    "date": "2026-10-10",
+    "provider": "Vodafone",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "title": "nbn Home Ultrafast NBN 1000/100",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        94.0,
+        104.0
+      ],
+      "promoMonths": [
+        12,
+        null
+      ]
+    }
+  },
+  {
     "date": "2026-10-09",
     "provider": "Pentanet",
     "serviceType": "nbn",

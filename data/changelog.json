@@ -1,6 +1,54 @@
 [
   {
     "date": "2026-10-10",
+    "message": "Updated Vodafone 220GB pricing"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Updated Vodafone 420GB pricing"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Updated Vodafone NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Updated Vodafone NBN 750/50 pricing"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Updated Vodafone NBN 1000/100 pricing"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Added Carbon Comms NBN 250/20 plan"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Added Carbon Comms NBN 400/40 plan"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Added Carbon Comms NBN 250/100 plan"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Added Carbon Comms NBN 500/200 plan"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Added Carbon Comms NBN 1000/400 plan"
+  },
+  {
+    "date": "2026-10-10",
+    "message": "Added Carbon Comms NBN 2000/500 plan"
+  },
+  {
+    "date": "2026-10-10",
     "message": "Updated Lyca Mobile 120GB pricing"
   },
   {
@@ -110,53 +158,5 @@
   {
     "date": "2026-10-04",
     "message": "Updated amaysim NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-10-03",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-02",
-    "message": "Updated amaysim 10GB pricing"
-  },
-  {
-    "date": "2026-10-02",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-01",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-01",
-    "message": "Updated Moose Mobile 30GB pricing"
-  },
-  {
-    "date": "2026-10-01",
-    "message": "Updated Moose Mobile 50GB pricing"
-  },
-  {
-    "date": "2026-10-01",
-    "message": "Updated Moose Mobile 100GB pricing"
-  },
-  {
-    "date": "2026-10-01",
-    "message": "Updated Moose Mobile 250GB pricing"
-  },
-  {
-    "date": "2026-10-01",
-    "message": "Updated amaysim NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-10-01",
-    "message": "Updated amaysim NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-10-01",
-    "message": "Updated Kogan Internet NBN 25 pricing"
-  },
-  {
-    "date": "2026-09-30",
-    "message": "Updated Superloop NBN 500/50 pricing"
   }
 ]
