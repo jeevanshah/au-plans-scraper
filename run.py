@@ -271,7 +271,28 @@ def _write_changelog(new_entries: list[dict]) -> None:
     )
 
 
-def main() -> int:
+def _read_provider_list(path: str | None) -> set[str] | None:
+    """One meta key per line, e.g. "Dodo (nbn)"; '#' starts a comment."""
+    if not path:
+        return None
+    keys = set()
+    for line in Path(path).read_text(encoding="utf-8").splitlines():
+        line = line.split("#", 1)[0].strip()
+        if line:
+            keys.add(line)
+    return keys
+
+
+def main(argv: list[str] | None = None) -> int:
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Scrape AU NBN and mobile plans")
+    parser.add_argument("--only-file", help="scrape only the providers listed in this file")
+    parser.add_argument("--skip-file", help="skip the providers listed in this file (keep their last data)")
+    args = parser.parse_args(argv)
+    only = _read_provider_list(args.only_file)
+    skip = _read_provider_list(args.skip_file) or set()
+
     DATA_DIR.mkdir(exist_ok=True)
     meta = _load_json(DATA_DIR / "meta.json") or {}
     if isinstance(meta, list):  # defensive: meta.json should always be a dict
@@ -280,14 +301,26 @@ def main() -> int:
 
     all_deals = []
 
+    scraped_count = 0
     for i, (module, category, transform) in enumerate(PROVIDERS):
         provider_name = module.PROVIDER
         meta_key = f"{provider_name} ({category})"
+
+        # Providers handled by another runner (see residential_providers.txt):
+        # carry their last data and status through untouched.
+        if (only is not None and meta_key not in only) or meta_key in skip:
+            all_deals.extend(
+                d for d in previous_deals
+                if d.get("provider") == provider_name and d.get("serviceType") == category
+            )
+            continue
+
         previous_status = meta.get(meta_key, {})
         consecutive_failures = previous_status.get("consecutive_failures", 0)
 
         # Politeness delay between providers (skip before the first one)
-        if i > 0:
+        scraped_count += 1
+        if scraped_count > 1:
             delay = INTER_PROVIDER_DELAY_MIN + random.random() * (
                 INTER_PROVIDER_DELAY_MAX - INTER_PROVIDER_DELAY_MIN
             )

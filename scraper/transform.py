@@ -93,7 +93,9 @@ def mobile_plan_to_deal(plan: MobilePlan) -> dict:
     deal = {
         "id": _make_id(plan.provider, id_key, plan.scraped_at),
         "provider": plan.provider,
-        "title": f"{plan.plan_name} {tier}",
+        # Some providers' plan names are just the allowance ("120GB"), which used
+        # to produce titles like "120GB 120GB".
+        "title": plan.plan_name.strip() if tier.lower() in plan.plan_name.lower() else f"{plan.plan_name.strip()} {tier}",
         "category": CATEGORY,
         "description": description,
         "promoPrice": plan.promo_price if has_promo else plan.price_monthly,

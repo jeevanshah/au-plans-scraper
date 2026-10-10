@@ -16,6 +16,11 @@ permissions:
   contents: write
   issues: write
 
+# Never let this and scrape-residential.yml write data/ at the same time.
+concurrency:
+  group: scrape-data
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -35,7 +40,9 @@ jobs:
         run: python -m pytest tests/
 
       - name: Run scrapers
-        run: python run.py
+        # Providers that block datacenter IPs are scraped by
+        # scrape-residential.yml on a self-hosted runner instead.
+        run: python run.py --skip-file residential_providers.txt
         continue-on-error: true
 
       - name: Commit data if changed

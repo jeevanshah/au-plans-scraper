@@ -395,6 +395,17 @@ showed up during local dev/testing:
    working and needs investigating (was mid-investigation when this note
    was written -- check for a resolution before re-investigating).
 
+**Resolution (2026-10-10): split runners.** By October the cloud-IP block
+covered Dodo (NBN + mobile), Vodafone (NBN + mobile), Neptune, Mint, More
+Telecom and Leaptel (NBN + OptiComm) -- 40 straight CI failures for most,
+while Leaptel's page still parses fine from a home browser. These are listed
+in `residential_providers.txt`. `scrape.yml` (GitHub-hosted) now runs
+`run.py --skip-file residential_providers.txt`, carrying their last data and
+status through untouched, and `scrape-residential.yml` runs
+`run.py --only-file residential_providers.txt` on a self-hosted Windows
+runner on a home connection. Both share a `scrape-data` concurrency group so
+they never write `data/` at the same time.
+
 ## "Purple Wireless" -- not a real entity, skipped (2026-08-14)
 
 Asked to add a scraper for an Australian NBN provider called "Purple
