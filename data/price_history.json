@@ -1,5 +1,95 @@
 [
   {
+    "date": "2026-10-09",
+    "provider": "Pentanet",
+    "serviceType": "nbn",
+    "tier": "NBN 100/20",
+    "title": "Family NBN 100/20",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        89.0,
+        84.0
+      ],
+      "promoMonths": [
+        12,
+        9
+      ]
+    }
+  },
+  {
+    "date": "2026-10-09",
+    "provider": "Pentanet",
+    "serviceType": "nbn",
+    "tier": "NBN 100/40",
+    "title": "Pro+ NBN 100/40",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        99.0,
+        94.0
+      ],
+      "promoMonths": [
+        12,
+        9
+      ]
+    }
+  },
+  {
+    "date": "2026-10-09",
+    "provider": "Pentanet",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "title": "Family NBN 500/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        89.0,
+        84.0
+      ],
+      "promoMonths": [
+        12,
+        9
+      ]
+    }
+  },
+  {
+    "date": "2026-10-09",
+    "provider": "Pentanet",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "title": "Elite NBN 750/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        99.0,
+        94.0
+      ],
+      "promoMonths": [
+        12,
+        9
+      ]
+    }
+  },
+  {
+    "date": "2026-10-09",
+    "provider": "Pentanet",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "title": "Prime NBN 1000/100",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        104.0,
+        99.0
+      ],
+      "promoMonths": [
+        12,
+        9
+      ]
+    }
+  },
+  {
     "date": "2026-10-07",
     "provider": "Optus",
     "serviceType": "nbn",
