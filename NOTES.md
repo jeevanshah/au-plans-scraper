@@ -423,13 +423,19 @@ Investigation revealed three distinct causes across the failing providers:
    preserving existing deal IDs (`more-telecom-nbn-25-10-...`), and More Telecom
    was moved back to the standard GitHub-hosted runner (`scrape.yml`).
 
-The remaining datacenter-blocked providers (Dodo, Vodafone, Neptune, Mint, Leaptel)
-are listed in `residential_providers.txt`. `scrape.yml` (GitHub-hosted) runs
-`run.py --skip-file residential_providers.txt`, carrying their last data and
-status through untouched, while `scrape-residential.yml` runs
-`run.py --only-file residential_providers.txt` on a self-hosted Windows
-runner on a home connection. Both share a `scrape-data` concurrency group so
-they never write `data/` at the same time.
+**Resolution (2026-10-10): Cloud-native resolution with ScraperAPI.**
+Rather than requiring a self-hosted runner on a personal PC to stay awake 24/7,
+ScraperAPI residential proxy integration was implemented in `scraper/base.py`
+specifically for the 5 datacenter-blocked brands (Dodo, Vodafone, Neptune, Mint,
+and Leaptel). At 8 requests per day (~240 requests/month), this operates 100%
+within ScraperAPI's permanent free tier (1,000 credits/month) using Australian
+geotargeting (`country_code=au`) and optional JS rendering (`render=true`).
+
+All 49 providers now run fully automated in the cloud via `scrape.yml` using the
+`SCRAPER_API_KEY` secret, completely eliminating the need for a self-hosted
+runner, laptop uptime, or runner splitting. If `SCRAPER_API_KEY` is absent (such
+as in local development without `.env`), `scraper/base.py` automatically falls
+back to standard direct fetching.
 
 ## "Purple Wireless" -- not a real entity, skipped (2026-08-14)
 

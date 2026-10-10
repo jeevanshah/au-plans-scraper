@@ -40,9 +40,9 @@ jobs:
         run: python -m pytest tests/
 
       - name: Run scrapers
-        # Providers that block datacenter IPs are scraped by
-        # scrape-residential.yml on a self-hosted runner instead.
-        run: python run.py --skip-file residential_providers.txt
+        env:
+          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
+        run: python run.py
         continue-on-error: true
 
       - name: Commit data if changed

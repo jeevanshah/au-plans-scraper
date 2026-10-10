@@ -10,7 +10,7 @@ REQUIRES_JS = True
 
 SPEED_RE = re.compile(r"(\d+)/(\d+)\s*Mbps", re.IGNORECASE)
 TYPICAL_RE = re.compile(r"Typical evening speed:\s*(\d+)\s*Mbps", re.IGNORECASE)
-PRICE_RE = re.compile(r"\$(\d+(?:\.\d+)?)\s*/\s*month", re.IGNORECASE)
+PRICE_RE = re.compile(r"\$\s*(\d+(?:\.\d+)?)\s*/\s*month", re.IGNORECASE)
 
 
 def scrape() -> list[NbnPlan]:
@@ -23,7 +23,11 @@ def scrape() -> list[NbnPlan]:
     # Find plan card blocks
     for card in soup.find_all(True):
         txt = card.get_text(" ", strip=True)
-        if "SIGN ME UP" in txt and "Typical evening speed" in txt and len(txt) < 400:
+        if (
+            ("SIGN ME UP" in txt or "Start an application" in txt)
+            and "Typical evening speed" in txt
+            and len(txt) < 400
+        ):
             speed_m = SPEED_RE.search(txt)
             price_m = PRICE_RE.search(txt)
             if not speed_m or not price_m:

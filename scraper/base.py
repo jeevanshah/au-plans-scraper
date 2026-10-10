@@ -1,13 +1,52 @@
 """Shared fetch helpers for provider scrapers."""
 import logging
+import os
 import re
 import time
+import urllib.parse
 from datetime import datetime
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
 
 logger = logging.getLogger("scraper")
+
+# Optional ScraperAPI proxy integration for providers that block datacenter IPs.
+# Can be configured via the SCRAPER_API_KEY environment variable or a local .env file.
+SCRAPER_API_KEY = os.environ.get("SCRAPER_API_KEY", "").strip()
+if not SCRAPER_API_KEY:
+    _env_path = Path(__file__).resolve().parent.parent / ".env"
+    if _env_path.exists():
+        for _line in _env_path.read_text(encoding="utf-8").splitlines():
+            _line = _line.strip()
+            if _line.startswith("SCRAPER_API_KEY="):
+                SCRAPER_API_KEY = _line.split("=", 1)[1].strip().strip('"').strip("'")
+                break
+
+DATACENTER_BLOCKED_DOMAINS = (
+    "dodo.com",
+    "vodafone.com.au",
+    "neptune.net.au",
+    "minttelecom.com.au",
+    "leaptel.com.au",
+)
+
+
+def _should_use_scraperapi(url: str) -> bool:
+    if not SCRAPER_API_KEY:
+        return False
+    return any(domain in url for domain in DATACENTER_BLOCKED_DOMAINS)
+
+
+def _fetch_scraperapi(url: str, *, render: bool = False, timeout: int = 60) -> BeautifulSoup:
+    encoded_url = urllib.parse.quote(url, safe="")
+    api_url = f"https://api.scraperapi.com?api_key={SCRAPER_API_KEY}&url={encoded_url}&country_code=au"
+    if render:
+        api_url += "&render=true"
+    resp = requests.get(api_url, timeout=timeout)
+    resp.raise_for_status()
+    return BeautifulSoup(resp.text, "lxml")
 
 USER_AGENT = (
     "au-plans-scraper/1.0 (+https://github.com/; contact: see repo README) "
@@ -26,7 +65,20 @@ class FetchError(RuntimeError):
 
 def fetch_static(url: str, *, retries: int = DEFAULT_RETRIES) -> BeautifulSoup:
     """Fetch a URL and return parsed HTML. Retries with backoff on failure."""
-    last_exc: Exception | None = None
+    if _should_use_scraperapi(url):
+        last_exc: Exception | None = None
+        for attempt in range(1, retries + 1):
+            try:
+                logger.info("Fetching %s via ScraperAPI (attempt %d/%d)", url, attempt, retries)
+                return _fetch_scraperapi(url, render=False, timeout=60)
+            except Exception as exc:
+                last_exc = exc
+                logger.warning("ScraperAPI fetch attempt %d/%d failed for %s: %s", attempt, retries, url, exc)
+                if attempt < retries:
+                    time.sleep(DEFAULT_BACKOFF_SECONDS * attempt)
+        logger.warning("ScraperAPI failed for %s, falling back to direct fetch: %s", url, last_exc)
+
+    last_exc = None
     for attempt in range(1, retries + 1):
         try:
             resp = requests.get(
@@ -76,7 +128,20 @@ def fetch_js(
     """
     from playwright.sync_api import sync_playwright
 
-    last_exc: Exception | None = None
+    if _should_use_scraperapi(url):
+        last_exc: Exception | None = None
+        for attempt in range(1, retries + 1):
+            try:
+                logger.info("Fetching %s via ScraperAPI with render=true (attempt %d/%d)", url, attempt, retries)
+                return _fetch_scraperapi(url, render=True, timeout=90)
+            except Exception as exc:
+                last_exc = exc
+                logger.warning("ScraperAPI render attempt %d/%d failed for %s: %s", attempt, retries, url, exc)
+                if attempt < retries:
+                    time.sleep(DEFAULT_BACKOFF_SECONDS * attempt)
+        logger.warning("ScraperAPI render failed for %s, falling back to direct Playwright: %s", url, last_exc)
+
+    last_exc = None
     for attempt in range(1, retries + 1):
         try:
             with sync_playwright() as p:

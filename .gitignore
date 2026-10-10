@@ -10,3 +10,4 @@ data/consumer_pain/
 *.jsonl
 data/.seen_*.json
 run_daily.py
+.env
