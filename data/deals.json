@@ -2462,7 +2462,7 @@
     "_source": "Neptune Internet official site, verified 2026-08-29"
   },
   {
-    "id": "more-telecom-nbn-25-10-value-2026-09",
+    "id": "more-telecom-nbn-25-10-value-2026-10",
     "provider": "More Telecom",
     "title": "Value NBN 25/10",
     "category": "Utilities",
@@ -2476,11 +2476,11 @@
     "tier": "NBN 25/10",
     "typicalEveningSpeed": 25.0,
     "techType": null,
-    "postedAt": "2026-09-07",
-    "_source": "More Telecom official site, verified 2026-09-07"
+    "postedAt": "2026-10-10",
+    "_source": "More Telecom official site, verified 2026-10-10"
   },
   {
-    "id": "more-telecom-nbn-50-20-value-plus-2026-09",
+    "id": "more-telecom-nbn-50-20-value-plus-2026-10",
     "provider": "More Telecom",
     "title": "Value Plus NBN 50/20",
     "category": "Utilities",
@@ -2494,11 +2494,11 @@
     "tier": "NBN 50/20",
     "typicalEveningSpeed": 50.0,
     "techType": null,
-    "postedAt": "2026-09-07",
-    "_source": "More Telecom official site, verified 2026-09-07"
+    "postedAt": "2026-10-10",
+    "_source": "More Telecom official site, verified 2026-10-10"
   },
   {
-    "id": "more-telecom-nbn-500-50-fast-max-2026-09",
+    "id": "more-telecom-nbn-500-50-fast-max-2026-10",
     "provider": "More Telecom",
     "title": "Fast Max NBN 500/50",
     "category": "Utilities",
@@ -2512,11 +2512,11 @@
     "tier": "NBN 500/50",
     "typicalEveningSpeed": 500.0,
     "techType": null,
-    "postedAt": "2026-09-07",
-    "_source": "More Telecom official site, verified 2026-09-07"
+    "postedAt": "2026-10-10",
+    "_source": "More Telecom official site, verified 2026-10-10"
   },
   {
-    "id": "more-telecom-nbn-1000-100-ultrafast-2026-09",
+    "id": "more-telecom-nbn-1000-100-ultrafast-2026-10",
     "provider": "More Telecom",
     "title": "Ultrafast NBN 1000/100",
     "category": "Utilities",
@@ -2528,10 +2528,10 @@
     "url": "https://www.more.com.au/personal/nbn-plans",
     "serviceType": "nbn",
     "tier": "NBN 1000/100",
-    "typicalEveningSpeed": 700.0,
+    "typicalEveningSpeed": 860.0,
     "techType": null,
-    "postedAt": "2026-09-07",
-    "_source": "More Telecom official site, verified 2026-09-07"
+    "postedAt": "2026-10-10",
+    "_source": "More Telecom official site, verified 2026-10-10"
   },
   {
     "id": "purple-connect-nbn-25-10-essentials-2026-10",

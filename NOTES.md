@@ -351,14 +351,18 @@ generic single word "More" colliding with unrelated things downstream.
   they're conditional on a CommBank payment method / router purchase, not
   a plan-price discount for all customers, so they're deliberately not
   modelled as `promo_price`.)
-- One field genuinely needed a raw-HTML regex instead of `get_text()`: each
-  card's authoritative nbn(R) speed tier string (e.g. "nbn(R) speed tier
-  500/50") only exists inside a tooltip icon's `data-bs-title` attribute,
-  not in any visible text node -- `get_text()` silently drops it. Regexing
-  `str(card)` instead picks it up. This matters because the card's own
-  *visible* "Typical Evening Speed" download/upload figures are NOT always
-  the same as the nominal tier (Ultrafast's real typical download is
-  700Mbps, not the tier's 1000) -- same pattern already seen with Swoop.
+- Speed tiers and 2026-09 redesign: originally, each card's authoritative
+  nbn(R) speed tier string (e.g. "nbn(R) speed tier 500/50") only existed
+  inside a tooltip icon's `data-bs-title` attribute. Around 2026-09-07/08, More
+  redesigned their cards to promote a CommBank $50 credit offer, replaced the
+  tooltips with generic speed-measurement disclaimers, and changed `data-offer`
+  from "false" to "true". This broke the tooltip regex and caused More to return
+  0 plans. The parser was updated to extract authoritative speed tiers directly
+  from the on-page "Compare nbn(R) plans" table (which explicitly pairs Value,
+  Value Plus, Fast Max, Ultrafast to 25/10, 50/20, 500/50, 1000/100) with a
+  fallback dict. This preserves upload speed tiers and existing deal IDs
+  (`more-telecom-nbn-25-10-...`). Ultrafast's busy-hour download also updated
+  from 700 to 860 Mbps on the live site. More is not blocked by datacenter IPs.
 
 ## CI/scheduling: pytest sys.path bug (fixed) and cloud-IP blocking (open)
 
@@ -395,13 +399,34 @@ showed up during local dev/testing:
    working and needs investigating (was mid-investigation when this note
    was written -- check for a resolution before re-investigating).
 
-**Resolution (2026-10-10): split runners.** By October the cloud-IP block
-covered Dodo (NBN + mobile), Vodafone (NBN + mobile), Neptune, Mint, More
-Telecom and Leaptel (NBN + OptiComm) -- 40 straight CI failures for most,
-while Leaptel's page still parses fine from a home browser. These are listed
-in `residential_providers.txt`. `scrape.yml` (GitHub-hosted) now runs
+**Resolution (2026-10-10): split runners and provider root causes.**
+Investigation revealed three distinct causes across the failing providers:
+
+1. **Dodo (NBN + mobile), Vodafone (NBN + mobile), Neptune, Mint:** Never
+   worked reliably from GitHub Actions datacenter IPs from day 1 due to
+   datacenter IP blocking (HTTP 403/503 / anti-bot). A single fortunate run
+   slipped through on 2026-08-29 around 1:30pm AEST when an unblocked runner IP
+   was assigned, followed by 41 consecutive nightly failures. All scrape
+   cleanly from residential IPs.
+2. **Leaptel (NBN + OptiComm):** Worked reliably every night until
+   2026-09-29 (OptiComm until 2026-10-05), after which Leaptel tightened its
+   anti-bot rules against datacenter IPs. The page DOM was not redesigned;
+   local/residential scraping continues to succeed with all 13 plans matching
+   existing selectors.
+3. **More Telecom (NBN):** Was NOT blocked by datacenter IPs at all (plain Nginx,
+   HTTP 200). Around 2026-09-07/08, More redesigned their plan cards (adding
+   CommBank offers and replacing the tooltip `nbn(R) speed tier 50/20` text with
+   disclaimer text), causing `more_nbn.py`'s regex to return no plans. More was
+   mistakenly placed in `residential_providers.txt`. The parser was fixed by
+   extracting authoritative speed tiers (25/10, 50/20, 500/50, 1000/100) from the
+   "Compare nbn(R) plans" table on the page (with a plan mapping fallback),
+   preserving existing deal IDs (`more-telecom-nbn-25-10-...`), and More Telecom
+   was moved back to the standard GitHub-hosted runner (`scrape.yml`).
+
+The remaining datacenter-blocked providers (Dodo, Vodafone, Neptune, Mint, Leaptel)
+are listed in `residential_providers.txt`. `scrape.yml` (GitHub-hosted) runs
 `run.py --skip-file residential_providers.txt`, carrying their last data and
-status through untouched, and `scrape-residential.yml` runs
+status through untouched, while `scrape-residential.yml` runs
 `run.py --only-file residential_providers.txt` on a self-hosted Windows
 runner on a home connection. Both share a `scrape-data` concurrency group so
 they never write `data/` at the same time.

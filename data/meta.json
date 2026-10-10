@@ -144,9 +144,9 @@
     "plan_count": 12
   },
   "More Telecom (nbn)": {
-    "status": "error",
-    "last_success": "2026-09-07T14:09:32.491192+00:00",
-    "consecutive_failures": 32,
+    "status": "ok",
+    "last_success": "2026-10-10T01:35:43.656958+00:00",
+    "consecutive_failures": 0,
     "plan_count": 4
   },
   "Purple Connect (nbn)": {

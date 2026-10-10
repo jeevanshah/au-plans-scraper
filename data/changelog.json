@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-10",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
     "date": "2026-10-09",
     "message": "Updated Lyca Mobile 120GB pricing"
   },
@@ -154,9 +158,5 @@
   {
     "date": "2026-09-30",
     "message": "Updated Superloop NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-09-30",
-    "message": "Updated Superloop NBN 750/50 pricing"
   }
 ]
