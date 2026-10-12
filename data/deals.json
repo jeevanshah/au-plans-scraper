@@ -1717,7 +1717,7 @@
     "dealChannel": "partner_exclusive",
     "dealChannelLabel": "WhistleOut Special",
     "directPublicPromoPrice": 44.0,
-    "howToGet": "Discounted via SpinTel's WhistleOut partner campaign. Saves an extra $3/mo for 6 months compared to the direct website.",
+    "howToGet": "Discounted via SpinTel's WhistleOut partner campaign. Saves an extra $3/mo for 6 months ($18 total) compared to the direct website.",
     "directUrl": "https://www.spintel.net.au/nbn"
   },
   {
@@ -1739,8 +1739,9 @@
     "_source": "SpinTel official site, verified 2026-10-11",
     "dealChannel": "partner_exclusive",
     "dealChannelLabel": "WhistleOut Special",
-    "howToGet": "Discounted via SpinTel's WhistleOut partner campaign. Saves an extra $3/mo for 6 months compared to the direct website.",
-    "directUrl": "https://www.spintel.net.au/nbn"
+    "howToGet": "Discounted via SpinTel's WhistleOut partner campaign. Saves an extra $3/mo for 6 months ($18 total) compared to the direct website.",
+    "directUrl": "https://www.spintel.net.au/nbn",
+    "directPublicPromoPrice": 59.0
   },
   {
     "id": "spintel-nbn-500-50-2026-10",
@@ -1784,7 +1785,7 @@
     "dealChannel": "partner_exclusive",
     "dealChannelLabel": "WhistleOut Special",
     "directPublicPromoPrice": 84.0,
-    "howToGet": "Discounted via SpinTel's WhistleOut partner campaign. Saves an extra $3/mo for 6 months compared to the direct website.",
+    "howToGet": "Discounted via SpinTel's WhistleOut partner campaign. Saves an extra $15/mo for 6 months ($90 total) compared to the direct website.",
     "directUrl": "https://www.spintel.net.au/nbn"
   },
   {
@@ -1828,8 +1829,9 @@
     "_source": "SpinTel official site, verified 2026-10-11",
     "dealChannel": "partner_exclusive",
     "dealChannelLabel": "WhistleOut Special",
-    "howToGet": "Discounted via SpinTel's WhistleOut partner campaign. Saves an extra $3/mo for 6 months compared to the direct website.",
-    "directUrl": "https://www.spintel.net.au/nbn"
+    "howToGet": "Discounted via SpinTel's WhistleOut partner campaign. Saves an extra $18/mo for 6 months ($108 total) compared to the direct website.",
+    "directUrl": "https://www.spintel.net.au/nbn",
+    "directPublicPromoPrice": 94.0
   },
   {
     "id": "tpg-nbn-100-20-nbn100-2026-10",
