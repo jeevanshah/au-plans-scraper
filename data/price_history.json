@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-13",
+    "provider": "Kogan Internet",
+    "serviceType": "nbn",
+    "tier": "NBN 25",
+    "title": "Bronze NBN 25",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        49.9,
+        47.9
+      ]
+    }
+  },
+  {
     "date": "2026-10-12",
     "provider": "Boost Mobile",
     "serviceType": "mobile",
