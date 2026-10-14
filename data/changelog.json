@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-14",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
     "date": "2026-10-13",
     "message": "Updated Lyca Mobile 120GB pricing"
   },
@@ -154,9 +158,5 @@
   {
     "date": "2026-10-06",
     "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-05",
-    "message": "Updated Telstra NBN 50 pricing"
   }
 ]
