@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-10-16",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-16",
+    "message": "Updated Vodafone NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-10-16",
+    "message": "Updated Vodafone NBN 750/50 pricing"
+  },
+  {
+    "date": "2026-10-16",
+    "message": "Updated Vodafone NBN 1000/100 pricing"
+  },
+  {
     "date": "2026-10-15",
     "message": "Updated Lyca Mobile 120GB pricing"
   },
@@ -142,21 +158,5 @@
   {
     "date": "2026-10-07",
     "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-07",
-    "message": "Updated Optus NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-10-07",
-    "message": "Updated Optus NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-10-07",
-    "message": "Updated Optus NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-10-07",
-    "message": "Updated Optus NBN 1000/100 pricing"
   }
 ]

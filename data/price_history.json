@@ -1,5 +1,59 @@
 [
   {
+    "date": "2026-10-16",
+    "provider": "Vodafone",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "title": "nbn Home Fast+ NBN 500/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        89.0,
+        68.0
+      ],
+      "promoMonths": [
+        null,
+        6
+      ]
+    }
+  },
+  {
+    "date": "2026-10-16",
+    "provider": "Vodafone",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "title": "nbn Home Superfast NBN 750/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        94.0,
+        73.0
+      ],
+      "promoMonths": [
+        null,
+        6
+      ]
+    }
+  },
+  {
+    "date": "2026-10-16",
+    "provider": "Vodafone",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "title": "nbn Home Ultrafast NBN 1000/100",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        104.0,
+        83.0
+      ],
+      "promoMonths": [
+        null,
+        6
+      ]
+    }
+  },
+  {
     "date": "2026-10-13",
     "provider": "Kogan Internet",
     "serviceType": "nbn",
