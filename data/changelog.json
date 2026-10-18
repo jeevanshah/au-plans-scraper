@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-18",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
     "date": "2026-10-17",
     "message": "Added Superloop NBN 2000/100 plan"
   },
@@ -154,9 +158,5 @@
   {
     "date": "2026-10-07",
     "message": "Updated iiNet NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-10-07",
-    "message": "Updated iiNet NBN 25/10 pricing"
   }
 ]
