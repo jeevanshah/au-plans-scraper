@@ -1,5 +1,87 @@
 [
   {
+    "date": "2026-10-19",
+    "provider": "Boost Mobile",
+    "serviceType": "mobile",
+    "tier": "105GB",
+    "title": "105GB",
+    "billingCycleDays": 28,
+    "changes": {
+      "promoPrice": [
+        59.0,
+        45.0
+      ],
+      "promoMonths": [
+        null,
+        1
+      ]
+    }
+  },
+  {
+    "date": "2026-10-19",
+    "provider": "Boost Mobile",
+    "serviceType": "mobile",
+    "tier": "160GB",
+    "title": "160GB",
+    "billingCycleDays": 186,
+    "changes": {
+      "promoPrice": [
+        160.0,
+        180.0
+      ],
+      "promoMonths": [
+        1,
+        null
+      ]
+    }
+  },
+  {
+    "date": "2026-10-19",
+    "provider": "Arctel",
+    "serviceType": "nbn",
+    "tier": "NBN 25/10",
+    "title": "Cruisy Lite NBN 25/10",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        48.99,
+        51.99
+      ],
+      "regularPrice": [
+        48.99,
+        51.99
+      ]
+    }
+  },
+  {
+    "date": "2026-10-19",
+    "provider": "Arctel",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "title": "Ultra Fast NBN 750/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        89.99,
+        86.99
+      ]
+    }
+  },
+  {
+    "date": "2026-10-19",
+    "provider": "Arctel",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "title": "Hyper Sonic NBN 1000/100",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        99.99,
+        95.99
+      ]
+    }
+  },
+  {
     "date": "2026-10-16",
     "provider": "Vodafone",
     "serviceType": "nbn",

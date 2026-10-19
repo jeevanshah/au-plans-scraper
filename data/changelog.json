@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-10-19",
+    "message": "Added Superloop NBN 2000/200 plan"
+  },
+  {
+    "date": "2026-10-19",
+    "message": "Added Kogan Mobile 300GB plan"
+  },
+  {
+    "date": "2026-10-19",
+    "message": "Added Kogan Mobile 900GB plan"
+  },
+  {
+    "date": "2026-10-19",
+    "message": "Added Kogan Mobile 140GB plan"
+  },
+  {
+    "date": "2026-10-19",
+    "message": "Updated Boost Mobile 75GB pricing"
+  },
+  {
+    "date": "2026-10-19",
+    "message": "Updated Boost Mobile 105GB pricing"
+  },
+  {
+    "date": "2026-10-19",
+    "message": "Updated Boost Mobile 160GB pricing"
+  },
+  {
+    "date": "2026-10-19",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-19",
+    "message": "Updated Arctel NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-10-19",
+    "message": "Updated Arctel NBN 750/50 pricing"
+  },
+  {
+    "date": "2026-10-19",
+    "message": "Updated Arctel NBN 1000/100 pricing"
+  },
+  {
     "date": "2026-10-18",
     "message": "Updated Lyca Mobile 120GB pricing"
   },
@@ -114,49 +158,5 @@
   {
     "date": "2026-10-10",
     "message": "Added Carbon Comms NBN 500/200 plan"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Added Carbon Comms NBN 1000/400 plan"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Added Carbon Comms NBN 2000/500 plan"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-09",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-09",
-    "message": "Updated Pentanet NBN 100/20 pricing"
-  },
-  {
-    "date": "2026-10-09",
-    "message": "Updated Pentanet NBN 100/40 pricing"
-  },
-  {
-    "date": "2026-10-09",
-    "message": "Updated Pentanet NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-10-09",
-    "message": "Updated Pentanet NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-10-09",
-    "message": "Updated Pentanet NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-10-08",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-07",
-    "message": "Updated iiNet NBN 500/50 pricing"
   }
 ]
