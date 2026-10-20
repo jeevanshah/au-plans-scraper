@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-20",
+    "provider": "amaysim",
+    "serviceType": "nbn",
+    "tier": "NBN 100/20",
+    "title": "NBN 100 NBN 100/20",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        50.0,
+        80.0
+      ]
+    }
+  },
+  {
+    "date": "2026-10-20",
+    "provider": "amaysim",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "title": "NBN 500 NBN 500/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        50.0,
+        80.0
+      ]
+    }
+  },
+  {
+    "date": "2026-10-20",
+    "provider": "Carbon Comms",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "title": "Carbon Home Ultrafast 1000/100 NBN NBN 1000/100",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        102.0,
+        100.0
+      ],
+      "regularPrice": [
+        102.0,
+        100.0
+      ]
+    }
+  },
+  {
     "date": "2026-10-19",
     "provider": "Boost Mobile",
     "serviceType": "mobile",

@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-20",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-10-20",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-20",
+    "message": "Updated amaysim NBN 100/20 pricing"
+  },
+  {
+    "date": "2026-10-20",
+    "message": "Updated amaysim NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-10-20",
+    "message": "Updated Carbon Comms NBN 1000/100 pricing"
+  },
+  {
     "date": "2026-10-19",
     "message": "Added Superloop NBN 2000/200 plan"
   },
@@ -138,25 +158,5 @@
   {
     "date": "2026-10-10",
     "message": "Updated Vodafone NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Updated Vodafone NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Added Carbon Comms NBN 250/20 plan"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Added Carbon Comms NBN 400/40 plan"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Added Carbon Comms NBN 250/100 plan"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Added Carbon Comms NBN 500/200 plan"
   }
 ]
