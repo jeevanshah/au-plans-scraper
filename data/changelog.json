@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-10-21",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-10-21",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
     "date": "2026-10-20",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -150,13 +158,5 @@
   {
     "date": "2026-10-10",
     "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Updated Vodafone NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Updated Vodafone NBN 750/50 pricing"
   }
 ]
