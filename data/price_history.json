@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-23",
+    "provider": "Arctel",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "title": "Super Fast NBN 500/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        67.99,
+        77.99
+      ],
+      "promoMonths": [
+        12,
+        24
+      ]
+    }
+  },
+  {
+    "date": "2026-10-23",
+    "provider": "amaysim",
+    "serviceType": "nbn",
+    "tier": "NBN 25/10",
+    "title": "NBN 25 NBN 25/10",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        30.0,
+        60.0
+      ]
+    }
+  },
+  {
+    "date": "2026-10-23",
+    "provider": "amaysim",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "title": "NBN 750 NBN 750/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        60.0,
+        90.0
+      ]
+    }
+  },
+  {
     "date": "2026-10-20",
     "provider": "amaysim",
     "serviceType": "nbn",

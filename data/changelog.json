@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-23",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-10-23",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-23",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-10-23",
+    "message": "Updated amaysim NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-10-23",
+    "message": "Updated amaysim NBN 750/50 pricing"
+  },
+  {
     "date": "2026-10-22",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -138,25 +158,5 @@
   {
     "date": "2026-10-12",
     "message": "Updated Boost Mobile 365GB pricing"
-  },
-  {
-    "date": "2026-10-12",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-12",
-    "message": "Updated Carbon Comms NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-10-11",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-10",
-    "message": "Updated Vodafone 220GB pricing"
   }
 ]
