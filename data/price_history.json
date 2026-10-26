@@ -1,5 +1,41 @@
 [
   {
+    "date": "2026-10-26",
+    "provider": "Boost Mobile",
+    "serviceType": "mobile",
+    "tier": "105GB",
+    "title": "105GB",
+    "billingCycleDays": 28,
+    "changes": {
+      "promoPrice": [
+        45.0,
+        59.0
+      ],
+      "promoMonths": [
+        1,
+        null
+      ]
+    }
+  },
+  {
+    "date": "2026-10-26",
+    "provider": "Boost Mobile",
+    "serviceType": "mobile",
+    "tier": "290GB",
+    "title": "290GB",
+    "billingCycleDays": 365,
+    "changes": {
+      "promoPrice": [
+        300.0,
+        265.0
+      ],
+      "promoMonths": [
+        null,
+        1
+      ]
+    }
+  },
+  {
     "date": "2026-10-23",
     "provider": "Arctel",
     "serviceType": "nbn",
