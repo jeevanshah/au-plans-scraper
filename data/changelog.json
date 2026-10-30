@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-10-30",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-10-30",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-10-30",
+    "message": "Updated Arctel NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-10-30",
+    "message": "Updated Arctel NBN 750/50 pricing"
+  },
+  {
     "date": "2026-10-29",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -142,21 +158,5 @@
   {
     "date": "2026-10-19",
     "message": "Added Superloop NBN 2000/200 plan"
-  },
-  {
-    "date": "2026-10-19",
-    "message": "Added Kogan Mobile 300GB plan"
-  },
-  {
-    "date": "2026-10-19",
-    "message": "Added Kogan Mobile 900GB plan"
-  },
-  {
-    "date": "2026-10-19",
-    "message": "Added Kogan Mobile 140GB plan"
-  },
-  {
-    "date": "2026-10-19",
-    "message": "Updated Boost Mobile 75GB pricing"
   }
 ]

@@ -1,5 +1,41 @@
 [
   {
+    "date": "2026-10-30",
+    "provider": "Arctel",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "title": "Super Fast NBN 500/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        77.99,
+        59.99
+      ],
+      "promoMonths": [
+        24,
+        6
+      ]
+    }
+  },
+  {
+    "date": "2026-10-30",
+    "provider": "Arctel",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "title": "Ultra Fast NBN 750/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        86.99,
+        81.99
+      ],
+      "promoMonths": [
+        24,
+        12
+      ]
+    }
+  },
+  {
     "date": "2026-10-27",
     "provider": "Carbon Comms",
     "serviceType": "nbn",
