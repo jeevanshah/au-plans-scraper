@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-10-31",
+    "message": "Updated Tangerine NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-10-31",
+    "message": "Updated Tangerine NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-10-31",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-10-31",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
     "date": "2026-10-30",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -142,21 +158,5 @@
   {
     "date": "2026-10-20",
     "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-20",
-    "message": "Updated amaysim NBN 100/20 pricing"
-  },
-  {
-    "date": "2026-10-20",
-    "message": "Updated amaysim NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-10-20",
-    "message": "Updated Carbon Comms NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-10-19",
-    "message": "Added Superloop NBN 2000/200 plan"
   }
 ]
