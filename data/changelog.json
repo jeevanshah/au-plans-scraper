@@ -1,5 +1,77 @@
 [
   {
+    "date": "2026-11-02",
+    "message": "Updated Telstra NBN 25 pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Telstra NBN 50 pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Telstra NBN 100 pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Telstra NBN 750 pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Telstra NBN 1000 pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Added Telstra 50GB plan"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Added Boost Mobile 80GB plan"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Added Boost Mobile 110GB plan"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Added Boost Mobile 140GB plan"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Added Boost Mobile 180GB plan"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Activ8me NBN 25/5 pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Activ8me NBN 50/20 pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Activ8me NBN 100/20 pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Activ8me Sky Muster Premium 25 (25/5) pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Activ8me Sky Muster Premium 50 (50/5) pricing"
+  },
+  {
+    "date": "2026-11-02",
+    "message": "Updated Activ8me Sky Muster Premium 100 (100/5) pricing"
+  },
+  {
     "date": "2026-11-01",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -86,77 +158,5 @@
   {
     "date": "2026-10-27",
     "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-27",
-    "message": "Updated Carbon Comms NBN 250/100 pricing"
-  },
-  {
-    "date": "2026-10-27",
-    "message": "Updated Carbon Comms NBN 500/200 pricing"
-  },
-  {
-    "date": "2026-10-27",
-    "message": "Updated Carbon Comms NBN 1000/400 pricing"
-  },
-  {
-    "date": "2026-10-27",
-    "message": "Updated Carbon Comms NBN 2000/500 pricing"
-  },
-  {
-    "date": "2026-10-26",
-    "message": "Added Kogan Mobile 60GB plan"
-  },
-  {
-    "date": "2026-10-26",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-10-26",
-    "message": "Added Kogan Mobile 25GB plan"
-  },
-  {
-    "date": "2026-10-26",
-    "message": "Added Kogan Mobile 80GB plan"
-  },
-  {
-    "date": "2026-10-26",
-    "message": "Updated Boost Mobile 105GB pricing"
-  },
-  {
-    "date": "2026-10-26",
-    "message": "Updated Boost Mobile 290GB pricing"
-  },
-  {
-    "date": "2026-10-26",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-25",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-10-25",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-24",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-10-24",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-23",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-10-23",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-23",
-    "message": "Updated Arctel NBN 500/50 pricing"
   }
 ]

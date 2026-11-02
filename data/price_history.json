@@ -1,5 +1,185 @@
 [
   {
+    "date": "2026-11-02",
+    "provider": "Telstra",
+    "serviceType": "nbn",
+    "tier": "NBN 50",
+    "title": "Essential NBN 50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        69.0,
+        49.0
+      ],
+      "promoMonths": [
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "provider": "Telstra",
+    "serviceType": "nbn",
+    "tier": "NBN 100",
+    "title": "Premium NBN 100",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        69.0,
+        49.0
+      ],
+      "promoMonths": [
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "provider": "Telstra",
+    "serviceType": "nbn",
+    "tier": "NBN 750",
+    "title": "Ultimate NBN 750",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        79.0,
+        59.0
+      ],
+      "promoMonths": [
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "provider": "Telstra",
+    "serviceType": "nbn",
+    "tier": "NBN 1000",
+    "title": "Ultrafast NBN 1000",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        89.0,
+        64.0
+      ],
+      "promoMonths": [
+        6,
+        4
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "provider": "Activ8me",
+    "serviceType": "nbn",
+    "tier": "NBN 25/5",
+    "title": "NBN 25/5 (Premium 25)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        59.0,
+        39.0
+      ],
+      "regularPrice": [
+        59.0,
+        39.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "provider": "Activ8me",
+    "serviceType": "nbn",
+    "tier": "NBN 50/20",
+    "title": "NBN 50/20 (Premium 50)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        74.0,
+        54.0
+      ],
+      "regularPrice": [
+        74.0,
+        54.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "provider": "Activ8me",
+    "serviceType": "nbn",
+    "tier": "NBN 100/20",
+    "title": "NBN 100/20 (Premium 100)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        99.0,
+        79.0
+      ],
+      "regularPrice": [
+        99.0,
+        79.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "provider": "Activ8me",
+    "serviceType": "satellite",
+    "tier": "Sky Muster Premium 25 (25/5)",
+    "title": "Premium 25 (25/5) (Sky Muster)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        59.0,
+        39.0
+      ],
+      "regularPrice": [
+        59.0,
+        39.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "provider": "Activ8me",
+    "serviceType": "satellite",
+    "tier": "Sky Muster Premium 50 (50/5)",
+    "title": "Premium 50 (50/5) (Sky Muster)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        74.0,
+        54.0
+      ],
+      "regularPrice": [
+        74.0,
+        54.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-02",
+    "provider": "Activ8me",
+    "serviceType": "satellite",
+    "tier": "Sky Muster Premium 100 (100/5)",
+    "title": "Premium 100 (100/5) (Sky Muster)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        99.0,
+        79.0
+      ],
+      "regularPrice": [
+        99.0,
+        79.0
+      ]
+    }
+  },
+  {
     "date": "2026-11-01",
     "provider": "amaysim",
     "serviceType": "nbn",
