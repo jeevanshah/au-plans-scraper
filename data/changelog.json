@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-11-04",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-11-04",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-11-04",
+    "message": "Updated Carbon Comms NBN 750/50 pricing"
+  },
+  {
+    "date": "2026-11-04",
+    "message": "Updated Belong NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-11-04",
+    "message": "Updated Belong NBN 100/20 pricing"
+  },
+  {
+    "date": "2026-11-04",
+    "message": "Updated Belong NBN 50/20 pricing"
+  },
+  {
+    "date": "2026-11-04",
+    "message": "Updated Belong NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-11-04",
+    "message": "Updated Belong NBN 1000/100 pricing"
+  },
+  {
     "date": "2026-11-03",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -125,38 +157,6 @@
   },
   {
     "date": "2026-10-31",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-30",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-10-30",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-30",
-    "message": "Updated Arctel NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-10-30",
-    "message": "Updated Arctel NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-10-29",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-10-29",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-10-28",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-10-28",
     "message": "Updated Lyca Mobile 120GB pricing"
   }
 ]

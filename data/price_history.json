@@ -1,5 +1,113 @@
 [
   {
+    "date": "2026-11-04",
+    "provider": "Carbon Comms",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "title": "Carbon Home Superfast 750/50 NBN NBN 750/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        91.0,
+        89.0
+      ],
+      "regularPrice": [
+        91.0,
+        89.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-04",
+    "provider": "Belong",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "title": "NBN 500/50 (Fast)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        59.0,
+        70.0
+      ],
+      "promoMonths": [
+        6,
+        12
+      ]
+    }
+  },
+  {
+    "date": "2026-11-04",
+    "provider": "Belong",
+    "serviceType": "nbn",
+    "tier": "NBN 100/20",
+    "title": "NBN 100/20 (Premium)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        59.0,
+        70.0
+      ],
+      "promoMonths": [
+        6,
+        12
+      ]
+    }
+  },
+  {
+    "date": "2026-11-04",
+    "provider": "Belong",
+    "serviceType": "nbn",
+    "tier": "NBN 50/20",
+    "title": "NBN 50/20 (Standard Plus)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        55.0,
+        69.0
+      ],
+      "promoMonths": [
+        6,
+        12
+      ]
+    }
+  },
+  {
+    "date": "2026-11-04",
+    "provider": "Belong",
+    "serviceType": "nbn",
+    "tier": "NBN 25/10",
+    "title": "NBN 25/10 (Starter)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        49.0,
+        55.0
+      ],
+      "promoMonths": [
+        6,
+        12
+      ]
+    }
+  },
+  {
+    "date": "2026-11-04",
+    "provider": "Belong",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "title": "NBN 1000/100 (Ultrafast)",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        75.0,
+        85.0
+      ],
+      "promoMonths": [
+        6,
+        12
+      ]
+    }
+  },
+  {
     "date": "2026-11-02",
     "provider": "Telstra",
     "serviceType": "nbn",
