@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-07",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-11-07",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-11-07",
+    "message": "Updated Starlink Starlink Residential - 100 Mbps pricing"
+  },
+  {
+    "date": "2026-11-07",
+    "message": "Updated Starlink Starlink Residential - 200 Mbps pricing"
+  },
+  {
+    "date": "2026-11-07",
+    "message": "Updated Starlink Starlink Residential - Max pricing"
+  },
+  {
     "date": "2026-11-06",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -138,25 +158,5 @@
   {
     "date": "2026-11-01",
     "message": "Updated amaysim NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-11-01",
-    "message": "Updated amaysim NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-11-01",
-    "message": "Updated amaysim NBN 100/20 pricing"
-  },
-  {
-    "date": "2026-11-01",
-    "message": "Updated amaysim NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-11-01",
-    "message": "Updated amaysim NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-11-01",
-    "message": "Updated amaysim NBN 1000/100 pricing"
   }
 ]
