@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-09",
+    "message": "Updated Kogan Mobile 300GB pricing"
+  },
+  {
+    "date": "2026-11-09",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
+    "date": "2026-11-09",
+    "message": "Updated Kogan Internet NBN 50 pricing"
+  },
+  {
+    "date": "2026-11-09",
+    "message": "Updated Kogan Internet NBN 100 pricing"
+  },
+  {
+    "date": "2026-11-09",
+    "message": "Updated Kogan Internet NBN 500 pricing"
+  },
+  {
     "date": "2026-11-08",
     "message": "Updated Kogan Mobile 300GB pricing"
   },
@@ -138,25 +158,5 @@
   {
     "date": "2026-11-02",
     "message": "Updated Activ8me NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-11-02",
-    "message": "Updated Activ8me NBN 100/20 pricing"
-  },
-  {
-    "date": "2026-11-02",
-    "message": "Updated Activ8me Sky Muster Premium 25 (25/5) pricing"
-  },
-  {
-    "date": "2026-11-02",
-    "message": "Updated Activ8me Sky Muster Premium 50 (50/5) pricing"
-  },
-  {
-    "date": "2026-11-02",
-    "message": "Updated Activ8me Sky Muster Premium 100 (100/5) pricing"
-  },
-  {
-    "date": "2026-11-01",
-    "message": "Updated Kogan Mobile 300GB pricing"
   }
 ]
