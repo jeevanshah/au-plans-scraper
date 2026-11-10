@@ -1,5 +1,185 @@
 [
   {
+    "date": "2026-11-10",
+    "provider": "Superloop",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "title": "Family Max NBN 500/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        74.0,
+        69.0
+      ],
+      "regularPrice": [
+        95.0,
+        99.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "provider": "Superloop",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "title": "Megaspeed NBN 750/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        79.0,
+        84.0
+      ],
+      "regularPrice": [
+        104.0,
+        109.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "provider": "Superloop",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "title": "Lightspeed NBN 1000/100",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        89.0,
+        99.0
+      ],
+      "regularPrice": [
+        114.0,
+        99.0
+      ],
+      "promoMonths": [
+        6,
+        null
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "provider": "Vodafone",
+    "serviceType": "mobile",
+    "tier": "65GB",
+    "title": "Small Plan 65GB",
+    "billingCycleDays": 30,
+    "changes": {
+      "promoPrice": [
+        45.0,
+        39.0
+      ],
+      "regularPrice": [
+        45.0,
+        39.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "provider": "TPG",
+    "serviceType": "nbn",
+    "tier": "NBN 100/20",
+    "title": "NBN100 NBN 100/20",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        74.99,
+        64.99
+      ],
+      "promoMonths": [
+        12,
+        6
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "provider": "TPG",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "title": "NBN500 NBN 500/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        74.99,
+        64.99
+      ],
+      "promoMonths": [
+        12,
+        6
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "provider": "TPG",
+    "serviceType": "nbn",
+    "tier": "NBN 25/10",
+    "title": "NBN25 NBN 25/10",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        59.99,
+        49.99
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "provider": "Arctel",
+    "serviceType": "nbn",
+    "tier": "NBN 25/10",
+    "title": "Cruisy Lite NBN 25/10",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        51.99,
+        45.99
+      ],
+      "promoMonths": [
+        null,
+        6
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "provider": "Arctel",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "title": "Ultra Fast NBN 750/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        81.99,
+        74.99
+      ],
+      "promoMonths": [
+        12,
+        6
+      ]
+    }
+  },
+  {
+    "date": "2026-11-10",
+    "provider": "Arctel",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "title": "Hyper Sonic NBN 1000/100",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        95.99,
+        84.99
+      ],
+      "promoMonths": [
+        24,
+        6
+      ]
+    }
+  },
+  {
     "date": "2026-11-09",
     "provider": "Kogan Internet",
     "serviceType": "nbn",
