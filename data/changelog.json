@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-11-12",
+    "message": "Updated Tangerine NBN 25/10 pricing"
+  },
+  {
+    "date": "2026-11-12",
+    "message": "Updated Tangerine NBN 500/50 pricing"
+  },
+  {
+    "date": "2026-11-12",
+    "message": "Added Kogan Mobile 35GB plan"
+  },
+  {
+    "date": "2026-11-12",
+    "message": "Added Kogan Mobile 40GB plan"
+  },
+  {
+    "date": "2026-11-12",
+    "message": "Added Kogan Mobile 130GB plan"
+  },
+  {
+    "date": "2026-11-12",
+    "message": "Added Kogan Mobile 240GB plan"
+  },
+  {
+    "date": "2026-11-12",
+    "message": "Added Kogan Mobile 250GB plan"
+  },
+  {
+    "date": "2026-11-12",
+    "message": "Added Kogan Mobile 400GB plan"
+  },
+  {
+    "date": "2026-11-12",
+    "message": "Updated Kogan Mobile 900GB pricing"
+  },
+  {
+    "date": "2026-11-12",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
     "date": "2026-11-10",
     "message": "Updated Superloop NBN 500/50 pricing"
   },
@@ -117,46 +157,6 @@
   },
   {
     "date": "2026-11-05",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-11-04",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-11-04",
-    "message": "Updated Lyca Mobile 120GB pricing"
-  },
-  {
-    "date": "2026-11-04",
-    "message": "Updated Carbon Comms NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-11-04",
-    "message": "Updated Belong NBN 500/50 pricing"
-  },
-  {
-    "date": "2026-11-04",
-    "message": "Updated Belong NBN 100/20 pricing"
-  },
-  {
-    "date": "2026-11-04",
-    "message": "Updated Belong NBN 50/20 pricing"
-  },
-  {
-    "date": "2026-11-04",
-    "message": "Updated Belong NBN 25/10 pricing"
-  },
-  {
-    "date": "2026-11-04",
-    "message": "Updated Belong NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-11-03",
-    "message": "Updated Kogan Mobile 300GB pricing"
-  },
-  {
-    "date": "2026-11-03",
     "message": "Updated Lyca Mobile 120GB pricing"
   }
 ]
