@@ -1,5 +1,47 @@
 [
   {
+    "date": "2026-11-13",
+    "provider": "Optus",
+    "serviceType": "nbn",
+    "tier": "NBN 25/10",
+    "title": "Basic NBN 25/10",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        73.0,
+        63.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-13",
+    "provider": "Optus",
+    "serviceType": "nbn",
+    "tier": "NBN 50/20",
+    "title": "Everyday NBN 50/20",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        87.0,
+        77.0
+      ]
+    }
+  },
+  {
+    "date": "2026-11-13",
+    "provider": "Optus",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "title": "Ultrafast NBN 1000/100",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        119.0,
+        109.0
+      ]
+    }
+  },
+  {
     "date": "2026-11-12",
     "provider": "Tangerine",
     "serviceType": "nbn",
