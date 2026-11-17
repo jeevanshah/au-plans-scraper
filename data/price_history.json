@@ -1,5 +1,59 @@
 [
   {
+    "date": "2026-11-17",
+    "provider": "Vodafone",
+    "serviceType": "nbn",
+    "tier": "NBN 500/50",
+    "title": "nbn Home Fast+ NBN 500/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        68.0,
+        69.0
+      ],
+      "promoMonths": [
+        6,
+        12
+      ]
+    }
+  },
+  {
+    "date": "2026-11-17",
+    "provider": "Vodafone",
+    "serviceType": "nbn",
+    "tier": "NBN 750/50",
+    "title": "nbn Home Superfast NBN 750/50",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        73.0,
+        74.0
+      ],
+      "promoMonths": [
+        6,
+        12
+      ]
+    }
+  },
+  {
+    "date": "2026-11-17",
+    "provider": "Vodafone",
+    "serviceType": "nbn",
+    "tier": "NBN 1000/100",
+    "title": "nbn Home Ultrafast NBN 1000/100",
+    "billingCycleDays": null,
+    "changes": {
+      "promoPrice": [
+        83.0,
+        84.0
+      ],
+      "promoMonths": [
+        6,
+        12
+      ]
+    }
+  },
+  {
     "date": "2026-11-15",
     "provider": "Aussie Broadband",
     "serviceType": "nbn",
