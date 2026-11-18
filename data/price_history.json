@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-11-18",
+    "provider": "Vodafone",
+    "serviceType": "mobile",
+    "tier": "220GB",
+    "title": "Medium Plan 220GB",
+    "billingCycleDays": 30,
+    "changes": {
+      "promoPrice": [
+        50.0,
+        49.0
+      ],
+      "regularPrice": [
+        50.0,
+        49.0
+      ]
+    }
+  },
+  {
     "date": "2026-11-17",
     "provider": "Vodafone",
     "serviceType": "nbn",
