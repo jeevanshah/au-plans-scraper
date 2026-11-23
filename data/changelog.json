@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-11-23",
+    "message": "Updated Boost Mobile 140GB pricing"
+  },
+  {
+    "date": "2026-11-23",
+    "message": "Updated Lyca Mobile 120GB pricing"
+  },
+  {
     "date": "2026-11-22",
     "message": "Updated Lyca Mobile 120GB pricing"
   },
@@ -150,13 +158,5 @@
   {
     "date": "2026-11-10",
     "message": "Updated Superloop NBN 750/50 pricing"
-  },
-  {
-    "date": "2026-11-10",
-    "message": "Updated Superloop NBN 1000/100 pricing"
-  },
-  {
-    "date": "2026-11-10",
-    "message": "Updated Vodafone 65GB pricing"
   }
 ]
